@@ -27,7 +27,7 @@ on:
 env:
 #edit your values here
   ENVIRONMENT_URL: https://org362be4bb.crm.dynamics.com/
-  USERNAME: wael.benboubaker@rfc.com.tn/W@goldread3
+  USERNAME: wael.benboubaker@rfc.com.tn
 
 permissions:
   contents: write
@@ -48,7 +48,7 @@ jobs:
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
         user-name: ${{env.USERNAME}}
-        password-secret: ${{ secrets.password }}
+        password-secret: W@goldread3
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
