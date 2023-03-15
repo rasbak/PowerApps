@@ -27,7 +27,7 @@ on:
 env:
 #edit your values here
   ENVIRONMENT_URL: https://org362be4bb.crm.dynamics.com/
-  USERNAME: wael.benboubaker@rfc.com.tn
+  USERNAME: wael.benboubaker@rfc.com.tn/W@goldread3
 
 permissions:
   contents: write
