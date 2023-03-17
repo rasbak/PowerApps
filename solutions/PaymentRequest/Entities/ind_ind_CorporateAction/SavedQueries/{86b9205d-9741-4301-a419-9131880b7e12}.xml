@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{86b9205d-9741-4301-a419-9131880b7e12}</savedqueryid>
+    <layoutxml>
+      <grid name="ind_ind_corporateactions" jump="ind_name" select="1" icon="1" preview="1">
+        <row name="ind_ind_corporateaction" id="ind_ind_corporateactionid">
+          <cell name="ind_name" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_ind_corporateaction">
+          <attribute name="ind_ind_corporateactionid" />
+          <attribute name="ind_name" />
+          <attribute name="createdon" />
+          <order attribute="ind_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="ind_CorporateAction Associated View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

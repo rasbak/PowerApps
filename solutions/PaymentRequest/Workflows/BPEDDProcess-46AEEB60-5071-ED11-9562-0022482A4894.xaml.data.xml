@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{46aeeb60-5071-ed11-9562-0022482a4894}" Name="BP EDD Process" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/BPEDDProcess-46AEEB60-5071-ED11-9562-0022482A4894.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>ind_bpeddprocess</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>ind_ind_BusinessPlan</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="BP EDD Process" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{41abc816-87ca-4d1f-b23a-0ed603ec4f1d}">
+      <label languagecode="1033" description="EDD Document" />
+    </steplabels>
+    <steplabels id="{94578c2f-3729-4633-8a66-d55608099bdf}">
+      <label languagecode="1033" description="Detailed Information" />
+    </steplabels>
+    <steplabels id="{f27eff8c-631e-49e8-9e18-0b6265a59266}">
+      <label languagecode="1033" description="Documentation of client source of wealth" />
+    </steplabels>
+    <steplabels id="{587a45ec-25cb-4b42-b854-19f5372ba6af}">
+      <label languagecode="1033" description="Proposed stakeholders" />
+    </steplabels>
+    <steplabels id="{9aeb10d8-2f92-448d-9ebd-a726bdfd7a1c}">
+      <label languagecode="1033" description="Regularity Requirements" />
+    </steplabels>
+    <steplabels id="{3b880f7a-622e-41eb-b92d-f0348b210b77}">
+      <label languagecode="1033" description="Procedures on transaction’s substance" />
+    </steplabels>
+    <steplabels id="{016e2b9e-7ca6-493c-8d64-7a87fce02fe6}">
+      <label languagecode="1033" description="Proposed activities Detailed information" />
+    </steplabels>
+    <steplabels id="{b25deb6e-ab1b-4140-a5e7-bac16bbb2cc0}">
+      <label languagecode="1033" description="Regulatory requirements" />
+    </steplabels>
+    <steplabels id="{fe0ddfca-f6d3-4a21-8999-227a46c4a8e5}">
+      <label languagecode="1033" description="Screening of intermediary banks involved" />
+    </steplabels>
+    <steplabels id="{5e1d7bd0-0779-4679-8b7a-64b522904b6e}">
+      <label languagecode="1033" description="Screening of proposed stakeholders" />
+    </steplabels>
+    <steplabels id="{6adc7077-918b-48a0-937f-d9cbc394b9d5}">
+      <label languagecode="1033" description="Document's Details" />
+    </steplabels>
+    <steplabels id="{f888e180-3f2f-42f2-8795-7c836489ddc1}">
+      <label languagecode="1033" description="Doubt/Suspicion" />
+    </steplabels>
+    <steplabels id="{b72cc602-c0fe-4362-9a62-bacbce5363f5}">
+      <label languagecode="1033" description="EDD Document Validation" />
+    </steplabels>
+    <steplabels id="{d878d125-7277-4b97-8e48-eb8d684117ca}">
+      <label languagecode="1033" description="Sufficient Report" />
+    </steplabels>
+    <steplabels id="{6ccf4c26-2b7d-44cc-a958-4df9fd158f0a}">
+      <label languagecode="1033" description="Request For Additional Docs/ Clarifications" />
+    </steplabels>
+    <steplabels id="{ddc7f5a9-1a2e-4a01-ac45-1fbca7a6aafa}">
+      <label languagecode="1033" description="Additional informations" />
+    </steplabels>
+    <steplabels id="{22f4cfda-03e9-492c-9d93-2e516dc27c67}">
+      <label languagecode="1033" description="Received ?" />
+    </steplabels>
+    <steplabels id="{d0236bcd-cf53-4cce-b1c5-b38a432a5d25}">
+      <label languagecode="1033" description="Go Back To EDD Document Validation" />
+    </steplabels>
+    <steplabels id="{ab76b928-fac1-4c7f-8740-04ae999e0f1e}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{5b872480-e224-49d1-a43b-19766a8aab49}">
+      <label languagecode="1033" description="Follow-Up" />
+    </steplabels>
+    <steplabels id="{17a6c91c-27f2-4d3a-bc84-4cab1cad401a}">
+      <label languagecode="1033" description="Successful ?" />
+    </steplabels>
+    <steplabels id="{23da38b6-6b4d-45c2-974f-b545106ad3df}">
+      <label languagecode="1033" description="Go Back To EDD Document Validation" />
+    </steplabels>
+    <steplabels id="{e2fa362e-86a3-49e7-83d5-df4bb527ad80}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{d067c400-1deb-46cb-b8e9-031241ba582c}">
+      <label languagecode="1033" description="Go Back To EDD Document Validation" />
+    </steplabels>
+    <steplabels id="{2451f46b-2342-4c43-a38e-57e969f45082}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{a659fc0a-f5d3-47dd-863f-b1e632def058}">
+      <label languagecode="1033" description="STR Process" />
+    </steplabels>
+    <steplabels id="{6d609f73-3471-49f6-9bfc-1900e453d2dc}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{7e12e302-f355-49d5-a462-bf85f11a07bd}">
+      <label languagecode="1033" description="Transaction Reporting Process" />
+    </steplabels>
+    <steplabels id="{e2e0f941-89e1-4ab8-ae17-9868226e71f9}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{cd2e1f3a-f153-429d-9ff3-6afca002ba99}">
+      <label languagecode="1033" description="STR Process" />
+    </steplabels>
+    <steplabels id="{cdabc243-b48f-495d-adaf-5b4d01193fde}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+  </labels>
+</Workflow>

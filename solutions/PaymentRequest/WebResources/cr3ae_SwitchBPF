@@ -1,0 +1,822 @@
+function BPFEvent(executionContext) {
+	var formContext = executionContext.getFormContext();
+    debugger;
+	
+	var status = Xrm.Page.data.process.getStatus();
+	Xrm.Page.data.process.addOnStageChange(SwitchReview);
+	Xrm.Page.data.process.addOnStageChange(SwitchTrepOutward2);
+	Xrm.Page.data.process.addOnStageChange(SetEddJur);
+	Xrm.Page.data.process.addOnProcessStatusChange(SwitchIt);
+	if (status == "finished") {
+		Xrm.Page.data.process.removeOnProcessStatusChange(SwitchIt);
+		Xrm.Page.data.process.removeOnStageChange(SwitchReview);
+		Xrm.Page.data.process.removeOnStageChange(SwitchTrepOutward2);
+		Xrm.Page.data.process.removeOnStageChange(SetEddJur);
+	}
+}
+
+function SwitchReview(executionContext){
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	if (idStage=='9a259ec2-c93e-4497-9c17-067f0d61b380'||idStage=='af25cb77-a8c4-424d-9ff9-580f96e6b8db'){
+		Xrm.Page.data.process.setActiveProcess("087abff4-6860-ed11-9562-0022482a40f8");
+		return;
+		
+	}
+}
+function SwitchTrepOutward2(executionContext){
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	if (idStage=='1d0d273e-9563-485a-ac9b-4b2e326268e6'||idStage=='6a39affe-2785-406d-9c06-bd61d0880eb8'){
+		Xrm.Page.data.process.setActiveProcess("711fef8d-0161-ed11-9562-0022482a40f8");
+		return;
+		
+	}
+}
+function SetEddJur(executionContext){
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	if (idStage=='f45e51cc-e890-482e-99c6-1886770ba1de'){
+		//EDD
+		Xrm.Page.getAttribute("ind_triggereddjurisdiction").setValue("Yes");		
+	}
+}
+ function SwitchIt(executionContext){
+
+	setTimeout(() => { 
+		var formContext = executionContext.getFormContext();
+	debugger;
+        var newRemitter = Xrm.Page.getAttribute("ind_newremitter").getValue();
+		var newBehaviour = Xrm.Page.getAttribute("ind_newbehavior").getValue();
+        var newCountry = Xrm.Page.getAttribute("ind_newcountry").getValue();
+        var newActivity = Xrm.Page.getAttribute("ind_newactivity").getValue();
+        var behaviorDone = Xrm.Page.getAttribute("ind_behaviordone").getValue();
+		
+       
+		var triggerCIBPARA = Xrm.Page.getAttribute("ind_triggercibpara").getValue();
+		var triggerCIBPJurisdiction = Xrm.Page.getAttribute("ind_triggercibpjustisdiction").getValue();
+				
+		var triggerEDDARA = Xrm.Page.getAttribute("ind_triggereddara").getValue();
+		var triggerEDDCDDI = Xrm.Page.getAttribute("ind_triggereddcddi").getValue();
+		var triggerEDDJusrisdiction = Xrm.Page.getAttribute("ind_triggereddjurisdiction").getValue();
+		var triggerEDDTR = Xrm.Page.getAttribute("ind_triggereddtr").getValue();
+		var triggerEDDONGOING = Xrm.Page.getAttribute("ind_triggereddongoing").getValue();
+		var triggerEDDCDDS = Xrm.Page.getAttribute("ind_triggereddcdds").getValue();
+		var triggerEDDPEP = Xrm.Page.getAttribute("ind_triggereddpep").getValue();
+				
+		var triggerSTRARA = Xrm.Page.getAttribute("ind_triggerstrara").getValue();
+		var triggerSTRCDDI = Xrm.Page.getAttribute("ind_triggerstrcddi").getValue();
+		var triggerSTREDD = Xrm.Page.getAttribute("ind_triggerstredd").getValue();
+		var triggerSTRTR = Xrm.Page.getAttribute("ind_triggerstrtr").getValue();
+	
+		var triggerSTRONGOING = Xrm.Page.getAttribute("ind_triggerstrongoing").getValue();
+		var triggerSTRCDDS = Xrm.Page.getAttribute("ind_triggerstrcdds").getValue();
+				
+		var triggerTREPARA = Xrm.Page.getAttribute("ind_triggertrepara").getValue();
+		var triggerTREPPEP = Xrm.Page.getAttribute("ind_triggertreppep").getValue();
+		var triggerTREPEDD = Xrm.Page.getAttribute("ind_triggertrepedd").getValue();
+		var triggerTREPJURISDICTION = Xrm.Page.getAttribute("ind_triggertrepjusrisdiction").getValue();
+		var triggerTREPTR = Xrm.Page.getAttribute("ind_triggertreptr").getValue();
+		var triggerTREPCDDI = Xrm.Page.getAttribute("ind_triggertrepcddi").getValue(); //à implémenter dans le BPF
+	
+		var statusPR = Xrm.Page.getAttribute("statuscode");
+		var paymentID = formContext.data.entity.getId();
+	
+		var loggedinUserId = Xrm.Utility.getGlobalContext().userSettings.userId;
+		var userRO;
+		if(formContext.getAttribute("ind_ro").getValue())
+			userRO = formContext.getAttribute("ind_ro").getValue()[0].id;
+		var userRC;
+		if(formContext.getAttribute("ind_rc").getValue())
+			userRC = formContext.getAttribute("ind_rc").getValue()[0].id;
+	debugger;
+	    var TransactionType = Xrm.Page.getAttribute("ind_transactiontype").getValue();
+		var idProcess = Xrm.Page.data.process.getActiveProcess().getId();
+		var idStage = Xrm.Page.data.process.getActiveStage().getId();
+		
+		//send mail to client  on ABORTED
+		if (idStage=="fb8a89bb-e9be-4ca0-a763-b505e0d40a57"||idStage=="b731fb3b-ecf2-4f5f-b57c-9755094e387c"||idStage=="51ecb28d-feb8-409b-8630-1bad62a1e5a7"||idStage=="73135d5a-9fbb-464d-a01a-19c648a0c12f"||idStage=="3d38205b-0d14-439b-8513-962e2ec61ff1"||idStage=="4304218c-5d4a-4c1a-afe1-86467433cf67")
+		{
+			var paymentID = formContext.data.entity.getId();
+			send(paymentID,"","ABORTED");
+		}
+		// Transaction(Outward/Inward)
+	    if(idStage == '51e9c646-964e-47f3-ae0b-97568db7188f' && userRO==loggedinUserId)
+	    {
+			if ( TransactionType == 100000000){
+				Xrm.Page.data.process.setActiveProcess("b2924b5a-1bb1-44fd-8773-12e032905472");
+				return;
+			}
+			else{
+				Xrm.Page.data.process.setActiveProcess("e11049ed-4354-ed11-bba3-0022482a4894");
+				return;
+			}
+	    }
+		
+		//TM
+		if (idProcess=="e11049ed-4354-ed11-bba3-0022482a4894" && userRO==loggedinUserId){
+			//cdds
+			if (idStage=="26c7d2a9-eae3-4582-aac1-8b990967cab8"){
+				//cdds
+				Xrm.Page.data.process.setActiveProcess("14bae384-7d5e-ed11-9562-0022482a40f8");
+				return;
+			}
+			//§§§§§§ ASSESS BEGIN §§§§§§§§§§ switch to the first process in Assess deviation §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+			if (idStage=="7869b070-b66d-4720-8cc5-95829aa2c74a"){
+				
+				if (newCountry == "Yes" ) {
+					
+					//Jurisdiction
+					statusPR.setValue(100000017);
+					Xrm.Page.getAttribute("ind_newcountry").setValue('Done');
+					Xrm.Page.data.process.setActiveProcess("1422cfed-3861-ed11-9562-0022482a4894");
+					return;
+				} 
+
+				else if ( newActivity == "Yes" && newCountry == "No" ){
+	     		
+					//ARA
+					statusPR.setValue(100000018);
+					Xrm.Page.data.process.setActiveProcess("8f6456d2-9061-ed11-9562-0022482a4894");
+					return;
+				}
+
+				else if (newRemitter == "Yes" &&  newCountry == "No" && newActivity=="No" ){
+					Xrm.Page.getAttribute("ind_newremitter").setValue('Done');
+					//CDDI
+					statusPR.setValue(100000019);
+					Xrm.Page.data.process.setActiveProcess("170fcbdf-9f61-ed11-9562-0022482a4894"); 
+					return;
+				}
+	
+				else if (newBehaviour == true && newRemitter == "No" &&  newCountry=="No" && newActivity=="No"){
+					debugger;
+					Xrm.Page.getAttribute("ind_behaviordone").setValue('Done');
+					//CDDS
+					statusPR.setValue(100000003);
+					
+						Xrm.Page.data.process.setActiveProcess("14bae384-7d5e-ed11-9562-0022482a40f8");
+					return;
+				}
+				else{
+					//CDDS
+					statusPR.setValue(100000003);
+					Xrm.Page.data.process.setActiveProcess("14bae384-7d5e-ed11-9562-0022482a40f8");
+					return;
+					
+				}
+	
+		
+			}
+		}
+		
+		
+		
+		
+		
+	
+		//§§§§§§ ASSESS Proceed §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+	    if(idStage == '2a68bc35-ed64-4ee5-8797-849efeea6828'/*Jurisdiction to proceed with TM*/
+	     
+	     //|| idStage == 'c778e513-3cd7-4e0f-a6fa-7a7c4a3efb58'/* AcRiAss */ 
+		 || idStage == 'd2148a9c-1c4c-44e5-a1a6-966f987f5592' /* CDDS */	
+		 || idStage == '4f954a17-55fc-4170-87b6-be15f6fa7350' /* CDDS */	
+		 || idStage == 'ffe04f69-febd-4339-aa62-2b402f04bed1' /* CDDS ongoing */
+		 || idStage == '' /* CDDS */
+		 || idStage == 'd3faef35-4660-4632-8afa-efbe6b2e653b' /* Jurisdiction cibp trigger */
+		 || idStage == '8e7b33d3-778b-4f60-bf86-520d8f6fcc0f' /* Jurisdiction TRP trigger */
+		 || idStage == 'f45e51cc-e890-482e-99c6-1886770ba1de' /* Jurisdiction EDD trigger */
+		 || idStage == '77202ea9-dd64-4572-b32b-59f3a7cf0cb8' /* ARA EDD trigger */
+		 || idStage == '7a0b2b1f-e8aa-4088-9f8b-eff170f9c040' /* ARA STR trigger */
+		 || idStage == '95a9a82d-513b-491c-8eee-262049230f7e' /* ARA CIBP trigger */
+		 || idStage == 'af353c5b-6772-482a-93a1-e149d47e2a2f' /* ARA TRep trigger */
+		  /* check here */
+		 || idStage == '561ab389-3df6-433a-800d-9130516e32f9' /* CDDI STR trigger */
+		 || idStage == '12d07c52-c09e-4800-9a57-b47aa3324436' /* CDDI STR trigger */
+		  /* check here */
+		 || idStage == '8e0b2abd-43a2-47c6-8fe9-e8ec3e647442' /* CDDI EDD trigger */
+		 || idStage == '89b72376-d6ed-4a14-b374-976e871999fe' /* CDDI CDDS trigger */
+		 || idStage == '8f66f957-c51f-4d4d-aa25-bbab1fff497b' /* CDDI CDDS trigger */
+		 || idStage == '67663308-6359-4f99-85d8-acaeae34cece' /* CDDI CDDS trigger */
+		 || idStage == '1eac60c5-07e7-48fe-8d91-fb9a724894ed' /* CDDI CDDS trigger */
+		 || idStage == '8da809d0-a6da-4da1-a454-51223cd1121b' /* CDDS STR trigger */
+		 || idStage == '3e0ec563-b0b6-421e-a73e-5a6d4839d40e' /* CDDS EDD trigger */
+		 || idStage == '4db0de07-13c6-4f40-ab26-13a2d7376e55' /* CDDS PEP trigger */
+		 || idStage == 'b95a4d48-2a2f-4074-8937-61b567457b55' /* PEP ËDD trigger */
+		 || idStage == '62d3461f-cafe-43e2-9ff7-0bc8eb1b85cc' /* PEP TREP trigger */
+		 || idStage == 'e4a3ee7f-42c7-4a7b-b709-80a5676ec3b3' /* Ongoing proceed */
+		 || idStage == '7627ad76-3949-48c1-995d-9ea7ab16489c' /* Ongoing proceed */
+		 || idStage == '05834b5a-de0a-4cc0-8080-e6fd9ea00bf5' /* Ongoing proceed */
+		 || idStage == 'f21f684c-e53a-4bec-aa10-44584d7b3995' /* Ongoing STR trigger */
+		 || idStage == '47bbfef6-702d-4e3f-8dcf-018bc30e8db9' /* Ongoing EDD trigger */
+		 || idStage == '264a8247-fd05-4f15-9e1a-d8d026e3ab97' /* Ongoing PEP */
+		 
+		 ){
+			  		/* Jurisdiction  */
+					if(idProcess=='1422cfed-3861-ed11-9562-0022482a4894' && userRO==loggedinUserId){
+						Xrm.Page.getAttribute("ind_newcountry").setValue("Done");
+						//CIBP
+						if (idStage=='d3faef35-4660-4632-8afa-efbe6b2e653b'){				
+							 Xrm.Page.getAttribute("ind_triggercibpjustisdiction").setValue("Yes");
+						}
+						//TRep
+						if (idStage=='8e7b33d3-778b-4f60-bf86-520d8f6fcc0f'){
+							Xrm.Page.getAttribute("ind_triggertrepjusrisdiction").setValue("Yes");
+						}
+						
+					}
+					/* /Jurisdiction */
+					
+					/* *ARA *********************************************/
+				
+			if(idProcess=='8f6456d2-9061-ed11-9562-0022482a4894'&& userRO==loggedinUserId){
+				
+					//EDD  from ARA
+				/*	if (idStage=='77202ea9-dd64-4572-b32b-59f3a7cf0cb8'){
+						Xrm.Page.getAttribute("ind_triggereddara").setValue("Yes");
+						Xrm.Page.getAttribute("ind_newactivity").setValue("Done");
+						newActivity="Done";						
+					}*/
+					//STR  from ARA
+					if (idStage=='7a0b2b1f-e8aa-4088-9f8b-eff170f9c040'){
+						Xrm.Page.getAttribute("ind_triggerstrara").setValue("Yes");
+						Xrm.Page.getAttribute("ind_newactivity").setValue("Done");
+						newActivity="Done";						
+					}
+					
+					//CIBP  from ARA
+					if (idStage=='95a9a82d-513b-491c-8eee-262049230f7e'){
+						var highrisk = 	Xrm.Page.getAttribute("ind_highriskactivity").getValue();
+						Xrm.Page.getAttribute("ind_triggercibpara").setValue("Yes");
+						Xrm.Page.getAttribute("ind_newactivity").setValue("Done");
+						if ( highrisk == true)
+						Xrm.Page.getAttribute("ind_triggereddara").setValue("Yes");
+						newActivity="Done";
+					}
+					//TRep  from ARA
+					if (idStage=='af353c5b-6772-482a-93a1-e149d47e2a2f'){
+						Xrm.Page.getAttribute("ind_triggertrepara").setValue("Yes");	
+						Xrm.Page.getAttribute("ind_newactivity").setValue("Done");
+						newActivity="Done";
+					}
+					
+			}
+					/* ************************************************** /ARA */
+					
+					/*  CDDI ************************************************/
+						
+			if(idProcess=='170fcbdf-9f61-ed11-9562-0022482a4894' & userRO==loggedinUserId){
+				 Xrm.Page.getAttribute("ind_newremitter").setValue("Done");
+				//STR  from CDDI
+				if (idStage=='561ab389-3df6-433a-800d-9130516e32f9' || idStage=='12d07c52-c09e-4800-9a57-b47aa3324436'){
+						Xrm.Page.getAttribute("ind_triggerstrcddi").setValue("Yes");
+						//CDDS	
+						statusPR.setValue(100000003);
+						Xrm.Page.data.process.setActiveProcess("14bae384-7d5e-ed11-9562-0022482a40f8");
+						return;	
+				}
+				
+				//EDD  from CDDI
+				if (idStage=='8e0b2abd-43a2-47c6-8fe9-e8ec3e647442'){
+						Xrm.Page.getAttribute("ind_triggereddcddi").setValue('Yes');
+						//CDDS	
+						statusPR.setValue(100000003);
+						Xrm.Page.data.process.setActiveProcess("14bae384-7d5e-ed11-9562-0022482a40f8");
+						return; 
+				}
+				//TREP  from CDDI
+				if (idStage=='15cc60d0-7427-47bd-8a3d-bd714557b2d5'){
+						Xrm.Page.getAttribute("ind_triggertrepcddi").setValue('Yes');
+						//CDDS	
+						statusPR.setValue(100000003);
+						Xrm.Page.data.process.setActiveProcess("14bae384-7d5e-ed11-9562-0022482a40f8");
+						return; 
+				}	
+				
+				//CDDS from CDDI
+				if (idStage=='89b72376-d6ed-4a14-b374-976e871999fe' ||idStage=='67663308-6359-4f99-85d8-acaeae34cece' ||idStage=='8f66f957-c51f-4d4d-aa25-bbab1fff497b' ||idStage=='1eac60c5-07e7-48fe-8d91-fb9a724894ed' ){
+						//CDDS	
+						statusPR.setValue(100000003);
+						Xrm.Page.data.process.setActiveProcess("14bae384-7d5e-ed11-9562-0022482a40f8");
+						return; 
+				}					
+			}
+				/* ***********************************************  /CDDI */	
+					
+				/* CDDS *******************************************************/
+			
+			//Switch from CDDS
+			if(idProcess=='14bae384-7d5e-ed11-9562-0022482a40f8' & userRO==loggedinUserId){
+				//STR  from CDDS
+				if (idStage=='8da809d0-a6da-4da1-a454-51223cd1121b'){
+					Xrm.Page.getAttribute("ind_triggerstrcdds").setValue('Yes');
+					//transaction review
+					statusPR.setValue(100000004);
+					Xrm.Page.data.process.setActiveProcess("e8a74313-985f-ed11-9562-0022482a40f8");
+					return;	
+				}
+				//TR  from CDDS
+				if (idStage=='d2148a9c-1c4c-44e5-a1a6-966f987f5592' || idStage=='4f954a17-55fc-4170-87b6-be15f6fa7350'){
+					
+					//transaction review
+					statusPR.setValue(100000004);
+					Xrm.Page.data.process.setActiveProcess("e8a74313-985f-ed11-9562-0022482a40f8");
+					return;	
+				}
+				
+				//EDD  from CDDS
+				if (idStage=='3e0ec563-b0b6-421e-a73e-5a6d4839d40e' /*other adverse report*/){
+					Xrm.Page.getAttribute("ind_triggereddcdds").setValue('Yes');
+					//transaction review
+					statusPR.setValue(100000004);
+					Xrm.Page.data.process.setActiveProcess("e8a74313-985f-ed11-9562-0022482a40f8");
+					return;
+				}
+				
+				//PEP from CDDS
+				if (idStage=='4db0de07-13c6-4f40-ab26-13a2d7376e55'){
+					statusPR.setValue(100000011);
+					Xrm.Page.data.process.setActiveProcess("568355fe-f160-ed11-9562-0022482a4894");
+					return;
+				}
+				
+				//Ongoing from CDDS
+				if (idStage=='ffe04f69-febd-4339-aa62-2b402f04bed1' && userRC==loggedinUserId ){
+					statusPR.setValue(100000020);
+					Xrm.Page.data.process.setActiveProcess("3fc7e0ba-f760-ed11-9562-0022482a40f8");
+					return;
+				}
+				
+
+				
+			}
+			/* ************************************ /CDDS */
+			
+			
+			/* Ongoing *************************************************/
+			
+			//Switch from Ongoing
+			if(idProcess=='3fc7e0ba-f760-ed11-9562-0022482a40f8' & userRO==loggedinUserId){
+				
+				//STR
+				if (idStage=='f21f684c-e53a-4bec-aa10-44584d7b3995'){
+					Xrm.Page.getAttribute("ind_triggerstrongoing").setValue("Yes");
+				}
+				//PEP
+				if (idStage=='264a8247-fd05-4f15-9e1a-d8d026e3ab97'){
+					statusPR.setValue(100000011);
+					Xrm.Page.data.process.setActiveProcess("568355fe-f160-ed11-9562-0022482a4894");
+					return;
+				}
+				//EDD
+				if (idStage=='47bbfef6-702d-4e3f-8dcf-018bc30e8db9'){
+					Xrm.Page.getAttribute("ind_triggereddongoing").setValue("Yes");
+				}
+				//TR
+				Xrm.Page.data.process.setActiveProcess("e8a74313-985f-ed11-9562-0022482a40f8");
+				return;
+			}
+			/* ************************************ /Ongoing */
+			
+			
+			/* PEP *************************************************/
+			if(idProcess=='568355fe-f160-ed11-9562-0022482a4894'& userRO==loggedinUserId){
+				//EDD from PEP
+				if (idStage=='b95a4d48-2a2f-4074-8937-61b567457b55'){
+					//miss
+					Xrm.Page.getAttribute("ind_triggereddpep").setValue('Yes');
+					//transaction review
+					statusPR.setValue(100000004);
+					Xrm.Page.data.process.setActiveProcess("e8a74313-985f-ed11-9562-0022482a40f8");
+					return;		
+				}
+				//TRep from PEP
+				if (idStage=='62d3461f-cafe-43e2-9ff7-0bc8eb1b85cc'){
+					//miss
+					Xrm.Page.getAttribute("ind_triggertreppep").setValue('Yes');
+					//transaction review
+					statusPR.setValue(100000004);
+					Xrm.Page.data.process.setActiveProcess("e8a74313-985f-ed11-9562-0022482a40f8");
+					return;
+				}
+			}
+			/* ******************************************************** /PEP */
+					
+		    if(newActivity=="Yes"){
+			   debugger;
+                //ARA
+				statusPR.setValue(100000018);
+				Xrm.Page.data.process.setActiveProcess("8f6456d2-9061-ed11-9562-0022482a4894");
+				return;
+		    }
+		    else if(newRemitter=="Yes" && (newActivity=="No" || newActivity=="Done")){
+				
+			    debugger;
+				//CDDI
+				statusPR.setValue(100000019);
+				Xrm.Page.data.process.setActiveProcess("170fcbdf-9f61-ed11-9562-0022482a4894"); return;
+		    }
+		
+			else if(newBehaviour==true && behaviorDone != 'Done'&& (newRemitter=="No"||newRemitter=="Done") && (newActivity=="No" || newActivity=="Done")){
+				debugger;
+				Xrm.Page.getAttribute("ind_behaviordone").setValue('Done');
+				//Xrm.Page.getAttribute("ind_triggereddbehavior").setValue('Yes');
+				//CDDS
+				statusPR.setValue(100000003);
+				Xrm.Page.data.process.setActiveProcess("14bae384-7d5e-ed11-9562-0022482a40f8");
+				return;
+			}
+		
+			else{
+					//CDDS
+					statusPR.setValue(100000003);
+					Xrm.Page.data.process.setActiveProcess("14bae384-7d5e-ed11-9562-0022482a40f8");
+					return;
+					
+				}
+		   
+	   } 
+	
+	
+	
+	
+	
+	//§§§§§§ Other Switch §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+	//Transaction Review switch
+			if(idProcess=='e8a74313-985f-ed11-9562-0022482a40f8' && userRO==loggedinUserId){
+
+				//if (newActivity=="No" && newBehaviour=="No" && newCountry=="No" && newRemitter=="No"){}
+				//STR
+				if (idStage=='19f20bd1-a5c9-4722-ac67-2749eec21cfe'||idStage=='3f1a062a-8948-4d58-97c6-3f45db6682e1'||idStage=='205fa648-f9a0-4442-aca3-7ef01a95d992'){
+						
+						//Xrm.Utility.alertDialog("");
+						Xrm.Page.getAttribute("ind_triggerstrtr").setValue('Yes');
+					
+						//EDD
+						if(triggerEDDPEP == "Yes" || triggerEDDCDDS == "Yes" || newBehaviour==true ||triggerEDDARA == "Yes" || triggerEDDCDDI == "Yes" || triggerEDDJusrisdiction == "Yes"|| triggerEDDTR == "Yes" || triggerEDDONGOING == "Yes"){
+							statusPR.setValue(100000010);
+							Xrm.Page.data.process.setActiveProcess("1348a6ad-7862-ed11-9562-0022482a40f8");
+							return;
+							
+						}
+						//CIBP                       
+						else if(triggerCIBPARA=="Yes" || triggerCIBPJurisdiction == "Yes"){
+							statusPR.setValue(100000014);
+							Xrm.Page.data.process.setActiveProcess("045363fa-e363-ed11-9562-0022482a40f8");
+							return;
+						}
+						//TRep
+						else if(triggerTREPARA == "Yes" ||triggerTREPCDDI == "Yes" ||triggerTREPPEP == "Yes" || triggerTREPEDD == "Yes" || triggerTREPJURISDICTION == "Yes"|| triggerTREPTR == "Yes"){
+							statusPR.setValue(100000015);
+							Xrm.Page.data.process.setActiveProcess("711fef8d-0161-ed11-9562-0022482a40f8");
+							return;
+						}
+						//STR
+						else{
+							statusPR.setValue(100000012);
+							Xrm.Page.data.process.setActiveProcess("dc605514-d860-ed11-9562-0022482a40f8");
+							return;
+						}
+				}
+				//EDD
+				if(idStage=='48c5db30-fd06-436b-958a-fac605af73aa'){
+				
+						Xrm.Page.getAttribute("ind_triggereddtr").setValue('Yes');
+					/*	//CIBP
+						if(triggerCIBPARA == "Yes" || triggerCIBPJurisdiction == "Yes"){
+							Xrm.Page.data.process.setActiveProcess("045363fa-e363-ed11-9562-0022482a40f8");
+							return;
+						} */
+						//EDD
+						statusPR.setValue(100000010);
+						Xrm.Page.data.process.setActiveProcess("1348a6ad-7862-ed11-9562-0022482a40f8");
+						return;
+						
+						
+				}
+				//TM
+				if(idStage=='3519469f-e5ba-40c2-9147-43e5f6177c41'||idStage=='a8599d70-cd3a-474f-a304-a0f90a94af94'
+				   ||idStage=='6bef052b-48cb-4ab8-97dc-efb1e7db2246'){
+						//EDD
+						if( triggerEDDPEP == "Yes" || triggerEDDCDDS == "Yes" ||newBehaviour==true ||triggerEDDARA =="Yes" || triggerEDDCDDI == "Yes" || triggerEDDJusrisdiction == "Yes"|| triggerEDDTR == "Yes"|| triggerEDDONGOING == "Yes"){
+							statusPR.setValue(100000010);
+							Xrm.Page.data.process.setActiveProcess("1348a6ad-7862-ed11-9562-0022482a40f8");
+							return;
+						}
+						//CIBP check with triggers if no trigger check edd if not check trep if no check str
+						else if(triggerCIBPARA=="Yes" || triggerCIBPJurisdiction == "Yes"){
+							statusPR.setValue(100000014);
+							Xrm.Page.data.process.setActiveProcess("045363fa-e363-ed11-9562-0022482a40f8");
+							return;
+						}
+						
+						//TRep
+						else if(triggerTREPARA =="Yes" ||triggerTREPCDDI =="Yes" ||triggerTREPPEP =="Yes" || triggerTREPEDD == "Yes" || triggerTREPJURISDICTION == "Yes"|| triggerTREPTR == "Yes"){
+							statusPR.setValue(100000015);
+							Xrm.Page.data.process.setActiveProcess("711fef8d-0161-ed11-9562-0022482a40f8");
+							return;
+						}
+						//STR
+						else if(triggerSTRCDDS == "Yes" ||triggerSTRARA =="Yes" ||  triggerSTRCDDI =="Yes" ||  triggerSTREDD =="Yes" ||  triggerSTRTR  =="Yes"  || triggerSTRONGOING =="Yes"){
+							statusPR.setValue(100000012);
+							Xrm.Page.data.process.setActiveProcess("dc605514-d860-ed11-9562-0022482a40f8");
+							return;
+						}
+						//TM2
+						else 
+						{
+							
+							send(paymentID,"b2268c54-8770-ed11-9562-0022482a40f8","TL");
+							statusPR.setValue(100000016);
+							Xrm.Page.data.process.setActiveProcess("b2268c54-8770-ed11-9562-0022482a40f8"); //missing
+							return;
+						}
+				}
+				//TRep
+				if(idStage=='2c2c78d9-af4f-4cb9-b7b4-77dc1f304e34'){
+					
+						Xrm.Page.getAttribute("ind_triggertreptr").setValue('Yes');
+						
+						//EDD
+						if(triggerEDDPEP == "Yes" || triggerEDDCDDS == "Yes" ||newBehaviour==true ||triggerEDDARA =="Yes" || triggerEDDCDDI == "Yes" || triggerEDDJusrisdiction == "Yes"|| triggerEDDTR == "Yes"|| triggerEDDONGOING == "Yes"){
+							statusPR.setValue(100000010);
+							Xrm.Page.data.process.setActiveProcess("1348a6ad-7862-ed11-9562-0022482a40f8");
+							return;
+						}
+						//CIBP
+						else if(triggerCIBPARA=="Yes" || triggerCIBPJurisdiction == "Yes"){
+							statusPR.setValue(100000014);
+							Xrm.Page.data.process.setActiveProcess("045363fa-e363-ed11-9562-0022482a40f8");
+							return;
+						}
+						
+						//TRep
+						else{
+							statusPR.setValue(100000015);
+							Xrm.Page.data.process.setActiveProcess("711fef8d-0161-ed11-9562-0022482a40f8");
+							return;
+						}
+				}
+				if(idStage=='9a259ec2-c93e-4497-9c17-067f0d61b380'){
+					//Review process
+					Xrm.Page.data.process.setActiveProcess("087abff4-6860-ed11-9562-0022482a40f8");
+					return;
+				}
+				
+			}
+	
+	
+			//Review Process switch
+			if(idProcess=='087abff4-6860-ed11-9562-0022482a40f8'){
+				if(idStage=='3ce1283a-7790-4137-ad09-be8f4f3a4cf5' || idStage=='7aa33d7f-5b33-4a0e-946d-d69b5e966e43'){
+					//Continue TR
+					statusPR.setValue(100000004);
+					Xrm.Page.data.process.setActiveProcess("e8a74313-985f-ed11-9562-0022482a40f8");
+					return;
+				}
+			}
+			
+			
+			//CIBP switch
+			if(idProcess=='045363fa-e363-ed11-9562-0022482a40f8'){
+				if (idStage=='5661a3b8-b158-4d75-a3e3-1097f56bc777'){
+						/*//EDD
+						if(triggerEDDPEP == "Yes" || triggerEDDCDDS == "Yes" || newBehaviour==441700000 ||triggerEDDARA =="Yes" || triggerEDDCDDI == "Yes" || triggerEDDJusrisdiction == "Yes"|| triggerEDDTR == "Yes"|| triggerEDDONGOING == "Yes"){
+							Xrm.Page.data.process.setActiveProcess("1348a6ad-7862-ed11-9562-0022482a40f8");
+							return;
+						}*/
+						//TRep
+						if(triggerTREPARA =="Yes" ||triggerTREPCDDI =="Yes" ||triggerTREPPEP =="Yes" || triggerTREPEDD == "Yes" || triggerTREPJURISDICTION == "Yes"|| triggerTREPTR == "Yes"){
+							statusPR.setValue(100000015);
+							Xrm.Page.data.process.setActiveProcess("711fef8d-0161-ed11-9562-0022482a40f8");
+							return;
+						}
+						//STR
+						else if(triggerSTRCDDS == "Yes" || triggerSTRARA =="Yes" ||  triggerSTRCDDI =="Yes" ||  triggerSTREDD =="Yes" ||  triggerSTRTR  =="Yes" ||  triggerSTRONGOING =="Yes"){
+							statusPR.setValue(100000012);
+							Xrm.Page.data.process.setActiveProcess("dc605514-d860-ed11-9562-0022482a40f8");
+							return;
+						}
+						//TM2
+						else 
+						{
+							send(paymentID,"b2268c54-8770-ed11-9562-0022482a40f8","TL");
+							statusPR.setValue(100000016);
+							Xrm.Page.data.process.setActiveProcess("b2268c54-8770-ed11-9562-0022482a40f8"); //in progress
+							return;
+						}
+				}
+				
+			}
+			
+			
+			//EDD Switch
+			if(idProcess=='1348a6ad-7862-ed11-9562-0022482a40f8'){
+				
+				//STR from EDD
+				if (idStage=='8c16918d-486a-4a61-aab3-0ddd704c9a0b'||idStage=='a7a8c0b0-89d8-4724-90aa-ff3cb06a2380'){
+					Xrm.Page.getAttribute("ind_triggerstredd").setValue('Yes');
+					
+					//CIBP
+					if(triggerCIBPARA=="Yes" || triggerCIBPJurisdiction == "Yes"){
+						statusPR.setValue(100000014);
+							Xrm.Page.data.process.setActiveProcess("045363fa-e363-ed11-9562-0022482a40f8");
+							return;
+					}
+					//TREP
+					else if(triggerTREPARA =="Yes" ||triggerTREPCDDI =="Yes" ||triggerTREPPEP =="Yes" || triggerTREPEDD == "Yes" || triggerTREPJURISDICTION == "Yes"|| triggerTREPTR == "Yes"){
+						statusPR.setValue(100000015);
+						
+						Xrm.Page.data.process.setActiveProcess("711fef8d-0161-ed11-9562-0022482a40f8");
+						return;
+					}
+					//STR
+					else{
+						statusPR.setValue(100000012);
+						Xrm.Page.data.process.setActiveProcess("dc605514-d860-ed11-9562-0022482a40f8");
+						return;	
+					}
+			    }
+				
+				
+				//TRep from EDD
+				if (idStage=='42af709b-2b35-48ee-bc20-8895055e9774'){
+					
+					
+					Xrm.Page.getAttribute("ind_triggertrepedd").setValue('Yes');
+					//CIBP
+					if(triggerCIBPARA=="Yes" || triggerCIBPJurisdiction == "Yes"){
+						statusPR.setValue(100000014);
+						Xrm.Page.data.process.setActiveProcess("045363fa-e363-ed11-9562-0022482a40f8");
+						return;
+					}
+					else{
+						statusPR.setValue(100000015);
+						Xrm.Page.data.process.setActiveProcess("711fef8d-0161-ed11-9562-0022482a40f8");
+						return;
+					}
+				}
+			}
+			
+			//TRep Switch
+			if(idProcess=='711fef8d-0161-ed11-9562-0022482a40f8'){
+			
+				//TM2 from TRep
+				if (idStage=='6533d529-1668-491c-95ae-451a6071b6b4'){ 
+					//STR
+					if(triggerSTRCDDS == "Yes" ||triggerSTRARA =="Yes" ||  triggerSTRCDDI =="Yes" ||  triggerSTREDD =="Yes" ||  triggerSTRTR  =="Yes"|| triggerSTRONGOING =="Yes"){
+							statusPR.setValue(100000012);
+							Xrm.Page.data.process.setActiveProcess("dc605514-d860-ed11-9562-0022482a40f8");
+							return;
+					}
+					//TM2
+					else{
+						send(paymentID,"b2268c54-8770-ed11-9562-0022482a40f8","TL");
+						statusPR.setValue(100000016);
+						Xrm.Page.data.process.setActiveProcess("b2268c54-8770-ed11-9562-0022482a40f8");
+						return;
+					}
+					
+				}
+			}
+			
+			//STR switch
+			if(idProcess=='dc605514-d860-ed11-9562-0022482a40f8'){
+				//TM2 from STR 
+				if (idStage == '654d4eae-3f86-49cc-a45d-59881420bde5'){
+					send(paymentID,"b2268c54-8770-ed11-9562-0022482a40f8","TL");
+					statusPR.setValue(100000016);
+					Xrm.Page.data.process.setActiveProcess("b2268c54-8770-ed11-9562-0022482a40f8");
+					return;
+				}
+			}	
+			//TM2 switch
+			if(idProcess=='b2268c54-8770-ed11-9562-0022482a40f8'){
+				/*/TREP from STR
+				if (idStage == '6a39affe-2785-406d-9c06-bd61d0880eb8'||idStage == '1d0d273e-9563-485a-ac9b-4b2e326268e6'){
+					statusPR.setValue(100000015);
+					Xrm.Page.data.process.setActiveProcess("711fef8d-0161-ed11-9562-0022482a40f8");
+					return;
+				}*/
+				var Account = Xrm.Page.getAttribute("ind_customeraccount").getValue();
+				var amount = Xrm.Page.getAttribute("ind_transactionamount").getValue();
+				var fund = Xrm.Page.getAttribute("ind_customerfunds").getValue();
+				var pad = Xrm.Page.getAttribute("ind_proceedtoassessdeviation").getValue();
+				var customer = Xrm.Page.getAttribute("ind_customername").getValue();
+				var party = Xrm.Page.getAttribute("ind_partyname").getValue();
+				var activity = Xrm.Page.getAttribute("ind_activity").getValue();
+				var sector = Xrm.Page.getAttribute("ind_sector").getValue();
+				var paymentID = formContext.data.entity.getId();
+				
+				/*var activitArray ={
+								  "entityType": "ind_ind_activity", 
+								  "id": activity[0].id.substring(1,37),
+								  "name": activity[0].name
+
+								};
+				var customerArray ={
+								  "entityType": "ind_customer", 
+								  "id": customer[0].id.substring(1,37),
+								  "name": customer[0].name
+
+								};	
+				var partyArray ={
+								  "entityType": "ind_party", 
+								  "id": party[0].id.substring(1,37),
+								  "name": party[0].name
+
+								};
+				
+				var sectorArray ={
+								  "entityType": "ind_sector", 
+								  "id": sector[0].id.substring(1,37),
+								  "name": sector[0].name
+
+								};*/
+				
+				var updatedFund = {
+					"ind_balance": fund - amount
+				}
+				
+				Account = Account[0].id.substring(1,37);
+				Xrm.WebApi.updateRecord("ind_ind_account", Account,updatedFund);
+				send(paymentID,"","SUCCESS");
+				
+				
+				if (pad==true && activity!=null){
+					
+				
+				const response = new XMLHttpRequest();
+				const json = JSON.stringify({
+					id: paymentID		
+				});
+
+				response.open("POST", 'https://prod-18.westus.logic.azure.com:443/workflows/03404543ecb241fd8429be5bd496c711/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Mg9EofGaBtiQ9q6q4WfUE2A-nCaZVHZow8zs_hdWX_U');
+				response.setRequestHeader('Content-Type', 'application/json');
+
+				response.send(json);
+		
+				/* Xrm.WebApi.retrieveRecord("ind_party", party[0].id.substring(1,37)).then(
+						function success(result) {
+							debugger;
+							var countryArray={
+								  "entityType": "ind_ind_country", 
+								  "id": result._ind_country_value,
+								  "name": result._ind_country_value
+
+								};
+							var updatedBP = {
+								"ind_Customer@odata.bind": "/Costomers("+customerArray.id+")",
+								"ind_Party@odata.bind": "/Parties("+partyArray.id+")",
+								"ind_Activity@odata.bind": "/Activities("+activitArray.id+")",
+								"ind_Sector@odata.bind":  "/tbl_Sectors("+sectorArray.id+")",
+								"ind_Country@odata.bind": "/Countries("+countryArray.id+")"
+								
+							
+							};
+						Xrm.WebApi.createRecord("ind_ind_businessplan",updatedBP);
+							// perform operations on record retrieval
+						},
+						function (error) {
+							console.log(error.message);
+							// handle error conditions
+						}
+					); */
+					
+				}
+
+				if (idStage == 'a4424597-7217-4448-adbc-ad26317591ed'||idStage == 'dba42855-b32a-4737-a29a-786ca51b9b2d'
+						||idStage == '5d4b65e3-38a1-48fe-9574-c4418f581222'||idStage == 'fbd42e25-0b55-4364-a98a-d529ac741eeb'
+					){
+				
+					
+				}
+				
+			}
+	
+	
+	
+	
+	}, "500");
+}
+
+function send(paymentID,IdProcess,Type)
+{
+	debugger;
+		
+		var Link = 'https://org362be4bb.crm.dynamics.com/main.aspx?appid=4015057c-deb5-4964-8d73-08bc500c6835&pagetype=entityrecord&etn=ind_ind_operation&id='+paymentID;
+		var response = new XMLHttpRequest();
+	    const json = JSON.stringify({
+				Id: paymentID,
+				type: Type,
+				Link : Link
+		});
+			
+			
+		//Send Notif
+		
+		response.open("POST", 'https://prod-60.westus.logic.azure.com:443/workflows/e04a7761732e480a9d302951cd310be0/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=GBgG0EGAOwLqh0j8cJbREZ0Swz-10aD_H-ZoPThzM1g');
+		response.setRequestHeader('Content-Type', 'application/json');
+
+		response.send(json);
+    
+	
+        
+}

@@ -1,0 +1,670 @@
+function StepDuration(executionContext){
+
+	var formContext = executionContext.getFormContext();
+	var idProcess = Xrm.Page.data.process.getActiveProcess().getId();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	var idEntity = formContext.data.entity.getId().substring(1,37);
+	debugger;
+	
+	//BP
+	if (idProcess=="8361a76b-2e6b-ed11-9562-0022482a4894"){
+		
+				Xrm.Page.data.process.addOnPreStageChange(getExitTimeStampBP);
+				Xrm.Page.data.process.addOnProcessStatusChange(getExitTimeStampBPLastSteps);
+
+	}
+	//BP ARA
+	if (idProcess=="f7f8465a-e570-ed11-9562-0022482a40f8"){
+		
+				Xrm.Page.data.process.addOnPreStageChange(getExitTimeStampBPARA);
+				Xrm.Page.data.process.addOnProcessStatusChange(getExitTimeStampBPARALastSteps);
+
+	}
+	//BP JUR
+	if (idProcess=="aafeb1a6-7c71-ed11-9562-0022482a40f8"){
+		
+				Xrm.Page.data.process.addOnPreStageChange(getExitTimeStampBPJUR);
+				Xrm.Page.data.process.addOnProcessStatusChange(getExitTimeStampBPJURLastSteps);
+
+	}
+	//BP EDD
+	if (idProcess=="46aeeb60-5071-ed11-9562-0022482a4894"){
+		
+				Xrm.Page.data.process.addOnPreStageChange(getExitTimeStampBPEDD);
+				Xrm.Page.data.process.addOnProcessStatusChange(getExitTimeStampBPEDDLastSteps);
+
+	}
+	//BP STR
+	if (idProcess=="78951581-8471-ed11-9562-0022482a40f8"){
+		
+				Xrm.Page.data.process.addOnPreStageChange(getExitTimeStampBPSTR);
+				Xrm.Page.data.process.addOnProcessStatusChange(getExitTimeStampBPSTRLastSteps);
+
+	}
+	//BP TREP
+	if (idProcess=="f5ddf3df-1d7a-ed11-81ad-0022482a4894"){
+		
+				Xrm.Page.data.process.addOnPreStageChange(getExitTimeStampBPTREP);
+				Xrm.Page.data.process.addOnProcessStatusChange(getExitTimeStampBPTREPLastSteps);
+
+	}
+	
+	
+}
+
+
+
+function getExitTimeStampBPTREP(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	debugger;
+		var opName = formContext.getAttribute("ind_name").getValue();
+		
+		var fetchXml = "?fetchXml=<fetch><entity name='ind_bptransactionreporting'><filter><condition attribute='bpf_ind_ind_businessplanid' operator='eq' value='" + formContext.data.entity.getId().substring(1,37) + "'/></filter></entity></fetch>";
+		
+		Xrm.WebApi.retrieveMultipleRecords('ind_bptransactionreporting', fetchXml).then(
+					function success(result) {
+								debugger;
+								var timeStamp = (new Date()-new Date(result.entities[0].activestagestartedon))/1000;
+								
+								//Submit Internal Report To Compliance Duration
+									if(idStage=="bfa17bd2-f9f4-4170-98ee-211b536c14c3")
+									var EntryTS = {
+										"ind_submitinternalreporttocomplianceduration": timeStamp
+									}
+								//Review And Issue Compliance Report Duration
+									if(idStage=="903f5d54-ea3e-4835-aedb-d1b70f313b4a")
+									var EntryTS = {
+										"ind_reviewandissuecompliancereportduration": timeStamp
+									}
+								//Holding Of External Comittee Duration
+									if(idStage=="19014a21-dbff-4c46-acc1-5793c27eb087")
+									var EntryTS = {
+										"ind_holdingofexternalcomitteeduration": timeStamp
+									}
+								//Take Note Duration
+									if(idStage=="e6fa2203-fc86-46b6-9867-5cea24509049")
+									var EntryTS = {
+										"ind_takenoteduration": timeStamp
+									}
+								//May Proceed With CIBP Duration
+									if(idStage=="789e7023-8eed-486a-b32b-895fa001916f")
+									var EntryTS = {
+										"ind_mayproceedwithcibpduration": timeStamp
+									}
+								//Request For Additional Docs Duration
+									if(idStage=="96de7abc-ea2f-4773-b1d2-7108035bca54")
+									var EntryTS = {
+										"ind_requestforadditionaldocsduration": timeStamp
+									}
+								//Validate Docs Duration
+									if(idStage=="e577741f-01c5-4665-9c75-b931bc736a71")
+									var EntryTS = {
+										"ind_validatedocsduration": timeStamp
+									}
+								
+									
+								
+								
+									/************************************/
+								console.log(EntryTS);
+								Xrm.WebApi.updateRecord("ind_bptransactionreporting", result.entities[0].businessprocessflowinstanceid,EntryTS).then(
+									function success(result) {
+										
+									},
+									function (error) {
+										console.log(error.message);
+										// handle error conditions
+									}
+								);
+					},
+					function (error) {
+						console.log(error.message);
+						// handle error conditions
+					}
+		);
+	
+}
+
+function getExitTimeStampBPTREPLastSteps(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	debugger;
+		
+		
+		var fetchXml = "?fetchXml=<fetch><entity name='ind_bptransactionreporting'><filter><condition attribute='bpf_ind_ind_businessplanid' operator='eq' value='" + formContext.data.entity.getId().substring(1,37) + "'/></filter></entity></fetch>";
+		
+		Xrm.WebApi.retrieveMultipleRecords('ind_bptransactionreporting', fetchXml).then(
+					function success(result) {
+								debugger;
+								var timeStamp = (new Date()-new Date(result.entities[0].activestagestartedon))/1000;
+							
+								//Continue With CIBP Process Duration
+									if(idStage=="57944bb3-3fea-4273-a2bd-a7d173c5e334")
+									var EntryTS = {
+										"ind_continuewithtmprocessduration": timeStamp
+									}
+
+									/************************************/
+							
+								Xrm.WebApi.updateRecord("ind_bptransactionreporting", result.entities[0].businessprocessflowinstanceid,EntryTS);
+					},
+					function (error) {
+						console.log(error.message);
+						// handle error conditions
+					}
+		);
+	
+}
+
+function getExitTimeStampBPSTR(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	debugger;
+		var opName = formContext.getAttribute("ind_name").getValue();
+		
+		var fetchXml = "?fetchXml=<fetch><entity name='ind_bpstrprocess'><filter><condition attribute='bpf_ind_ind_businessplanid' operator='eq' value='" + formContext.data.entity.getId().substring(1,37) + "'/></filter></entity></fetch>";
+		
+		Xrm.WebApi.retrieveMultipleRecords('ind_bpstrprocess', fetchXml).then(
+					function success(result) {
+								debugger;
+								var timeStamp = (new Date()-new Date(result.entities[0].activestagestartedon))/1000;
+								
+								//Prepare Unusual Transaction Report Duration
+									if(idStage=="1107f229-41e3-44b5-8287-cb226e5b98b8")
+									var EntryTS = {
+										"ind_prepareunusualtransactionreportduration": timeStamp
+									}
+								//Update Internal Report Log RO Duration
+									if(idStage=="810c5acc-baca-4d3c-9937-e8792df842a5")
+									var EntryTS = {
+										"ind_updateinternalreportlogroduration": timeStamp
+									}
+								//Performs Transaction And Behaviour Analysis Duration
+									if(idStage=="555adfda-c11f-4a02-a31e-8b06141b3be1")
+									var EntryTS = {
+										"ind_performstransactionbehavioranalysisduration": timeStamp
+									}
+								//File STR With FIU Duration
+									if(idStage=="65434e43-ae25-4240-9f6d-57fd95360d82"||idStage=="6ed35fce-536a-44f4-a959-8004541d3253")
+									var EntryTS = {
+										"ind_filestrwithfiuduration": timeStamp
+									}
+								//Updates External Report Log Duration
+									if(idStage=="3b7d3ae2-e14b-479c-835d-df5e8101de32"||idStage=="2152c5a6-c589-450a-8f9f-e03462a27fe5")
+									var EntryTS = {
+										"ind_updatesexternalreportlogduration": timeStamp
+									}
+								//Perform Screening And Due Diligence Duration
+									if(idStage=="568c5653-c834-433e-b610-5e6fe0859a7d")
+									var EntryTS = {
+										"ind_performscreeningandduediligenceduration": timeStamp
+									}
+								//Conclusion Of Investigation Report Duration
+									if(idStage=="05bab4d0-4394-4eaf-b381-4b1a4c08b2ac")
+									var EntryTS = {
+										"ind_conclusionofinvestigationreportduration": timeStamp
+									}
+								//Update Internal Report Log MLRO Duration
+									if(idStage=="ff0e6687-f85b-412c-8b85-79a8e9a51674")
+									var EntryTS = {
+										"ind_updateinternalreportlogmlroduration": timeStamp
+									}
+								
+								
+									/************************************/
+								console.log(EntryTS);
+								Xrm.WebApi.updateRecord("ind_bpstrprocess", result.entities[0].businessprocessflowinstanceid,EntryTS).then(
+									function success(result) {
+										
+									},
+									function (error) {
+										console.log(error.message);
+										// handle error conditions
+									}
+								);
+					},
+					function (error) {
+						console.log(error.message);
+						// handle error conditions
+					}
+		);
+	
+}
+
+function getExitTimeStampBPSTRLastSteps(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	debugger;
+		
+		
+		var fetchXml = "?fetchXml=<fetch><entity name='ind_bpstrprocess'><filter><condition attribute='bpf_ind_ind_businessplanid' operator='eq' value='" + formContext.data.entity.getId().substring(1,37) + "'/></filter></entity></fetch>";
+		
+		Xrm.WebApi.retrieveMultipleRecords('ind_bpstrprocess', fetchXml).then(
+					function success(result) {
+								debugger;
+								var timeStamp = (new Date()-new Date(result.entities[0].activestagestartedon))/1000;
+							
+								//Proceed With CIBP process Duration
+									if(idStage=="d0c129e8-176c-4d9e-871d-f5cc48138b84")
+									var EntryTS = {
+										"ind_proceedwithcibpprocessduration": timeStamp
+									}
+								
+								
+							
+									/************************************/
+							
+								Xrm.WebApi.updateRecord("ind_bpstrprocess", result.entities[0].businessprocessflowinstanceid,EntryTS);
+					},
+					function (error) {
+						console.log(error.message);
+						// handle error conditions
+					}
+		);
+	
+}
+
+
+function getExitTimeStampBPEDDLastSteps(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	debugger;
+		
+		
+		var fetchXml = "?fetchXml=<fetch><entity name='ind_bpeddprocess'><filter><condition attribute='bpf_ind_ind_businessplanid' operator='eq' value='" + formContext.data.entity.getId().substring(1,37) + "'/></filter></entity></fetch>";
+		
+		Xrm.WebApi.retrieveMultipleRecords('ind_bpeddprocess', fetchXml).then(
+					function success(result) {
+								debugger;
+								var timeStamp = (new Date()-new Date(result.entities[0].activestagestartedon))/1000;
+							
+								//STR Process Duration
+									if(idStage=="cd2e1f3a-f153-429d-9ff3-6afca002ba99"||idStage=="a659fc0a-f5d3-47dd-863f-b1e632def058")
+									var EntryTS = {
+										"ind_strprocessduration": timeStamp
+									}
+								//Transaction Reporting Process Duration
+									if(idStage=="7e12e302-f355-49d5-a462-bf85f11a07bd")
+									var EntryTS = {
+										"ind_transactionreportingprocessduration": timeStamp
+									}	
+								
+							
+									/************************************/
+							
+								Xrm.WebApi.updateRecord("ind_bpeddprocess", result.entities[0].businessprocessflowinstanceid,EntryTS);
+					},
+					function (error) {
+						console.log(error.message);
+						// handle error conditions
+					}
+		);
+	
+}
+
+function getExitTimeStampBPEDD(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	debugger;
+		
+		
+		var fetchXml = "?fetchXml=<fetch><entity name='ind_bpeddprocess'><filter><condition attribute='bpf_ind_ind_businessplanid' operator='eq' value='" + formContext.data.entity.getId().substring(1,37) + "'/></filter></entity></fetch>";
+		
+		Xrm.WebApi.retrieveMultipleRecords('ind_bpeddprocess', fetchXml).then(
+					function success(result) {
+								debugger;
+								var timeStamp = (new Date()-new Date(result.entities[0].activestagestartedon))/1000;
+								
+								//EDD Document Duration
+									if(idStage=="41abc816-87ca-4d1f-b23a-0ed603ec4f1d")
+									var EntryTS = {
+										"ind_edddocumentduration": timeStamp
+									}
+								//EDD Document Validation Duration
+									if(idStage=="b72cc602-c0fe-4362-9a62-bacbce5363f5")
+									var EntryTS = {
+										"ind_edddocumentvalidationduration": timeStamp
+									}
+								//Request For Additional Information Duration
+									if(idStage=="6ccf4c26-2b7d-44cc-a958-4df9fd158f0a")
+									var EntryTS = {
+										"ind_requestforadditionalinformationduration" : timeStamp
+									}
+								//Follow-Up Duration
+									if(idStage=="5b872480-e224-49d1-a43b-19766a8aab49")
+									var EntryTS = {
+										"ind_followupduration" : timeStamp
+									}
+									/************************************/
+								console.log(EntryTS);
+								Xrm.WebApi.updateRecord("ind_bpeddprocess", result.entities[0].businessprocessflowinstanceid,EntryTS).then(
+									function success(result) {
+										
+									},
+									function (error) {
+										console.log(error.message);
+										// handle error conditions
+									}
+								);
+					},
+					function (error) {
+						console.log(error.message);
+						// handle error conditions
+					}
+		);
+	
+}
+
+
+function getExitTimeStampBPJURLastSteps(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	debugger;
+		
+		
+		var fetchXml = "?fetchXml=<fetch><entity name='ind_bpjurisdiction'><filter><condition attribute='bpf_ind_ind_businessplanid' operator='eq' value='" + formContext.data.entity.getId().substring(1,37) + "'/></filter></entity></fetch>";
+		
+		Xrm.WebApi.retrieveMultipleRecords('ind_bpjurisdiction', fetchXml).then(
+					function success(result) {
+								debugger;
+								var timeStamp = (new Date()-new Date(result.entities[0].activestagestartedon))/1000;
+								
+								//Transaction Reporting Process Duration
+									if(idStage=="5deea8c9-f5ad-459a-8040-81145f1e5498")
+									var EntryTS = {
+										"ind_transactionreportingprocessduration": timeStamp
+									}
+								//Proceed with CIBP duration
+									if(idStage=="b7e77f30-c114-41da-be4f-85d4786843d3")
+									var EntryTS = {
+										"ind_proceedwithcibpduration": timeStamp
+									}
+									
+									
+									/************************************/
+								console.log(EntryTS);
+								Xrm.WebApi.updateRecord("ind_bpjurisdiction", result.entities[0].businessprocessflowinstanceid,EntryTS).then(
+									function success(result) {
+										
+									},
+									function (error) {
+										console.log(error.message);
+										// handle error conditions
+									}
+								);
+					},
+					function (error) {
+						console.log(error.message);
+						// handle error conditions
+					}
+		);
+	
+}
+
+function getExitTimeStampBPJUR(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	debugger;
+		var opName = formContext.getAttribute("ind_name").getValue();
+		
+		var fetchXml = "?fetchXml=<fetch><entity name='ind_bpjurisdiction'><filter><condition attribute='bpf_ind_ind_businessplanid' operator='eq' value='" + formContext.data.entity.getId().substring(1,37) + "'/></filter></entity></fetch>";
+		
+		Xrm.WebApi.retrieveMultipleRecords('ind_bpjurisdiction', fetchXml).then(
+					function success(result) {
+								debugger;
+								var timeStamp = (new Date()-new Date(result.entities[0].activestagestartedon))/1000;
+								
+								//Establish Rationale For Change Duration
+									if(idStage=="fc4d8fa7-2aef-4c53-9be5-4e479ef22de1")
+									var EntryTS = {
+										"ind_establishrationaleforchangeduration": timeStamp
+									}
+								//Assess Country No-Go Country Duration
+									if(idStage=="a086d746-d7a9-412f-993a-0ad4380342cc")
+									var EntryTS = {
+										"ind_assesscountrynogocountryduration": timeStamp
+									}
+								//Assess Country High Risk Jur Duration
+									if(idStage=="335a4c88-0f57-4fe0-bc06-e213488be405")
+									var EntryTS = {
+										"ind_assesscountryhighriskjurduration": timeStamp
+									}
+								
+									
+									
+									/************************************/
+								console.log(EntryTS);
+								Xrm.WebApi.updateRecord("ind_bpjurisdiction", result.entities[0].businessprocessflowinstanceid,EntryTS).then(
+									function success(result) {
+										
+									},
+									function (error) {
+										console.log(error.message);
+										// handle error conditions
+									}
+								);
+					},
+					function (error) {
+						console.log(error.message);
+						// handle error conditions
+					}
+		);
+	
+}
+
+function getExitTimeStampBPARALastSteps(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	debugger;
+		
+		
+		var fetchXml = "?fetchXml=<fetch><entity name='ind_bpactivityriskassessement'><filter><condition attribute='bpf_ind_ind_businessplanid' operator='eq' value='" + formContext.data.entity.getId().substring(1,37) + "'/></filter></entity></fetch>";
+		
+		Xrm.WebApi.retrieveMultipleRecords('ind_bpactivityriskassessement', fetchXml).then(
+					function success(result) {
+								debugger;
+								var timeStamp = (new Date()-new Date(result.entities[0].activestagestartedon))/1000;
+								
+								//STR Process Duration
+									if(idStage=="60e2a9db-480c-44fb-9e3c-9ad2d65600a5")
+									var EntryTS = {
+										"ind_strprocessduration": timeStamp
+									}
+								//Proceed to CIBP duration
+									if(idStage=="e951f463-c310-48be-acc8-12371d63fda9")
+									var EntryTS = {
+										"ind_proceedtocibpduration": timeStamp
+									}	
+								//Transaction Reporting Process Duration
+									if(idStage=="af353c5b-6772-482a-93a1-e149d47e2a2f")
+									var EntryTS = {
+										"ind_transactionreportingprocessduration": timeStamp
+									}
+									/************************************/
+								console.log(EntryTS);
+								Xrm.WebApi.updateRecord("ind_bpactivityriskassessement", result.entities[0].businessprocessflowinstanceid,EntryTS).then(
+									function success(result) {
+										
+									},
+									function (error) {
+										console.log(error.message);
+										// handle error conditions
+									}
+								);
+					},
+					function (error) {
+						console.log(error.message);
+						// handle error conditions
+					}
+		);
+	
+}
+
+function getExitTimeStampBPARA(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	debugger;
+		var opName = formContext.getAttribute("ind_name").getValue();
+		
+		var fetchXml = "?fetchXml=<fetch><entity name='ind_bpactivityriskassessement'><filter><condition attribute='bpf_ind_ind_businessplanid' operator='eq' value='" + formContext.data.entity.getId().substring(1,37) + "'/></filter></entity></fetch>";
+		
+		Xrm.WebApi.retrieveMultipleRecords('ind_bpactivityriskassessement', fetchXml).then(
+					function success(result) {
+								debugger;
+								var timeStamp = (new Date()-new Date(result.entities[0].activestagestartedon))/1000;
+								
+								//Establish Rationale For Change Duration
+									if(idStage=="d70bb6ae-e0e7-43ac-933d-b300edf212a2")
+									var EntryTS = {
+										"ind_establishrationaleforchangeduration": timeStamp
+									}
+								//Assess Activity Banned Activity Duration
+									if(idStage=="4be2638f-ec85-4db1-8496-64dd97c70595")
+									var EntryTS = {
+										"ind_assessactivitybannedactivityduration": timeStamp
+									}
+								//Assess High Risk Activity Duration
+									if(idStage=="09a2560f-038b-4651-be0b-004e6a4adae5")
+									var EntryTS = {
+										"ind_assesshighriskactivityduration": timeStamp
+									}
+								//EDD Process Duration
+									if(idStage=="ab87a217-d87f-4f70-9d86-4fa3f25ac366")
+									var EntryTS = {
+										"ind_eddprocessduration": timeStamp
+									}
+									
+									
+									/************************************/
+								console.log(EntryTS);
+								Xrm.WebApi.updateRecord("ind_bpactivityriskassessement", result.entities[0].businessprocessflowinstanceid,EntryTS).then(
+									function success(result) {
+										
+									},
+									function (error) {
+										console.log(error.message);
+										// handle error conditions
+									}
+								);
+					},
+					function (error) {
+						console.log(error.message);
+						// handle error conditions
+					}
+		);
+	
+}
+
+function getExitTimeStampBPLastSteps(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	debugger;
+		
+		
+		var fetchXml = "?fetchXml=<fetch><entity name='ind_requestforchangeinbusinessplan'><filter><condition attribute='bpf_ind_ind_businessplanid' operator='eq' value='" + formContext.data.entity.getId().substring(1,37) + "'/></filter></entity></fetch>";
+		
+		Xrm.WebApi.retrieveMultipleRecords('ind_requestforchangeinbusinessplan', fetchXml).then(
+					function success(result) {
+								debugger;
+								var timeStamp = (new Date()-new Date(result.entities[0].activestagestartedon))/1000;
+							
+								//Circulate Docs For Signature Duration
+									if(idStage=="0e487651-1a79-40ed-93d3-81b9507afb5f")
+									var EntryTS = {
+										"ind_circulatedocsforsignatureduration": timeStamp
+									}
+
+									/************************************/
+							
+								Xrm.WebApi.updateRecord("ind_requestforchangeinbusinessplan", result.entities[0].businessprocessflowinstanceid,EntryTS);
+					},
+					function (error) {
+						console.log(error.message);
+						// handle error conditions
+					}
+		);
+}
+function getExitTimeStampBP(executionContext){
+	
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	debugger;
+		
+		
+		var fetchXml = "?fetchXml=<fetch><entity name='ind_requestforchangeinbusinessplan'><filter><condition attribute='bpf_ind_ind_businessplanid' operator='eq' value='" + formContext.data.entity.getId().substring(1,37) + "'/></filter></entity></fetch>";
+		
+		Xrm.WebApi.retrieveMultipleRecords('ind_requestforchangeinbusinessplan', fetchXml).then(
+					
+					function success(result) {
+								debugger;
+								var timeStamp = (new Date()-new Date(result.entities[0].activestagestartedon))/1000;
+								//Identify Change in Activity Duration
+									if(idStage=="d99c7b78-47c6-4e99-a619-aeb8b2669247")
+									var EntryTS = {
+										"ind_identifychangeinactivityduration": timeStamp
+									}
+								//Activity Risk Assessment Duration
+									if(idStage=="f1bdd2e7-09b8-431b-8c32-3af0e816ee9f")
+									var EntryTS = {
+										"ind_activityriskassessmentduration": timeStamp
+									}
+								//Identify Jusrisdiction Change Duration
+									if(idStage=="45fc8343-79cb-498d-9dbc-7d58d8eac2b7")
+									var EntryTS = {
+										"ind_identifyjusrisdictionchangeduration": timeStamp
+									}
+								//Jurisdiction Screening Duration
+									if(idStage=="8e3a34cf-90ee-420d-ab3b-1a9f215a3e7d")
+									var EntryTS = {
+										"ind_jurisdictionscreeningduration": timeStamp
+									}
+								//Check Licensing Conditions Duration
+									if(idStage=="f38caee2-20f9-43c8-8935-27d335d314b1")
+									var EntryTS = {
+										"ind_checklicensingconditionsduration": timeStamp
+									}
+								//Prepare Updated BP Duration
+									if(idStage=="ac034837-c05c-40a1-bebd-7e01cbf62c24")
+									var EntryTS = {
+										"ind_prepareupdatedbpduration": timeStamp
+									}
+								//Prepare BP Duration
+									if(idStage=="c26444a7-60cb-4970-b038-fd067a686652")
+									var EntryTS = {
+										"ind_preparebpduration": timeStamp
+									}
+								//Review Documentation Duration
+									if(idStage=="82d340ef-0bb4-4cc5-8e32-c88c27ec4204")
+									var EntryTS = {
+										"ind_reviewdocumentationduration": timeStamp
+									}
+								//Amend Document Duration
+									if(idStage=="1628f825-56f4-44e1-bfad-b49024719e2b")
+									var EntryTS = {
+										"ind_amenddocumentduration": timeStamp
+									}
+								
+								
+									
+								
+								
+									/************************************/
+								console.log(EntryTS);
+								Xrm.WebApi.updateRecord("ind_requestforchangeinbusinessplan", result.entities[0].businessprocessflowinstanceid,EntryTS).then(
+									function success(result) {
+										
+									},
+									function (error) {
+										console.log(error.message);
+										// handle error conditions
+									}
+								);
+					},
+					function (error) {
+						console.log(error.message);
+						// handle error conditions
+					}
+		);
+
+}

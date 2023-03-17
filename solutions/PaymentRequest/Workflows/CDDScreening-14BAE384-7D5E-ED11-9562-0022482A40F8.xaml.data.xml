@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{14bae384-7d5e-ed11-9562-0022482a40f8}" Name="CDD Screening" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/CDDScreening-14BAE384-7D5E-ED11-9562-0022482A40F8.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>ind_cddscreening</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>ind_ind_Operation</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="CDD Screening" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{1cfe8af1-5991-43bc-9e96-88f40dcf1223}">
+      <label languagecode="1033" description="Party On OGS" />
+    </steplabels>
+    <steplabels id="{bcda2e4d-1ff3-439b-a211-aeb3f6c8b8aa}">
+      <label languagecode="1033" description="Party On OGS ?" />
+    </steplabels>
+    <steplabels id="{111bfb41-a424-4358-b8f6-61f8fd00ecd8}">
+      <label languagecode="1033" description="Party On VP" />
+    </steplabels>
+    <steplabels id="{7eaabeac-caee-4edf-a037-049ca4f875ed}">
+      <label languagecode="1033" description="Party On VP ?" />
+    </steplabels>
+    <steplabels id="{f081f995-344f-46b9-877e-4a21ae26f2ce}">
+      <label languagecode="1033" description="Create Masterfile On VP" />
+    </steplabels>
+    <steplabels id="{8479d312-42b1-457b-87db-8bd95439a654}">
+      <label languagecode="1033" description="Created ?" />
+    </steplabels>
+    <steplabels id="{67297252-702c-4a18-b523-ac9e00c07284}">
+      <label languagecode="1033" description="Create Transaction Party On OGS And Perform Screening On World Check" />
+    </steplabels>
+    <steplabels id="{b521f3d0-74af-4f21-838d-d6a25a3dac53}">
+      <label languagecode="1033" description="Created ?" />
+    </steplabels>
+    <steplabels id="{37a0f35f-7cfc-47d7-9b81-2e0c435b34ed}">
+      <label languagecode="1033" description="Perform Web Check" />
+    </steplabels>
+    <steplabels id="{66bba364-3137-41f1-93f9-e5b24b256588}">
+      <label languagecode="1033" description="Web check document" />
+    </steplabels>
+    <steplabels id="{ffafd783-0e3f-4969-95c7-b2832f007ede}">
+      <label languagecode="1033" description="Adverse Hits ?" />
+    </steplabels>
+    <steplabels id="{7982bf19-ff33-4d79-9707-00ff65ec644a}">
+      <label languagecode="1033" description="Assess Genuineness Of The World Check Hits" />
+    </steplabels>
+    <steplabels id="{ff35af03-4f55-4ecf-bb37-d5bca9e79ed1}">
+      <label languagecode="1033" description="True Match ?" />
+    </steplabels>
+    <steplabels id="{4f954a17-55fc-4170-87b6-be15f6fa7350}">
+      <label languagecode="1033" description="Continue With Transaction Review" />
+    </steplabels>
+    <steplabels id="{341067c1-9c25-4161-bc29-e16cdea80126}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{8da809d0-a6da-4da1-a454-51223cd1121b}">
+      <label languagecode="1033" description="Initiate STR Process" />
+    </steplabels>
+    <steplabels id="{9955d1fb-9a15-45cd-ad13-737ed07198aa}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{4db0de07-13c6-4f40-ab26-13a2d7376e55}">
+      <label languagecode="1033" description="PEP Screening Process" />
+    </steplabels>
+    <steplabels id="{f2eef019-7a4f-4286-8b84-c5beb844ddc3}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{3e0ec563-b0b6-421e-a73e-5a6d4839d40e}">
+      <label languagecode="1033" description="EDD Process" />
+    </steplabels>
+    <steplabels id="{7e00e8eb-afac-4a03-864e-2a1b0495c273}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{d2148a9c-1c4c-44e5-a1a6-966f987f5592}">
+      <label languagecode="1033" description="Continue With Transaction Review" />
+    </steplabels>
+    <steplabels id="{5dd4b1b2-94ea-4233-926f-090c2bac0728}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{ffe04f69-febd-4339-aa62-2b402f04bed1}">
+      <label languagecode="1033" description="Ongoing Screening" />
+    </steplabels>
+    <steplabels id="{0fa3f34f-ef71-4b15-8f4d-f1ec3ff5741e}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+  </labels>
+</Workflow>

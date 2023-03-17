@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{dc605514-d860-ed11-9562-0022482a40f8}" Name="STR Process" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/STRProcess-DC605514-D860-ED11-9562-0022482A40F8.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>ind_strprocess</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>ind_ind_Operation</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="STR Process" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{61fe73fc-ef74-4b06-9515-b02d20389365}">
+      <label languagecode="1033" description="Prepare Unusual Transaction Report " />
+    </steplabels>
+    <steplabels id="{5d41c74a-9b10-41ea-8988-6b6b027c5c0a}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion TR)" />
+    </steplabels>
+    <steplabels id="{3565190a-2ec4-47b1-a064-95e7a86f35c8}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{41850d4f-350a-424b-b0f8-28b66fa92804}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion EDD)" />
+    </steplabels>
+    <steplabels id="{d54bd85f-6c08-4eda-a86e-599a580a72cb}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{4589cd77-3f7c-4bc9-9210-eaf6c847b1c9}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion CDDI)" />
+    </steplabels>
+    <steplabels id="{7e50af67-47d2-4ea3-810e-ead6ed98f8ed}">
+      <label languagecode="1033" description="STR (illegal banned activity)" />
+    </steplabels>
+    <steplabels id="{d4014ac2-fc41-441f-9b72-ba81045e5339}">
+      <label languagecode="1033" description="Unusual transaction report" />
+    </steplabels>
+    <steplabels id="{b22af40c-0ea9-4bf7-8857-87a799cfe363}">
+      <label languagecode="1033" description="Update Internal Report Log" />
+    </steplabels>
+    <steplabels id="{53436cb3-c489-4d8e-b7e6-95a788bc00cf}">
+      <label languagecode="1033" description="Internal Report Log" />
+    </steplabels>
+    <steplabels id="{7d7146a5-420b-4f54-b844-cd5d8a6894c8}">
+      <label languagecode="1033" description="Performs Transaction And Behaviour Analysis" />
+    </steplabels>
+    <steplabels id="{5faf3864-7aed-49d4-acc2-dd46f12f0bb9}">
+      <label languagecode="1033" description="Satisfactory ?" />
+    </steplabels>
+    <steplabels id="{877ad773-c2b7-4792-8bc4-5bd300af20ff}">
+      <label languagecode="1033" description="Perform Screening And Due Diligence" />
+    </steplabels>
+    <steplabels id="{b06d275f-eb90-43c1-9adb-58069c448b09}">
+      <label languagecode="1033" description="World Check File" />
+    </steplabels>
+    <steplabels id="{45c7b59d-fc87-40e5-9479-6e47f9348f31}">
+      <label languagecode="1033" description="Satisfactory ?" />
+    </steplabels>
+    <steplabels id="{a6e20d6b-5662-4d6c-99d4-d9822fee84cc}">
+      <label languagecode="1033" description="Conclusion Of Investigation Report" />
+    </steplabels>
+    <steplabels id="{f157d659-0b4b-4586-8e20-9eb893eac02e}">
+      <label languagecode="1033" description="Conclusion of Investigation Report" />
+    </steplabels>
+    <steplabels id="{13a03fd3-1bde-42ed-9491-9f0125e5c0e2}">
+      <label languagecode="1033" description="Update Internal Report Log" />
+    </steplabels>
+    <steplabels id="{92aa08cb-2d09-4f75-8356-25c8b29e9862}">
+      <label languagecode="1033" description="Internal Report Log" />
+    </steplabels>
+    <steplabels id="{654d4eae-3f86-49cc-a45d-59881420bde5}">
+      <label languagecode="1033" description="Proceed With Transaction Monitoring Process" />
+    </steplabels>
+    <steplabels id="{11e9df8e-64a6-463c-8c52-9835d9f3c3d6}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{4800fe1a-df7b-4659-99da-22e0276ba9c8}">
+      <label languagecode="1033" description="File STR With FIU" />
+    </steplabels>
+    <steplabels id="{f6c8481a-f643-4a3c-8453-1dd9a3ad10d1}">
+      <label languagecode="1033" description="STR Report" />
+    </steplabels>
+    <steplabels id="{b6c66e12-30b5-4819-8fbb-17080833c4cf}">
+      <label languagecode="1033" description="Updates External Report Log" />
+    </steplabels>
+    <steplabels id="{47d7a8bd-9b4e-4e9c-819f-427d26ea2545}">
+      <label languagecode="1033" description="External Report Log" />
+    </steplabels>
+    <steplabels id="{3d38205b-0d14-439b-8513-962e2ec61ff1}">
+      <label languagecode="1033" description="Request Aborted" />
+    </steplabels>
+    <steplabels id="{fa53e5f2-7360-4961-9e41-3c65151454f9}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{d29327ec-a074-47b1-b9c8-893dd4d91351}">
+      <label languagecode="1033" description="File STR With FIU" />
+    </steplabels>
+    <steplabels id="{c771484d-008d-400f-aafb-d89ee9f40f94}">
+      <label languagecode="1033" description="STR Report" />
+    </steplabels>
+    <steplabels id="{08c8fd92-3189-43f9-a1bc-7ebf48ac641b}">
+      <label languagecode="1033" description="Updates External Report Log" />
+    </steplabels>
+    <steplabels id="{f388d5ab-84bd-478c-8c77-9edd1a4f329e}">
+      <label languagecode="1033" description="External Report Log" />
+    </steplabels>
+    <steplabels id="{4304218c-5d4a-4c1a-afe1-86467433cf67}">
+      <label languagecode="1033" description="Request Aborted" />
+    </steplabels>
+    <steplabels id="{70c853a5-cfc2-42bd-a7aa-927e9ab6e9a2}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+  </labels>
+</Workflow>

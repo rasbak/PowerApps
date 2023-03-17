@@ -1,0 +1,354 @@
+function TheUltimateReturnStage(){
+	var idProcess = Xrm.Page.data.process.getActiveProcess().getId();
+	var status = Xrm.Page.data.process.getStatus(); //remove handler on finished
+	//TR
+	if (idProcess == 'e8a74313-985f-ed11-9562-0022482a40f8'){
+		Xrm.Page.data.process.addOnStageChange(ReturnToStage);
+	}
+	//EDD
+	if (idProcess == '1348a6ad-7862-ed11-9562-0022482a40f8'){
+		Xrm.Page.data.process.addOnStageChange(ReturnToStage3);
+	}
+	//CIBP
+	if (idProcess == '045363fa-e363-ed11-9562-0022482a40f8'){
+		Xrm.Page.data.process.addOnStageChange(ReturnToStage7);
+	}
+	//CDDI
+	if (idProcess == '170fcbdf-9f61-ed11-9562-0022482a4894'){
+		Xrm.Page.data.process.addOnStageChange(ReturnToStage5);
+	}
+	//TRep
+	if (idProcess == '711fef8d-0161-ed11-9562-0022482a40f8'){
+		Xrm.Page.data.process.setStatus("active");
+		Xrm.Page.data.process.addOnStageChange(ReturnToStage4);
+	}
+	//Rev
+	if (idProcess == '087abff4-6860-ed11-9562-0022482a40f8'){
+		Xrm.Page.data.process.addOnStageChange(ReturnToStage6);
+	}
+	//Outward2
+	if (idProcess == 'b2268c54-8770-ed11-9562-0022482a40f8'){
+		Xrm.Page.data.process.addOnStageChange(ReturnToStage8);
+	}
+	debugger;
+	//TM
+	if (idProcess == 'e11049ed-4354-ed11-bba3-0022482a4894'){
+		Xrm.Page.data.process.addOnStageChange(ReturnToStage2);
+	}
+	if (status == "finished") {
+		Xrm.Page.data.process.removeOnStageChange(ReturnToStage2);
+		Xrm.Page.data.process.removeOnStageChange(ReturnToStage);
+		Xrm.Page.data.process.removeOnStageChange(ReturnToStage3);
+		Xrm.Page.data.process.removeOnStageChange(ReturnToStage4);
+		Xrm.Page.data.process.removeOnStageChange(ReturnToStage5);
+		Xrm.Page.data.process.removeOnStageChange(ReturnToStage6);
+		Xrm.Page.data.process.removeOnStageChange(ReturnToStage7);
+		Xrm.Page.data.process.removeOnStageChange(ReturnToStage8);
+	}
+	
+	
+}
+
+
+function ReturnToStage2(executionContext){
+	//setTimeout(() => {
+		debugger;
+		var formContext = executionContext.getFormContext();
+		var idStage = Xrm.Page.data.process.getActiveStage().getId();
+		var basicdoccontinue = Xrm.Page.getAttribute("ind_basicdocscontinue").getValue();
+		var basicdocorder = Xrm.Page.getAttribute("ind_basicdocsinorder").getValue();
+		if (Xrm.Page.getAttribute("ind_activitytype").getValue() != null)
+		var activitytype = Xrm.Page.getAttribute("ind_activitytype").getValue();
+		if (Xrm.Page.getAttribute("ind_corporateaction").getValue()!=null)
+		var ca = Xrm.Page.getAttribute("ind_corporateaction").getValue()[0].id.substring(1,37).toLowerCase();
+		var fundAccount = Xrm.Page.getAttribute("ind_fundaccount").getValue();
+		
+		
+		debugger;
+		if (basicdocorder==1){
+			basicdoccontinue = 1;
+		}
+		if (idStage == "bfebc484-b353-46bc-ac6f-fdc8dcad574d" && basicdoccontinue==0)
+		{
+			//trad
+			if( activitytype==100000001){
+				formContext.data.process.setActiveStage('7acd31a4-1d7f-4fca-8e33-5a975aa1344e');
+				return;
+			}
+			//inv hl
+			if( activitytype==100000000){
+				formContext.data.process.setActiveStage('1e523d31-a9e9-4ef0-8eda-39e67828321a');
+				return;
+			}
+			//consul
+			if( activitytype==100000002){
+				formContext.data.process.setActiveStage('d0a870e4-a09f-4f36-8a58-b6e17681aa18');
+				return;
+			}
+			if( activitytype==752410003){
+				formContext.data.process.setActiveStage('a3047965-573f-4db4-9578-92ab7819b429');
+				return;
+			}
+			if( activitytype==752410004){
+				formContext.data.process.setActiveStage('809b0601-88c4-494b-aaa8-8e8dd4bda652');
+				return;
+			}
+			if( ca=='f044bfaa-4e54-ed11-bba3-0022482a40f8'){
+				formContext.data.process.setActiveStage('f28b8a0a-5a8b-4e12-af8d-43249d43645d');
+				return;
+			}
+			if( ca=='e3a7ca54-1355-ed11-bba3-0022482a4894'){
+				formContext.data.process.setActiveStage('97cd0de5-e780-4082-baea-fce2465fff6d');
+				return;
+			}
+			if( ca=='f9aa6658-1355-ed11-bba3-0022482a40f8'){
+				formContext.data.process.setActiveStage('7238f13f-4cdf-421a-91b8-cda8103ab4b5');
+				return;
+			}
+			if( ca=='449f885c-1355-ed11-bba3-0022482a4894'){
+				formContext.data.process.setActiveStage('fefe5cba-f277-49c1-9e9d-b1c10728be7a');
+				return;
+			}
+			if( ca=='3e15ee5e-1355-ed11-bba3-0022482a40f8'){
+				formContext.data.process.setActiveStage('fb77f598-302f-4d61-92ff-c6c0f76ab5a5');
+				return;
+			}
+		}
+		
+		if (idStage == "8bea2f77-9824-4015-add7-2c652e798dfe" && (fundAccount == 100000003 || fundAccount ==100000001) )
+		{
+			formContext.data.process.setActiveStage('8ab8ea05-cf0e-48bd-a248-2650f11bdbc8');
+				return;
+		}
+		
+		//Check Balance
+			if (idStage == "2e7e9b46-155f-4f82-8690-22f6a8f78939")
+		{
+			//availability of funds
+			formContext.data.process.setActiveStage('8ab8ea05-cf0e-48bd-a248-2650f11bdbc8');
+			return;
+		}
+		
+	//}, "200");
+}
+
+function ReturnToStage(executionContext){
+	//setTimeout(() => {
+		
+		var formContext = executionContext.getFormContext();
+		var idStage = Xrm.Page.data.process.getActiveStage().getId();
+		var Successful = Xrm.Page.getAttribute("ind_successfultr").getValue();
+		
+		
+		debugger;
+		
+		if (idStage == "36c82a8d-ca98-4e05-b292-c6ae37cff8b1" && Successful==1)
+		{
+			//assess doc at hand
+			formContext.data.process.setActiveStage('b9920e35-28ca-4220-ac65-8f998c7712cd');
+				Xrm.Page.getAttribute("ind_successfultr").setValue(null);
+				
+				Xrm.Page.getAttribute("ind_adequate").setValue(null);
+			/*	var paymentID = Xrm.Page.data.entity.getId();
+					const response = new XMLHttpRequest();
+					const json = JSON.stringify({
+									Id: paymentID
+								});
+
+					response.open("POST", 'https://prod-114.westeurope.logic.azure.com/workflows/010a5966103e4ac7a6085545a619a890/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=uWnc-S_8XW-JU8LtM0aknoxhY0dj8ja7EWAx4xP1uAQ')
+					response.setRequestHeader('Content-Type', 'application/json');
+					response.send(json);*/
+				
+			return;
+		}
+		
+		if (idStage == "36c82a8d-ca98-4e05-b292-c6ae37cff8b1" && Successful==0)
+		{
+			//Request for doc
+			formContext.data.process.setActiveStage('9a259ec2-c93e-4497-9c17-067f0d61b380');
+				
+					
+					Xrm.Page.getAttribute("ind_adequate").setValue(null);
+					Xrm.Page.getAttribute("ind_successfultr").setValue(null);
+				
+			return;
+		}
+
+	//}, "500");
+}
+
+function ReturnToStage3(executionContext){
+
+		
+		var formContext = executionContext.getFormContext();
+		var idStage = Xrm.Page.data.process.getActiveStage().getId();
+		
+		
+		
+		debugger;
+		
+		if (idStage == "a5dc2a6c-a88d-4709-a4d2-66b4f74d92c6" || idStage == "e26e3f83-0f31-46f1-aeba-eeadb65de6fa" || idStage == "f5f74579-9688-40a6-afef-10c9917c43c7")
+		{
+			//edd doc validation
+			formContext.data.process.setActiveStage('5143b691-2b60-4d79-8822-9d460816c594');
+				Xrm.Page.getAttribute("ind_sufficientedd").setValue(null);
+	
+			return;
+		}
+
+}
+
+function ReturnToStage4(executionContext){
+	
+		
+		var formContext = executionContext.getFormContext();
+		var idStage = Xrm.Page.data.process.getActiveStage().getId();
+		
+		
+		
+		debugger;
+		//circulate approval
+		if (idStage == "cf31a4d2-c601-4e48-a604-12c6544edf65" )
+		{
+			//trep
+			formContext.data.process.setActiveStage('5411b474-6471-42e6-9791-c51b3d3c71d4');
+				//Xrm.Page.getAttribute("").setValue(null);
+	
+			return;
+		}
+
+}
+function ReturnToStage6(executionContext){
+	
+		
+		var formContext = executionContext.getFormContext();
+		var idStage = Xrm.Page.data.process.getActiveStage().getId();
+		
+		
+		
+		debugger;
+		
+		if (idStage == "2ff84777-74b1-4d3e-9e03-122adddd4e15" )
+		{
+			//trep
+			formContext.data.process.setActiveStage('80c56baa-67f9-4f3d-a5f3-955b937eba25');
+				//Xrm.Page.getAttribute("").setValue(null);
+			return;
+		}
+
+}
+function ReturnToStage7(executionContext){
+	
+		
+		var formContext = executionContext.getFormContext();
+		var idStage = Xrm.Page.data.process.getActiveStage().getId();
+		
+		
+		
+		debugger;
+		//review doc
+		if (idStage == "8337d718-25bb-4f86-8c67-34d040e928f8" )
+		{
+			//review documenation
+			formContext.data.process.setActiveStage('c6cc371d-997c-4247-8f80-cb87a7fa2a0e');
+			
+			return;
+		}
+
+}
+
+function ReturnToStage8(executionContext){
+	
+		
+		var formContext = executionContext.getFormContext();
+		var idStage = Xrm.Page.data.process.getActiveStage().getId();
+		
+		
+		
+		debugger;
+		//Verif
+		if (idStage == "c5e2daa1-c6de-481a-b071-2fb029b65c83" ||  idStage == "889d23e3-4116-4c05-85c6-51d330d85767" ||  idStage == "108a339d-7803-46d1-b942-8690f741453e" ||  
+			idStage == "6426ef5c-dc3e-4f22-bb82-b34c27e2f163" ||  idStage == "6426ef5c-dc3e-4f22-bb82-b34c27e2f163"  )
+		{
+			//verif
+			formContext.data.process.setActiveStage('d4bd34e6-7931-4463-bb9e-fb50fcf768bf');
+				formContext.getControl("header_process_ind_regeneratebankdoc").setDisabled(false);
+				formContext.getControl("header_process_ind_regeneratebankdoc").getAttribute().setValue(false);
+				
+			
+			return;
+		}
+}
+
+ function ReturnToStage5(executionContext){
+	
+		
+		var formContext = executionContext.getFormContext();
+		var idStage = Xrm.Page.data.process.getActiveStage().getId();
+		//var Successful = Xrm.Page.getAttribute("ind_successfulcddi");
+		
+		
+		debugger;
+		//adequate
+		if (idStage == "eb0ccd93-3eb4-4471-b910-b744cdf05e23")
+		{
+			//Assess
+			formContext.data.process.setActiveStage('e1df7569-22ff-48d4-874f-57c15fbd87f1');
+			return;
+		}
+		
+		if (idStage == "a2c31bdf-ee99-4634-8197-37a3b4b1c69d"){
+			//Assess
+			formContext.data.process.setActiveStage('e1df7569-22ff-48d4-874f-57c15fbd87f1');
+			return;
+		}
+		//assess doc 4
+		if (idStage == "78a9afa9-4f08-40e0-bf51-7db346273ce1"){
+				Xrm.Page.getAttribute("ind_customeridentified").setValue(true);
+				Xrm.Page.getAttribute("ind_adequatecddi").setValue(false);
+				formContext.data.entity.save();
+				setTimeout(() => {
+			     //Assess
+			     Xrm.Page.data.process.movePrevious(function (result)
+					 {
+							Xrm.Page.data.process.movePrevious(function (result)
+
+									{
+												Xrm.Page.data.process.movePrevious(function (result)
+
+													{
+																	Xrm.Page.data.process.moveNext(); 
+													});
+									});
+					
+					 }
+					);
+				
+				}, "1500");
+			return;
+		}
+		//assess doc 3
+		if (idStage == "405d7887-7961-4e85-b18e-196033f6471f")
+		{
+			//formContext.getAttribute("ind_identificationonfile").fireOnChange();
+						 Xrm.Page.getAttribute("ind_customeridentified").setValue(true);
+						 formContext.data.entity.save();
+						 setTimeout(() => {
+			//Assess
+			     Xrm.Page.data.process.movePrevious(function (result)
+					 {
+							Xrm.Page.data.process.movePrevious(function (result)
+
+									{
+	  
+													Xrm.Page.data.process.moveNext(); 
+									});
+					
+					 }
+				);
+				
+					 }, "1500");
+			return;
+		}
+
+}

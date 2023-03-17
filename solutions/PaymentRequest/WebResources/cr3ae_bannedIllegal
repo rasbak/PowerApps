@@ -1,0 +1,16 @@
+function bannedIllegalVisibility(executionContext){
+	
+		var formContext = executionContext.getFormContext();	
+		var bannedAct = formContext.getControl("header_process_ind_bannedactivitylookup").getAttribute().getValue();
+		
+		if(bannedAct!=undefined){
+			if(bannedAct[0].name=="None"){
+				formContext.getControl("header_process_ind_illegalbannedactivity").setVisible(false);
+			}else{
+				formContext.getControl("header_process_ind_illegalbannedactivity").setVisible(true);
+			}
+		}
+		else{
+			formContext.getControl("header_process_ind_illegalbannedactivity").setVisible(false);
+		}
+}

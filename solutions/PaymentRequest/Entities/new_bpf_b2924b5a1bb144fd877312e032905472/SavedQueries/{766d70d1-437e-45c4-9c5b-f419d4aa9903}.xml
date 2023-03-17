@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{766d70d1-437e-45c4-9c5b-f419d4aa9903}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="bpf_name" select="1" icon="1" preview="1">
+        <row name="result" id="businessprocessflowinstanceid">
+          <cell name="bpf_ind_ind_operationid" width="146" />
+          <cell name="activestageid" width="150" />
+          <cell name="processid" width="74" />
+          <cell name="ind_transactionduratoin" width="100" />
+          <cell name="ind_securitychecksduration" width="100" />
+          <cell name="ind_corporateactionduration" width="100" />
+          <cell name="ind_occasionalstandardcdddividendpaymentduration" width="100" />
+          <cell name="ind_investmentholdingstandardcddduration" width="100" />
+          <cell name="ind_standardcddbeneficaryduration" width="100" />
+          <cell name="ind_standardcddforfeitureofsharesduration" width="100" />
+          <cell name="ind_standardcddissueofsharesduration" width="100" />
+          <cell name="ind_standardcddloantoshareholderduration" width="100" />
+          <cell name="ind_standardcddredemptionofsharesduration" width="100" />
+          <cell name="ind_standardcddtransactionssubstanceduration" width="100" />
+          <cell name="ind_tradingstandardcddduration" width="100" />
+          <cell name="ind_consultancystandardcddduration" width="100" />
+          <cell name="ind_continuewithtransactionduration" width="100" />
+          <cell name="ind_assessdeviationduration" width="100" />
+          <cell name="ind_proceedwithcddscreeningduration" width="100" />
+          <cell name="ind_proceedwithassesdeviationduration" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="new_bpf_b2924b5a1bb144fd877312e032905472">
+          <attribute name="businessprocessflowinstanceid" />
+          <attribute name="bpf_name" />
+          <attribute name="bpf_ind_ind_operationid" />
+          <attribute name="activestageid" />
+          <attribute name="statecode" />
+          <attribute name="createdby" />
+          <attribute name="processid" />
+          <order attribute="bpf_name" descending="false" />
+          <attribute name="ind_transactionduratoin" />
+          <attribute name="ind_securitychecksduration" />
+          <attribute name="ind_corporateactionduration" />
+          <attribute name="ind_occasionalstandardcdddividendpaymentduration" />
+          <attribute name="ind_investmentholdingstandardcddduration" />
+          <attribute name="ind_standardcddbeneficaryduration" />
+          <attribute name="ind_standardcddforfeitureofsharesduration" />
+          <attribute name="ind_standardcddissueofsharesduration" />
+          <attribute name="ind_standardcddloantoshareholderduration" />
+          <attribute name="ind_standardcddredemptionofsharesduration" />
+          <attribute name="ind_standardcddtransactionssubstanceduration" />
+          <attribute name="ind_tradingstandardcddduration" />
+          <attribute name="ind_consultancystandardcddduration" />
+          <attribute name="ind_continuewithtransactionduration" />
+          <attribute name="ind_assessdeviationduration" />
+          <attribute name="ind_proceedwithcddscreeningduration" />
+          <attribute name="ind_proceedwithassesdeviationduration" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Inward" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

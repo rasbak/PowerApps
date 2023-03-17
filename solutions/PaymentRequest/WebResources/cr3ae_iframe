@@ -1,0 +1,5 @@
+function testOnReadySateComplete(executionContext){
+	debugger;
+	console.log(executionContext);
+
+}

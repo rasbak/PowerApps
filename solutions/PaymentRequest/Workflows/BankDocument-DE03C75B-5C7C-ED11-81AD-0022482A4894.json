@@ -1,0 +1,761 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "ind_sharedcommondataserviceforapps_64f74"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_wordonlinebusiness_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "ind_sharedwordonlinebusiness_a6ce5"
+        },
+        "api": {
+          "name": "shared_wordonlinebusiness"
+        }
+      },
+      "shared_adobepdftools_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "ind_sharedadobepdftools_3ec2c"
+        },
+        "api": {
+          "name": "shared_adobepdftools"
+        }
+      },
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "ind_sharedcommondataserviceforapps_64f74"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "396cbae9-799e-4e6c-8a00-4b1753351c8e"
+          },
+          "type": "Request",
+          "kind": "Http",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "actions": {
+        "Initialize_variable": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "f017ce10-136a-4f38-8d66-de7b8c3d2e73"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "id",
+                "type": "string",
+                "value": "@{substring(triggerBody()?['id'], 1, 36)}"
+              }
+            ]
+          }
+        },
+        "Get_a_row_by_ID": {
+          "runAfter": {
+            "Initialize_variable_2": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e3ee8dd7-5389-4a72-88d1-99884fb3a194"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ind_ind_operations",
+              "recordId": "@variables('id')"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_customer_account": {
+          "runAfter": {
+            "Get_a_row_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "34ffcdbd-f97b-49ef-b1a8-1590ba5a6f49"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ind_ind_accounts",
+              "recordId": "@outputs('Get_a_row_by_ID')?['body/_ind_customeraccount_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_Party": {
+          "runAfter": {
+            "Get_a_row_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "55bd4ca9-019b-447c-a037-bb3cb6b7b99f"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ind_parties",
+              "recordId": "@outputs('Get_a_row_by_ID')?['body/_ind_partyname_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_Party_account": {
+          "runAfter": {
+            "Get_a_row_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c42efa48-5688-4eb2-bf4c-b0d4e350c5c4"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ind_ind_partyaccounts",
+              "recordId": "@outputs('Get_a_row_by_ID')?['body/_ind_partyaccount_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_custome": {
+          "runAfter": {
+            "Get_a_row_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "25628c1b-dac6-4dad-a751-01995c1f8454"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ind_customers",
+              "recordId": "@outputs('Get_a_row_by_ID')?['body/_ind_customername_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Condition": {
+          "actions": {
+            "Populate_a_Microsoft_Word_template": {
+              "runAfter": {},
+              "metadata": {
+                "01SOHJIZGPLFHYUAEEIJDZ5BHN6AVF4TBP": "/WorldCheck PFD Template.docx",
+                "operationMetadataId": "62b25852-0953-4de5-aa48-d1560c90b04b",
+                "01SOHJIZAOYO7CLHWWT5BZO3MS5XDZGZDY": "/ABSA Outward Remittance Template.docx",
+                "01SOHJIZHVUB46ELRRO5AJZ35KFJPVHKF5": "/ABSA Outward Remittance Template.docx",
+                "01SOHJIZALYG63ESVFYRHJW34VGPA7BVKK": "/ABSA Outward Remittance Template.docx",
+                "01SOHJIZCSBJIMLU6LCZGKKLWNI2GTSYRH": "/ABSA Outward Remittance Template.docx",
+                "01SOHJIZEX3WM4GDYIHBAKDLP4MRCNSGNH": "/ABSA Outward Remittance Template.docx",
+                "01SOHJIZGWIM6XMKLNFBEYHELXCC2CNRKG": "/ABSA Outward Remittance Template.docx",
+                "013VJZDJSFWNXSYHCK3RHL2FDST3PVALMS": "/ABSA Outward Remittance Template (3).docx",
+                "013VJZDJWLGURGPX35ZJCIWDN6KWSYUV4T": "/ABSA Outward Remittance Template (3).docx",
+                "01CVPBTG3HRZ5SLZ2BIVAZJ4RVCSRK6OK7": "/ABSA Outward Remittance Template (3).docx"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_wordonlinebusiness_1",
+                  "operationId": "CreateFileItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                },
+                "parameters": {
+                  "source": "me",
+                  "drive": "b!hz41ECynQk2hlEbDvBQcvfBuv1l-6e1BkX1-Z2l8F1EGjAKULWe6Ra4DZnhlZdiD",
+                  "file": "01CVPBTG3HRZ5SLZ2BIVAZJ4RVCSRK6OK7",
+                  "dynamicFileSchema/372589149": "@substring(outputs('Get_a_row_by_ID')?['body/createdon'],3,1)",
+                  "dynamicFileSchema/463389930": "@substring(outputs('Get_a_row_by_ID')?['body/createdon'],9,1)",
+                  "dynamicFileSchema/484895566": "@outputs('Get_a_row_by_ID')?['body/ind_amountinwords']",
+                  "dynamicFileSchema/488988388": "@outputs('Get_Party')?['body/ind_address']",
+                  "dynamicFileSchema/516896605": "@Outputs('Get_customer_account')?['body/_ind_accountcurrency_value@OData.Community.Display.V1.FormattedValue']",
+                  "dynamicFileSchema/552973263": "@substring(outputs('Get_a_row_by_ID')?['body/createdon'],6,1)",
+                  "dynamicFileSchema/609937746": "N/A",
+                  "dynamicFileSchema/657204234": "@outputs('Get_Party_account')?['body/ind_accountnumber']",
+                  "dynamicFileSchema/1001848227": "N/A",
+                  "dynamicFileSchema/1419209368": "N/A",
+                  "dynamicFileSchema/1496389099": "@outputs('Get_customer_account')?['body/ind_accountnumber']",
+                  "dynamicFileSchema/1529450774": "@outputs('Get_a_row_by_ID')?['body/ind_transactionamount@OData.Community.Display.V1.FormattedValue']",
+                  "dynamicFileSchema/1598134965": "@outputs('Get_Party_account')?['body/ind_accountnumber']",
+                  "dynamicFileSchema/1641307926": "@substring(outputs('Get_a_row_by_ID')?['body/createdon'],0,1)",
+                  "dynamicFileSchema/1695497264": "@outputs('Get_custome')?['body/ind_address']",
+                  "dynamicFileSchema/1732811732": "@outputs('Get_a_row_by_ID')?['body/ind_rate']",
+                  "dynamicFileSchema/2075854988": "@outputs('Get_Party_account')?['body/ind_branchbank']",
+                  "dynamicFileSchema/2094580855": "@substring(outputs('Get_a_row_by_ID')?['body/createdon'],8,1)",
+                  "dynamicFileSchema/-708804660": "N/A",
+                  "dynamicFileSchema/-367075221": "@substring(outputs('Get_a_row_by_ID')?['body/createdon'],5,1)",
+                  "dynamicFileSchema/-1671403865": "@substring(outputs('Get_a_row_by_ID')?['body/createdon'],1,1)",
+                  "dynamicFileSchema/-1297297592": "@substring(outputs('Get_a_row_by_ID')?['body/createdon'],2,1)",
+                  "dynamicFileSchema/-456343017": "@outputs('Get_custome')?['body/ind_name']",
+                  "dynamicFileSchema/-118605793": "@outputs('Get_custome')?['body/ind_contactnumber']",
+                  "dynamicFileSchema/-1585826354": "@Outputs('Get_a_row_by_ID')?['body/_transactioncurrencyid_value@OData.Community.Display.V1.FormattedValue']",
+                  "dynamicFileSchema/-1068487678": "@outputs('Get_a_row_by_ID')?['body/_ind_currency_value']",
+                  "dynamicFileSchema/-1556232657": "N/A",
+                  "dynamicFileSchema/-1806686589": "N/A",
+                  "dynamicFileSchema/-71972093": "N/A",
+                  "dynamicFileSchema/-1961404713": "@outputs('Get_Party')?['body/ind_name']",
+                  "dynamicFileSchema/-554079882": "@Outputs('Get_a_row_by_ID')?['body/_ind_activity_value@OData.Community.Display.V1.FormattedValue']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Convert_Word_to_PDF": {
+              "runAfter": {
+                "Populate_a_Microsoft_Word_template": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "f37bb6c5-9dd0-4839-a201-8a4f83745200"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_adobepdftools_1",
+                  "operationId": "CreatePDFFromWord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_adobepdftools"
+                },
+                "parameters": {
+                  "inputFileName": "ABSA Outward Remittance Template.docx",
+                  "InputFile0/body": "@body('Populate_a_Microsoft_Word_template')",
+                  "outputFileName": "ABSA Outward Remittance Template"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Upload_a_file_or_an_image": {
+              "runAfter": {
+                "Convert_Word_to_PDF": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "7f8e56cf-ed84-495d-845f-dec09dfa810c"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_1",
+                  "operationId": "UpdateEntityFileImageFieldContent",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "ind_ind_operations",
+                  "recordId": "@variables('id')",
+                  "fileImageFieldName": "ind_bandocument",
+                  "item": "@outputs('Convert_Word_to_PDF')?['body/fileContent']",
+                  "x-ms-file-name": "@{outputs('Get_a_row_by_ID')?['body/ind_name']}-ABSA Outward Remittance.pdf"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_Party_account": [
+              "Succeeded"
+            ],
+            "Get_custome": [
+              "Succeeded"
+            ],
+            "Get_Bank": [
+              "Succeeded"
+            ],
+            "Apply_to_each": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Condition_2": {
+                "actions": {
+                  "Upload_a_file_or_an_image_2": {
+                    "runAfter": {
+                      "Convert_Word_to_PDF_2": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "7f8e56cf-ed84-495d-845f-dec09dfa810c"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_commondataserviceforapps_1",
+                        "operationId": "UpdateEntityFileImageFieldContent",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                      },
+                      "parameters": {
+                        "entityName": "ind_ind_operations",
+                        "recordId": "@variables('id')",
+                        "fileImageFieldName": "ind_bandocument",
+                        "item": "@outputs('Convert_Word_to_PDF_2')?['body/fileContent']",
+                        "x-ms-file-name": "@{outputs('Get_a_row_by_ID')?['body/ind_name']}-AFRASIA.pdf"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  },
+                  "Populate_a_Microsoft_Word_template_2": {
+                    "runAfter": {},
+                    "metadata": {
+                      "013VJZDJXU2G74DEHQ2FCZ54NVL7VFGWUE": "/AfrAsia Outward Remittance Template.docx",
+                      "operationMetadataId": "554d5556-864b-43d6-9533-ced861c0b927",
+                      "013VJZDJWXLKRZHND6DNDJ7UGGBQ5RMWLR": "/AfrAsia Outward Remittance Template.docx",
+                      "01CVPBTGZRUXTK22JRNVHJOTRNVIJKRVGE": "/AfrAsia Outward Remittance Template.docx"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_wordonlinebusiness_1",
+                        "operationId": "CreateFileItem",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                      },
+                      "parameters": {
+                        "source": "me",
+                        "drive": "b!hz41ECynQk2hlEbDvBQcvfBuv1l-6e1BkX1-Z2l8F1EGjAKULWe6Ra4DZnhlZdiD",
+                        "file": "01CVPBTGZRUXTK22JRNVHJOTRNVIJKRVGE",
+                        "dynamicFileSchema/26071226": "@outputs('Get_custome')?['body/ind_name']",
+                        "dynamicFileSchema/132455950": "@outputs('Get_customer_account')?['body/ind_accountnumber']",
+                        "dynamicFileSchema/578479648": "@outputs('Get_Party')?['body/ind_name']",
+                        "dynamicFileSchema/1173677969": "@outputs('Get_Party')?['body/ind_address']",
+                        "dynamicFileSchema/1236977050": "N/A",
+                        "dynamicFileSchema/1357780084": "@outputs('Get_a_row_by_ID')?['body/ind_date']",
+                        "dynamicFileSchema/1427611372": "N/A",
+                        "dynamicFileSchema/1661037992": "N/A",
+                        "dynamicFileSchema/1690482182": "@outputs('Get_a_row_by_ID')?['body/createdon']",
+                        "dynamicFileSchema/-1270627754": "@outputs('Get_custome')?['body/ind_address']",
+                        "dynamicFileSchema/-1544055103": "@outputs('Get_Party_account')?['body/ind_accountnumber']",
+                        "dynamicFileSchema/-889649059": "@outputs('Get_Party_account')?['body/ind_iban']",
+                        "dynamicFileSchema/-580676501": "@outputs('Get_Party_account')?['body/ind_sortcode']",
+                        "dynamicFileSchema/-785974319": "@outputs('Get_a_row_by_ID')?['body/ind_mentionedpurposeoftransfer']",
+                        "dynamicFileSchema/-2065175181": "@outputs('Get_a_row_by_ID')?['body/ind_transactionamount']",
+                        "dynamicFileSchema/-1468113609": "@outputs('Get_a_row_by_ID')?['body/ind_amountinwords']"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  },
+                  "Convert_Word_to_PDF_2": {
+                    "runAfter": {
+                      "Populate_a_Microsoft_Word_template_2": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "f37bb6c5-9dd0-4839-a201-8a4f83745200"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_adobepdftools_1",
+                        "operationId": "CreatePDFFromWord",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_adobepdftools"
+                      },
+                      "parameters": {
+                        "inputFileName": "AFRASIA.docx",
+                        "InputFile0/body": "@body('Populate_a_Microsoft_Word_template_2')",
+                        "outputFileName": "@{outputs('Get_a_row_by_ID')?['body/ind_name']}-AFRASIA"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  }
+                },
+                "runAfter": {},
+                "else": {
+                  "actions": {
+                    "Condition_3": {
+                      "actions": {
+                        "Upload_a_file_or_an_image_3": {
+                          "runAfter": {
+                            "Convert_Word_to_PDF_3": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "7f8e56cf-ed84-495d-845f-dec09dfa810c"
+                          },
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "connectionName": "shared_commondataserviceforapps_1",
+                              "operationId": "UpdateEntityFileImageFieldContent",
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                            },
+                            "parameters": {
+                              "entityName": "ind_ind_operations",
+                              "recordId": "@variables('id')",
+                              "fileImageFieldName": "ind_bandocument",
+                              "item": "@outputs('Convert_Word_to_PDF_3')?['body/fileContent']",
+                              "x-ms-file-name": "@{outputs('Get_a_row_by_ID')?['body/ind_name']}-MCB Outward Remittance Template.pdf"
+                            },
+                            "authentication": "@parameters('$authentication')"
+                          }
+                        },
+                        "Populate_a_Microsoft_Word_template_3": {
+                          "runAfter": {},
+                          "metadata": {
+                            "013VJZDJWYYMA7LWOLHJFL5LX5B6POXNVL": "/MCB Outward Remittance Template.docx",
+                            "operationMetadataId": "c5bdeb42-bd8c-4589-b090-1123070de3e7",
+                            "013VJZDJUBDCEWFK3DUVH3FO3QEBNUFJGO": "/MCB Outward Remittance Template.docx",
+                            "01CVPBTG7DQFUE5XQJ2FDLUSU3Q7DOAUGI": "/MCB Outward Remittance Template.docx"
+                          },
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "connectionName": "shared_wordonlinebusiness_1",
+                              "operationId": "CreateFileItem",
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                            },
+                            "parameters": {
+                              "source": "me",
+                              "drive": "b!hz41ECynQk2hlEbDvBQcvfBuv1l-6e1BkX1-Z2l8F1EGjAKULWe6Ra4DZnhlZdiD",
+                              "file": "01CVPBTG7DQFUE5XQJ2FDLUSU3Q7DOAUGI",
+                              "dynamicFileSchema/123210930": "@outputs('Get_custome')?['body/ind_name']",
+                              "dynamicFileSchema/342833946": "@outputs('Get_a_row_by_ID')?['body/ind_amountinwords']",
+                              "dynamicFileSchema/400413670": "N/A",
+                              "dynamicFileSchema/1178549796": "@outputs('Get_Party')?['body/ind_address']",
+                              "dynamicFileSchema/1423455470": "@Outputs('Get_a_row_by_ID')?['body/_transactioncurrencyid_value@OData.Community.Display.V1.FormattedValue']",
+                              "dynamicFileSchema/-797148368": "@outputs('Get_Party_account')?['body/ind_accountnumber']",
+                              "dynamicFileSchema/-1647510342": "@outputs('Get_Party')?['body/ind_name']",
+                              "dynamicFileSchema/-188225193": "@outputs('Get_Party_account')?['body/ind_iban']",
+                              "dynamicFileSchema/-2038649982": "N/A",
+                              "dynamicFileSchema/-1893423788": "N/A",
+                              "dynamicFileSchema/-373615421": "@outputs('Get_a_row_by_ID')?['body/ind_transactionamount']"
+                            },
+                            "authentication": "@parameters('$authentication')"
+                          }
+                        },
+                        "Convert_Word_to_PDF_3": {
+                          "runAfter": {
+                            "Populate_a_Microsoft_Word_template_3": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "f37bb6c5-9dd0-4839-a201-8a4f83745200"
+                          },
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "connectionName": "shared_adobepdftools_1",
+                              "operationId": "CreatePDFFromWord",
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_adobepdftools"
+                            },
+                            "parameters": {
+                              "inputFileName": "MCB.docx",
+                              "InputFile0/body": "@body('Populate_a_Microsoft_Word_template_3')",
+                              "outputFileName": "@{outputs('Get_a_row_by_ID')?['body/ind_name']}-MCB"
+                            },
+                            "authentication": "@parameters('$authentication')"
+                          }
+                        }
+                      },
+                      "runAfter": {},
+                      "else": {
+                        "actions": {
+                          "Condition_4": {
+                            "actions": {
+                              "Upload_a_file_or_an_image_4": {
+                                "runAfter": {
+                                  "Convert_Word_to_PDF_4": [
+                                    "Succeeded"
+                                  ]
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "7f8e56cf-ed84-495d-845f-dec09dfa810c"
+                                },
+                                "type": "OpenApiConnection",
+                                "inputs": {
+                                  "host": {
+                                    "connectionName": "shared_commondataserviceforapps_1",
+                                    "operationId": "UpdateEntityFileImageFieldContent",
+                                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                                  },
+                                  "parameters": {
+                                    "entityName": "ind_ind_operations",
+                                    "recordId": "@variables('id')",
+                                    "fileImageFieldName": "ind_bandocument",
+                                    "item": "@outputs('Convert_Word_to_PDF_4')?['body/fileContent']",
+                                    "x-ms-file-name": "@{outputs('Get_a_row_by_ID')?['body/ind_name']}-BankOne.pdf"
+                                  },
+                                  "authentication": "@parameters('$authentication')"
+                                }
+                              },
+                              "Populate_a_Microsoft_Word_template_4": {
+                                "runAfter": {},
+                                "metadata": {
+                                  "013VJZDJXNPKXYSRBECNH3HCBHDHGZMLJ2": "/BankOne.docx",
+                                  "operationMetadataId": "ffa63f92-8615-487d-8260-e74dc36746c6",
+                                  "013VJZDJS4YQQ4BGA75JGKBWZXGDCWFZBW": "/BankOne.docx",
+                                  "013VJZDJQMQOD23AH3RNEYME3UE66V4OPU": "/BankOne.docx",
+                                  "01CVPBTG45WAOVKNEVBNHKMBS355T2WY7R": "/BankOne.docx"
+                                },
+                                "type": "OpenApiConnection",
+                                "inputs": {
+                                  "host": {
+                                    "connectionName": "shared_wordonlinebusiness_1",
+                                    "operationId": "CreateFileItem",
+                                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                                  },
+                                  "parameters": {
+                                    "source": "me",
+                                    "drive": "b!hz41ECynQk2hlEbDvBQcvfBuv1l-6e1BkX1-Z2l8F1EGjAKULWe6Ra4DZnhlZdiD",
+                                    "file": "01CVPBTG45WAOVKNEVBNHKMBS355T2WY7R",
+                                    "dynamicFileSchema/252253518": "@outputs('Get_customer_account')?['body/ind_accountnumber']",
+                                    "dynamicFileSchema/299812643": "@outputs('Get_Bank')?['body/ind_address']",
+                                    "dynamicFileSchema/321935339": "@variables('counry')",
+                                    "dynamicFileSchema/355010926": "@outputs('Get_Party')?['body/ind_address']",
+                                    "dynamicFileSchema/405275098": "@outputs('Get_Party')?['body/ind_name']",
+                                    "dynamicFileSchema/1463533695": "@outputs('Get_a_row_by_ID')?['body/ind_date']",
+                                    "dynamicFileSchema/-1249577934": "@outputs('Get_custome')?['body/ind_name']",
+                                    "dynamicFileSchema/-2087370478": "@outputs('Get_custome')?['body/ind_contactnumber']",
+                                    "dynamicFileSchema/-1173639379": "@Outputs('Get_customer_account')?['body/_ind_accountcurrency_value@OData.Community.Display.V1.FormattedValue']",
+                                    "dynamicFileSchema/-375011697": "@outputs('Get_a_row_by_ID')?['body/ind_rate']",
+                                    "dynamicFileSchema/-293207268": "@outputs('Get_a_row_by_ID')?['body/_transactioncurrencyid_value@OData.Community.Display.V1.FormattedValue']",
+                                    "dynamicFileSchema/-1715336251": "@outputs('Get_a_row_by_ID')?['body/ind_transactionamount']",
+                                    "dynamicFileSchema/-1830902829": "@outputs('Get_a_row_by_ID')?['body/ind_amountinwords']",
+                                    "dynamicFileSchema/-2056374366": "N/A",
+                                    "dynamicFileSchema/-199161267": "N/A",
+                                    "dynamicFileSchema/-679580450": "N/A",
+                                    "dynamicFileSchema/-253591582": "@outputs('Get_a_row_by_ID')?['body/ind_mentionedpurposeoftransfer']"
+                                  },
+                                  "authentication": "@parameters('$authentication')"
+                                }
+                              },
+                              "Convert_Word_to_PDF_4": {
+                                "runAfter": {
+                                  "Populate_a_Microsoft_Word_template_4": [
+                                    "Succeeded"
+                                  ]
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "f37bb6c5-9dd0-4839-a201-8a4f83745200"
+                                },
+                                "type": "OpenApiConnection",
+                                "inputs": {
+                                  "host": {
+                                    "connectionName": "shared_adobepdftools_1",
+                                    "operationId": "CreatePDFFromWord",
+                                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_adobepdftools"
+                                  },
+                                  "parameters": {
+                                    "inputFileName": "BankOne.docx",
+                                    "InputFile0/body": "@body('Populate_a_Microsoft_Word_template_4')",
+                                    "outputFileName": "@{outputs('Get_a_row_by_ID')?['body/ind_name']}-BankOne"
+                                  },
+                                  "authentication": "@parameters('$authentication')"
+                                }
+                              }
+                            },
+                            "runAfter": {},
+                            "expression": {
+                              "equals": [
+                                "@outputs('Get_Bank')?['body/ind_name']",
+                                "Bank One"
+                              ]
+                            },
+                            "metadata": {
+                              "operationMetadataId": "4e231029-d4df-45be-b214-82b01407d374"
+                            },
+                            "type": "If"
+                          }
+                        }
+                      },
+                      "expression": {
+                        "equals": [
+                          "@outputs('Get_Bank')?['body/ind_name']",
+                          "MCB"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "c9e58ea2-733f-4cca-a74a-f3f8c75cd36f"
+                      },
+                      "type": "If"
+                    }
+                  }
+                },
+                "expression": {
+                  "equals": [
+                    "@outputs('Get_Bank')?['body/ind_name']",
+                    "AfrAsia"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "643da862-7f5b-45ea-8e35-333a91ced33e"
+                },
+                "type": "If"
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@outputs('Get_Bank')?['body/ind_name']",
+              "ABSA"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "fa3adf01-0b69-48b1-9270-506961c07b56"
+          },
+          "type": "If"
+        },
+        "Get_Bank": {
+          "runAfter": {
+            "Get_customer_account": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b012fa56-f7a5-43ba-b813-3cc896033614"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ind_ind_banks",
+              "recordId": "@outputs('Get_customer_account')?['body/_ind_bank_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "List_rows": {
+          "runAfter": {
+            "Get_Party": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "0ed3b600-7210-4dc6-a03f-a9e62a09f515"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ind_ind_countries",
+              "$filter": "ind_ufvalue eq '@{Outputs('Get_Party')?['body/_ind_country_value@OData.Community.Display.V1.FormattedValue']}'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Initialize_variable_2": {
+          "runAfter": {
+            "Initialize_variable": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9541cf13-9ec1-4cf1-8fe7-a9349e344de4"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "counry",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Apply_to_each": {
+          "foreach": "@outputs('List_rows')?['body/value']",
+          "actions": {
+            "Set_variable": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "56611114-7431-41cd-bca5-b6e14ee8ba53"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "counry",
+                "value": "@items('Apply_to_each')?['ind_ufname']"
+              }
+            }
+          },
+          "runAfter": {
+            "List_rows": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "fbc8a227-74b8-41c8-94f0-eef78eab0631"
+          },
+          "type": "Foreach"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

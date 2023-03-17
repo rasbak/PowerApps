@@ -1,0 +1,36 @@
+function BPReturnStage(){
+	var idProcess = Xrm.Page.data.process.getActiveProcess().getId();
+	var status = Xrm.Page.data.process.getStatus(); //remove handler on finished
+
+	//CIBP
+	if (idProcess == '8361a76b-2e6b-ed11-9562-0022482a4894'){
+		Xrm.Page.data.process.addOnStageChange(ReturnToStage);
+	}
+
+	if (status == "finished") {
+	
+		Xrm.Page.data.process.removeOnStageChange(ReturnToStage);
+	}
+	
+	
+}
+
+
+function ReturnToStage(executionContext){
+
+		
+		var formContext = executionContext.getFormContext();
+		var idStage = Xrm.Page.data.process.getActiveStage().getId();
+		
+		
+		
+		debugger;
+		
+		if (idStage == "d1619cf0-1888-4a5f-a8cf-340fcdf1d00d" )
+		{
+			
+			formContext.data.process.setActiveStage('82d340ef-0bb4-4cc5-8e32-c88c27ec4204');
+			return;
+		}
+
+}

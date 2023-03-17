@@ -1,0 +1,544 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "ind_sharedcommondataserviceforapps_64f74"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "ind_sharedoffice365_cc2d4"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "25aea027-d36f-437e-92ea-0c19e2223c2a"
+          },
+          "type": "Request",
+          "kind": "Http",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "Link": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "actions": {
+        "Get_Operation": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "bb59340a-69d7-4c0d-8982-b2738e5f6814"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ind_ind_operations",
+              "recordId": "@substring(triggerBody()?['Id'],1,36)"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Condition": {
+          "actions": {
+            "Get_user": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "73bf03d3-1f14-4c08-bcbf-fa883c973923"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "systemusers",
+                  "recordId": "@outputs('Get_Operation')?['body/_ind_ro_value']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Send_an_email_(V2)": {
+              "runAfter": {
+                "Get_user": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "14228b3b-8070-4476-bc55-018db0ad835f"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_office365",
+                  "operationId": "SendEmailV2",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                },
+                "parameters": {
+                  "emailMessage/To": "@outputs('Get_user')?['body/internalemailaddress']",
+                  "emailMessage/Subject": "Work to do in @{outputs('Get_Operation')?['body/ind_name']} RO",
+                  "emailMessage/Body": "<p>Hello @{outputs('Get_user')?['body/firstname']},<br>\nYou have work to do in Operation : @{outputs('Get_Operation')?['body/ind_name']}.<br>\nPlease find below the link to the Process : <br>\n<a href=\"@{triggerBody()?['Link']}\">Go to Process</a>\n<br>\nThank You!\n</p>",
+                  "emailMessage/Importance": "Normal"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_Operation": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Condition_2": {
+                "actions": {
+                  "Get_user_2": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "0b7393df-34c5-4777-a02b-3552d34c889c"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_commondataserviceforapps",
+                        "operationId": "GetItem",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                      },
+                      "parameters": {
+                        "entityName": "systemusers",
+                        "recordId": "@outputs('Get_Operation')?['body/_ind_rm_value']"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  },
+                  "Send_an_email_(V2)_2": {
+                    "runAfter": {
+                      "Get_user_2": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "060db198-adcb-4ba8-a940-ecdedb199663"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_office365",
+                        "operationId": "SendEmailV2",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                      },
+                      "parameters": {
+                        "emailMessage/To": "@outputs('Get_user_2')?['body/internalemailaddress']",
+                        "emailMessage/Subject": "Work to do in @{outputs('Get_Operation')?['body/ind_name']} RM",
+                        "emailMessage/Body": "<p>Hello @{outputs('Get_user_2')?['body/firstname']},<br>\nYou have work to do in Operation : @{outputs('Get_Operation')?['body/ind_name']}.<br>\nPlease find below the link to the Process : <br>\n<a href=\"@{triggerBody()?['Link']}\">Go to Process</a>\n<br>\nThank You!\n</p>",
+                        "emailMessage/Importance": "Normal"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  }
+                },
+                "runAfter": {},
+                "else": {
+                  "actions": {
+                    "Condition_3": {
+                      "actions": {
+                        "Get_user_3": {
+                          "runAfter": {},
+                          "metadata": {
+                            "operationMetadataId": "0b7393df-34c5-4777-a02b-3552d34c889c"
+                          },
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "connectionName": "shared_commondataserviceforapps",
+                              "operationId": "GetItem",
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                            },
+                            "parameters": {
+                              "entityName": "systemusers",
+                              "recordId": "@outputs('Get_Operation')?['body/_ind_rc_value']"
+                            },
+                            "authentication": "@parameters('$authentication')"
+                          }
+                        },
+                        "Send_an_email_(V2)_3": {
+                          "runAfter": {
+                            "Get_user_3": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "060db198-adcb-4ba8-a940-ecdedb199663"
+                          },
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "connectionName": "shared_office365",
+                              "operationId": "SendEmailV2",
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                            },
+                            "parameters": {
+                              "emailMessage/To": "@outputs('Get_user_3')?['body/internalemailaddress']",
+                              "emailMessage/Subject": "Work to do in @{outputs('Get_Operation')?['body/ind_name']} RC",
+                              "emailMessage/Body": "<p>Hello @{outputs('Get_user_3')?['body/firstname']},<br>\nYou have work to do in Operation : @{outputs('Get_Operation')?['body/ind_name']}.<br>\nPlease find below the link to the Process : <br>\n<a href=\"@{triggerBody()?['Link']}\">Go to Process</a>\n<br>\nThank You!\n</p>",
+                              "emailMessage/Importance": "Normal"
+                            },
+                            "authentication": "@parameters('$authentication')"
+                          }
+                        }
+                      },
+                      "runAfter": {},
+                      "else": {
+                        "actions": {
+                          "Condition_4": {
+                            "actions": {
+                              "Get_user_4": {
+                                "runAfter": {},
+                                "metadata": {
+                                  "operationMetadataId": "0b7393df-34c5-4777-a02b-3552d34c889c"
+                                },
+                                "type": "OpenApiConnection",
+                                "inputs": {
+                                  "host": {
+                                    "connectionName": "shared_commondataserviceforapps",
+                                    "operationId": "GetItem",
+                                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                                  },
+                                  "parameters": {
+                                    "entityName": "systemusers",
+                                    "recordId": "@outputs('Get_Operation')?['body/_ind_rhc_value']"
+                                  },
+                                  "authentication": "@parameters('$authentication')"
+                                }
+                              },
+                              "Send_an_email_(V2)_4": {
+                                "runAfter": {
+                                  "Get_user_4": [
+                                    "Succeeded"
+                                  ]
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "060db198-adcb-4ba8-a940-ecdedb199663"
+                                },
+                                "type": "OpenApiConnection",
+                                "inputs": {
+                                  "host": {
+                                    "connectionName": "shared_office365",
+                                    "operationId": "SendEmailV2",
+                                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                                  },
+                                  "parameters": {
+                                    "emailMessage/To": "@outputs('Get_user_4')?['body/internalemailaddress']",
+                                    "emailMessage/Subject": "Work to do in @{outputs('Get_Operation')?['body/ind_name']} RHC",
+                                    "emailMessage/Body": "<p>Hello @{outputs('Get_user_4')?['body/firstname']},<br>\nYou have work to do in Operation : @{outputs('Get_Operation')?['body/ind_name']}.<br>\nPlease find below the link to the Process : <br>\n<a href=\"@{triggerBody()?['Link']}\">Go to Process</a>\n<br>\nThank You!\n</p>",
+                                    "emailMessage/Importance": "Normal"
+                                  },
+                                  "authentication": "@parameters('$authentication')"
+                                }
+                              }
+                            },
+                            "runAfter": {},
+                            "else": {
+                              "actions": {
+                                "Condition_5": {
+                                  "actions": {
+                                    "Get_user_5": {
+                                      "runAfter": {},
+                                      "metadata": {
+                                        "operationMetadataId": "0b7393df-34c5-4777-a02b-3552d34c889c"
+                                      },
+                                      "type": "OpenApiConnection",
+                                      "inputs": {
+                                        "host": {
+                                          "connectionName": "shared_commondataserviceforapps",
+                                          "operationId": "GetItem",
+                                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                                        },
+                                        "parameters": {
+                                          "entityName": "systemusers",
+                                          "recordId": "@outputs('Get_Operation')?['body/_ind_mlro_value']"
+                                        },
+                                        "authentication": "@parameters('$authentication')"
+                                      }
+                                    },
+                                    "Send_an_email_(V2)_5": {
+                                      "runAfter": {
+                                        "Get_user_5": [
+                                          "Succeeded"
+                                        ]
+                                      },
+                                      "metadata": {
+                                        "operationMetadataId": "060db198-adcb-4ba8-a940-ecdedb199663"
+                                      },
+                                      "type": "OpenApiConnection",
+                                      "inputs": {
+                                        "host": {
+                                          "connectionName": "shared_office365",
+                                          "operationId": "SendEmailV2",
+                                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                                        },
+                                        "parameters": {
+                                          "emailMessage/To": "@outputs('Get_user_5')?['body/internalemailaddress']",
+                                          "emailMessage/Subject": "Work to do in @{outputs('Get_Operation')?['body/ind_name']} MLRO",
+                                          "emailMessage/Body": "<p>Hello @{outputs('Get_user_5')?['body/firstname']},<br>\nYou have work to do in Operation : @{outputs('Get_Operation')?['body/ind_name']}.<br>\nPlease find below the link to the Process : <br>\n<a href=\"@{triggerBody()?['Link']}\">Go to Process</a>\n<br>\nThank You!\n</p>",
+                                          "emailMessage/Importance": "Normal"
+                                        },
+                                        "authentication": "@parameters('$authentication')"
+                                      }
+                                    }
+                                  },
+                                  "runAfter": {},
+                                  "else": {
+                                    "actions": {
+                                      "Aborted": {
+                                        "actions": {
+                                          "Send_an_email_(V2)_6": {
+                                            "runAfter": {},
+                                            "metadata": {
+                                              "operationMetadataId": "060db198-adcb-4ba8-a940-ecdedb199663"
+                                            },
+                                            "type": "OpenApiConnection",
+                                            "inputs": {
+                                              "host": {
+                                                "connectionName": "shared_office365",
+                                                "operationId": "SendEmailV2",
+                                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                                              },
+                                              "parameters": {
+                                                "emailMessage/To": "@outputs('Get_Operation')?['body/ind_contactemail']",
+                                                "emailMessage/Subject": "About your Transaction",
+                                                "emailMessage/Body": "<p>Hello ,<br>\nYour Transaction is cancelled! Contact us for more informations<br>\nThank You!</p>",
+                                                "emailMessage/Importance": "Normal"
+                                              },
+                                              "authentication": "@parameters('$authentication')"
+                                            }
+                                          }
+                                        },
+                                        "runAfter": {},
+                                        "else": {
+                                          "actions": {
+                                            "Success": {
+                                              "actions": {
+                                                "Send_an_email_(V2)_7": {
+                                                  "runAfter": {},
+                                                  "metadata": {
+                                                    "operationMetadataId": "060db198-adcb-4ba8-a940-ecdedb199663"
+                                                  },
+                                                  "type": "OpenApiConnection",
+                                                  "inputs": {
+                                                    "host": {
+                                                      "connectionName": "shared_office365",
+                                                      "operationId": "SendEmailV2",
+                                                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                                                    },
+                                                    "parameters": {
+                                                      "emailMessage/To": "@outputs('Get_Operation')?['body/ind_contactemail']",
+                                                      "emailMessage/Subject": "About your Transaction",
+                                                      "emailMessage/Body": "<p>Hello ,<br>\n<br>\nYour Transaction is done! Contact us for more informations<br>\n<br>\nThank You!</p>",
+                                                      "emailMessage/Importance": "Normal"
+                                                    },
+                                                    "authentication": "@parameters('$authentication')"
+                                                  }
+                                                }
+                                              },
+                                              "runAfter": {},
+                                              "else": {
+                                                "actions": {
+                                                  "TL": {
+                                                    "actions": {
+                                                      "Obtenir_une_ligne_par_ID": {
+                                                        "runAfter": {},
+                                                        "metadata": {
+                                                          "operationMetadataId": "036809fd-db52-4c73-b795-1c18a0e7a11a"
+                                                        },
+                                                        "type": "OpenApiConnection",
+                                                        "inputs": {
+                                                          "host": {
+                                                            "connectionName": "shared_commondataserviceforapps",
+                                                            "operationId": "GetItem",
+                                                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                                                          },
+                                                          "parameters": {
+                                                            "entityName": "systemusers",
+                                                            "recordId": "@outputs('Get_Operation')?['body/_ind_tl_value']"
+                                                          },
+                                                          "authentication": "@parameters('$authentication')"
+                                                        }
+                                                      },
+                                                      "Send_an_email_(V2)_8": {
+                                                        "runAfter": {
+                                                          "Obtenir_une_ligne_par_ID": [
+                                                            "Succeeded"
+                                                          ]
+                                                        },
+                                                        "metadata": {
+                                                          "operationMetadataId": "060db198-adcb-4ba8-a940-ecdedb199663"
+                                                        },
+                                                        "type": "OpenApiConnection",
+                                                        "inputs": {
+                                                          "host": {
+                                                            "connectionName": "shared_office365",
+                                                            "operationId": "SendEmailV2",
+                                                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                                                          },
+                                                          "parameters": {
+                                                            "emailMessage/To": "@outputs('Obtenir_une_ligne_par_ID')?['body/internalemailaddress']",
+                                                            "emailMessage/Subject": "Work to do in @{outputs('Get_Operation')?['body/ind_name']} TL",
+                                                            "emailMessage/Body": "<p>Hello @{outputs('Obtenir_une_ligne_par_ID')?['body/firstname']},<br>\nYou have work to do in Operation : @{outputs('Get_Operation')?['body/ind_name']},<br>\nPlease find below the link to the Process : <br>\n<a href=\"@{triggerBody()?['Link']}\">Go to Process</a><br>\n<br>\nThank You!<br>\n</p>",
+                                                            "emailMessage/Importance": "Normal"
+                                                          },
+                                                          "authentication": "@parameters('$authentication')"
+                                                        }
+                                                      }
+                                                    },
+                                                    "runAfter": {},
+                                                    "expression": {
+                                                      "equals": [
+                                                        "@triggerBody()?['type']",
+                                                        "TL"
+                                                      ]
+                                                    },
+                                                    "metadata": {
+                                                      "operationMetadataId": "ebbb1c17-574f-4916-8c3d-6c33df617473"
+                                                    },
+                                                    "type": "If"
+                                                  }
+                                                }
+                                              },
+                                              "expression": {
+                                                "equals": [
+                                                  "@triggerBody()?['type']",
+                                                  "SUCCESS"
+                                                ]
+                                              },
+                                              "metadata": {
+                                                "operationMetadataId": "ebbb1c17-574f-4916-8c3d-6c33df617473"
+                                              },
+                                              "type": "If"
+                                            }
+                                          }
+                                        },
+                                        "expression": {
+                                          "equals": [
+                                            "@triggerBody()?['type']",
+                                            "ABORTED"
+                                          ]
+                                        },
+                                        "metadata": {
+                                          "operationMetadataId": "ebbb1c17-574f-4916-8c3d-6c33df617473"
+                                        },
+                                        "type": "If"
+                                      }
+                                    }
+                                  },
+                                  "expression": {
+                                    "equals": [
+                                      "@triggerBody()?['type']",
+                                      "MLRO"
+                                    ]
+                                  },
+                                  "metadata": {
+                                    "operationMetadataId": "ebbb1c17-574f-4916-8c3d-6c33df617473"
+                                  },
+                                  "type": "If"
+                                }
+                              }
+                            },
+                            "expression": {
+                              "equals": [
+                                "@triggerBody()?['type']",
+                                "RHC"
+                              ]
+                            },
+                            "metadata": {
+                              "operationMetadataId": "542fa3d6-ab6c-4740-9823-80b1f289f448"
+                            },
+                            "type": "If"
+                          }
+                        }
+                      },
+                      "expression": {
+                        "equals": [
+                          "@triggerBody()?['type']",
+                          "RC"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "cfc6f43d-f964-4514-a33a-f6b8b6973aee"
+                      },
+                      "type": "If"
+                    }
+                  }
+                },
+                "expression": {
+                  "equals": [
+                    "@triggerBody()?['type']",
+                    "RM"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "63c12ea3-94c6-4315-a0a5-22a411a58027"
+                },
+                "type": "If"
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@triggerBody()?['type']",
+              "RO"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ac6fc28d-15ff-4ddb-bc1f-4719c05034b4"
+          },
+          "type": "If"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{dd250fd2-8d39-454e-8747-4a8bf976c054}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{d3ec997b-0463-408c-ad47-ea53195b7338}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{2f4995dc-c423-4e8a-91d4-cadabd4357d3}">
+          <labels>
+            <label description="Documents On File" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{aa9fca09-3368-bed2-4aa3-9351a450dfb1}" name="StageStep3_section1" labelid="{e3f26ab9-6f43-4e91-b5b6-fcc93d4b4fba}">
+                  <labels>
+                    <label description="Documents On File" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{0c2bbd05-4c87-4ad0-9559-e45c06266aa6}" showlabel="true" visible="true" labelid="{1c3b5c73-30db-4b4b-9fc7-ddaccf2fbdfb}">
+                        <labels>
+                          <label description="Identification Document" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:ind_identificationdocument" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_identificationdocument" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cf2efddb-32d2-4668-907d-5a932165e65d}" showlabel="true" visible="true" labelid="{db4e1b8c-390b-4e51-a59b-3fbe0b40d655}">
+                        <labels>
+                          <label description="Identification On File ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:ind_identificationonfile" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_identificationonfile" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{e1df7569-22ff-48d4-874f-57c15fbd87f1}" name="StageStep9" locklevel="0" expanded="true" visible="false" labelid="{8a162c6a-1c7a-43b6-971c-d0ded398699e}">
+          <labels>
+            <label description="Request Identification From Client" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{17c634ab-9463-8289-a5a8-b6eac2ba4221}" name="StageStep9_section1" labelid="{c60f6c93-6765-4ca0-a41a-9ad63366aaf8}">
+                  <labels>
+                    <label description="Request Identification From Client" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d31bbbf4-da30-48fd-b90a-ce1353f5e3eb}" showlabel="true" visible="true" labelid="{ac83ddb3-9108-4fb3-a376-f8bb29c46a65}">
+                        <labels>
+                          <label description="Customer Identification Document" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:ind_customeridentificationdocument" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_customeridentificationdocument" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6e4b202f-620a-40ca-b362-eac343d38ef7}" showlabel="true" visible="true" labelid="{419d12f0-eb88-47c1-922a-472600b40fba}">
+                        <labels>
+                          <label description="Identification On File" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:ind_customeridentified" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_customeridentified" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{55222528-f534-442d-9ee6-5cf1b3def63d}" showlabel="true" visible="true" labelid="{792169b4-e6ce-434b-aeb5-de44a562cde7}">
+                        <labels>
+                          <label description="Doubt/Suspicion" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:ind_doubtsuspicioncddi" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_doubtsuspicioncddi" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ea9906c1-c9fd-458d-bbd1-0ded078a60b5}" showlabel="true" visible="true" labelid="{73b40434-ebd0-4492-be1e-4438bfd1a94b}">
+                        <labels>
+                          <label description="Adequate ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:ind_adequatecddi" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_adequatecddi" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{12d07c52-c09e-4800-9a57-b47aa3324436}" name="StageStep19" locklevel="0" expanded="true" visible="false" labelid="{4324de76-95e1-4698-bd0c-88e77fa802dc}">
+          <labels>
+            <label description="STR Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{5028b2fc-fde2-3d84-e454-69428622ebe4}" name="StageStep19_section1" labelid="{0e7c699d-fd6f-4726-96fd-3dc655e3b9bb}">
+                  <labels>
+                    <label description="STR Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3d0e47e6-9c87-46ec-80cf-9a2d3fddda4b}" showlabel="true" visible="true" labelid="{d81630fc-be26-4fb2-aab6-8e1f40e22a85}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{89b72376-d6ed-4a14-b374-976e871999fe}" name="StageStep23" locklevel="0" expanded="true" visible="false" labelid="{0c795d3f-94aa-4dba-882c-6efad3f35d44}">
+          <labels>
+            <label description="CDD Screening" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{7a860af8-4831-e959-6444-eb55de3e6ac8}" name="StageStep23_section1" labelid="{1a8cb7c4-c938-42a7-ad18-a9c84927c0ea}">
+                  <labels>
+                    <label description="CDD Screening" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{1ce8ee7d-6d83-4696-a075-c30008fcfb60}" showlabel="true" visible="true" labelid="{de4b70e2-6085-499e-ab7f-b4c7e1ab7cde}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{2def3a39-c55b-4780-83ae-1b19cb0dce51}" name="StageStep27" locklevel="0" expanded="true" visible="false" labelid="{c5aad345-69b1-40a5-948e-70ca54ebb2cf}">
+          <labels>
+            <label description="Assess Documents At Hand" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{76a51410-88c4-43c7-ab8b-f34b1b9478e0}" name="StageStep27_section1" labelid="{133312b5-3c38-41d3-9f65-fc54e7cffd82}">
+                  <labels>
+                    <label description="Assess Documents At Hand" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d8f463c6-30d4-4676-a0b5-611cbf7734ed}" showlabel="true" visible="true" labelid="{c675593d-f3df-49f8-86f2-6d2482ff56e1}">
+                        <labels>
+                          <label description="In Order ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:ind_inordercddi" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="ind_inordercddi" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{1eac60c5-07e7-48fe-8d91-fb9a724894ed}" name="StageStep31" locklevel="0" expanded="true" visible="false" labelid="{760945ca-ff0f-4a75-8931-794a2542038f}">
+          <labels>
+            <label description="CDD Screening" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{26b18171-f01d-1d01-7236-1f55aaa4e4e7}" name="StageStep31_section1" labelid="{a25bcc57-f5a4-4203-a142-6960c1e72081}">
+                  <labels>
+                    <label description="CDD Screening" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{35a01e1e-ad17-45bc-98d7-ccd21d035da8}" showlabel="true" visible="true" labelid="{c30e92ce-b628-475d-a568-9b1ff2dcfbdf}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{d1974a42-5987-4415-a3f0-780b717d7201}" name="StageStep35" locklevel="0" expanded="true" visible="false" labelid="{3f5413e6-32ce-4625-a93d-4dbcec78c74f}">
+          <labels>
+            <label description="Customer Request " languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{6769ff59-afd1-84eb-bc83-9b8b2ffa2fb5}" name="StageStep35_section1" labelid="{e19abdb5-ddce-4e39-abdd-6d1356440d10}">
+                  <labels>
+                    <label description="Customer Request " languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{781df0f7-7d73-4a81-a0f6-8e7afa2d941a}" showlabel="true" visible="true" labelid="{e7d0976e-7e60-4251-96c2-219663a4bc3b}">
+                        <labels>
+                          <label description="Customer Document" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:ind_customerdocumentcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_customerdocumentcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{81444594-db14-430e-aeae-e7fabf0f6b8d}" showlabel="true" visible="true" labelid="{f3c57036-c4bb-42af-86a8-4352894b67ac}">
+                        <labels>
+                          <label description="Received CDDI" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:ind_receivedcddi" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_receivedcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{eb0ccd93-3eb4-4471-b910-b744cdf05e23}" name="StageStep41" locklevel="0" expanded="true" visible="false" labelid="{58896c72-c6b4-4ebe-bc88-d730f5313186}">
+          <labels>
+            <label description="Adequate" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{7445930a-3657-8eb2-9a81-148d10be67ae}" name="StageStep41_section1" labelid="{fd2f6f5e-910b-434c-aa4d-1713783f643f}">
+                  <labels>
+                    <label description="Adequate" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{8b820c3e-822b-47c6-aaf0-adf33eb72ec3}" showlabel="true" visible="true" labelid="{0ff00d58-bde8-4c0d-8f2b-3fea78dc5f75}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{a2c31bdf-ee99-4634-8197-37a3b4b1c69d}" name="StageStep45" locklevel="0" expanded="true" visible="false" labelid="{5d95f00c-56ac-4f57-bec1-9644675228a8}">
+          <labels>
+            <label description="Redirect Assess Documents At Hand" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{a1271a5d-8cee-5069-0758-94644483adef}" name="StageStep45_section1" labelid="{1ce2acde-4c27-4a20-a1b5-59e599b83029}">
+                  <labels>
+                    <label description="Redirect Assess Documents At Hand" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{70dce620-89cc-43fa-b609-fc1f5265c94b}" showlabel="true" visible="true" labelid="{cba6791a-dba1-44c6-9ca0-6a49e94b12a8}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{561ab389-3df6-433a-800d-9130516e32f9}" name="StageStep49" locklevel="0" expanded="true" visible="false" labelid="{e723d56c-aa06-4474-8970-a36df55d3d4b}">
+          <labels>
+            <label description="STR Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{71b23fe0-853e-a674-872e-7e32cf2640dd}" name="StageStep49_section1" labelid="{f3a51488-565f-4502-834c-5d2c63e306fc}">
+                  <labels>
+                    <label description="STR Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{951c3484-94f1-4846-9dc0-8f84679b870a}" showlabel="true" visible="true" labelid="{fb6d84cc-8a1a-4a3a-b8bb-a1d5effd5cc4}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{8e0b2abd-43a2-47c6-8fe9-e8ec3e647442}" name="StageStep53" locklevel="0" expanded="true" visible="false" labelid="{766fbd61-d2a8-420d-b626-b1dfa894734f}">
+          <labels>
+            <label description="EDD Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{9190cb35-9425-6d90-44e3-dc0ba69da749}" name="StageStep53_section1" labelid="{fe000d3e-8577-406c-9912-a0c9d094cbe8}">
+                  <labels>
+                    <label description="EDD Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ac08fdfe-0ca4-49d2-9cf5-297d5210f004}" showlabel="true" visible="true" labelid="{6e3ebb18-8fff-412d-9147-17e9913cc307}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{15cc60d0-7427-47bd-8a3d-bd714557b2d5}" name="StageStep57" locklevel="0" expanded="true" visible="false" labelid="{aa9525a7-2d4a-4cea-b6f9-c8948677eef8}">
+          <labels>
+            <label description="Transaction Reporting Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{be3477b7-3ff2-1363-50c9-79d4c1b3fc50}" name="StageStep57_section1" labelid="{f972cad2-1bc4-4700-b1c3-93fa2aa91b11}">
+                  <labels>
+                    <label description="Transaction Reporting Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b09f98d2-cedb-48c8-b489-9a95065dea70}" showlabel="true" visible="true" labelid="{5a87fbdd-f0cd-45b8-b1e1-531f3ebf7ee5}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{e36ae374-372e-4da4-a9b4-25452fa49b48}" name="StageStep61" locklevel="0" expanded="true" visible="false" labelid="{a010e9e1-ebb8-4eb7-8295-38a775259924}">
+          <labels>
+            <label description="Follow Up" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{abd56c7e-0a4d-17db-8eb1-115f26780284}" name="StageStep61_section1" labelid="{512aa376-6d5d-48db-9891-9d7f33d1cf0c}">
+                  <labels>
+                    <label description="Follow Up" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3806eaf2-62b7-4a02-af59-de8c836e5bb0}" showlabel="true" visible="true" labelid="{f31e64c8-ae8b-47c8-879b-c1a434451f73}">
+                        <labels>
+                          <label description="Successful ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:ind_successfulcddi" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_successfulcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{405d7887-7961-4e85-b18e-196033f6471f}" name="StageStep65" locklevel="0" expanded="true" visible="false" labelid="{414e6929-62e3-4410-bbe9-67dcf5f6d23d}">
+          <labels>
+            <label description="Assess Documents At Hand 3" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{d96896a2-aefa-ac03-6247-0a56f45fc5cf}" name="StageStep65_section1" labelid="{e4b85840-108b-4625-8a07-6ddffaa61f96}">
+                  <labels>
+                    <label description="Assess Documents At Hand 3" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ea26f4e4-598f-4fe8-b800-8fbac16af68b}" showlabel="true" visible="true" labelid="{cfc01897-e602-4dd2-b6a1-8ea2f6fa46b6}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{8a6d12a7-a303-4f40-8d64-c8d9e7563350}" name="StageStep69" locklevel="0" expanded="true" visible="false" labelid="{16f1807b-8c8d-4a77-ba7b-f4cb39b35812}">
+          <labels>
+            <label description="Adequates" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{0dbd4eb7-f21e-eec6-9f7b-0445405868bc}" name="StageStep69_section1" labelid="{f7bab10c-e5a7-4257-9aa7-81e2e5669a2d}">
+                  <labels>
+                    <label description="Adequates" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d2595327-bc55-4888-815b-90f5f4cfba9e}" showlabel="true" visible="true" labelid="{f2a8b417-11f9-4af6-9185-53bfb7fc24f8}">
+                        <labels>
+                          <label description="Adequate ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:ind_adequatecddi" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_adequatecddi" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{67663308-6359-4f99-85d8-acaeae34cece}" name="StageStep73" locklevel="0" expanded="true" visible="false" labelid="{08926e47-65f7-4530-b6d7-9349d2585842}">
+          <labels>
+            <label description="CDD Screening" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{0331662c-e85f-d750-be66-47d0107b6ef5}" name="StageStep73_section1" labelid="{706fa32f-876a-4ee5-9bad-8e9f49602922}">
+                  <labels>
+                    <label description="CDD Screening" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{24d14c0c-4fd9-4993-838d-dd526fb9d5cf}" showlabel="true" visible="true" labelid="{6b7fd0e5-4018-4841-b2f9-9a333525f8a4}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{78a9afa9-4f08-40e0-bf51-7db346273ce1}" name="StageStep77" locklevel="0" expanded="true" visible="false" labelid="{3958a722-83af-4f91-ba9b-b213b9a21b77}">
+          <labels>
+            <label description="Assess Documents At Hand 4" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{c76f731c-4dac-007d-0788-4cfa2459f23f}" name="StageStep77_section1" labelid="{0f013e43-7968-4672-899a-abcf5c813817}">
+                  <labels>
+                    <label description="Assess Documents At Hand 4" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{32c637c1-58fb-4952-981d-406141673ee6}" showlabel="true" visible="true" labelid="{3b4641bf-9934-48d8-af81-24072744281b}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{cc2d47ed-814a-4b7b-aed1-c24fb40b6215}" name="StageStep81" locklevel="0" expanded="true" visible="false" labelid="{8b335eae-9819-431d-b24e-51b30856e1c1}">
+          <labels>
+            <label description="Original Copy" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{4478b68d-c892-c78e-c431-476ad27dc368}" name="StageStep81_section1" labelid="{bb6fd074-aba7-4d58-8138-7c9bd24adfff}">
+                  <labels>
+                    <label description="Original Copy" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b00ef4a4-e8b1-47d6-b8a9-7056562fa700}" showlabel="true" visible="true" labelid="{f369afdf-f959-4441-b20c-70586b38436a}">
+                        <labels>
+                          <label description="Original Copy CDDI" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:ind_originalcopycddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_originalcopycddi" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{8f66f957-c51f-4d4d-aa25-bbab1fff497b}" name="StageStep85" locklevel="0" expanded="true" visible="false" labelid="{d5a1aca6-d200-4287-9af3-76289471ba32}">
+          <labels>
+            <label description="CDD Screening" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{7c171a1a-1986-5fb9-00b4-b689839258ae}" name="StageStep85_section1" labelid="{bc5e3108-3fbf-458d-9469-69d40e9c2a30}">
+                  <labels>
+                    <label description="CDD Screening" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{fc85953d-9fb1-4339-8223-80ec9f693c3f}" showlabel="true" visible="true" labelid="{471f2c4d-748b-4c26-b9b0-21d8a0c116fa}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddidentification:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddidentification" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

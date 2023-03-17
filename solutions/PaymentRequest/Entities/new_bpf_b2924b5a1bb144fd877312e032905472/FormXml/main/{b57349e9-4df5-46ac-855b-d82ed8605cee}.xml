@@ -1,0 +1,927 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{b57349e9-4df5-46ac-855b-d82ed8605cee}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{7cd5bbb2-6226-4c34-af1a-707b0eef0820}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{e5864380-73d8-4a48-a252-0adeb4b8b508}">
+          <labels>
+            <label description="Transaction" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{fd8375b4-d74e-e848-8243-5323c22c9fff}" name="StageStep3_section1" labelid="{49ea24fb-f7d8-4af1-b90c-505b98ba714b}">
+                  <labels>
+                    <label description="Transaction" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3c39f2b3-eeb2-4f1a-9f46-52f27798002d}" showlabel="true" visible="true" labelid="{49b05e34-a45f-44e5-aca6-a19cc6249237}">
+                        <labels>
+                          <label description="Customer Name" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_customername" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_customername" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d1dda7b4-0108-4a60-9ab5-fcdfb253b590}" showlabel="true" visible="true" labelid="{1e439b53-428c-4f66-b79d-7610515bd98d}">
+                        <labels>
+                          <label description="Customer Account" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_customeraccount" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_customeraccount" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a2dc70c1-1e58-45f1-a4c2-782f6c3da92a}" showlabel="true" visible="true" labelid="{c54beacd-47f9-4ebc-af55-24fbd8c495e6}">
+                        <labels>
+                          <label description="Beneficiary Name" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_partyname" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_partyname" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3a913054-f70e-4d68-b775-047381e00f6f}" showlabel="true" visible="true" labelid="{937db628-38b7-4322-a98f-dbfc375620a6}">
+                        <labels>
+                          <label description="Beneficiary Account" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_partyaccount" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_partyaccount" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c4843b48-e67f-481f-ae2d-92f29a4c3a1c}" showlabel="true" visible="true" labelid="{36764081-39b1-40ed-9ab9-a6915665ac47}">
+                        <labels>
+                          <label description="Mentioned Purpose of transfer" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_mentionedpurposeoftransfer" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_mentionedpurposeoftransfer" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9621282a-d0c4-47b5-b9b8-20c162d95b65}" showlabel="true" visible="true" labelid="{3130231c-000f-40d7-bcb4-762ae1507f90}">
+                        <labels>
+                          <label description="Currency" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:transactioncurrencyid" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="transactioncurrencyid" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c0e0e68a-d117-4196-9f2e-5e395562ab4b}" showlabel="true" visible="true" labelid="{8c77081b-0e41-4eee-a3c2-5ee3ad05b7cc}">
+                        <labels>
+                          <label description="Transaction Amount" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_transactionamount" classid="{533b9e00-756b-4312-95a0-dc888637ac78}" datafieldname="ind_transactionamount" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fd5b1bfc-4bfe-4fb3-af1b-9cb8cd215e9b}" showlabel="true" visible="true" labelid="{a70e0330-6674-4cef-9a87-403641692afa}">
+                        <labels>
+                          <label description="Amount In Words" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_amountinwords" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_amountinwords" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c63b3858-42cf-4c99-b509-8b467a465b8e}" showlabel="true" visible="true" labelid="{5d1d09aa-6a2f-40eb-ac7f-ec8768a0ea7c}">
+                        <labels>
+                          <label description="Fx Rate/Ref" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_rate" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_rate" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b4dc9373-30ba-4fe1-9415-53f5e8e57f67}" showlabel="true" visible="true" labelid="{c275ae9b-4b12-44f7-8a13-b33391d2d459}">
+                        <labels>
+                          <label description="Bank Charges" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_localcharges" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="ind_localcharges" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{45486bc0-7180-4a77-b8c9-881d6528dee6}" name="StageStep25" locklevel="0" expanded="true" visible="false" labelid="{ecc99c8a-da12-4f54-815b-aa49c56cce06}">
+          <labels>
+            <label description="Security Checks" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{17981d8a-7c2d-e801-dcbc-adedf3942dc7}" name="StageStep25_section1" labelid="{7d7b542e-0400-48a3-8a87-9e5273c69975}">
+                  <labels>
+                    <label description="Security Checks" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e721863e-9ec9-4342-b476-eb79f6491583}" showlabel="true" visible="true" labelid="{d6327d94-c8f7-466c-8682-668f68981197}">
+                        <labels>
+                          <label description="New behavior" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_newbehavior" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_newbehavior" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{08f0e522-1958-4282-ab53-24187563ef67}" showlabel="true" visible="true" labelid="{61490add-f873-4a69-872a-48381f56b761}">
+                        <labels>
+                          <label description="Existant Email" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_existantemail" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_existantemail" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{205ce00a-56b7-4c4f-b62a-63f41986490d}" showlabel="true" visible="true" labelid="{e49fa792-e69a-4e4a-ae1c-8f984c96d416}">
+                        <labels>
+                          <label description="Requested Email and Genuine" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_requestedemailandgenuine" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_requestedemailandgenuine" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3b8d003a-6b3b-4dc5-a785-3a425430004f}" showlabel="true" visible="true" labelid="{57178f22-cb01-4f45-9e3a-df579f123293}">
+                        <labels>
+                          <label description="Validate callback step" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_validatecallbackstep" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_validatecallbackstep" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e66fd983-6bfb-48f5-995c-a04ded62cc8a}" showlabel="true" visible="true" labelid="{2bc7fb89-6ac6-40bd-8281-c1b8bd2a51c7}">
+                        <labels>
+                          <label description="Callback Date" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_callbackdate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="ind_callbackdate" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1f990c56-5d16-44a6-bf8b-94c9c50c56e1}" showlabel="true" visible="true" labelid="{fd2a58ef-59fa-4446-aae8-f0e37bcb8cf0}">
+                        <labels>
+                          <label description="Identification of Email Address" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_identificationofemailaddress" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_identificationofemailaddress" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3d924570-4032-4d09-b039-1cace66fe709}" showlabel="true" visible="true" labelid="{78e526b8-ade6-4ebe-a3b1-7c5f2947ecdb}">
+                        <labels>
+                          <label description="Authorised for payment" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_contactverified" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_contactverified" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{be9be228-62ff-4c0a-a811-ba209cd14931}" showlabel="true" visible="true" labelid="{1a38229d-048f-4901-9107-4639afbd9811}">
+                        <labels>
+                          <label description="Security checks Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_securitycheckssattus" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_securitycheckssattus" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{8d5636b2-9b7c-432c-9536-a683d99fd221}" name="StageStep43" locklevel="0" expanded="true" visible="false" labelid="{cbf84b6e-fa9f-4f1a-bee9-5398f9b8f943}">
+          <labels>
+            <label description="Update VP DATABASE" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{b9e2af62-fba9-9860-d14b-c9510e65ff7f}" name="StageStep43_section1" labelid="{b3e5e61e-0be8-4e13-8d78-acd20c611bba}">
+                  <labels>
+                    <label description="Update VP DATABASE" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{608047fe-564e-43d3-ad56-4c6fa91800d1}" showlabel="true" visible="true" labelid="{e89814de-2a27-4718-af1f-e56616402c26}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{38554659-514e-4e55-a328-cd409ddc237b}" name="StageStep47" locklevel="0" expanded="true" visible="false" labelid="{cf46f3ff-bc74-448f-ab95-510283868095}">
+          <labels>
+            <label description="Request Aborted" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{ffb17cb9-fcd3-a727-c9c5-e364f392a3b5}" name="StageStep47_section1" labelid="{ba14cfad-8596-4520-8303-1f6c5f483f55}">
+                  <labels>
+                    <label description="Request Aborted" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f3fc7bcc-e07a-47f3-aab8-07b1b1f3916c}" showlabel="true" visible="true" labelid="{ab5c294d-615f-4bc2-b712-c9b0a2091fe2}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{4345c56c-4f69-454d-b153-d7b721a54af5}" name="StageStep51" locklevel="0" expanded="true" visible="false" labelid="{91369b2a-8296-429f-8ffa-3e4a220c0cd2}">
+          <labels>
+            <label description="Corporate Action" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{6fcd6c04-6082-a4e3-c038-ec088f38a593}" name="StageStep51_section1" labelid="{cd593849-fe46-4950-9866-743dfbfaebb2}">
+                  <labels>
+                    <label description="Corporate Action" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{dcba61b1-5af3-4eaf-810e-9afeed7975c1}" showlabel="true" visible="true" labelid="{55be6550-641f-4c99-8954-52d63da9820d}">
+                        <labels>
+                          <label description="Corporate Action ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_iscorporateaction" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_iscorporateaction" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0cdcaf18-abc7-43d3-a2d3-69087f5aec3b}" showlabel="true" visible="true" labelid="{010f60ab-dfcc-4aaf-aa85-7cb660a69d4c}">
+                        <labels>
+                          <label description="Corporate Action" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_corporateaction" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_corporateaction" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ac65c591-2f66-4ec0-9f7f-4af7c8e7709a}" showlabel="true" visible="true" labelid="{c0b481f0-be4c-420f-8001-e54c2330441f}">
+                        <labels>
+                          <label description="Activity Type" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_activitytype" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="ind_activitytype" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0e8c1a88-40ba-4fe4-9968-dd57aeb7d28f}" showlabel="true" visible="true" labelid="{36ea818d-9a5e-4ee6-9e19-e4219993a908}">
+                        <labels>
+                          <label description="Purpose of Transfer" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_activity" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_activity" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4a8e9c68-b2fe-4a58-9710-70d180be2417}" showlabel="true" visible="true" labelid="{126e67a8-d68c-417f-91d1-7f1aa4969f10}">
+                        <labels>
+                          <label description="Sector" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_sector" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_sector" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{013f03ac-f6b5-4d38-9460-a1e47e3614e3}" name="StageStep63" locklevel="0" expanded="true" visible="false" labelid="{306b6b55-a1f0-41d1-aaab-8f167c67d08f}">
+          <labels>
+            <label description="Trading Standard CDD : Transaction's Substance" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{6740dd42-6ddd-55d1-ba09-39f332d01ba2}" name="StageStep63_section1" labelid="{bc544d42-d877-482d-9c0d-6517fb2f6673}">
+                  <labels>
+                    <label description="Trading Standard CDD : Transaction's Substance" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{4ce3a5d3-05c5-4a53-954a-549b961ee1cc}" showlabel="true" visible="true" labelid="{c0aa0915-42cf-46d3-840f-81cf8b56bcc8}">
+                        <labels>
+                          <label description="Comment (Reason)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_commentreason" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="ind_commentreason" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e545d314-59b7-4087-bdc5-45c91a1b67d2}" showlabel="true" visible="true" labelid="{e4b60465-4d19-4815-844c-775abcf2f6ae}">
+                        <labels>
+                          <label description="Bill of lading" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_billoflading" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_billoflading" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{23c2766c-6dd7-4c00-b212-4e0373df0ef6}" showlabel="true" visible="true" labelid="{4aa3b094-24ea-4123-ac01-4937342eb594}">
+                        <labels>
+                          <label description="Goods receipt notes at delivery point" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_goodsreceiptnotesatdeliverypoint" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_goodsreceiptnotesatdeliverypoint" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a0b15536-c2bb-4849-a817-224d6973b07a}" showlabel="true" visible="true" labelid="{93d012c2-2081-4759-9542-059d0f9a7b2a}">
+                        <labels>
+                          <label description="Invoice from supplier" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_invoicefromsupplier" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_invoicefromsupplier" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{2cc7ccd0-e388-441c-b42a-5de0748ca608}" name="StageStep73" locklevel="0" expanded="true" visible="false" labelid="{80318b67-c850-440a-b2eb-cbcc7fed51f8}">
+          <labels>
+            <label description="Investment Holding Standard CDD : Transaction's Substance" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{dc474c60-9c8c-3832-69a4-b4bc8b0ab23f}" name="StageStep73_section1" labelid="{611ebe09-266f-4cb7-83b5-a9fadf523cde}">
+                  <labels>
+                    <label description="Investment Holding Standard CDD : Transaction's Substance" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{76f4d1e9-dbd1-4b5c-a9e8-f98ad1350d0f}" showlabel="true" visible="true" labelid="{0223d8f4-c6cd-4dcc-ad3a-bbed91b24ed9}">
+                        <labels>
+                          <label description="Comment (Reason)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_commentreason" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="ind_commentreason" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b6f9ce08-6929-486e-9780-5463b58b7d3c}" showlabel="true" visible="true" labelid="{629c9d41-d6c7-4f36-9a7b-aead68772ee5}">
+                        <labels>
+                          <label description="Board Approval" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_boardaproval" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_boardaproval" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{09670a7a-ae13-4717-9df2-b84a878b0a17}" showlabel="true" visible="true" labelid="{442ca940-ea83-46b6-b415-86eb2160840e}">
+                        <labels>
+                          <label description="Solvency test/Solvensy certificate" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_solvencytestsolvensycertificate" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_solvencytestsolvensycertificate" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2930b534-adb6-4e02-8bf4-cf7cc071ba9f}" showlabel="true" visible="true" labelid="{50f4c81b-cd7f-4c1e-a88f-ab8f34b78814}">
+                        <labels>
+                          <label description="Sales purshase agreement" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_salespurshaseagreement" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_salespurshaseagreement" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{602d712d-9e5f-47d7-acac-f19c4cc9fff2}" name="StageStep83" locklevel="0" expanded="true" visible="false" labelid="{4faf603f-edb3-4661-b7d4-f7a673058e3c}">
+          <labels>
+            <label description="Consultancy Standard CDD : Transaction's Substance" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{1b834611-72c8-1155-b880-3835fb542216}" name="StageStep83_section1" labelid="{0e5cee3c-5bfb-42bb-afc8-798c0d0afb4a}">
+                  <labels>
+                    <label description="Consultancy Standard CDD : Transaction's Substance" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{727ebf00-c732-4236-b9b3-d5c1b8c52b74}" showlabel="true" visible="true" labelid="{c5998c25-c87e-4812-8f36-aca582f35b51}">
+                        <labels>
+                          <label description="Comment (Reason)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_commentreason" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="ind_commentreason" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a9eb21f3-d999-42db-be0d-deedb43527fe}" showlabel="true" visible="true" labelid="{1d1b2462-9158-433a-8cd9-83e15793b335}">
+                        <labels>
+                          <label description="Agreement" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_agreement" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_agreement" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8c6ab04e-c63f-4e7d-8cb2-cf4a47893ce1}" showlabel="true" visible="true" labelid="{ad68d883-5273-4f89-9e67-db333933f03a}">
+                        <labels>
+                          <label description="Evidance of delivrable" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_evidanceofdelivrable" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_evidanceofdelivrable" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{79456444-83d2-408d-9485-44b8311e6051}" showlabel="true" visible="true" labelid="{79d36e69-e94d-48b7-a47b-fc4b5dd39293}">
+                        <labels>
+                          <label description="Invoice" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_invoice" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_invoice" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{edfa189a-058b-490c-af04-54c710b0c7a8}" name="StageStep93" locklevel="0" expanded="true" visible="false" labelid="{61b642ed-a88c-4a78-9a3e-c23152be5933}">
+          <labels>
+            <label description="Other Standard CDD : Transaction's Substance" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{595f11a3-7391-7660-c277-2107129e54c8}" name="StageStep93_section1" labelid="{8a8aaa24-6094-43fc-b5bc-15b6917c408d}">
+                  <labels>
+                    <label description="Other Standard CDD : Transaction's Substance" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{cdcbd924-5984-4359-ab66-34f0dd38af7f}" showlabel="true" visible="true" labelid="{1bf8780a-3f41-49a4-9ed1-cbd14f30003d}">
+                        <labels>
+                          <label description="Comment (Reason)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_commentreason" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="ind_commentreason" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{618e1301-9572-4032-9364-149ff4821967}" showlabel="true" visible="true" labelid="{c0962613-a4a3-43a8-a292-5c93753a8371}">
+                        <labels>
+                          <label description="Agreement" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_agreement" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_agreement" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{6717d880-dd8c-4a0a-8cf8-19bc28fdd399}" name="StageStep99" locklevel="0" expanded="true" visible="false" labelid="{2bc425bf-0fc3-4a09-a535-ce3de33b81ef}">
+          <labels>
+            <label description="Occasional Standard CDD : Transaction's Substance" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{3bea40b4-ca49-1fc3-d15b-46fac5c77945}" name="StageStep99_section1" labelid="{37b112b1-1c45-4866-8cb0-d1793e7a6534}">
+                  <labels>
+                    <label description="Occasional Standard CDD : Transaction's Substance" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{4cddb8d2-89f7-4201-91c5-2fc9837695a3}" showlabel="true" visible="true" labelid="{067e3c5b-56f2-4c06-8d42-1374c282feb3}">
+                        <labels>
+                          <label description="Comment (Reason)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_commentreason" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="ind_commentreason" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fadd53f2-c3e7-49a1-b27b-40af437d1f8d}" showlabel="true" visible="true" labelid="{7d32d169-1e8d-4761-bfd2-bca966f53d56}">
+                        <labels>
+                          <label description="Board Approval" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_boardaproval" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_boardaproval" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2ef0e170-84af-4802-98d1-0f3ef571b88c}" showlabel="true" visible="true" labelid="{9325222b-4d6a-4824-bdcb-5e5aac472cbe}">
+                        <labels>
+                          <label description="Assassement of significance" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_assassementofsignificance" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_assassementofsignificance" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{3736003b-0af8-4140-be4f-d7ea324b21cd}" name="StageStep107" locklevel="0" expanded="true" visible="false" labelid="{113d26e1-2782-4eaa-bb64-b5080deb2bde}">
+          <labels>
+            <label description="Occasional Standard CDD : Dividend Payment" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{4a0a3c4c-ff1b-7768-01ff-70c4290b1a8c}" name="StageStep107_section1" labelid="{8c2c7cf8-488c-48ce-9854-1fb88950b124}">
+                  <labels>
+                    <label description="Occasional Standard CDD : Dividend Payment" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{566e1824-765f-4757-ab5f-7111e59623c2}" showlabel="true" visible="true" labelid="{267af243-8b0f-42e7-bccf-ae668588ddda}">
+                        <labels>
+                          <label description="Comment (Reason)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_commentreason" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="ind_commentreason" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b6109c20-5a6b-4ca9-b5da-2b393f359457}" showlabel="true" visible="true" labelid="{ad372512-167e-41a0-ae5f-86b5d5f7af6a}">
+                        <labels>
+                          <label description="Docs for Dividend payment" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_docsfordividendpayment" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_docsfordividendpayment" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{a58fa8f6-f8ec-4585-b10b-a2b2cbdbff32}" name="StageStep113" locklevel="0" expanded="true" visible="false" labelid="{90c89496-4f75-496e-a03d-ba54e4ee824f}">
+          <labels>
+            <label description="Occasional Standard CDD : Forfeiture Of Shares" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{999c30d0-967d-d843-1417-832603a94450}" name="StageStep113_section1" labelid="{3868ee48-3dd5-4618-9c2d-b663253102da}">
+                  <labels>
+                    <label description="Occasional Standard CDD : Forfeiture Of Shares" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{1b2411c7-6008-4835-b990-62d47ed5e4f0}" showlabel="true" visible="true" labelid="{346811f4-7204-404e-a622-2ef7f5f14171}">
+                        <labels>
+                          <label description="Comment (Reason)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_commentreason" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="ind_commentreason" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f7cdd796-1f48-433f-a08c-90384ac93d8c}" showlabel="true" visible="true" labelid="{e5887466-ee2c-4e9e-b097-28036c01a17e}">
+                        <labels>
+                          <label description="Docs forfeiture of shares" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_docsforforfeitureofshares" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_docsforforfeitureofshares" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{29b4b78b-5626-407a-b2e3-1ea22ce18a9c}" name="StageStep119" locklevel="0" expanded="true" visible="false" labelid="{10506c44-f74c-46c9-a0cc-9498551d52fa}">
+          <labels>
+            <label description="Occasional Standard CDD : Issue Of Shares" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{83afffdc-d9ef-6796-e39d-423fe8548c39}" name="StageStep119_section1" labelid="{ba91af3e-1d51-41b2-8e6a-a978d6dce965}">
+                  <labels>
+                    <label description="Occasional Standard CDD : Issue Of Shares" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{bbce255b-6a0c-461a-b11a-643c40ee2996}" showlabel="true" visible="true" labelid="{115d52e3-a6bf-400a-96f7-24c013dc179a}">
+                        <labels>
+                          <label description="Comment (Reason)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_commentreason" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="ind_commentreason" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d5f357d2-f38f-46c6-b29b-24f2eafaa6e2}" showlabel="true" visible="true" labelid="{fde030ae-197e-45ee-9704-ab865c9f26f8}">
+                        <labels>
+                          <label description="Docs for Issue of Shares" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_docsforissueofshares" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_docsforissueofshares" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{74c936e5-e615-458d-b055-c6ed18daebbd}" name="StageStep125" locklevel="0" expanded="true" visible="false" labelid="{1e96ad66-c04f-454a-95e8-7b16a720c662}">
+          <labels>
+            <label description="Occasional Standard CDD : Loan To Shareholder" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{319ca6c9-1c05-2c61-c100-9656486134ff}" name="StageStep125_section1" labelid="{d00124ea-365c-449d-8804-03ac83cd933a}">
+                  <labels>
+                    <label description="Occasional Standard CDD : Loan To Shareholder" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f988dcca-673d-4900-89ca-1c729cc2a578}" showlabel="true" visible="true" labelid="{7f9c3260-2b89-4e69-97de-3fe02ac2d4cf}">
+                        <labels>
+                          <label description="Comment (Reason)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_commentreason" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="ind_commentreason" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{0204fe93-ed39-4f9a-9d8d-01af4382e1b3}" name="StageStep129" locklevel="0" expanded="true" visible="false" labelid="{566d71e7-7b1b-43e3-bd7d-b1b515784689}">
+          <labels>
+            <label description="Occasional Standard CDD : Redemption Of Shares" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{6b45f268-2315-70f4-6152-fbb39b78b9c3}" name="StageStep129_section1" labelid="{2efb1749-c9d9-4052-aeca-9730aed7bbbb}">
+                  <labels>
+                    <label description="Occasional Standard CDD : Redemption Of Shares" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3a69545a-2561-42d4-b4e4-f06ac3c8be82}" showlabel="true" visible="true" labelid="{9b6e020f-7935-436a-9b4f-eb704db471ea}">
+                        <labels>
+                          <label description="Comment (Reason)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_commentreason" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="ind_commentreason" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{3819266b-c10c-45c0-b8d4-3cbf840b0a03}" name="StageStep133" locklevel="0" expanded="true" visible="false" labelid="{67d3a39f-eb3a-4c02-977d-10ba3b96c2c7}">
+          <labels>
+            <label description="Standard CDD : Backgound Of Payment Beneficary" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{757949bf-8ea0-fb75-7653-1d8def66d522}" name="StageStep133_section1" labelid="{44dda464-a4a5-4db9-861e-c83dc6897baf}">
+                  <labels>
+                    <label description="Standard CDD : Backgound Of Payment Beneficary" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d3bd50ec-810a-41ab-bf96-ebee028ee7cd}" showlabel="true" visible="true" labelid="{2e22b99e-8014-4ded-8366-ea3f15c5b523}">
+                        <labels>
+                          <label description="Certificate of incorporation/Proof of identity" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_certificateofincorporationproofofidentity" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_certificateofincorporationproofofidentity" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{73f047eb-004a-408c-852f-faaf1b6d8b17}" showlabel="true" visible="true" labelid="{a9fd032e-9962-4692-8b63-7fc84491d32b}">
+                        <labels>
+                          <label description="List of directors" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_listofdirectors" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_listofdirectors" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a90b5c11-107f-43e9-84b8-d1ed72e4568a}" showlabel="true" visible="true" labelid="{9cb0af46-800c-4d0e-8e23-f85b135decb0}">
+                        <labels>
+                          <label description="Evidence of background verification" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_evidenceofbackgroundverification" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_evidenceofbackgroundverification" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{353b9da4-d07f-4d7f-8aa7-b1e57ff95770}" name="StageStep141" locklevel="0" expanded="true" visible="false" labelid="{52bd934b-8873-4ae2-8755-1984a106c7fa}">
+          <labels>
+            <label description="In Order?" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{66c30722-4671-c1a2-bf39-46065d5d22df}" name="StageStep141_section1" labelid="{cc5db261-706f-4532-83b7-a4944bb4e5a9}">
+                  <labels>
+                    <label description="In Order?" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{dfceb772-1af5-40ef-9c02-2aac33c33e4f}" showlabel="true" visible="true" labelid="{93b31a4a-160d-4b69-81b1-c733c9cd42b4}">
+                        <labels>
+                          <label description="Basic Docs In Order ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_basicdocsinorder" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_basicdocsinorder" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{f13406b6-01d9-40d1-b792-cbf45fdbefad}" name="StageStep145" locklevel="0" expanded="true" visible="false" labelid="{fe0e93aa-705b-43a2-8c19-cf701b94fc7e}">
+          <labels>
+            <label description="Continue With Transaction?" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{93f85c61-0be6-caa3-5a65-de8ea992359d}" name="StageStep145_section1" labelid="{4b034cb0-5426-423a-ae8e-63e929885d4f}">
+                  <labels>
+                    <label description="Continue With Transaction?" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{74e31f15-fb4a-40a4-b9f6-b31e57694578}" showlabel="true" visible="true" labelid="{a58f019c-8e4c-4cf2-93fe-2acf56d61823}">
+                        <labels>
+                          <label description="Continue With Transaction?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_basicdocscontinue" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_basicdocscontinue" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a43aa0d6-d8d5-44cc-a1bc-d0d55ee4245d}" showlabel="true" visible="true" labelid="{81bba2b9-bc74-4a6f-864d-75d1c1cf0afa}">
+                        <labels>
+                          <label description="Comment (Reason)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_commentreason" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="ind_commentreason" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{e94bc73a-0b9f-492e-a7f0-17079a9c7897}" name="StageStep151" locklevel="0" expanded="true" visible="false" labelid="{7926faad-457e-48d2-bae7-78ba2ed4ef0b}">
+          <labels>
+            <label description="Assess Deviation Inputs Result And Documents" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{87d26604-52f9-4f1b-9a54-e6c1823eccfc}" name="StageStep151_section1" labelid="{3fe06213-d098-466e-b4f1-7105a1d45c4a}">
+                  <labels>
+                    <label description="Assess Deviation Inputs Result And Documents" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e9346588-00ef-4c27-9da9-e7e684a2e0cf}" showlabel="true" visible="true" labelid="{6865ad73-47cf-47e0-bf58-3bc23f544e3f}">
+                        <labels>
+                          <label description="New Country" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_newcountry" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_newcountry" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8e3dd53e-315e-42c5-aa91-f5019c1d3565}" showlabel="true" visible="true" labelid="{ddea5572-25f3-4952-8ec7-8170445750f0}">
+                        <labels>
+                          <label description="New Activity" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_newactivity" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_newactivity" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{978a87b0-5fe9-4f0c-8c86-5b8f486bacec}" showlabel="true" visible="true" labelid="{769d9051-7027-4164-b2e2-591f4a5ec3a7}">
+                        <labels>
+                          <label description="New Remitter" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_newremitter" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_newremitter" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{37f9df51-7d2b-4369-a497-ebaa9a9a429b}" showlabel="true" visible="true" labelid="{ce0afb1b-ffb6-4655-8ad2-3608cd42756b}">
+                        <labels>
+                          <label description="New behavior" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_newbehavior" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_newbehavior" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0e8a41f4-88bf-4d7b-8203-9d6f107d0306}" showlabel="true" visible="true" labelid="{ccd7b247-c05b-456a-948a-1bcb0cdc51c2}">
+                        <labels>
+                          <label description="Transaction Review Documents " languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_documentsrequiredtransactionreview" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_documentsrequiredtransactionreview" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{62b763be-611b-473e-8ae9-7286d1ee2e4b}" showlabel="true" visible="true" labelid="{0362bfcf-f972-481c-a3f2-faba4e328b73}">
+                        <labels>
+                          <label description="EDD Document" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_edddocument" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_edddocument" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b323f618-ea31-4ed7-a21e-613e5cee5a55}" showlabel="true" visible="true" labelid="{72f215c2-7dec-4333-9ec8-9d89711c1b68}">
+                        <labels>
+                          <label description="Customer Identification Document " languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_customeridentificationdocument" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_customeridentificationdocument" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{08b2619d-2ac1-49c0-89c0-fd4c541bd596}" showlabel="true" visible="true" labelid="{6e35e0b9-3f0f-4325-8321-a6d9def2f490}">
+                        <labels>
+                          <label description="Proceed to assess deviation?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:ind_proceedtoassessdeviation" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_proceedtoassessdeviation" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{e38d1a92-5b22-4158-b6d0-7b19e1e31590}" name="StageStep169" locklevel="0" expanded="true" visible="false" labelid="{53498911-a014-4413-af9c-b75ab806e9ed}">
+          <labels>
+            <label description="Proceed With Asses Deviation" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{5a1829ed-dd04-8ded-7989-5c1d49153e18}" name="StageStep169_section1" labelid="{0aad1261-530e-4b3e-a466-b1eee9489054}">
+                  <labels>
+                    <label description="Proceed With Asses Deviation" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{cb705744-c17e-4428-944f-3ceebc149cdb}" showlabel="true" visible="true" labelid="{4ce8e297-2d3f-4a03-8526-3610d2ade2da}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{d26d7268-ae00-4328-bb06-d186dd6d21d9}" name="StageStep173" locklevel="0" expanded="true" visible="false" labelid="{d3aa4f7a-728f-4f5e-8c58-1767dc9e8107}">
+          <labels>
+            <label description="Proceed With  CDD Screening" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{c0f50f4a-2952-f933-f295-fed2dbe27676}" name="StageStep173_section1" labelid="{04a330e6-0dac-4cd2-8bc8-d03ef0ceb6a2}">
+                  <labels>
+                    <label description="Proceed With  CDD Screening" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{0754729e-5163-441e-8db0-75da7a642573}" showlabel="true" visible="true" labelid="{2fd29015-04b0-4ac2-8c58-f296ec9b15c1}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_new_bpf_b2924b5a1bb144fd877312e032905472" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

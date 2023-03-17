@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{47868cbd-6b06-454d-b72c-be3a38728ad9}</savedqueryid>
+    <layoutxml>
+      <grid name="ind_customers" jump="ind_name" select="1" icon="1" preview="0">
+        <row name="ind_customer" id="ind_customerid">
+          <cell name="ind_name" width="300" />
+          <cell name="ind_entitycode" width="100" />
+          <cell name="ind_contactnumber" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_customer">
+          <attribute name="ind_customerid" />
+          <attribute name="ind_name" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="ind_entitycode" />
+          <attribute name="ind_contactnumber" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="ind_Customer Lookup View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

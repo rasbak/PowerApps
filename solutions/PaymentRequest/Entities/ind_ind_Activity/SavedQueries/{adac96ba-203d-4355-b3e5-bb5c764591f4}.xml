@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{adac96ba-203d-4355-b3e5-bb5c764591f4}</savedqueryid>
+    <layoutxml>
+      <grid name="ind_ind_activities" jump="ind_purposeoftransfer" select="1" icon="1" preview="0">
+        <row name="ind_ind_activity" id="ind_ind_activityid">
+          <cell name="ind_purposeoftransfer" width="300" />
+          <cell name="ind_furtherdetails" width="100" />
+          <cell name="ind_activitytype" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_ind_activity">
+          <attribute name="ind_ind_activityid" />
+          <attribute name="ind_purposeoftransfer" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="ind_activitytype" />
+          <attribute name="ind_furtherdetails" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Activity Lookup View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

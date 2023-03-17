@@ -1,0 +1,391 @@
+function RoleStage (executionContext)
+{
+    debugger;
+    var formContext = executionContext.getFormContext();
+
+    formContext.data.process.addOnPreStageChange(Block);
+    Xrm.Page.data.process.addOnProcessStatusChange(endBlock);
+	var status = Xrm.Page.data.process.getStatus();
+
+	if (status == "finished") {
+		Xrm.Page.data.process.removeOnProcessStatusChange(endBlock);
+	}
+        
+}
+
+function endBlock(executionContext){
+		debugger;
+	var formContext = executionContext.getFormContext();
+	
+	var loggedinUserId = Xrm.Utility.getGlobalContext().userSettings.userId;
+	var userRM; var userRO;var userRC;var userMLRO;var userTL;var userRHC;
+	
+	if(formContext.getAttribute("ind_rm").getValue())
+		userRM = formContext.getAttribute("ind_rm").getValue()[0].id;
+	if(formContext.getAttribute("ind_ro").getValue())
+		userRO = formContext.getAttribute("ind_ro").getValue()[0].id;
+	if(formContext.getAttribute("ind_rc").getValue())
+		userRC = formContext.getAttribute("ind_rc").getValue()[0].id; //not added
+	if(formContext.getAttribute("ind_mlro").getValue())
+		userMLRO = formContext.getAttribute("ind_mlro").getValue()[0].id; //not added
+	if(formContext.getAttribute("ind_tl").getValue())
+		userTL = formContext.getAttribute("ind_tl").getValue()[0].id; //not added
+	if(formContext.getAttribute("ind_rhc").getValue())
+		userRHC = formContext.getAttribute("ind_rhc").getValue()[0].id; //not added
+	
+	 var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	// var currentRole = formContext.getAttribute("ind_currentrole").getValue();
+	var status = Xrm.Page.data.process.getStatus();
+	 
+	
+	//RO ***********************
+	if(
+	/*******************TRANSACTION***************/
+	(idStage=="51e9c646-964e-47f3-ae0b-97568db7188f" //Inward/Outward
+	/***********TR*******************/
+	||idStage=="48c5db30-fd06-436b-958a-fac605af73aa" //EDD
+	||idStage=="f0defd43-1099-4e08-995f-25dc1df0da53" //Transaction reporting
+	||idStage=="3519469f-e5ba-40c2-9147-43e5f6177c41"||idStage=="6bef052b-48cb-4ab8-97dc-efb1e7db2246" //Proceed With Transaction Monitoring
+	||idStage=="3f1a062a-8948-4d58-97c6-3f45db6682e1" ||idStage=="19f20bd1-a5c9-4722-ac67-2749eec21cfe" ||idStage=="205fa648-f9a0-4442-aca3-7ef01a95d992" //STR
+	/*********OUTWARD1*****************/
+	||idStage=="26c7d2a9-eae3-4582-aac1-8b990967cab8" // Proceed With  CDD Screening
+	||idStage=="7869b070-b66d-4720-8cc5-95829aa2c74a" // Proceed With Asses Deviation
+	/***********ARA********************/
+	||idStage=="af353c5b-6772-482a-93a1-e149d47e2a2f" //Transaction Reporting Process
+	||idStage=="e8e83579-0e40-4986-9452-ec0d56ea2b5b" //Proceed With Transaction Monitoring
+	||idStage=="7a0b2b1f-e8aa-4088-9f8b-eff170f9c040" //STR Process	
+	/************JURISDICTION***************/
+	||idStage=="8e7b33d3-778b-4f60-bf86-520d8f6fcc0f" // Transaction Reporting Process
+	||idStage=="2a68bc35-ed64-4ee5-8797-849efeea6828" //Proceed With Transaction Monitoring
+	/************cddi*********************/
+	||idStage=="1eac60c5-07e7-48fe-8d91-fb9a724894ed"||idStage=="89b72376-d6ed-4a14-b374-976e871999fe" // CDD Screening
+	||idStage=="67663308-6359-4f99-85d8-acaeae34cece" ||idStage=="8f66f957-c51f-4d4d-aa25-bbab1fff497b" // CDD Screening
+	||idStage=="15cc60d0-7427-47bd-8a3d-bd714557b2d5" //Transaction Reporting Process
+	||idStage=="561ab389-3df6-433a-800d-9130516e32f9" ||idStage=="12d07c52-c09e-4800-9a57-b47aa3324436" //STR Process
+	/*********ONGOING***************/
+	||idStage=="47bbfef6-702d-4e3f-8dcf-018bc30e8db9" // EDD Process
+	||idStage=="f21f684c-e53a-4bec-aa10-44584d7b3995" // STR Process
+	||idStage=="264a8247-fd05-4f15-9e1a-d8d026e3ab97" // PEP Screening
+	||idStage=="e4a3ee7f-42c7-4a7b-b709-80a5676ec3b3" ||idStage=="05834b5a-de0a-4cc0-8080-e6fd9ea00bf5" ||idStage=="7627ad76-3949-48c1-995d-9ea7ab16489c" //Continue With Transaction Monitoring Process
+	/*****CDDS**************/
+	||idStage=="8da809d0-a6da-4da1-a454-51223cd1121b" // Initiate STR Process
+	||idStage=="4db0de07-13c6-4f40-ab26-13a2d7376e55" // PEP Screening Process
+	||idStage=="3e0ec563-b0b6-421e-a73e-5a6d4839d40e" //EDD Process
+	||idStage=="d2148a9c-1c4c-44e5-a1a6-966f987f5592"||idStage=="4f954a17-55fc-4170-87b6-be15f6fa7350" //Continue with Transaction Review
+	
+	
+	/************PEP***********/
+	||idStage=="62d3461f-cafe-43e2-9ff7-0bc8eb1b85cc" // Transaction Reporting Process
+	||idStage=="b95a4d48-2a2f-4074-8937-61b567457b55" // EDD Process
+	) && loggedinUserId!=userRO && status=="finished"){
+		
+		
+		Xrm.Utility.alertDialog("RO Stage is not allowed for you");
+		formContext.data.process.setStatus('active');
+		
+	}
+	
+	if ( idStage=="ffe04f69-febd-4339-aa62-2b402f04bed1" /*Ongoing Screening*/ && loggedinUserId!=userRC && status=="finished"){
+		Xrm.Utility.alertDialog("RC Stage is not allowed for you");
+		formContext.data.process.setStatus('active');
+	}
+}
+
+
+
+
+function Block(executionContext){
+	debugger;
+	var formContext = executionContext.getFormContext();
+	
+	var loggedinUserId = Xrm.Utility.getGlobalContext().userSettings.userId;
+	var userRM; var userRO;var userRC;var userMLRO;var userTL;var userRHC;
+	
+	if(formContext.getAttribute("ind_rm").getValue())
+		userRM = formContext.getAttribute("ind_rm").getValue()[0].id;
+	if(formContext.getAttribute("ind_ro").getValue())
+		userRO = formContext.getAttribute("ind_ro").getValue()[0].id;
+	if(formContext.getAttribute("ind_rc").getValue())
+		userRC = formContext.getAttribute("ind_rc").getValue()[0].id; //not added
+	if(formContext.getAttribute("ind_mlro").getValue())
+		userMLRO = formContext.getAttribute("ind_mlro").getValue()[0].id; //not added
+	if(formContext.getAttribute("ind_tl").getValue())
+		userTL = formContext.getAttribute("ind_tl").getValue()[0].id; //not added
+	if(formContext.getAttribute("ind_rhc").getValue())
+		userRHC = formContext.getAttribute("ind_rhc").getValue()[0].id; //not added
+	
+	 var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	// var currentRole = formContext.getAttribute("ind_currentrole").getValue();
+	 
+	
+	//RO ***********************
+	if(
+	
+	
+	/*******************Outward1***************/
+	(idStage=="92ed90d0-0407-43cb-8cb5-14f7ab49fde8" //transaction 
+	||idStage=="7f3a4c8b-a2b2-4ccb-9ede-1b97a2d791a6" //security check
+	||idStage=="8ab8ea05-cf0e-48bd-a248-2650f11bdbc8" //availability of funds
+	||idStage=="8bea2f77-9824-4015-add7-2c652e798dfe" // CORPORATE ACTION
+	||idStage=="f28b8a0a-5a8b-4e12-af8d-43249d43645d" // Occasional Standard CDD : Dividend Payment
+	||idStage=="809b0601-88c4-494b-aaa8-8e8dd4bda652" // Occasional Standard CDD : Transaction's Substance
+	||idStage=="fefe5cba-f277-49c1-9e9d-b1c10728be7a" // Occasional Standard CDD : Loan To Shareholder
+	||idStage=="fb77f598-302f-4d61-92ff-c6c0f76ab5a5" // Occasional Standard CDD : Redemption Of Shares
+	||idStage=="7238f13f-4cdf-421a-91b8-cda8103ab4b5" //Occasional Standard CDD : Issue Of Shares
+	||idStage=="97cd0de5-e780-4082-baea-fce2465fff6d" //Occasional Standard CDD : Forfeiture Of Shares
+	||idStage=="b0f21b36-d4e3-49d2-9297-1895c6b62d25" //Other Standard CDD : Transaction's Substance
+	||idStage=="1e523d31-a9e9-4ef0-8eda-39e67828321a" //Investment Holding Standard CDD : Transaction's Substance
+	||idStage=="7acd31a4-1d7f-4fca-8e33-5a975aa1344e" // Trading Standard CDD : Transaction's Substance
+	||idStage=="d0a870e4-a09f-4f36-8a58-b6e17681aa18" // Consultancy Standard CDD : Transaction's Substance
+	||idStage=="741c7575-ff3c-4fd8-bdd7-c5e841b9cf38" // Standard CDD : Backgound Of Payment Beneficary
+	||idStage=="bfebc484-b353-46bc-ac6f-fdc8dcad574d" // Assess Deviation Inputs Result And Documents
+
+	||idStage=="204e10ac-2a2f-43a1-9b07-2453d4de9307" // Upload New Account Swift
+	
+	/*******************INWARD***************/
+	||idStage=="92ed90d0-0407-43cb-8cb5-14f7ab49fde8" //transaction 
+	||idStage=="7f3a4c8b-a2b2-4ccb-9ede-1b97a2d791a6" //security check
+	||idStage=="8ab8ea05-cf0e-48bd-a248-2650f11bdbc8" //availability of funds
+	||idStage=="8bea2f77-9824-4015-add7-2c652e798dfe" // CORPORATE ACTION
+	||idStage=="bfebc484-b353-46bc-ac6f-fdc8dcad574d" // Assess Deviation Inputs Result And Documents
+	||idStage=="26c7d2a9-eae3-4582-aac1-8b990967cab8" // Proceed With  CDD Screening
+	||idStage=="7869b070-b66d-4720-8cc5-95829aa2c74a" // Proceed With Asses Deviation
+	||idStage=="204e10ac-2a2f-43a1-9b07-2453d4de9307" // Upload New Account Swift
+	
+	/*******************TR***************/
+	||idStage=="0ca040ed-d4b9-4caf-be17-ba271f2e23e6" // Perform Standard CDD
+	||idStage=="9a259ec2-c93e-4497-9c17-067f0d61b380" // Review process
+	||idStage=="ca558de3-ac19-4edc-ad10-327b3dbd1c42" //Received In Place
+	||idStage=="16651a39-6628-4e0b-a874-9678dcb01e31" //Request For Additional Docs/ Clarifications
+	||idStage=="cd728542-bdba-46a4-bd51-02300be75169"||idStage=="62c0d0f8-7110-4a9c-a1c8-9736cf45cd78" // Request For Documents
+	
+	
+	/*******************CDDI***************/
+	||idStage=="d3ec997b-0463-408c-ad47-ea53195b7338" // Documents On File
+	||idStage=="e1df7569-22ff-48d4-874f-57c15fbd87f1" // Request Identification From Client
+	||idStage=="eb0ccd93-3eb4-4471-b910-b744cdf05e23" ||idStage=="8a6d12a7-a303-4f40-8d64-c8d9e7563350" //Adequate
+	||idStage=="d1974a42-5987-4415-a3f0-780b717d7201" //Request Customer
+	||idStage=="cc2d47ed-814a-4b7b-aed1-c24fb40b6215"  //Original Copy
+	||idStage=="8e0b2abd-43a2-47c6-8fe9-e8ec3e647442" //EDD Process
+	
+	
+	/*******************ONGOING***************/
+	||idStage=="b5382f81-cc3f-4ad9-9e80-947086b45400" // Perform Web ChecK
+	||idStage=="ee2cfc32-e20d-4bd4-8145-9c0b5f2a977f" // Assess Genuineness Of The World Check Hits
+
+	
+	
+	/*******************CDDS***************/
+
+	||idStage=="f081f995-344f-46b9-877e-4a21ae26f2ce" //Create Masterfile On VP	
+	||idStage=="b571f597-1bf9-4681-bb2a-2cf30498e42a" //Preform Screening On World Check
+	||idStage=="37a0f35f-7cfc-47d7-9b81-2e0c435b34ed" //Preform Web Check
+	||idStage=="7982bf19-ff33-4d79-9707-00ff65ec644a" //Assess Genuineness Of The World Check Hits
+	||idStage=="111bfb41-a424-4358-b8f6-61f8fd00ecd8" //Party On VP
+	||idStage=="67297252-702c-4a18-b523-ac9e00c07284" //Create Transaction Party On OGS!
+	
+	
+	
+	/*******************PEP***************/
+	||idStage=="8748f185-3012-49ad-97de-52907aa35c42" // Identify PEP
+	||idStage=="11464401-b63b-4229-b026-a5e52016616a" //Reject The Transaction And Inform The Client
+	
+	/*******************JURISDICTION***************/
+	||idStage=="f45e51cc-e890-482e-99c6-1886770ba1de" // EDD Process
+	||idStage=="1c0ccca4-bc45-4de6-b684-6da6d1ec3d16" //Assess Country : High Risk Jurisdiction
+	||idStage=="5e9741c5-0af8-424b-8808-935a918de1e6" //Assess Country : No-Go Country
+	||idStage=="6c8f5cab-f215-4374-8ae6-98d7194d02e0" //Establish Rationale For ChangE
+	||idStage=="e381df5a-0f3d-4ddf-8d78-ba458dd1085b" //Change In Business Plan Process
+	||idStage=="d3faef35-4660-4632-8afa-efbe6b2e653b" //Initiate Change In Business Plan Process
+	
+	/*******************ARA***************/
+	||idStage=="405bd032-65af-4c71-994f-01280d9dec95" // Establish Rationale For Change
+	||idStage=="95a9a82d-513b-491c-8eee-262049230f7e" // Trigger Change In Business Plan
+	||idStage=="77202ea9-dd64-4572-b32b-59f3a7cf0cb8" //EDD Process
+	||idStage=="37370366-27ce-47a1-9296-a5cade034f1c" //Assess Activity : High Risk Activity
+	||idStage=="53e0bd11-ab3b-4cb1-8b58-c4e0cef94fda" //Assess Activity : Banned Activity
+	
+	
+	/*******************REVIEW***************/
+	||idStage=="80c56baa-67f9-4f3d-a5f3-955b937eba25" //Submit For Verifications
+	||idStage=="fe8c2802-6cc4-4062-b84e-b6f3e60a95ae" // Amend
+	||idStage=="72ff84777-74b1-4d3e-9e03-122adddd4e15" //Redirect Amend
+	||idStage=="00fee77b-1ba9-403a-9b5f-780be12737d0" //Signature Of Client
+	||idStage=="1df78933-1d6f-4a77-8e19-64b0c0f8cf64" //Send To Client For Review And Signature
+	||idStage=="3ce1283a-7790-4137-ad09-be8f4f3a4cf5"||idStage=="7aa33d7f-5b33-4a0e-946d-d69b5e966e43" //Submit For Approval And Signature Of Resident Director
+	
+	/****************EDD******************/
+	||idStage=="8c16918d-486a-4a61-aab3-0ddd704c9a0b"||idStage=="a7a8c0b0-89d8-4724-90aa-ff3cb06a2380" //STR Process
+	||idStage=="2379679a-1a9c-4eaa-995f-9426361bbff8" //Request For Additional Information
+	||idStage=="42af709b-2b35-48ee-bc20-8895055e9774" //Transaction Reporting Process
+	||idStage=="2379679a-1a9c-4eaa-995f-9426361bbff8" //Request For Additional Information"
+	||idStage=="ee4b525d-d4ef-4942-ab39-8dba919d3dc1" //EDD Document
+	||idStage=="b7698b46-0809-4904-bdf5-5a713c06fe42" //Follow-Up
+	
+	/****************TREP******************/
+	||idStage=="daeea7d8-2e52-4c32-91a1-d48a1efe9fd2" //Submit Internal Report To Compliance
+	||idStage=="6533d529-1668-491c-95ae-451a6071b6b4" //Continue With Transaction Monitoring Process
+	||idStage=="205bd9e2-3e16-439d-99d9-e7bf110f85ee" //Request For Additional Docs/ Clarifications
+	||idStage=="90dcd30c-d5c9-45ae-8e70-4d0718bf15f7" //Inform Customer
+	
+	/****************CIBP******************/
+	||idStage=="5661a3b8-b158-4d75-a3e3-1097f56bc777" //Circulate Docs For Signature
+	||idStage=="f7b82c1d-e0e6-4816-b4c3-13e2cede3d31" //Check Licensing Conditions
+	||idStage=="4aeb68f0-9c56-4f5f-a6d1-2bde45423527" //Submit Documents To Registry For Filing
+	||idStage=="753c7e22-9896-4d57-89bc-43e3800df045" //Notify FSC / Seek Approval
+	||idStage=="efc2a64d-cd36-49c5-9d02-70465b2b3c7a" //Amend Document
+	||idStage=="ecc9b916-0d49-43b7-bfad-d7c38de7dab7" //Prepare Business Plan, Resolution And Approval Letter
+	||idStage=="0b19b7a6-f4f3-4fa7-a055-e8102cd8f545" //Inform Banks
+	||idStage=="70c62d88-0a0f-4143-9e69-edd85ba39f5b" //Prepare Updated Business Plan, Resolution And Confirmation Letter
+	||idStage=="85135d8c-5635-46cb-81da-ee42b3684a24" //Update VP
+	
+	/****************STR******************/
+	||idStage=="61fe73fc-ef74-4b06-9515-b02d20389365" //Prepare Unusual Transaction Report
+	
+	/****************OUTWARD2******************/
+	||idStage=="d4bd34e6-7931-4463-bb9e-fb50fcf768bf" //Verifications
+	||idStage=="6040d8dd-9c1a-4c25-b9ee-bf25a6003cbd" //Request For Additional Docs
+	||idStage=="dba42855-b32a-4737-a29a-786ca51b9b2d"||idStage=="a4424597-7217-4448-adbc-ad26317591ed"||idStage=="5d4b65e3-38a1-48fe-9574-c4418f581222"||idStage=="fbd42e25-0b55-4364-a98a-d529ac741eeb" //Circulate Docs To Bank Signatories
+	
+	
+	) && loggedinUserId!=userRO){
+		
+		Xrm.Utility.alertDialog("RO Stage is not allowed for you");
+		executionContext.getEventArgs().preventDefault();
+
+	}
+	
+	//RM **************************
+	if( 
+		/*******************Outward1***************/
+		(idStage=="081c1f00-0fde-4dbe-82f4-f9cd1e7ec2ef" //Manager Decision 
+	    ||idStage=="6dac4b60-9b62-45ac-ae63-caaf92614d9f" //Awaiting Funds
+	    ||idStage=="2be72291-8fa9-43ff-8200-0a6a0baff0c3" //Upload Awaiting Funds Swift
+	    ||idStage=="a3047965-573f-4db4-9578-92ab7819b429" //Continue With Transaction?
+
+		
+		/***********************TR****************/
+	    ||idStage=="b9920e35-28ca-4220-ac65-8f998c7712cd" //Assess Doc At Hand
+	   
+		
+		/***********************CDDI****************/
+	    ||idStage=="2def3a39-c55b-4780-83ae-1b19cb0dce51"  //Assess Documents At Hand
+	   
+		
+	  
+		
+	    /***********************EDD**********************/
+	    ||idStage=="5143b691-2b60-4d79-8822-9d460816c594" //EDD Document Validation
+
+	    /***********************TREP********************/
+	    ||idStage=="9b175e1d-530f-476b-8a9a-b1b13d2f065b" //Validate Docs
+		
+	    /***********************OTWARD2********************/
+	     ||idStage=="5e7a0617-bcb3-46a4-8ea0-c1148fda1c6e" //Manager Cross Verifications
+	     ||idStage=="81aab181-e8f2-4aec-904f-d5f2ddcf8673" //Discuss With Client & Request For Alternative Doc/Info
+	  
+	   
+		) && loggedinUserId!=userRM){
+		
+		Xrm.Utility.alertDialog("RM Stage is not allowed for you");
+		executionContext.getEventArgs().preventDefault();
+		
+		
+	}
+	
+	//RC **************************
+	if( 
+		/*******************ONGOING***************/
+		(idStage=="ee2cfc32-e20d-4bd4-8145-9c0b5f2a977f" //Assess Genuineness Of The World Check Hits
+	    ||idStage=="8b97b1a5-a877-44b6-a203-e3fa40dc456f" //Assess Report Of RO
+	    ||idStage=="264a8247-fd05-4f15-9e1a-d8d026e3ab97" //PEP Screening
+	    ||idStage=="47bbfef6-702d-4e3f-8dcf-018bc30e8db9" //EDD Process
+	    ||idStage=="f21f684c-e53a-4bec-aa10-44584d7b3995" //STR Process
+	    ||idStage=="ef254fe9-dee9-4ee1-a4b6-4a6e63c2d7f6" //Preliminary Assessment
+	    ||idStage=="0fa915c0-adff-4201-84fe-e4bf90219b0e" //Potentially Adverse Hits
+	    ||idStage=="06eafa1b-a3c8-4140-8973-253a559834f9" //Perform Web Check
+		
+		/*******************TREP***************/
+		||idStage=="b7e67d41-05aa-4fb2-8d98-ff6048b08a6e" //Review And Issue Compliance Report
+		
+		/*******************OUTWARD2***************/
+		||idStage=="d81c6162-590b-4811-9cf2-bd00a66f5088" //Review And Query Transaction
+	   
+		) && loggedinUserId!=userRC){
+		
+		Xrm.Utility.alertDialog("RC Stage is not allowed for you");
+		executionContext.getEventArgs().preventDefault();
+		
+	}
+	//MLRO **************************
+	if( 
+		/*******************STR***************/
+		(idStage=="b6c66e12-30b5-4819-8fbb-17080833c4cf" //Updates External Report Log
+	    ||idStage=="654d4eae-3f86-49cc-a45d-59881420bde5" //Proceed With Transaction Monitoring Process
+	    ||idStage=="877ad773-c2b7-4792-8bc4-5bd300af20ff" //Perform Screening And Due Diligence
+	    ||idStage=="08c8fd92-3189-43f9-a1bc-7ebf48ac641b" //Updates External Report Log
+	    ||idStage=="4304218c-5d4a-4c1a-afe1-86467433cf67" //Request Aborted
+	    ||idStage=="b22af40c-0ea9-4bf7-8857-87a799cfe363" //Update Internal Report Log
+	    ||idStage=="d29327ec-a074-47b1-b9c8-893dd4d91351" ||idStage=="4800fe1a-df7b-4659-99da-22e0276ba9c8" //File STR With FIU
+	    ||idStage=="13a03fd3-1bde-42ed-9491-9f0125e5c0e2" //Update Internal Report Log
+	    ||idStage=="7d7146a5-420b-4f54-b844-cd5d8a6894c8" //Performs Transaction And Behaviour Analysis
+	    ||idStage=="a6e20d6b-5662-4d6c-99d4-d9822fee84cc" //Conclusion Of Investigation Report
+	   
+	   
+		) && loggedinUserId!=userMLRO){
+		
+		Xrm.Utility.alertDialog("MLRO Stage is not allowed for you");
+		executionContext.getEventArgs().preventDefault();
+		
+	}
+	//TL **************************
+	if( 
+		/****************OUTWARD2******************/
+	   ( idStage=="d4bd34e6-7931-4463-bb9e-fb50fcf768bf" //Verifications
+	    ||idStage=="e7da33e8-7826-4d93-bdc5-adc199963075" //Amend Transfer Form
+	   
+	   
+	   
+		) && loggedinUserId!=userTL){
+		
+		Xrm.Utility.alertDialog("TL Stage is not allowed for you");
+		executionContext.getEventArgs().preventDefault();
+		
+	}
+	//TL/RM **************************
+	if( 
+		
+	   ( /***********************CIBP********************/
+	    idStage=="c6cc371d-997c-4247-8f80-cb87a7fa2a0e" //Review Documentation
+		  /***********************REVIEW****TL/RM************/
+	    ||idStage=="67e9cc71-69bf-428f-8a05-f49364e71398" //Document Verification
+		) && loggedinUserId!=userTL&& loggedinUserId!=userRM){
+		
+		Xrm.Utility.alertDialog("TL/RM Stage is not allowed for you");
+		executionContext.getEventArgs().preventDefault();
+		
+	}
+	
+	//RHC **************************
+	if( 
+		/****************OUTWARD2******************/
+	   ( idStage=="4dc8f6b0-1df5-4845-b9fb-086e675fd950" //HOC Cross Verification
+	    ||idStage=="1d0d273e-9563-485a-ac9b-4b2e326268e6" //Transaction Reporting Process
+	    
+	   
+		) && loggedinUserId!=userRHC){
+		
+		Xrm.Utility.alertDialog("RHC Stage is not allowed for you");
+		executionContext.getEventArgs().preventDefault();
+		
+	}
+}
+
+
+function RO (){
+	
+	//RO ***********************
+	if(true){
+		return true;
+	}
+}

@@ -1,0 +1,185 @@
+function filterBpfLookup (executionContext){
+	
+	var formContext = executionContext.getFormContext();
+	debugger;
+	if (formContext.getControl("header_process_ind_customeraccount") != null){
+		formContext.getControl("header_process_ind_customeraccount").addPreSearch(filterCustomerAccount);
+	
+		//formContext.getControl("").addPreSearch(filterDefinition);
+		//console.log(formContext.getControl());
+	}
+    if (formContext.getControl("header_process_ind_partyaccount") != null){
+		formContext.getControl("header_process_ind_partyaccount").addPreSearch(filterPartyAccount);
+		//formContext.getControl("").addPreSearch(filterDefinition);
+	}
+	
+	if (formContext.getControl("header_process_ind_activity") != null){
+		formContext.getControl("header_process_ind_activity").addPreSearch(filterActivities);
+		//formContext.getControl("").addPreSearch(filterDefinition);
+	}
+	if (formContext.getControl("header_process_ind_businessplan") != null){
+	    formContext.getControl("header_process_ind_businessplan").addPreSearch(filterPartyName);
+	}
+}
+
+function filterCustomerAccount(executionContext) {
+	
+	var formContext = executionContext.getFormContext();
+    var customerId = null;
+    var customerLookup;
+    var filterBpf;
+	 
+    debugger;
+	 
+    if (formContext.getControl("header_process_ind_customeraccount") != null &&
+		
+		formContext.getControl("header_process_ind_customername").getAttribute().getValue() !=  null){
+        customerLookup = formContext.getControl("header_process_ind_customername").getAttribute().getValue();
+        customerId = customerLookup[0].id.substring(1,37);
+         
+        if (customerId != null && customerId != undefined){
+            filterBpf = "<filter type='and'>" + 
+						"<condition attribute='ind_customer' operator='eq' value='" + customerId + "' />" +
+						"</filter>";
+             
+            formContext.getControl("header_process_ind_customeraccount").addCustomFilter(filterBpf,"ind_ind_account");
+         }
+     }
+ }
+
+function filterPartyAccount(executionContext) {
+	
+	var formContext = executionContext.getFormContext();
+    var partyId = null;
+    var partyLookup;
+    var filterBpf;
+	 
+    debugger;
+	 
+    if (formContext.getControl("header_process_ind_partyaccount") != null &&
+		
+		formContext.getControl("header_process_ind_partyname").getAttribute().getValue() !=  null){
+        partyLookup = formContext.getControl("header_process_ind_partyname").getAttribute().getValue();
+        partyId = partyLookup[0].id.substring(1,37);
+         
+        if (partyId != null && partyId != undefined){
+            filterBpf = "<filter type='and'>" + 
+						"<condition attribute='ind_party' operator='eq' value='" + partyId + "' />" +
+						"</filter>";
+            
+            formContext.getControl("header_process_ind_partyaccount").addCustomFilter(filterBpf,"ind_ind_partyaccount");
+         }
+     }
+ }
+ 
+ function filterActivities(executionContext) {
+		
+	var formContext = executionContext.getFormContext();
+  
+    var activityChoice;
+    var filterBpf;
+	 
+    debugger;
+	 
+    if (formContext.getControl("header_process_ind_activity") != null &&
+		
+		formContext.getControl("header_process_ind_activitytype").getAttribute().getValue() !=  null){
+        activityChoice = formContext.getControl("header_process_ind_activitytype").getAttribute().getValue();
+       
+		
+		
+        if (activityChoice != null && activityChoice != undefined){
+            filterBpf = "<filter type='and'>" + 
+						"<condition attribute='ind_activitytype' operator='eq' value='" + activityChoice + "' />" +
+						"</filter>";
+             
+            formContext.getControl("header_process_ind_activity").addCustomFilter(filterBpf,"ind_ind_activity");
+         }
+     }
+ }
+
+ async function filterPartyName(executionContext) {
+	
+	var formContext = executionContext.getFormContext();
+    var customerId = null;
+    var customerLookup;
+    var filterBpf;
+	 
+    debugger;
+	 
+    if (formContext.getControl("header_process_ind_businessplan") != null &&
+		
+		formContext.getControl("header_process_ind_customername").getAttribute().getValue() !=  null){
+			
+        customerLookup = formContext.getControl("header_process_ind_customername").getAttribute().getValue();
+        customerId = customerLookup[0].id.substring(1,37);
+		 
+        if (customerId != null && customerId != undefined){
+			
+			//var fetchXml = "?fetchXml=<fetch><entity name='ind_ind_businessplan'><filter><condition attribute='ind_customer' operator='eq' value='" + customerId + "'/></filter></entity></fetch>";
+			
+			var filterConditionsXml = "";
+			 filterBpfBP = "<filter type='and'>" + 
+						"<condition attribute='ind_customer' operator='eq' value='" + customerId + "' />" +
+						"</filter>";
+             
+			 formContext.getControl("header_process_ind_businessplan").addCustomFilter(filterBpfBP,"ind_ind_businessplan");
+
+							debugger;
+			
+				/*await Xrm.WebApi.retrieveMultipleRecords('ind_ind_businessplan', fetchXml).then(
+					function success(result) {
+						var filterConditionsXml = "";
+						debugger;
+						for (var i = 0; i < result.entities.length; i++) {
+							filterConditionsXml = filterConditionsXml + "<condition attribute='ind_partyid' operator='eq' value='" + result.entities[0]._ind_party_value + "' />" ;
+						}                    
+						formContext.getControl("header_process_ind_partyname").addCustomFilter("<filter type='and'>"+filterConditionsXml+"</filter>");
+						// perform additional operations on retrieved records
+					},
+					function (error) {
+						console.log(error.message);
+						// handle error conditions
+					}
+				);
+					
+			/*	debugger;
+					
+					//for ( var i=0;i<a.entities.length;i++){
+					setTimeout(() => { 	
+						filterConditionsXml = filterConditionsXml + "<condition attribute='ind_partyid' operator='eq' value='" + a.entities[0]._ind_party_value + "' />" ;
+					//}
+					var filter = "<filter type='and'>"+filterConditionsXml+"</filter>";
+					
+					//formContext.getControl("header_process_ind_partyname").addCustomFilter("<filter type='or'><condition attribute='ind_partyid' operator='eq' value='1d17cadf-c757-ed11-bba3-0022482a40f8' /><condition attribute='ind_partyid' operator='eq' value='82a88e1c-4e54-ed11-bba3-0022482a40f8' /></filter>","ind_party");
+				
+					
+						formContext.getControl("header_process_ind_partyname").addCustomFilter(filter);
+					
+					}, "500");*/
+					 
+			/*	var b = () => {
+				  a.then((d)=>{
+					  debugger;
+					  console.log(d);
+					  formContext.getControl("header_process_ind_partyname").addCustomFilter(d,"ind_party");
+				  });
+				 
+				};	
+				
+				b();
+					*/
+				
+				
+            
+        }
+	
+	}
+
+
+}
+ 
+
+function ultimateCall(){
+	return "a";
+}

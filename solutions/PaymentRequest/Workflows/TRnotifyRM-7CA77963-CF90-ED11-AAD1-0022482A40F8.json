@@ -1,0 +1,296 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "ind_sharedcommondataserviceforapps_64f74"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "ind_sharedoffice365_cc2d4"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "1bd48ea1-498b-4244-adcc-787ca9224178"
+          },
+          "type": "Request",
+          "kind": "Http",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "actions": {
+        "Get_a_row_by_ID": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "54ad6664-8140-4a3d-b297-58aaffcecbb8"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ind_ind_operations",
+              "recordId": "@substring(triggerBody()?['Id'],1,36)"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_a_row_by_ID_2": {
+          "runAfter": {
+            "Get_a_row_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e0539ff2-63c7-4fb9-91b9-682150b476cb"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ind_customers",
+              "recordId": "@outputs('Get_a_row_by_ID')?['body/_ind_customername_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Condition": {
+          "actions": {
+            "Get_a_row_by_ID_4": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "cef23325-e1f0-409f-85ff-f92cf0be17fc"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "systemusers",
+                  "recordId": "@outputs('Get_a_row_by_ID_2')?['body/_ind_rm_value']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Send_an_email_(V2)_2": {
+              "runAfter": {
+                "Get_a_row_by_ID_4": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "fc77641d-7fa0-48eb-8a41-3b886d7143ec"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_office365",
+                  "operationId": "SendEmailV2",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                },
+                "parameters": {
+                  "emailMessage/To": "wael.benboubaker@rfc.com.tn",
+                  "emailMessage/Subject": "@{outputs('Get_a_row_by_ID')?['body/ind_name']}- Document Not received @{outputs('Get_a_row_by_ID_2')?['body/statuscode']}",
+                  "emailMessage/Body": "<p>Hello,<br>\nPlease Check the request @{outputs('Get_a_row_by_ID')?['body/ind_name']} to Assess Documents in @{outputs('Get_a_row_by_ID_2')?['body/statuscode']} Process.<br>\nThank You ! @{outputs('Get_a_row_by_ID_4')?['body/internalemailaddress']}</p>",
+                  "emailMessage/Importance": "Normal"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_a_row_by_ID_2": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Condition_2": {
+                "actions": {
+                  "Get_a_row_by_ID_3": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "cef23325-e1f0-409f-85ff-f92cf0be17fc"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_commondataserviceforapps",
+                        "operationId": "GetItem",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                      },
+                      "parameters": {
+                        "entityName": "systemusers",
+                        "recordId": "@outputs('Get_a_row_by_ID_2')?['body/_ind_ro_value']"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  },
+                  "Send_an_email_(V2)": {
+                    "runAfter": {
+                      "Get_a_row_by_ID_3": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "fc77641d-7fa0-48eb-8a41-3b886d7143ec"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_office365",
+                        "operationId": "SendEmailV2",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                      },
+                      "parameters": {
+                        "emailMessage/To": "wael.benboubaker@rfc.com.tn",
+                        "emailMessage/Subject": "@{outputs('Get_a_row_by_ID')?['body/ind_name']}- Internal logs updated@{outputs('Get_a_row_by_ID_2')?['body/statuscode']}",
+                        "emailMessage/Body": "<p>Hello,<br>\nPlease Check the request @{outputs('Get_a_row_by_ID')?['body/ind_name']} &nbsp;: internal reports in @{outputs('Get_a_row_by_ID')?['body/statuscode']} Process are updated.<br>\nThank You ! @{outputs('Get_a_row_by_ID_3')?['body/internalemailaddress']}</p>",
+                        "emailMessage/Importance": "Normal"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  }
+                },
+                "runAfter": {},
+                "else": {
+                  "actions": {
+                    "Condition_3": {
+                      "actions": {
+                        "Get_a_row_by_ID_5": {
+                          "runAfter": {},
+                          "metadata": {
+                            "operationMetadataId": "cef23325-e1f0-409f-85ff-f92cf0be17fc"
+                          },
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "connectionName": "shared_commondataserviceforapps",
+                              "operationId": "GetItem",
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                            },
+                            "parameters": {
+                              "entityName": "systemusers",
+                              "recordId": "@outputs('Get_a_row_by_ID_2')?['body/_ind_ro_value']"
+                            },
+                            "authentication": "@parameters('$authentication')"
+                          }
+                        },
+                        "Send_an_email_(V2)_3": {
+                          "runAfter": {
+                            "Get_a_row_by_ID_5": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "fc77641d-7fa0-48eb-8a41-3b886d7143ec"
+                          },
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "connectionName": "shared_office365",
+                              "operationId": "SendEmailV2",
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                            },
+                            "parameters": {
+                              "emailMessage/To": "wael.benboubaker@rfc.com.tn",
+                              "emailMessage/Subject": "@{outputs('Get_a_row_by_ID')?['body/ind_name']}- Assess GenuinenesS od WC hits@{outputs('Get_a_row_by_ID_2')?['body/statuscode']}",
+                              "emailMessage/Body": "<p>Hello,<br>\nPlease Check the request @{outputs('Get_a_row_by_ID')?['body/ind_name']} &nbsp;: Assess WC doc in @{outputs('Get_a_row_by_ID')?['body/statuscode']} .<br>\nThank You ! @{outputs('Get_a_row_by_ID_5')?['body/internalemailaddress']}</p>",
+                              "emailMessage/Importance": "Normal"
+                            },
+                            "authentication": "@parameters('$authentication')"
+                          }
+                        }
+                      },
+                      "runAfter": {},
+                      "expression": {
+                        "equals": [
+                          "@triggerBody()?['type']",
+                          "Ro ongoing"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "4714f0dd-db0c-4ffd-b851-4cc945a0e043"
+                      },
+                      "type": "If"
+                    }
+                  }
+                },
+                "expression": {
+                  "equals": [
+                    "@triggerBody()?['type']",
+                    "Ro STR"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "e2dd8b12-b4e7-4583-8630-d4ddb5ff36c6"
+                },
+                "type": "If"
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@triggerBody()?['type']",
+              "RM Notif"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9df7d0ca-67b9-4451-9cba-ed8f00259606"
+          },
+          "type": "If"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

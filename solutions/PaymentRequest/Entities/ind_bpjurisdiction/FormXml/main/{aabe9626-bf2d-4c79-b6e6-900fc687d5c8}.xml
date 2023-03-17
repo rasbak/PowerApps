@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{aabe9626-bf2d-4c79-b6e6-900fc687d5c8}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{fc4d8fa7-2aef-4c53-9be5-4e479ef22de1}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{4aa88753-07cf-4e78-9dfd-2b8d4402f4c9}">
+          <labels>
+            <label description="Establish Rationale For Change" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{f79c94ff-3efc-491f-f560-b63f142a65f7}" name="StageStep3_section1" labelid="{8254354c-dfd1-46b9-97d1-21054353d10c}">
+                  <labels>
+                    <label description="Establish Rationale For Change" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{35d0c48d-d765-4adf-92a3-20953e83d750}" showlabel="true" visible="true" labelid="{f684f034-e142-4608-931a-0a4656a11d04}">
+                        <labels>
+                          <label description="Rationale For Change" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpjurisdiction:ind_rationalforchange" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_rationalforchange" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpjurisdiction" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{a086d746-d7a9-412f-993a-0ad4380342cc}" name="StageStep7" locklevel="0" expanded="true" visible="false" labelid="{668ca84f-0c5c-487b-ad1b-7075ba4c2deb}">
+          <labels>
+            <label description="Assess Country : No-Go Country" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{0aff4349-0a84-f62f-4cfb-59b8f8d905c4}" name="StageStep7_section1" labelid="{29157e6c-2c71-4dca-b616-cc545e01dc5c}">
+                  <labels>
+                    <label description="Assess Country : No-Go Country" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a2668d17-42c0-4da4-9a85-13a32cd5822e}" showlabel="true" visible="true" labelid="{ba177fea-23b9-46e7-add2-9b7989fc2030}">
+                        <labels>
+                          <label description="No-go country identified ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpjurisdiction:ind_nogocountryidentified" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_nogocountryidentified" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpjurisdiction" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{335a4c88-0f57-4fe0-bc06-e213488be405}" name="StageStep11" locklevel="0" expanded="true" visible="false" labelid="{ba95fc0c-aee9-41f2-9737-9c9a9b89a31f}">
+          <labels>
+            <label description="Assess Country : High Risk Jurisdiction" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{c5de1509-cf5d-ec20-665c-7ce8e7b2c446}" name="StageStep11_section1" labelid="{73133f5a-b7ea-460b-a7f9-f12c24e0f8e5}">
+                  <labels>
+                    <label description="Assess Country : High Risk Jurisdiction" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{48132507-deb6-4167-a133-1e350ae75660}" showlabel="true" visible="true" labelid="{2be13b51-d8f6-4acc-ac61-9f9cbcb2f66a}">
+                        <labels>
+                          <label description="High risk jurisdiction identified ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpjurisdiction:ind_highriskjurisdictionidentified" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_highriskjurisdictionidentified" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpjurisdiction" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{f10b6a11-7e33-4519-a90b-289beb99546d}" name="StageStep15" locklevel="0" expanded="true" visible="false" labelid="{986e8a1d-1e3b-4ba4-848f-d7b560049f20}">
+          <labels>
+            <label description="EDD Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{da718813-ea44-5728-1473-d9c1535a5a1e}" name="StageStep15_section1" labelid="{b6328090-5150-44df-984b-21fbeb775d55}">
+                  <labels>
+                    <label description="EDD Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a6c03630-1ec1-4a9c-9da8-53f1e79eddae}" showlabel="true" visible="true" labelid="{bf45d649-2ede-4ab2-aded-a57a07415b79}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpjurisdiction:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpjurisdiction" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{b7e77f30-c114-41da-be4f-85d4786843d3}" name="StageStep19" locklevel="0" expanded="true" visible="false" labelid="{b2d8d373-a143-43f5-b2ea-1699369cf0dd}">
+          <labels>
+            <label description="Proceed With Business Plan Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{06275c94-4812-9289-3f09-b42669e07d67}" name="StageStep19_section1" labelid="{076a2370-0cf0-4172-ac19-0ed53cc06f52}">
+                  <labels>
+                    <label description="Proceed With Business Plan Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5cc90e50-b97a-4282-80b4-1b0c848056d9}" showlabel="true" visible="true" labelid="{5aaa3132-f572-46f0-a538-b8794fd25fc6}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpjurisdiction:statuscode" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpjurisdiction" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{5deea8c9-f5ad-459a-8040-81145f1e5498}" name="StageStep23" locklevel="0" expanded="true" visible="false" labelid="{ca76170e-eb46-439e-a318-740a95a489f8}">
+          <labels>
+            <label description="Transaction Reporting Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{ca79744d-f72b-edc7-cffe-7616eff63609}" name="StageStep23_section1" labelid="{5be12056-65b5-4ae2-b084-7525d649571c}">
+                  <labels>
+                    <label description="Transaction Reporting Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{1ad324fe-0e75-4d24-9e97-591a1157ed21}" showlabel="true" visible="true" labelid="{66c41d99-b330-4f74-ba21-acd2ce627b35}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpjurisdiction:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpjurisdiction" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

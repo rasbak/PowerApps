@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModule>
+  <UniqueName>ind_Paymenrequest</UniqueName>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <WebResourceId>953b9fac-1e5e-e611-80d6-00155ded156f</WebResourceId>
+  <OptimizedFor></OptimizedFor>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <FormFactor>1</FormFactor>
+  <ClientType>4</ClientType>
+  <NavigationType>0</NavigationType>
+  <AppModuleComponents>
+    <AppModuleComponent type="1" schemaName="activitypointer" />
+    <AppModuleComponent type="1" schemaName="expiredprocess" />
+    <AppModuleComponent type="1" schemaName="ind_activityriskassessmentt" />
+    <AppModuleComponent type="1" schemaName="ind_bannedactivity" />
+    <AppModuleComponent type="1" schemaName="ind_bpactivityriskassessement" />
+    <AppModuleComponent type="1" schemaName="ind_bpeddprocess" />
+    <AppModuleComponent type="1" schemaName="ind_bpjurisdiction" />
+    <AppModuleComponent type="1" schemaName="ind_bpstrprocess" />
+    <AppModuleComponent type="1" schemaName="ind_bptransactionreporting" />
+    <AppModuleComponent type="1" schemaName="ind_cddidentification" />
+    <AppModuleComponent type="1" schemaName="ind_cddscreening" />
+    <AppModuleComponent type="1" schemaName="ind_changeinbusinessplan" />
+    <AppModuleComponent type="1" schemaName="ind_customer" />
+    <AppModuleComponent type="1" schemaName="ind_eddprocess" />
+    <AppModuleComponent type="1" schemaName="ind_highriskactivity" />
+    <AppModuleComponent type="1" schemaName="ind_ind_account" />
+    <AppModuleComponent type="1" schemaName="ind_ind_activity" />
+    <AppModuleComponent type="1" schemaName="ind_ind_bank" />
+    <AppModuleComponent type="1" schemaName="ind_ind_businessplan" />
+    <AppModuleComponent type="1" schemaName="ind_ind_corporateaction" />
+    <AppModuleComponent type="1" schemaName="ind_ind_operation" />
+    <AppModuleComponent type="1" schemaName="ind_ind_partyaccount" />
+    <AppModuleComponent type="1" schemaName="ind_ind_usercontact" />
+    <AppModuleComponent type="1" schemaName="ind_jurisdictionscreening" />
+    <AppModuleComponent type="1" schemaName="ind_ongoingscreening" />
+    <AppModuleComponent type="1" schemaName="ind_outward" />
+    <AppModuleComponent type="1" schemaName="ind_outward2" />
+    <AppModuleComponent type="1" schemaName="ind_party" />
+    <AppModuleComponent type="1" schemaName="ind_pepscreening" />
+    <AppModuleComponent type="1" schemaName="ind_requestforchangeinbusinessplan" />
+    <AppModuleComponent type="1" schemaName="ind_reviewprocess" />
+    <AppModuleComponent type="1" schemaName="ind_strprocess" />
+    <AppModuleComponent type="1" schemaName="ind_transaction" />
+    <AppModuleComponent type="1" schemaName="ind_transactionreporting" />
+    <AppModuleComponent type="1" schemaName="ind_transactionreview" />
+    <AppModuleComponent type="1" schemaName="knowledgearticle" />
+    <AppModuleComponent type="1" schemaName="mailbox" />
+    <AppModuleComponent type="1" schemaName="new_bpf_b21126463e024788a29492e65ed951e3" />
+    <AppModuleComponent type="1" schemaName="new_bpf_b2924b5a1bb144fd877312e032905472" />
+    <AppModuleComponent type="1" schemaName="systemuser" />
+    <AppModuleComponent type="1" schemaName="teammobileofflineprofilemembership" />
+    <AppModuleComponent type="1" schemaName="translationprocess" />
+    <AppModuleComponent type="29" id="{8f6456d2-9061-ed11-9562-0022482a4894}" />
+    <AppModuleComponent type="29" id="{f7f8465a-e570-ed11-9562-0022482a40f8}" />
+    <AppModuleComponent type="29" id="{46aeeb60-5071-ed11-9562-0022482a4894}" />
+    <AppModuleComponent type="29" id="{aafeb1a6-7c71-ed11-9562-0022482a40f8}" />
+    <AppModuleComponent type="29" id="{78951581-8471-ed11-9562-0022482a40f8}" />
+    <AppModuleComponent type="29" id="{f5ddf3df-1d7a-ed11-81ad-0022482a4894}" />
+    <AppModuleComponent type="29" id="{170fcbdf-9f61-ed11-9562-0022482a4894}" />
+    <AppModuleComponent type="29" id="{14bae384-7d5e-ed11-9562-0022482a40f8}" />
+    <AppModuleComponent type="29" id="{045363fa-e363-ed11-9562-0022482a40f8}" />
+    <AppModuleComponent type="29" id="{1348a6ad-7862-ed11-9562-0022482a40f8}" />
+    <AppModuleComponent type="29" id="{b2924b5a-1bb1-44fd-8773-12e032905472}" />
+    <AppModuleComponent type="29" id="{1422cfed-3861-ed11-9562-0022482a4894}" />
+    <AppModuleComponent type="29" id="{b2112646-3e02-4788-a294-92e65ed951e3}" />
+    <AppModuleComponent type="29" id="{3fc7e0ba-f760-ed11-9562-0022482a40f8}" />
+    <AppModuleComponent type="29" id="{e11049ed-4354-ed11-bba3-0022482a4894}" />
+    <AppModuleComponent type="29" id="{b2268c54-8770-ed11-9562-0022482a40f8}" />
+    <AppModuleComponent type="29" id="{568355fe-f160-ed11-9562-0022482a4894}" />
+    <AppModuleComponent type="29" id="{8361a76b-2e6b-ed11-9562-0022482a4894}" />
+    <AppModuleComponent type="29" id="{087abff4-6860-ed11-9562-0022482a40f8}" />
+    <AppModuleComponent type="29" id="{dc605514-d860-ed11-9562-0022482a40f8}" />
+    <AppModuleComponent type="29" id="{8c98dbc3-7458-ed11-9562-0022482a40f8}" />
+    <AppModuleComponent type="29" id="{711fef8d-0161-ed11-9562-0022482a40f8}" />
+    <AppModuleComponent type="29" id="{e8a74313-985f-ed11-9562-0022482a40f8}" />
+    <AppModuleComponent type="60" id="{7b00802b-099b-ed11-aad1-0022482a4894}" />
+    <AppModuleComponent type="60" id="{57220268-843b-e511-80d1-00155db10d2b}" />
+    <AppModuleComponent type="60" id="{9de2de6f-1b31-4b2f-be64-db1fe3eeda7c}" />
+    <AppModuleComponent type="60" id="{c378c42a-ed4d-4f60-9d17-f71b8bfb91df}" />
+    <AppModuleComponent type="62" schemaName="ind_Paymenrequest" />
+  </AppModuleComponents>
+  <AppModuleRoleMaps>
+    <Role id="{236750cd-45ae-4939-ab12-b24b920ced93}" />
+    <Role id="{627090ff-40a3-4053-8790-584edc5be201}" />
+    <Role id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+  </AppModuleRoleMaps>
+  <LocalizedNames>
+    <LocalizedName description="Paymen request" languagecode="1033" />
+  </LocalizedNames>
+</AppModule>

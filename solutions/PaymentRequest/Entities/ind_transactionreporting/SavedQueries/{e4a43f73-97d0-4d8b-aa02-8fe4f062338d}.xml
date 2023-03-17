@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{e4a43f73-97d0-4d8b-aa02-8fe4f062338d}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="bpf_name" select="1" icon="1" preview="1">
+        <row name="result" id="businessprocessflowinstanceid">
+          <cell name="bpf_ind_ind_operationid" width="150" />
+          <cell name="activestageid" width="150" />
+          <cell name="processid" width="131" />
+          <cell name="ind_submitinternalreporttocomplianceduration" width="300" />
+          <cell name="ind_reviewandissuecompliancereportduration" width="300" />
+          <cell name="ind_holdingofexternalcomitteeduration" width="277" />
+          <cell name="ind_takenoteduration" width="163" />
+          <cell name="ind_validatedocsduration" width="169" />
+          <cell name="ind_mayproceedwithtransactionduration" width="299" />
+          <cell name="ind_continuewithtmprocessduration" width="260" />
+          <cell name="ind_requestforadditionaldocsduration" width="229" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_transactionreporting">
+          <attribute name="businessprocessflowinstanceid" />
+          <attribute name="bpf_name" />
+          <attribute name="bpf_ind_ind_operationid" />
+          <attribute name="activestageid" />
+          <attribute name="statecode" />
+          <attribute name="createdby" />
+          <attribute name="processid" />
+          <order attribute="bpf_name" descending="false" />
+          <attribute name="ind_submitinternalreporttocomplianceduration" />
+          <attribute name="ind_reviewandissuecompliancereportduration" />
+          <attribute name="ind_holdingofexternalcomitteeduration" />
+          <attribute name="ind_takenoteduration" />
+          <attribute name="ind_validatedocsduration" />
+          <attribute name="ind_continuewithtmprocessduration" />
+          <attribute name="ind_requestforadditionaldocsduration" />
+          <attribute name="ind_mayproceedwithtransactionduration" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Transaction Reporting" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

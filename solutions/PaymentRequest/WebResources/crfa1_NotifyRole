@@ -1,0 +1,212 @@
+function notifyRole(executionContext)
+{
+    debugger;
+    var formContext = executionContext.getFormContext();
+
+    formContext.data.process.addOnStageChange(Notify);
+
+}
+
+function Notify(executionContext)
+{
+		setTimeout(() => {
+
+			debugger;
+			var formContext = executionContext.getFormContext();
+			var idStage = Xrm.Page.data.process.getActiveStage().getId();
+			var idProcess = Xrm.Page.data.process.getActiveProcess().getId();
+			var ProcessIns = formContext.data.process.getInstanceId();
+			/***********Outward*****/
+			//RM//Manager decision //Continue With Transaction? 
+			if(idStage=="081c1f00-0fde-4dbe-82f4-f9cd1e7ec2ef"||idStage=="a3047965-573f-4db4-9578-92ab7819b429")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RM",ProcessIns);
+			}
+			//RO//Upload New Account Swift //Check Balance //Assess Deviation Inputs Result And Documents
+			if(idStage=="204e10ac-2a2f-43a1-9b07-2453d4de9307"||idStage=="2e7e9b46-155f-4f82-8690-22f6a8f78939"||idStage=="bfebc484-b353-46bc-ac6f-fdc8dcad574d")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RO",ProcessIns);
+			}
+			
+			/**************CDDS*****************/
+			//RC//Assess Doc At Hand
+			if(idStage=="ffe04f69-febd-4339-aa62-2b402f04bed1")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RC",ProcessIns);
+			}
+			/***********TR*****/
+			//RM//Assess Doc At Hand
+			if(idStage=="b9920e35-28ca-4220-ac65-8f998c7712cd")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RM",ProcessIns);
+			}
+			//RO//Request For Additional Docs/ Clarifications //Transaction Reporting Process//3Proceed With Transaction Monitoring//3STR//EDD
+			if(idStage=="16651a39-6628-4e0b-a874-9678dcb01e31"||idStage=="f0defd43-1099-4e08-995f-25dc1df0da53"||idStage=="3519469f-e5ba-40c2-9147-43e5f6177c41"||idStage=="a8599d70-cd3a-474f-a304-a0f90a94af94"||idStage=="6bef052b-48cb-4ab8-97dc-efb1e7db2246"||idStage=="19f20bd1-a5c9-4722-ac67-2749eec21cfe"||idStage=="3f1a062a-8948-4d58-97c6-3f45db6682e1"||idStage=="205fa648-f9a0-4442-aca3-7ef01a95d992"||idStage=="48c5db30-fd06-436b-958a-fac605af73aa")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RO",ProcessIns);
+			}
+			
+			
+			
+			/***********STR*****/
+			//MLRO//Updates External Report Log
+			if(idStage=="b22af40c-0ea9-4bf7-8857-87a799cfe363")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"MLRO",ProcessIns);
+			}
+			//RO//Proceed With Transaction Monitoring Process
+			if(idStage=="654d4eae-3f86-49cc-a45d-59881420bde5")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RO",ProcessIns);
+			}
+			
+			
+			
+			/***********EDD*****/
+			//RM//EDD Document Validation
+			if(idStage=="5143b691-2b60-4d79-8822-9d460816c594")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RM",ProcessIns);
+			}
+			//RO//STR Process//Transaction Reporting Process//Request For Additional Information
+			if(idStage=="8c16918d-486a-4a61-aab3-0ddd704c9a0b"||idStage=="42af709b-2b35-48ee-bc20-8895055e9774"||idStage=="2379679a-1a9c-4eaa-995f-9426361bbff8"||idStage=="a7a8c0b0-89d8-4724-90aa-ff3cb06a2380")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RO",ProcessIns);
+			}
+			
+			/***********TREP*****/
+			//RM//Circulate For Approval
+			if(idStage=="cf31a4d2-c601-4e48-a604-12c6544edf65")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RM",ProcessIns);
+			}
+			//RC//Review And Issue Compliance Report
+			if(idStage=="b7e67d41-05aa-4fb2-8d98-ff6048b08a6e")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RC",ProcessIns);
+			}
+			//RO//Request For Additional Docs/ Clarifications
+			if(idStage=="205bd9e2-3e16-439d-99d9-e7bf110f85ee")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RO",ProcessIns);
+			}
+			/***********Outward2*****/
+			//TL//Verifications
+			if(idStage=="d4bd34e6-7931-4463-bb9e-fb50fcf768bf")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"TL",ProcessIns);
+			}
+			//RO//Amend Transfer Form//Request For Additional Docs/ Clarifications
+			if(idStage=="e7da33e8-7826-4d93-bdc5-adc199963075"||idStage=="6040d8dd-9c1a-4c25-b9ee-bf25a6003cbd")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RO",ProcessIns);
+			}
+			/***********Review*****/
+			//TL/RM //Verification
+			if(idStage=="67e9cc71-69bf-428f-8a05-f49364e71398")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RM",ProcessIns);
+				send(paymentID,idProcess,"TL",ProcessIns);
+			}
+			//RO//Signature Of Client//Amend
+			if(idStage=="00fee77b-1ba9-403a-9b5f-780be12737d0"||idStage=="fe8c2802-6cc4-4062-b84e-b6f3e60a95ae")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RO",ProcessIns);
+			}
+			
+			/***********CDDI*****/
+			//RM //ASSESS
+			if(idStage=="2def3a39-c55b-4780-83ae-1b19cb0dce51")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RM",ProcessIns);
+				
+			}
+			//RO//Customer request//2STR Process//EDD Process//Transaction Reporting Process//4CDD Screening
+			if(idStage=="d1974a42-5987-4415-a3f0-780b717d7201"||idStage=="561ab389-3df6-433a-800d-9130516e32f9"||idStage=="12d07c52-c09e-4800-9a57-b47aa3324436"||idStage=="8e0b2abd-43a2-47c6-8fe9-e8ec3e647442"||idStage=="15cc60d0-7427-47bd-8a3d-bd714557b2d5"||idStage=="89b72376-d6ed-4a14-b374-976e871999f"||idStage=="67663308-6359-4f99-85d8-acaeae34cece"||idStage=="1eac60c5-07e7-48fe-8d91-fb9a724894ed")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RO",ProcessIns);
+			}
+			
+			/***********ONGOING*****/
+			//RC//Assess Report Of RO
+			if(idStage=="8b97b1a5-a877-44b6-a203-e3fa40dc456f")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RC",ProcessIns);
+				
+			}
+			//RO//Perform Web Check//Assess Genuineness Of The World Check Hits//3TM//STR//EDD//PEP
+			if(idStage=="ee2cfc32-e20d-4bd4-8145-9c0b5f2a977f"||idStage=="ee2cfc32-e20d-4bd4-8145-9c0b5f2a977f"||idStage=="05834b5a-de0a-4cc0-8080-e6fd9ea00bf5"||idStage=="7627ad76-3949-48c1-995d-9ea7ab16489c"||idStage=="e4a3ee7f-42c7-4a7b-b709-80a5676ec3b3"||idStage=="f21f684c-e53a-4bec-aa10-44584d7b3995"||idStage=="47bbfef6-702d-4e3f-8dcf-018bc30e8db9"||idStage=="264a8247-fd05-4f15-9e1a-d8d026e3ab97")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RO",ProcessIns);
+			}
+			/***********CIBP*****/
+			//TL/RM//Review Documentation
+			if(idStage=="c6cc371d-997c-4247-8f80-cb87a7fa2a0e")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RM",ProcessIns);
+				send(paymentID,idProcess,"TL");
+				
+			}
+			//RO//Amend Document//Circulate Docs For Signature
+			if(idStage=="efc2a64d-cd36-49c5-9d02-70465b2b3c7a"||idStage=="5661a3b8-b158-4d75-a3e3-1097f56bc777")
+			{
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,idProcess,"RO",ProcessIns);
+			}
+			
+			
+			//Customer notify
+			if(idStage=="6ec04693-8893-4cfd-a1b5-c72d14d48f49"||idStage=="8cf067c9-11e2-4ea1-9fdf-8208f9a3e859"){
+				var paymentID = formContext.data.entity.getId();
+				send(paymentID,"","ABORTED");
+			}
+    
+		}, "500");
+        
+}
+
+
+function send(paymentID,IdProcess,Type,ProcessIns)
+{
+	debugger;
+		
+		var Link = 'https://org362be4bb.crm.dynamics.com/main.aspx?appid=4015057c-deb5-4964-8d73-08bc500c6835&pagetype=entityrecord&etn=ind_ind_operation&id='+paymentID+'&process='+IdProcess+'&processinstanceid='+ProcessIns;
+		var response = new XMLHttpRequest();
+	    const json = JSON.stringify({
+				Id: paymentID,
+				type: Type,
+				Link : Link
+		});
+			
+			
+		//Send Notif
+		
+		response.open("POST", 'https://prod-60.westus.logic.azure.com:443/workflows/e04a7761732e480a9d302951cd310be0/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=GBgG0EGAOwLqh0j8cJbREZ0Swz-10aD_H-ZoPThzM1g');
+		response.setRequestHeader('Content-Type', 'application/json');
+
+		response.send(json);
+    
+	
+        
+}

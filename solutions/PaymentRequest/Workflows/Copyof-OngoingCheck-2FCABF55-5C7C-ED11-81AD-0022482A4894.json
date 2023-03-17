@@ -1,0 +1,613 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_encodiandocumentmanager_1": {
+        "runtimeSource": "embedded",
+        "connection": {},
+        "api": {
+          "name": "shared_encodiandocumentmanager"
+        }
+      },
+      "shared_commondataserviceforapps": {
+        "impersonation": {},
+        "runtimeSource": "embedded",
+        "connection": {},
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "e4a70918-4dc0-44df-84bd-f5a9fec5300f"
+          },
+          "type": "Request",
+          "kind": "Http",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "actions": {
+        "Set_ID": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "176cc91f-81f9-4af5-b016-5cda951d9554"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Id",
+                "type": "string",
+                "value": "@{substring(triggerBody()?['Id'], 1, 36)}"
+              }
+            ]
+          }
+        },
+        "Convert_time_zone": {
+          "runAfter": {
+            "Set_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "cb375081-cafe-4e26-83a6-d74b72a8ec04"
+          },
+          "type": "Expression",
+          "kind": "ConvertTimeZone",
+          "inputs": {
+            "baseTime": "@{utcNow()}",
+            "formatString": "r",
+            "sourceTimeZone": "UTC",
+            "destinationTimeZone": "UTC"
+          }
+        },
+        "Set_Body": {
+          "runAfter": {
+            "Convert_time_zone": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "02ae50b4-2681-4c76-ae13-0fd722718e1e"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Body",
+                "type": "string",
+                "value": "{\n    \"query\": \"creationDate>1900-04-15T00:00:00.000Z\",\n    \"sort\": [\n        {\n            \"columnName\": \"modificationDate\",\n            \"order\": \"ASCENDING\"\n        },\n        {\n            \"columnName\": \"modifierUserId\",\n            \"order\": \"DESCENDING\"\n        }\n    ],\n    \"cursorOptions\": {\n        \"itemsPerPage\": 1000\n    }\n}"
+              }
+            ]
+          }
+        },
+        "Create_HMAC": {
+          "runAfter": {
+            "Set_Body": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "21d9b138-db72-4153-a3ca-4f97a2f0eed2"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_encodiandocumentmanager",
+              "connectionName": "shared_encodiandocumentmanager_1",
+              "operationId": "CreateHMAC"
+            },
+            "parameters": {
+              "operation/data": "(request-target): post /v2/cases/summaries\nhost: api-worldcheck.refinitiv.com\ndate: @{body('Convert_time_zone')}\ncontent-type: application/json\ncontent-length: @{length(variables('Body'))}\n@{variables('Body')}",
+              "operation/cryptoInputDataType": "TEXT",
+              "operation/key": "CWMK2DK0lDoFJDIhtoF+fOWPNeXCcW3NRkMwa0s/b1GWVmcwFtAYVSNP9ogFsDiyD9DcyrH3RIDrbhDpeKqvqw==",
+              "operation/cryptoKeyDataType": "TEXT",
+              "operation/digestAlgorithm": "SHA256",
+              "operation/cryptoOutputDataType": "BASE64",
+              "operation/case": "Lower",
+              "operation/encoding": "UTF8"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "HTTP": {
+          "runAfter": {
+            "Create_HMAC": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dbdc7cf0-e546-4523-bdcb-c1b7bf2e42c6"
+          },
+          "type": "Http",
+          "inputs": {
+            "method": "POST",
+            "uri": "https://api-worldcheck.refinitiv.com/v2/cases/summaries",
+            "headers": {
+              "Date": "@body('Convert_time_zone')",
+              "Authorization": "Signature keyId=\"0bf50809-cd38-49c3-8085-4b2820bfe94e\",algorithm=\"hmac-sha256\",headers=\"(request-target) host date content-type content-length\",signature=\"@{outputs('Create_HMAC')?['body/hmac']}\"",
+              "Content-Type": "application/json",
+              "Content-Length": "@{length(variables('Body'))}"
+            },
+            "body": "@variables('Body')"
+          }
+        },
+        "Parse_JSON": {
+          "runAfter": {
+            "HTTP": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "2ebc9cb7-d51f-4448-aa4e-51bfdf4eb255"
+          },
+          "type": "ParseJson",
+          "inputs": {
+            "content": "@body('HTTP')",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "cursor": {
+                  "type": "object",
+                  "properties": {
+                    "cursorId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "query": {
+                  "type": "string"
+                },
+                "sort": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "columnName": {
+                        "type": "string"
+                      },
+                      "order": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "columnName",
+                      "order"
+                    ]
+                  }
+                },
+                "totalResultCount": {
+                  "type": "integer"
+                },
+                "results": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "caseSystemId": {
+                        "type": "string"
+                      },
+                      "caseId": {
+                        "type": "string"
+                      },
+                      "groupId": {
+                        "type": "string"
+                      },
+                      "creator": {
+                        "type": "object",
+                        "properties": {
+                          "fullName": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "modifier": {
+                        "type": "object",
+                        "properties": {
+                          "fullName": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "modificationDate": {
+                        "type": "string"
+                      },
+                      "creationDate": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "caseSystemId",
+                      "caseId",
+                      "groupId",
+                      "creator",
+                      "modifier",
+                      "modificationDate",
+                      "creationDate"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Apply_to_each_2": {
+          "foreach": "@body('Parse_JSON')?['results']",
+          "actions": {
+            "Convert_time_zone_2": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "cb375081-cafe-4e26-83a6-d74b72a8ec04"
+              },
+              "type": "Expression",
+              "kind": "ConvertTimeZone",
+              "inputs": {
+                "baseTime": "@{utcNow()}",
+                "formatString": "r",
+                "sourceTimeZone": "UTC",
+                "destinationTimeZone": "UTC"
+              }
+            },
+            "Create_HMAC_2": {
+              "runAfter": {
+                "Convert_time_zone_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "5832c586-8a67-4e18-a0ee-d98ec16b4a8d"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_encodiandocumentmanager",
+                  "connectionName": "shared_encodiandocumentmanager_1",
+                  "operationId": "CreateHMAC"
+                },
+                "parameters": {
+                  "operation/data": "(request-target): get /v2/cases/@{items('Apply_to_each_2')?['caseSystemId']}\nhost: api-worldcheck.refinitiv.com\ndate: @{body('Convert_time_zone_2')}",
+                  "operation/cryptoInputDataType": "TEXT",
+                  "operation/key": "CWMK2DK0lDoFJDIhtoF+fOWPNeXCcW3NRkMwa0s/b1GWVmcwFtAYVSNP9ogFsDiyD9DcyrH3RIDrbhDpeKqvqw==",
+                  "operation/cryptoKeyDataType": "TEXT",
+                  "operation/digestAlgorithm": "SHA256",
+                  "operation/cryptoOutputDataType": "BASE64",
+                  "operation/case": "Lower",
+                  "operation/encoding": "UTF8"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "HTTP_2": {
+              "runAfter": {
+                "Create_HMAC_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "bacdeca3-f533-4831-be08-357f5e8d20f6"
+              },
+              "type": "Http",
+              "inputs": {
+                "method": "GET",
+                "uri": "https://api-worldcheck.refinitiv.com/v2/cases/@{items('Apply_to_each_2')?['caseSystemId']}?aggregatedSummary=true",
+                "headers": {
+                  "Date": "@body('Convert_time_zone_2')",
+                  "Authorization": "Signature keyId=\"0bf50809-cd38-49c3-8085-4b2820bfe94e\",algorithm=\"hmac-sha256\",headers=\"(request-target) host date\",signature=\"@{outputs('Create_HMAC_2')?['body/hmac']}\""
+                }
+              }
+            },
+            "Parse_JSON_3": {
+              "runAfter": {
+                "HTTP_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "61d9a89b-646d-414d-8c1b-dbf2d44d1e12"
+              },
+              "type": "ParseJson",
+              "inputs": {
+                "content": "@body('HTTP_2')",
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "caseId": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "providerTypes": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "customFields": {
+                      "type": "array"
+                    },
+                    "secondaryFields": {
+                      "type": "array"
+                    },
+                    "groupId": {
+                      "type": "string"
+                    },
+                    "entityType": {
+                      "type": "string"
+                    },
+                    "caseSystemId": {
+                      "type": "string"
+                    },
+                    "caseScreeningState": {
+                      "type": "object",
+                      "properties": {
+                        "WATCHLIST": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "lifecycleState": {
+                      "type": "string"
+                    },
+                    "creator": {
+                      "type": "object",
+                      "properties": {
+                        "userId": {
+                          "type": "string"
+                        },
+                        "firstName": {
+                          "type": "string"
+                        },
+                        "lastName": {
+                          "type": "string"
+                        },
+                        "fullName": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "modifier": {
+                      "type": "object",
+                      "properties": {
+                        "userId": {
+                          "type": "string"
+                        },
+                        "firstName": {
+                          "type": "string"
+                        },
+                        "lastName": {
+                          "type": "string"
+                        },
+                        "fullName": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "assignee": {},
+                    "creationDate": {
+                      "type": "string"
+                    },
+                    "modificationDate": {
+                      "type": "string"
+                    },
+                    "nameTransposition": {
+                      "type": "boolean"
+                    },
+                    "outstandingActions": {
+                      "type": "boolean"
+                    },
+                    "lastScreenedDatesByProviderType": {
+                      "type": "object",
+                      "properties": {
+                        "WATCHLIST": {
+                          "type": "object"
+                        }
+                      }
+                    },
+                    "aggregatedResultSummaries": {
+                      "type": "object",
+                      "properties": {
+                        "totalMandatoryActions": {
+                          "type": "integer"
+                        },
+                        "totalSubCases": {
+                          "type": "integer"
+                        },
+                        "mediaCheck": {
+                          "type": "object",
+                          "properties": {
+                            "mediaCheckAttachedCount": {
+                              "type": "integer"
+                            },
+                            "mediaCheckReviewRequired": {
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        "watchlist": {
+                          "type": "string",
+                          "properties": {
+                            "watchlistTotalMatches": {
+                              "type": "integer"
+                            },
+                            "watchlistUnresolved": {
+                              "type": "integer"
+                            },
+                            "watchlistReviewRequired": {
+                              "type": "integer"
+                            },
+                            "categorisedMatches": {
+                              "type": "object",
+                              "properties": {
+                                "watchlistUnresolvedBySubCategory": {
+                                  "type": "object",
+                                  "properties": {
+                                    "Other Bodies": {
+                                      "type": "integer"
+                                    },
+                                    "Law Enforcement": {
+                                      "type": "integer"
+                                    },
+                                    "PEP": {
+                                      "type": "integer"
+                                    },
+                                    "Special Interest Categories": {
+                                      "type": "integer"
+                                    },
+                                    "Sanctions": {
+                                      "type": "integer"
+                                    },
+                                    "Regulatory Enforcement": {
+                                      "type": "integer"
+                                    }
+                                  }
+                                },
+                                "watchlistReviewRequiredBySubCategory": {
+                                  "type": "object",
+                                  "properties": {
+                                    "Other Bodies": {
+                                      "type": "integer"
+                                    },
+                                    "Law Enforcement": {
+                                      "type": "integer"
+                                    },
+                                    "PEP": {
+                                      "type": "integer"
+                                    },
+                                    "Special Interest Categories": {
+                                      "type": "integer"
+                                    },
+                                    "Sanctions": {
+                                      "type": "integer"
+                                    },
+                                    "Regulatory Enforcement": {
+                                      "type": "integer"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "clientWatchlist": {
+                          "type": "object",
+                          "properties": {
+                            "clientWatchlistReviewRequired": {
+                              "type": "integer"
+                            },
+                            "clientWatchlistUnresolved": {
+                              "type": "integer"
+                            },
+                            "clientWatchlistTotalMatches": {
+                              "type": "integer"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "Apply_to_each": {
+              "foreach": "@body('Parse_JSON_3')?['providerTypes']",
+              "actions": {
+                "Add_a_new_row": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "74b82882-a8a0-4e77-aecb-666484fa77cd"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "CreateRecord"
+                    },
+                    "parameters": {
+                      "entityName": "ind_worldchecks",
+                      "item/ind_name": "@body('Parse_JSON_3')?['name']",
+                      "item/ind_caseid": "@body('Parse_JSON_3')?['caseId']",
+                      "item/ind_casesystemid": "@body('Parse_JSON_3')?['caseSystemId']",
+                      "item/ind_entitytype": "@body('Parse_JSON_3')?['entityType']",
+                      "item/ind_groupid": "@body('Parse_JSON_3')?['groupId']",
+                      "item/ind_item": "@items('Apply_to_each')",
+                      "item/ind_lifecyclestate": "@body('Parse_JSON_3')?['lifecycleState']",
+                      "item/ind_userid": "@body('Parse_JSON_3')?['creator']?['userId']",
+                      "item/ind_watchlist": "@body('Parse_JSON_3')?['caseScreeningState']?['WATCHLIST']"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {
+                "Parse_JSON_3": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "7d770162-745d-4677-9e99-d15d4b9adcc9"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "Parse_JSON": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c82afff1-8ef6-47a7-a98c-dd06fde8dc9c"
+          },
+          "type": "Foreach",
+          "runtimeConfiguration": {
+            "concurrency": {
+              "repetitions": 50
+            }
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

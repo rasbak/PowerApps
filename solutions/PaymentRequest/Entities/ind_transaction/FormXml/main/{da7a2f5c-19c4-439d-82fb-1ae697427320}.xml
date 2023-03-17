@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{da7a2f5c-19c4-439d-82fb-1ae697427320}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{51e9c646-964e-47f3-ae0b-97568db7188f}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{2dca79e3-3390-40f5-ad35-827a2bb5ad63}">
+          <labels>
+            <label description="Inward/Outward" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{6d2459ec-5e3e-fa7d-e566-0fa9f3685192}" name="StageStep3_section1" labelid="{c0217dd5-3f21-4923-8ded-aeef5f0d176f}">
+                  <labels>
+                    <label description="Inward/Outward" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{dde97470-90ef-40bf-849e-8b49b85d1683}" showlabel="true" visible="true" labelid="{67e8513b-2e6b-462c-904f-5c8b3d3bbbe1}">
+                        <labels>
+                          <label description="Transaction Type" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transaction:ind_transactiontype" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="ind_transactiontype" disabled="false" relationship="bpf_ind_ind_operation_ind_transaction" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

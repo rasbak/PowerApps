@@ -1,0 +1,26 @@
+function updateBanned(executionContext){
+	var formContext = executionContext.getFormContext();
+	debugger;
+	if ( formContext.getControl("header_process_ind_bannedactivitylookup").getAttribute().getValue()!=null){
+		var banned = formContext.getControl("header_process_ind_bannedactivitylookup").getAttribute().getValue();
+		var bannedID = banned[0].id.substring(1,37);
+			if (bannedID=='d6469a94-4375-ed11-81ab-0022482a40f8'){
+				Xrm.Page.getAttribute("ind_bannedactivity").setValue(false);
+				formContext.data.refresh(false);
+			}else{
+				Xrm.Page.getAttribute("ind_bannedactivity").setValue(false);
+				formContext.data.refresh(false);
+			}
+	}
+	if (formContext.getControl("header_process_ind_highriskactivitylookup").getAttribute().getValue()!=null){
+		var High = formContext.getControl("header_process_ind_highriskactivitylookup").getAttribute().getValue();
+		High = High[0].id.substring(1,37);
+		if (High=='fcd804ac-4375-ed11-81ab-0022482a40f8'){
+			Xrm.Page.getAttribute("ind_highriskactivity").setValue(false);formContext.data.refresh(false);
+		}else{
+			Xrm.Page.getAttribute("ind_highriskactivity").setValue(true);formContext.data.refresh(false);
+		}
+	}
+
+	
+}

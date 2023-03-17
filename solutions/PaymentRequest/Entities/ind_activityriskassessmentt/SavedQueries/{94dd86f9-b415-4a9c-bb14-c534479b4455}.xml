@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{94dd86f9-b415-4a9c-bb14-c534479b4455}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="bpf_name" select="1" icon="1" preview="1">
+        <row name="result" id="businessprocessflowinstanceid">
+          <cell name="bpf_ind_ind_operationid" width="64" />
+          <cell name="activestageid" width="150" />
+          <cell name="processid" width="138" />
+          <cell name="ind_establishrationaleforchangedurtion" width="100" />
+          <cell name="ind_assessactivitybannedactivityduration" width="100" />
+          <cell name="ind_assesshighriskactivityduration" width="100" />
+          <cell name="ind_eddprocessduration" width="100" />
+          <cell name="ind_strprocessduration" width="100" />
+          <cell name="ind_transactionreportingprocessduration" width="100" />
+          <cell name="ind_proceedwithtransactionmonitoringduration" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_activityriskassessmentt">
+          <attribute name="businessprocessflowinstanceid" />
+          <attribute name="bpf_name" />
+          <attribute name="bpf_ind_ind_operationid" />
+          <attribute name="activestageid" />
+          <attribute name="statecode" />
+          <attribute name="createdby" />
+          <attribute name="processid" />
+          <order attribute="bpf_name" descending="false" />
+          <attribute name="ind_establishrationaleforchangedurtion" />
+          <attribute name="ind_assessactivitybannedactivityduration" />
+          <attribute name="ind_assesshighriskactivityduration" />
+          <attribute name="ind_eddprocessduration" />
+          <attribute name="ind_strprocessduration" />
+          <attribute name="ind_transactionreportingprocessduration" />
+          <attribute name="ind_proceedwithtransactionmonitoringduration" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Activity Risk Assessmentt" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

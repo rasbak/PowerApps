@@ -1,0 +1,655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{e8a74313-985f-ed11-9562-0022482a40f8}" Name="Transaction Review" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/TransactionReview-E8A74313-985F-ED11-9562-0022482A40F8.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>ind_transactionreview</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>ind_ind_Operation</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Transaction Review" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{0ca040ed-d4b9-4caf-be17-ba271f2e23e6}">
+      <label languagecode="1033" description="Perform Standard CDD" />
+    </steplabels>
+    <steplabels id="{ca924952-3217-449b-8497-056e18baaec2}">
+      <label languagecode="1033" description="On File?" />
+    </steplabels>
+    <steplabels id="{70cc67d0-03f5-47ee-bf7b-b5c6c06b7585}">
+      <label languagecode="1033" description="Doubt/Suspicion?" />
+    </steplabels>
+    <steplabels id="{1703c78d-e509-43b3-b18c-6182c7059dcb}">
+      <label languagecode="1033" description="Documents Needed" />
+    </steplabels>
+    <steplabels id="{67ea874f-7795-4518-9628-f31b518622be}">
+      <label languagecode="1033" description="Source of Documents" />
+    </steplabels>
+    <steplabels id="{9a259ec2-c93e-4497-9c17-067f0d61b380}">
+      <label languagecode="1033" description="Review Process" />
+    </steplabels>
+    <steplabels id="{de3b3e32-1a5a-4271-a2cc-2310b1607937}">
+      <label languagecode="1033" description="Status Reason" />
+    </steplabels>
+    <steplabels id="{62c0d0f8-7110-4a9c-a1c8-9736cf45cd78}">
+      <label languagecode="1033" description="Request For Documents" />
+    </steplabels>
+    <steplabels id="{dae11ccd-5efd-4153-8c9c-cc9fb465e357}">
+      <label languagecode="1033" description="Documents required transaction review" />
+    </steplabels>
+    <steplabels id="{cd728542-bdba-46a4-bd51-02300be75169}">
+      <label languagecode="1033" description="Request For Documents" />
+    </steplabels>
+    <steplabels id="{fabbd82e-359e-4e6f-b245-2ea40fb93ab8}">
+      <label languagecode="1033" description="Documents required transaction review" />
+    </steplabels>
+    <steplabels id="{af25cb77-a8c4-424d-9ff9-580f96e6b8db}">
+      <label languagecode="1033" description="Review Process" />
+    </steplabels>
+    <steplabels id="{1f5b3d6f-04b4-461f-98ac-d2ba21946e07}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{ca558de3-ac19-4edc-ad10-327b3dbd1c42}">
+      <label languagecode="1033" description="Received In Place" />
+    </steplabels>
+    <steplabels id="{3173acb1-8962-4b55-a45a-0d7405de28ef}">
+      <label languagecode="1033" description="Received In Place" />
+    </steplabels>
+    <steplabels id="{c76b9d60-4643-4032-a656-35b9e53ac29a}">
+      <label languagecode="1033" description="Doubt/Suspicion" />
+    </steplabels>
+    <steplabels id="{a8599d70-cd3a-474f-a304-a0f90a94af94}">
+      <label languagecode="1033" description="Proceed With Transaction Monitoring" />
+    </steplabels>
+    <steplabels id="{3da43b96-5bc5-4e19-841f-4fb318d1dc5c}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{1b3b70ee-69e2-4720-95e2-645653eab377}">
+      <label languagecode="1033" description="CIBP from ARA" />
+    </steplabels>
+    <steplabels id="{96282b7f-9e46-40c3-a7e1-c728f6f5e656}">
+      <label languagecode="1033" description="CIBP from Jurisdiction" />
+    </steplabels>
+    <steplabels id="{dbe59f94-0c42-4a31-96c5-44511c0383b5}">
+      <label languagecode="1033" description="EDD New Behavior" />
+    </steplabels>
+    <steplabels id="{9b267ba0-327e-4da1-a5a1-b0a230b29beb}">
+      <label languagecode="1033" description="EDD (high risk activity identified)" />
+    </steplabels>
+    <steplabels id="{dade4634-1680-43e5-a449-aac22e7153f3}">
+      <label languagecode="1033" description="EDD (False or stolen Docs CDDI)" />
+    </steplabels>
+    <steplabels id="{e6ef4015-599a-4f19-907e-da08fb97142a}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{937ee965-7fe3-4e69-918a-c193679c0045}">
+      <label languagecode="1033" description="EDD (High Risk Jurisdiction)" />
+    </steplabels>
+    <steplabels id="{f8c30454-c9c8-43f3-a6e8-66edc151bb34}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{c62b38d1-d55b-4d7c-ac6d-d76c1b804130}">
+      <label languagecode="1033" description="EDD (PEP is not an MP)" />
+    </steplabels>
+    <steplabels id="{eed7ab80-ce28-4fb0-82ff-a50537a5ef3a}">
+      <label languagecode="1033" description="EDD (False or stolen Docs TR)" />
+    </steplabels>
+    <steplabels id="{8a87af1a-576e-4e01-a4d7-a589b1760dfa}">
+      <label languagecode="1033" description="Transaction Amount" />
+    </steplabels>
+    <steplabels id="{416df422-994b-4cb6-9a6d-99c8b1263e58}">
+      <label languagecode="1033" description="STR (illegal banned activity)" />
+    </steplabels>
+    <steplabels id="{85baac10-6fe6-40af-8317-d946b3a74dfc}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion CDDI)" />
+    </steplabels>
+    <steplabels id="{2a4ac9ed-0667-4f11-98c2-f75d13dec964}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{7b1946e5-5492-479f-8720-8d8adb8795b3}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion EDD)" />
+    </steplabels>
+    <steplabels id="{6c324462-6138-4c5d-9e02-20a46d1854e6}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{d7ae8133-0a29-43eb-bd9e-2fb63df889ba}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion TR)" />
+    </steplabels>
+    <steplabels id="{a43a5d69-f820-4cc1-9bd8-dccfb7dc383e}">
+      <label languagecode="1033" description="TReporting (Banned activity identified)" />
+    </steplabels>
+    <steplabels id="{d939d5f2-5b10-436a-b637-4e232117bf71}">
+      <label languagecode="1033" description="TReporting (No-go country identified)" />
+    </steplabels>
+    <steplabels id="{fc72a922-1e20-4d3f-91f5-c85b20b731ae}">
+      <label languagecode="1033" description="TReporting (One month Late EDD)" />
+    </steplabels>
+    <steplabels id="{e8bdd211-0305-4dc1-ad82-cf46724577ce}">
+      <label languagecode="1033" description="TReporting (One month Late TR)" />
+    </steplabels>
+    <steplabels id="{205fa648-f9a0-4442-aca3-7ef01a95d992}">
+      <label languagecode="1033" description="STR Process" />
+    </steplabels>
+    <steplabels id="{b8c04311-de0c-4c9f-9cbc-d7db17238267}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{a39f4380-ddb9-4f09-afb7-ba3c2ef7a7b4}">
+      <label languagecode="1033" description="CIBP from ARA" />
+    </steplabels>
+    <steplabels id="{a2693fb8-1584-48d2-8363-b0e37d70e33d}">
+      <label languagecode="1033" description="CIBP from Jurisdiction" />
+    </steplabels>
+    <steplabels id="{90043448-d4ae-4816-becc-48e2457108a5}">
+      <label languagecode="1033" description="EDD New Behavior" />
+    </steplabels>
+    <steplabels id="{3caef25d-a4a9-4b38-99f1-2b7d0740e133}">
+      <label languagecode="1033" description="EDD (high risk activity identified)" />
+    </steplabels>
+    <steplabels id="{1f79eb76-19a9-4b0c-a74e-d455ff92b92b}">
+      <label languagecode="1033" description="EDD (False or stolen Docs CDDI)" />
+    </steplabels>
+    <steplabels id="{d2db2e56-44ca-468f-a7b6-658a9583e7bc}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{83f915f3-9e87-47cb-b487-c859a3c8e998}">
+      <label languagecode="1033" description="EDD (High Risk Jurisdiction)" />
+    </steplabels>
+    <steplabels id="{6a989491-f857-4ae3-8a8f-fa1d15aeee2c}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{6db724f0-d53b-43e2-979b-ce7f67b653eb}">
+      <label languagecode="1033" description="EDD (PEP is not an MP)" />
+    </steplabels>
+    <steplabels id="{2802c398-788c-4d10-b288-9fffa2fa0e92}">
+      <label languagecode="1033" description="EDD (False or stolen Docs TR)" />
+    </steplabels>
+    <steplabels id="{5bb10e03-49d7-4d41-8f0b-e1b459fe3ef9}">
+      <label languagecode="1033" description="Transaction Amount" />
+    </steplabels>
+    <steplabels id="{56f3d577-2e4b-4662-bfb6-5cd1ec2e987e}">
+      <label languagecode="1033" description="STR (illegal banned activity)" />
+    </steplabels>
+    <steplabels id="{2b9f00b3-4bae-47e3-b4cd-096176250a8a}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion CDDI)" />
+    </steplabels>
+    <steplabels id="{a0f0bcdc-4c04-45b3-80c4-00b2391139d3}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{aa283baf-8132-4a31-9e49-f1f1674e525b}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion EDD)" />
+    </steplabels>
+    <steplabels id="{30a578b7-0640-406d-85e8-38457185aac5}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{993baf70-2086-4504-8fe2-c3ffdb98b411}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion TR)" />
+    </steplabels>
+    <steplabels id="{6dd6df80-2509-4969-8239-d30b8c5372e2}">
+      <label languagecode="1033" description="TReporting (Banned activity identified)" />
+    </steplabels>
+    <steplabels id="{3fa7be64-499f-4b03-b708-54ed1128643b}">
+      <label languagecode="1033" description="TReporting (No-go country identified)" />
+    </steplabels>
+    <steplabels id="{5b94cafa-cfaa-4738-bf99-808c76e52680}">
+      <label languagecode="1033" description="TReporting (One month Late EDD)" />
+    </steplabels>
+    <steplabels id="{36b8c2cd-32b4-474b-b798-6051f0e100e8}">
+      <label languagecode="1033" description="TReporting (One month Late TR)" />
+    </steplabels>
+    <steplabels id="{b9920e35-28ca-4220-ac65-8f998c7712cd}">
+      <label languagecode="1033" description="Assess Doc At Hand" />
+    </steplabels>
+    <steplabels id="{9ac90d5a-34a7-4fe3-9a16-a91445ee648a}">
+      <label languagecode="1033" description="Additional documents" />
+    </steplabels>
+    <steplabels id="{674666b5-3485-4005-bdd9-1c2b49c8ced7}">
+      <label languagecode="1033" description="Adequate" />
+    </steplabels>
+    <steplabels id="{6bef052b-48cb-4ab8-97dc-efb1e7db2246}">
+      <label languagecode="1033" description="Proceed With Transaction Monitoring" />
+    </steplabels>
+    <steplabels id="{b60420af-6e55-44de-bcb3-d1eff1baefa3}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{7303be2d-9b28-4bed-9c9e-1265ce7dbece}">
+      <label languagecode="1033" description="CIBP from ARA" />
+    </steplabels>
+    <steplabels id="{ee61a199-70ea-4208-b47f-96f7bc612bac}">
+      <label languagecode="1033" description="CIBP from Jurisdiction" />
+    </steplabels>
+    <steplabels id="{13a4cb67-b15f-4a95-9bd4-1a9de2edeba7}">
+      <label languagecode="1033" description="EDD New Behavior" />
+    </steplabels>
+    <steplabels id="{9bc7473d-bd5b-4f2c-9541-02d25a6011cf}">
+      <label languagecode="1033" description="EDD (high risk activity identified)" />
+    </steplabels>
+    <steplabels id="{ce3a899e-c315-4770-9021-e3694c592e14}">
+      <label languagecode="1033" description="EDD (False or stolen Docs CDDI)" />
+    </steplabels>
+    <steplabels id="{d9816931-9018-4aed-ac58-ea6508aa0679}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{520090e7-0dce-4e06-ac3d-2c99717018aa}">
+      <label languagecode="1033" description="EDD (High Risk Jurisdiction)" />
+    </steplabels>
+    <steplabels id="{9a4bed15-a653-4a99-920a-dd24a6d07c2b}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{e73a6315-31d7-49ad-8edf-3d83ca89f55d}">
+      <label languagecode="1033" description="EDD (PEP is not an MP)" />
+    </steplabels>
+    <steplabels id="{3ab161eb-d54e-42d5-96fe-ccfc03d9fab6}">
+      <label languagecode="1033" description="EDD (False or stolen Docs TR)" />
+    </steplabels>
+    <steplabels id="{32102ff6-ecea-43b3-bea4-8d71d25adad6}">
+      <label languagecode="1033" description="Transaction Amount" />
+    </steplabels>
+    <steplabels id="{f1c602ed-826b-41c0-a554-7e75a4bcde42}">
+      <label languagecode="1033" description="STR (illegal banned activity)" />
+    </steplabels>
+    <steplabels id="{a95d515d-f645-49b6-b1ed-4d15db3f8bc5}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion CDDI)" />
+    </steplabels>
+    <steplabels id="{bfa47d59-e0c3-46a6-b4c0-e2d61f5bc948}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{68567803-9954-43b6-b455-8c009f8a2716}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion EDD)" />
+    </steplabels>
+    <steplabels id="{94f32f70-f6f1-4dae-82ff-ac8972f6f9db}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{f38187b4-64a4-4c21-b898-87c0e9f6905d}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion TR)" />
+    </steplabels>
+    <steplabels id="{9f2d80de-6567-4982-946d-4d81e8af22b3}">
+      <label languagecode="1033" description="TReporting (Banned activity identified)" />
+    </steplabels>
+    <steplabels id="{b54dc325-d27c-4cd6-b8ea-56c9bd4bd3d6}">
+      <label languagecode="1033" description="TReporting (No-go country identified)" />
+    </steplabels>
+    <steplabels id="{dee35f79-295a-4b47-b132-411c0f2e6eb8}">
+      <label languagecode="1033" description="TReporting (One month Late EDD)" />
+    </steplabels>
+    <steplabels id="{b4a8e018-5ceb-478f-be15-93e7bd393bde}">
+      <label languagecode="1033" description="TReporting (One month Late TR)" />
+    </steplabels>
+    <steplabels id="{19f20bd1-a5c9-4722-ac67-2749eec21cfe}">
+      <label languagecode="1033" description="STR Process" />
+    </steplabels>
+    <steplabels id="{afe3fd2c-7d59-4705-a7af-f938c3fb310d}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{c4432c90-1b71-45c5-acb2-15d4ff8abee3}">
+      <label languagecode="1033" description="CIBP from ARA" />
+    </steplabels>
+    <steplabels id="{dbe6a4c7-098f-417f-aa65-6f63b608fd0d}">
+      <label languagecode="1033" description="CIBP from Jurisdiction" />
+    </steplabels>
+    <steplabels id="{d540e6dd-7d76-41ab-b92c-68c933f92d89}">
+      <label languagecode="1033" description="EDD New Behavior" />
+    </steplabels>
+    <steplabels id="{095744ff-deeb-4ef3-828b-c18d3e38fe0a}">
+      <label languagecode="1033" description="EDD (high risk activity identified)" />
+    </steplabels>
+    <steplabels id="{b87b3aa9-4d6d-4f8e-9277-e6651f4c4c7b}">
+      <label languagecode="1033" description="EDD (False or stolen Docs CDDI)" />
+    </steplabels>
+    <steplabels id="{b3de6706-8a61-4294-8b7e-fe3184003c2b}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{c0336b3a-79ac-4130-bc1b-1be7f423ea65}">
+      <label languagecode="1033" description="EDD (High Risk Jurisdiction)" />
+    </steplabels>
+    <steplabels id="{e5cfd504-5065-426d-bc36-b306ac9f29fe}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{1752bdcf-181d-46d6-bd59-b73f04b9f7d8}">
+      <label languagecode="1033" description="EDD (PEP is not an MP)" />
+    </steplabels>
+    <steplabels id="{42ec3f82-af04-4056-be42-d756f1df5dd9}">
+      <label languagecode="1033" description="EDD (False or stolen Docs TR)" />
+    </steplabels>
+    <steplabels id="{c52fb777-bac6-4701-9fed-3fab2b577adb}">
+      <label languagecode="1033" description="Transaction Amount" />
+    </steplabels>
+    <steplabels id="{fc7d0a05-19fc-45d6-9740-04766a42a49b}">
+      <label languagecode="1033" description="STR (illegal banned activity)" />
+    </steplabels>
+    <steplabels id="{9ec475d2-244f-4e89-9ad2-175f12b71470}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion CDDI)" />
+    </steplabels>
+    <steplabels id="{e2e6a511-f837-4460-8e10-402f7ef9c490}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{490e0dd4-398f-4e56-81c5-675fa8b77dd9}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion EDD)" />
+    </steplabels>
+    <steplabels id="{1a0ae6f0-dbed-412d-a364-d96e5aa27345}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{e3724e7d-37a0-422a-93cb-ba4be4498f23}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion TR)" />
+    </steplabels>
+    <steplabels id="{d77a5a13-2537-481f-811f-d5232df6998d}">
+      <label languagecode="1033" description="TReporting (Banned activity identified)" />
+    </steplabels>
+    <steplabels id="{35863341-12d2-4e6b-8708-cd070e160339}">
+      <label languagecode="1033" description="TReporting (No-go country identified)" />
+    </steplabels>
+    <steplabels id="{3b3b445f-dc85-42e7-b002-2216c3d717ca}">
+      <label languagecode="1033" description="TReporting (One month Late EDD)" />
+    </steplabels>
+    <steplabels id="{9f226ac5-706b-4c31-9c80-5b585dac2fc0}">
+      <label languagecode="1033" description="TReporting (One month Late TR)" />
+    </steplabels>
+    <steplabels id="{48c5db30-fd06-436b-958a-fac605af73aa}">
+      <label languagecode="1033" description="EDD Process" />
+    </steplabels>
+    <steplabels id="{0c7fccf0-1c3e-4ef1-aa7b-fe11172cbe58}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{c3c5cb52-e773-473c-9d87-4f1ed424bb18}">
+      <label languagecode="1033" description="CIBP from ARA" />
+    </steplabels>
+    <steplabels id="{fbbb6930-1c44-4746-8218-a7223a36a9f5}">
+      <label languagecode="1033" description="CIBP from Jurisdiction" />
+    </steplabels>
+    <steplabels id="{25babb6d-98ec-498d-bf7c-5ebc9dfb6a33}">
+      <label languagecode="1033" description="EDD New Behavior" />
+    </steplabels>
+    <steplabels id="{e62e8500-2bbd-4512-90a6-86a6f3aeb9f5}">
+      <label languagecode="1033" description="EDD (high risk activity identified)" />
+    </steplabels>
+    <steplabels id="{d8021152-4d67-4fd2-b174-dbbd7bb72198}">
+      <label languagecode="1033" description="EDD (False or stolen Docs CDDI)" />
+    </steplabels>
+    <steplabels id="{eee34dac-9e06-4371-b544-99b0a527068b}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{0ad081e3-aff3-464d-9fee-a5659b0db2dd}">
+      <label languagecode="1033" description="EDD (High Risk Jurisdiction)" />
+    </steplabels>
+    <steplabels id="{9b045625-f539-4180-af25-768a983a1118}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{338a2ed7-1a3d-45d7-a791-56e90b811d18}">
+      <label languagecode="1033" description="EDD (PEP is not an MP)" />
+    </steplabels>
+    <steplabels id="{ad0bb66f-a4eb-49e5-b1c4-b695b3d93c9d}">
+      <label languagecode="1033" description="EDD (False or stolen Docs TR)" />
+    </steplabels>
+    <steplabels id="{347cdbb7-e25d-45f5-8009-047423f75fb1}">
+      <label languagecode="1033" description="Transaction Amount" />
+    </steplabels>
+    <steplabels id="{e19117e9-2037-4abd-ba28-068fedc3c39f}">
+      <label languagecode="1033" description="STR (illegal banned activity)" />
+    </steplabels>
+    <steplabels id="{f20c8968-8412-4b11-ad49-058e755d34ab}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion CDDI)" />
+    </steplabels>
+    <steplabels id="{6eacee16-eff1-4964-a90b-a1cd583e81ad}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{2ecb015e-2274-41fa-94d7-86d99d8b8750}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion EDD)" />
+    </steplabels>
+    <steplabels id="{6e4492e8-9ebc-4d73-a21f-8ba45669b589}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{3567cada-519d-4665-afa9-23d5876ab6a5}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion TR)" />
+    </steplabels>
+    <steplabels id="{9c7efe82-f992-41e3-886d-c3fce5747559}">
+      <label languagecode="1033" description="TReporting (Banned activity identified)" />
+    </steplabels>
+    <steplabels id="{e5e59fc7-d426-4689-904d-4beb2be1d4eb}">
+      <label languagecode="1033" description="TReporting (No-go country identified)" />
+    </steplabels>
+    <steplabels id="{f7b84ac3-27ac-42d6-9053-5749faea6828}">
+      <label languagecode="1033" description="TReporting (One month Late EDD)" />
+    </steplabels>
+    <steplabels id="{4446f930-ca4a-4935-aa5b-67cbd62fa734}">
+      <label languagecode="1033" description="TReporting (One month Late TR)" />
+    </steplabels>
+    <steplabels id="{16651a39-6628-4e0b-a874-9678dcb01e31}">
+      <label languagecode="1033" description="Request For Additional Docs/ Clarifications" />
+    </steplabels>
+    <steplabels id="{e7327f3e-2ff6-4039-8d5e-d9f630bb96ac}">
+      <label languagecode="1033" description="Additionals Document" />
+    </steplabels>
+    <steplabels id="{96d5566c-42a1-4e12-b33a-1c8a14d57f36}">
+      <label languagecode="1033" description="Successful" />
+    </steplabels>
+    <steplabels id="{36c82a8d-ca98-4e05-b292-c6ae37cff8b1}">
+      <label languagecode="1033" description="Redirect" />
+    </steplabels>
+    <steplabels id="{83693603-d523-43aa-9c46-1c3b29e8f292}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{f0defd43-1099-4e08-995f-25dc1df0da53}">
+      <label languagecode="1033" description="Transaction Reporting Process" />
+    </steplabels>
+    <steplabels id="{ca8b11ef-a90c-4d90-8c84-d53873aa2c63}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{055b3e37-c166-47ec-ab47-98d179db914c}">
+      <label languagecode="1033" description="CIBP from ARA" />
+    </steplabels>
+    <steplabels id="{0f4b499a-a947-42b4-bbd6-ab3ed7f155c0}">
+      <label languagecode="1033" description="CIBP from Jurisdiction" />
+    </steplabels>
+    <steplabels id="{c70521bb-7b31-44b0-8e92-e993ac9a9c26}">
+      <label languagecode="1033" description="EDD New Behavior" />
+    </steplabels>
+    <steplabels id="{41f7a022-0815-4ec0-ae93-a691e85fff38}">
+      <label languagecode="1033" description="EDD (high risk activity identified)" />
+    </steplabels>
+    <steplabels id="{99396d74-fa73-4556-8cd5-9f6def05d89d}">
+      <label languagecode="1033" description="EDD (False or stolen Docs CDDI)" />
+    </steplabels>
+    <steplabels id="{06406957-a451-4e6e-b2a8-b81ead3fbbd1}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{06332723-b1a8-47b7-a7bf-07199f96a390}">
+      <label languagecode="1033" description="EDD (High Risk Jurisdiction)" />
+    </steplabels>
+    <steplabels id="{b96be1e3-ddb1-426b-8a55-854b01ab38e3}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{cf03bcb0-84a8-4a71-8ed5-e45e953c4026}">
+      <label languagecode="1033" description="EDD (PEP is not an MP)" />
+    </steplabels>
+    <steplabels id="{468b72e2-7430-4ced-b5f5-be0cc49a94a3}">
+      <label languagecode="1033" description="EDD (False or stolen Docs TR)" />
+    </steplabels>
+    <steplabels id="{30f21471-337c-48b6-9df2-7aed6d03a1d6}">
+      <label languagecode="1033" description="Transaction Amount" />
+    </steplabels>
+    <steplabels id="{e2297dd3-1d47-4066-bf66-d8b2cafaf3eb}">
+      <label languagecode="1033" description="STR (illegal banned activity)" />
+    </steplabels>
+    <steplabels id="{295aecec-009a-4268-a488-e58927461b94}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion CDDI)" />
+    </steplabels>
+    <steplabels id="{ecae4190-2e68-4f01-8036-0c2ef8ace4ed}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{8c57141a-3ec7-4f38-96bc-ea6fdb035651}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion EDD)" />
+    </steplabels>
+    <steplabels id="{da946747-08f6-41b7-8618-ccbc286bc531}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{54be1a88-6a42-4984-baae-81c430a206d5}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion TR)" />
+    </steplabels>
+    <steplabels id="{f98128d7-f7f6-4a0c-8715-6b7b01eb178a}">
+      <label languagecode="1033" description="TReporting (Banned activity identified)" />
+    </steplabels>
+    <steplabels id="{8d051129-863c-4ca4-ba4e-4383fbe92ea6}">
+      <label languagecode="1033" description="TReporting (No-go country identified)" />
+    </steplabels>
+    <steplabels id="{97a92e48-c632-45d9-b07a-edc5df9542e6}">
+      <label languagecode="1033" description="TReporting (One month Late EDD)" />
+    </steplabels>
+    <steplabels id="{3135be1b-bfda-462a-9568-3082bd1ed613}">
+      <label languagecode="1033" description="TReporting (One month Late TR)" />
+    </steplabels>
+    <steplabels id="{3f1a062a-8948-4d58-97c6-3f45db6682e1}">
+      <label languagecode="1033" description="STR Process" />
+    </steplabels>
+    <steplabels id="{a0bf5d76-0625-4d29-bae8-cfbf216d12ec}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{3f7f4d8c-7df7-46f4-a7ec-97080df095bd}">
+      <label languagecode="1033" description="CIBP from ARA" />
+    </steplabels>
+    <steplabels id="{f02e4643-93a4-4ae7-99ce-1052ed090cdf}">
+      <label languagecode="1033" description="CIBP from Jurisdiction" />
+    </steplabels>
+    <steplabels id="{46cc8177-86c0-445f-8041-38850d9c40bb}">
+      <label languagecode="1033" description="EDD New Behavior" />
+    </steplabels>
+    <steplabels id="{db0cdc6f-561f-4943-85bc-7335f70b51cc}">
+      <label languagecode="1033" description="EDD (high risk activity identified)" />
+    </steplabels>
+    <steplabels id="{e03aac5e-6f42-47c9-9099-3e2f3c1d0ea6}">
+      <label languagecode="1033" description="EDD (False or stolen Docs CDDI)" />
+    </steplabels>
+    <steplabels id="{03159bd0-5071-411f-aca3-7489232b06b4}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{de110013-e709-4a77-a409-aacde371d052}">
+      <label languagecode="1033" description="EDD (High Risk Jurisdiction)" />
+    </steplabels>
+    <steplabels id="{19d31056-b672-47b2-9a32-5d459724ee58}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{cd2c72b3-e2da-4f9a-9030-11d1af957864}">
+      <label languagecode="1033" description="EDD (PEP is not an MP)" />
+    </steplabels>
+    <steplabels id="{26a7ac33-9ff6-479b-a5ab-1c770d6842cb}">
+      <label languagecode="1033" description="EDD (False or stolen Docs TR)" />
+    </steplabels>
+    <steplabels id="{4b0305d8-0d50-4f0c-92e6-65611eb3bfa3}">
+      <label languagecode="1033" description="Transaction Amount" />
+    </steplabels>
+    <steplabels id="{b42d00ac-50c5-421f-b8fd-b849ee60dd4d}">
+      <label languagecode="1033" description="STR (illegal banned activity)" />
+    </steplabels>
+    <steplabels id="{aa68a916-0b49-4076-9404-1d3a429dcba2}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion CDDI)" />
+    </steplabels>
+    <steplabels id="{13221ccb-8cca-499a-9f4e-48766d6764a1}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{34fa2d20-909b-4894-a596-823638ea2704}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion EDD)" />
+    </steplabels>
+    <steplabels id="{5485f5a3-0422-46ce-a1f4-495fc78055fe}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{59a7c832-08dc-42c8-a1a8-8fd989466ded}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion TR)" />
+    </steplabels>
+    <steplabels id="{8d8b6375-2642-4b80-976b-144e3c3556ff}">
+      <label languagecode="1033" description="TReporting (Banned activity identified)" />
+    </steplabels>
+    <steplabels id="{029109d0-c91d-445e-bdf5-17df37bdad89}">
+      <label languagecode="1033" description="TReporting (No-go country identified)" />
+    </steplabels>
+    <steplabels id="{c122c684-c146-4dd1-ae7e-fbfe116c3225}">
+      <label languagecode="1033" description="TReporting (One month Late EDD)" />
+    </steplabels>
+    <steplabels id="{d1160fe1-fef2-4849-b597-0f03054976bb}">
+      <label languagecode="1033" description="TReporting (One month Late TR)" />
+    </steplabels>
+    <steplabels id="{3519469f-e5ba-40c2-9147-43e5f6177c41}">
+      <label languagecode="1033" description="Proceed With Transaction Monitoring" />
+    </steplabels>
+    <steplabels id="{82694ac2-830b-4e1c-a32b-10249f63e70a}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{08dd8941-fd9f-4b1e-bdd2-9d955517c588}">
+      <label languagecode="1033" description="CIBP from ARA" />
+    </steplabels>
+    <steplabels id="{5a0b9f6e-de01-41ac-a967-c350e5567282}">
+      <label languagecode="1033" description="CIBP from Jurisdiction" />
+    </steplabels>
+    <steplabels id="{825d04a1-c3fa-4d21-a7b0-18fa68a2d0f6}">
+      <label languagecode="1033" description="EDD New Behavior" />
+    </steplabels>
+    <steplabels id="{859f28ba-f14e-4978-b792-bfac064f7ba4}">
+      <label languagecode="1033" description="EDD (high risk activity identified)" />
+    </steplabels>
+    <steplabels id="{9c840009-379b-486b-9cc2-5f300f369845}">
+      <label languagecode="1033" description="EDD (False or stolen Docs CDDI)" />
+    </steplabels>
+    <steplabels id="{f803af1d-190a-4fbf-b8d1-ec8bb445dda0}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{21d84dd1-93d4-41bf-8ebf-153e2253eecb}">
+      <label languagecode="1033" description="EDD (High Risk Jurisdiction)" />
+    </steplabels>
+    <steplabels id="{757cd2cd-1b07-441c-870b-9d626651a67c}">
+      <label languagecode="1033" description="EDD (Other adverse report)" />
+    </steplabels>
+    <steplabels id="{a128169c-f6c9-4ade-a2ee-e1591078c38c}">
+      <label languagecode="1033" description="EDD (PEP is not an MP)" />
+    </steplabels>
+    <steplabels id="{18f34ddc-1dba-4387-a7c9-381f2944c24b}">
+      <label languagecode="1033" description="EDD (False or stolen Docs TR)" />
+    </steplabels>
+    <steplabels id="{d7d12d2d-cd4a-45ad-996a-c4255280a7b7}">
+      <label languagecode="1033" description="Transaction Amount" />
+    </steplabels>
+    <steplabels id="{e367d757-b850-41be-98eb-73673affd0b7}">
+      <label languagecode="1033" description="STR (illegal banned activity)" />
+    </steplabels>
+    <steplabels id="{5f85620a-3e6a-4571-9ef7-12cb3dc9e1b1}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion CDDI)" />
+    </steplabels>
+    <steplabels id="{64ae79c7-9c8a-45d4-9abc-ca9808d030d4}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{da2a56ce-de88-48a6-bb40-9081a01931d1}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion EDD)" />
+    </steplabels>
+    <steplabels id="{67b7bb8b-227f-4c1c-9a00-745304d3fa65}">
+      <label languagecode="1033" description="STR (Sanctioned Person)" />
+    </steplabels>
+    <steplabels id="{a8ebee31-08d4-493d-b853-a8c82263c195}">
+      <label languagecode="1033" description="STR (Doubt/Suspicion TR)" />
+    </steplabels>
+    <steplabels id="{148b340b-43ed-4a82-a5b1-839ad1567e01}">
+      <label languagecode="1033" description="TReporting (Banned activity identified)" />
+    </steplabels>
+    <steplabels id="{f1174096-d745-46e0-8b2c-281a97eec806}">
+      <label languagecode="1033" description="TReporting (No-go country identified)" />
+    </steplabels>
+    <steplabels id="{99279a65-29b3-4994-84b2-f3c68a4b941d}">
+      <label languagecode="1033" description="TReporting (One month Late EDD)" />
+    </steplabels>
+    <steplabels id="{a0ce76e3-2bac-4620-b4f9-cefd8fe4143b}">
+      <label languagecode="1033" description="TReporting (One month Late TR)" />
+    </steplabels>
+  </labels>
+</Workflow>

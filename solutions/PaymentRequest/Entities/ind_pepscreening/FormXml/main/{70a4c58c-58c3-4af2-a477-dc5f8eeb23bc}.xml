@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{70a4c58c-58c3-4af2-a477-dc5f8eeb23bc}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{8748f185-3012-49ad-97de-52907aa35c42}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{eb87071e-09aa-4811-8816-38904c074aed}">
+          <labels>
+            <label description="Identify PEP " languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{9eee6a3a-f641-75a2-413a-a14c3232c618}" name="StageStep3_section1" labelid="{a9a52344-9a52-4bbd-8305-b14a4980a7ab}">
+                  <labels>
+                    <label description="Identify PEP " languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d6e157be-8a78-4648-b1e3-cb0db766397b}" showlabel="true" visible="true" labelid="{d8f5aec5-599f-41fb-b7b7-c709ad4c8ae2}">
+                        <labels>
+                          <label description="PEP from Government" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_pepscreening:ind_pepfromgoverment" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_pepfromgoverment" disabled="false" relationship="bpf_ind_ind_operation_ind_pepscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{62d3461f-cafe-43e2-9ff7-0bc8eb1b85cc}" name="StageStep7" locklevel="0" expanded="true" visible="false" labelid="{05048a76-8858-4524-9e1c-7fe8f97ab130}">
+          <labels>
+            <label description="Transaction Reporting Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{655e3d68-09f6-7d57-f65c-5fb09afc7b53}" name="StageStep7_section1" labelid="{ec423518-70a4-496f-aa43-e6bc728a18d9}">
+                  <labels>
+                    <label description="Transaction Reporting Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b8b84229-52ad-45f5-9c0c-b23f127dbf60}" showlabel="true" visible="true" labelid="{6fa77b2f-9123-4f3e-addd-dba0ba16174c}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_pepscreening:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_pepscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{b95a4d48-2a2f-4074-8937-61b567457b55}" name="StageStep11" locklevel="0" expanded="true" visible="false" labelid="{a763b55a-4232-4576-9ec8-297bff192015}">
+          <labels>
+            <label description="EDD Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{37661069-d8a2-b94a-677f-ea77a179802b}" name="StageStep11_section1" labelid="{c4ed2acf-af14-457f-90c8-3049134c85db}">
+                  <labels>
+                    <label description="EDD Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{731ef14c-dec9-4dd7-a97b-4d1fc11a41f5}" showlabel="true" visible="true" labelid="{7a2f1746-13f5-4821-9946-de1614cdbc9f}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_pepscreening:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_pepscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

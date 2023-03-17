@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{78951581-8471-ed11-9562-0022482a40f8}" Name="BP STR Process" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/BPSTRProcess-78951581-8471-ED11-9562-0022482A40F8.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>ind_bpstrprocess</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.8</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>ind_ind_BusinessPlan</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="BP STR Process" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{1107f229-41e3-44b5-8287-cb226e5b98b8}">
+      <label languagecode="1033" description="Prepare Unusual Transaction Report " />
+    </steplabels>
+    <steplabels id="{7d62bc78-2bd3-4bb0-a98f-e4e4e9725281}">
+      <label languagecode="1033" description="ARA (illegal banned activity)" />
+    </steplabels>
+    <steplabels id="{64e77504-cacf-4312-8d1c-cac6021318d6}">
+      <label languagecode="1033" description="EDD (Doubt/Suspicion)" />
+    </steplabels>
+    <steplabels id="{5d2df77e-b353-4ea3-9595-05d0acef5e11}">
+      <label languagecode="1033" description="Unusual transaction report" />
+    </steplabels>
+    <steplabels id="{810c5acc-baca-4d3c-9937-e8792df842a5}">
+      <label languagecode="1033" description="Update Internal Report Log" />
+    </steplabels>
+    <steplabels id="{97ab4f46-72f9-448e-bd61-3331cc2f5cbc}">
+      <label languagecode="1033" description="Internal Report Log" />
+    </steplabels>
+    <steplabels id="{555adfda-c11f-4a02-a31e-8b06141b3be1}">
+      <label languagecode="1033" description="Performs Transaction And Behaviour Analysis" />
+    </steplabels>
+    <steplabels id="{2df266bd-94fc-463f-a6fe-1a10edaa1b42}">
+      <label languagecode="1033" description="Satisfactory ?" />
+    </steplabels>
+    <steplabels id="{568c5653-c834-433e-b610-5e6fe0859a7d}">
+      <label languagecode="1033" description="Perform Screening And Due Diligence" />
+    </steplabels>
+    <steplabels id="{50ee363f-dc93-49d6-aea6-f0276660eb90}">
+      <label languagecode="1033" description="World Check File" />
+    </steplabels>
+    <steplabels id="{fe74436a-2bb6-4660-92bc-5dda9cf1a3c9}">
+      <label languagecode="1033" description="Satisfactory ?" />
+    </steplabels>
+    <steplabels id="{05bab4d0-4394-4eaf-b381-4b1a4c08b2ac}">
+      <label languagecode="1033" description="Conclusion Of Investigation Report" />
+    </steplabels>
+    <steplabels id="{abba5542-3061-4a77-9619-c9bd08aaa843}">
+      <label languagecode="1033" description="Conclusion of Investigation Report" />
+    </steplabels>
+    <steplabels id="{ff0e6687-f85b-412c-8b85-79a8e9a51674}">
+      <label languagecode="1033" description="Update Internal Report Log 2" />
+    </steplabels>
+    <steplabels id="{bca1e460-d16c-4a82-8135-f8cce7a02a35}">
+      <label languagecode="1033" description="Internal Report Log" />
+    </steplabels>
+    <steplabels id="{d0c129e8-176c-4d9e-871d-f5cc48138b84}">
+      <label languagecode="1033" description="Proceed With Change In Business Plan Process" />
+    </steplabels>
+    <steplabels id="{0800f902-3583-413d-8420-7f7a7306173c}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{65434e43-ae25-4240-9f6d-57fd95360d82}">
+      <label languagecode="1033" description="File STR With FIU" />
+    </steplabels>
+    <steplabels id="{3858a44a-fbde-44c5-bf4d-ab1ad29579ce}">
+      <label languagecode="1033" description="STR Report" />
+    </steplabels>
+    <steplabels id="{3b7d3ae2-e14b-479c-835d-df5e8101de32}">
+      <label languagecode="1033" description="Updates External Report Log" />
+    </steplabels>
+    <steplabels id="{eb9d5942-b804-4c10-b2cf-093843d1920d}">
+      <label languagecode="1033" description="External Report Log" />
+    </steplabels>
+    <steplabels id="{98421ca2-9763-4243-bb3d-eccfb255965c}">
+      <label languagecode="1033" description="Request Aborted" />
+    </steplabels>
+    <steplabels id="{c3bb5638-cd9f-485f-adea-60152571e0d0}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{6ed35fce-536a-44f4-a959-8004541d3253}">
+      <label languagecode="1033" description="File STR With FIU" />
+    </steplabels>
+    <steplabels id="{7c29fb8d-c97f-4521-b167-c283f81e12b9}">
+      <label languagecode="1033" description="STR Report" />
+    </steplabels>
+    <steplabels id="{2152c5a6-c589-450a-8f9f-e03462a27fe5}">
+      <label languagecode="1033" description="Updates External Report Log" />
+    </steplabels>
+    <steplabels id="{a5403720-465b-439f-bd8d-36c5f5471bc2}">
+      <label languagecode="1033" description="External Report Log" />
+    </steplabels>
+    <steplabels id="{50c384a7-497b-4948-a7e9-36d672db851e}">
+      <label languagecode="1033" description="Request Aborted" />
+    </steplabels>
+    <steplabels id="{b8e5d6f8-54cb-47f6-b9aa-38843bb2d2ea}">
+      <label languagecode="1033" description="Banned Activity" />
+    </steplabels>
+  </labels>
+</Workflow>

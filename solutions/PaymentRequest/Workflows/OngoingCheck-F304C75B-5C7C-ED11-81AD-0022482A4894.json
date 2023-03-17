@@ -1,0 +1,194 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "ind_sharedcommondataserviceforapps_64f74"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "e4a70918-4dc0-44df-84bd-f5a9fec5300f"
+          },
+          "type": "Request",
+          "kind": "Http",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "actions": {
+        "Set_ID": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "176cc91f-81f9-4af5-b016-5cda951d9554"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Id",
+                "type": "string",
+                "value": "@{substring(triggerBody()?['Id'], 1, 36)}"
+              }
+            ]
+          }
+        },
+        "STOP": {
+          "runAfter": {
+            "Set_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "02ae50b4-2681-4c76-ae13-0fd722718e1e"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Stop",
+                "type": "boolean",
+                "value": "@false"
+              }
+            ]
+          }
+        },
+        "List_rows": {
+          "runAfter": {
+            "STOP": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4e3a6065-5010-4b99-a594-277860c817b8"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ind_worldchecks",
+              "$filter": "ind_name eq '@{triggerBody()?['name']}'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Apply_to_each": {
+          "foreach": "@outputs('List_rows')?['body/value']",
+          "actions": {
+            "Condition": {
+              "actions": {
+                "Stop_true": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "7801c936-bf92-4c0e-89b7-1447a9995cb3"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "Stop",
+                    "value": "@true"
+                  }
+                },
+                "Update_a_row": {
+                  "runAfter": {
+                    "Stop_true": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "2d19dbb2-b95c-460f-9a19-e4924fafb444"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "UpdateRecord",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "ind_ind_operations",
+                      "recordId": "@variables('Id')",
+                      "item/ind_partyonogs": true
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {},
+              "expression": {
+                "and": [
+                  {
+                    "equals": [
+                      "@items('Apply_to_each')?['ind_watchlist']",
+                      "ONGOING"
+                    ]
+                  },
+                  {
+                    "equals": [
+                      "@variables('Stop')",
+                      "@false"
+                    ]
+                  }
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "e0038c49-cd8b-44bd-925c-fb5f21f8f3c5"
+              },
+              "type": "If"
+            }
+          },
+          "runAfter": {
+            "List_rows": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b2fb774c-fd35-4267-bd4a-b69d0931239c"
+          },
+          "type": "Foreach",
+          "runtimeConfiguration": {
+            "concurrency": {
+              "repetitions": 50
+            }
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}
