@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{3fc7e0ba-f760-ed11-9562-0022482a40f8}" Name="Ongoing Screening" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/OngoingScreening-3FC7E0BA-F760-ED11-9562-0022482A40F8.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>ind_ongoingscreening</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>ind_ind_Operation</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Ongoing Screening" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{0fa915c0-adff-4201-84fe-e4bf90219b0e}">
+      <label languagecode="1033" description="Potentially Adverse Hits" />
+    </steplabels>
+    <steplabels id="{8dc719f5-5b5d-4fd8-abf2-915d14b8631f}">
+      <label languagecode="1033" description="Adverse Hits ?" />
+    </steplabels>
+    <steplabels id="{b5382f81-cc3f-4ad9-9e80-947086b45400}">
+      <label languagecode="1033" description="Perform Web Check" />
+    </steplabels>
+    <steplabels id="{c4660fc8-bafb-496a-b12d-ed2b48ba2209}">
+      <label languagecode="1033" description="Web Check File" />
+    </steplabels>
+    <steplabels id="{ef254fe9-dee9-4ee1-a4b6-4a6e63c2d7f6}">
+      <label languagecode="1033" description="Preliminary Assessment" />
+    </steplabels>
+    <steplabels id="{ba73c1dd-3a87-4230-8986-4689c199f618}">
+      <label languagecode="1033" description="Dismiss" />
+    </steplabels>
+    <steplabels id="{22cd8467-8d77-46c2-8132-752872b90f2d}">
+      <label languagecode="1033" description="Web Check" />
+    </steplabels>
+    <steplabels id="{9e597262-1d3e-43a2-8f5b-2e9bada6cd8d}">
+      <label languagecode="1033" description="Reason Dismiss" />
+    </steplabels>
+    <steplabels id="{05834b5a-de0a-4cc0-8080-e6fd9ea00bf5}">
+      <label languagecode="1033" description="Continue With Transaction Monitoring Process" />
+    </steplabels>
+    <steplabels id="{1dc77bd0-dfb9-47c9-b320-722911d84972}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{ee2cfc32-e20d-4bd4-8145-9c0b5f2a977f}">
+      <label languagecode="1033" description="Assess Genuineness Of The World Check Hits" />
+    </steplabels>
+    <steplabels id="{5ddcb538-4510-4736-a6ac-8d631c09b836}">
+      <label languagecode="1033" description="RO Report" />
+    </steplabels>
+    <steplabels id="{8b97b1a5-a877-44b6-a203-e3fa40dc456f}">
+      <label languagecode="1033" description="Assess Report Of RO" />
+    </steplabels>
+    <steplabels id="{ab9b98b6-f91b-45cb-b3f7-e18f869afd7e}">
+      <label languagecode="1033" description="RO Report" />
+    </steplabels>
+    <steplabels id="{511196d2-2c1b-4853-aca3-01aa3bccd72c}">
+      <label languagecode="1033" description="Dismiss" />
+    </steplabels>
+    <steplabels id="{7627ad76-3949-48c1-995d-9ea7ab16489c}">
+      <label languagecode="1033" description="Continue With Transaction Monitoring Process" />
+    </steplabels>
+    <steplabels id="{6a7571cf-eaf4-4522-9a12-1819b81ef72b}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{f21f684c-e53a-4bec-aa10-44584d7b3995}">
+      <label languagecode="1033" description="STR Process" />
+    </steplabels>
+    <steplabels id="{74bd7e13-7370-4620-b271-cd83afac30b0}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{264a8247-fd05-4f15-9e1a-d8d026e3ab97}">
+      <label languagecode="1033" description="PEP Screening" />
+    </steplabels>
+    <steplabels id="{6dea66c9-4bb1-44dc-a041-457cee507648}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{47bbfef6-702d-4e3f-8dcf-018bc30e8db9}">
+      <label languagecode="1033" description="EDD Process" />
+    </steplabels>
+    <steplabels id="{a067bc40-9ecf-44a1-91d9-14a5990940f5}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{06eafa1b-a3c8-4140-8973-253a559834f9}">
+      <label languagecode="1033" description="Perform Web Check" />
+    </steplabels>
+    <steplabels id="{9d41b605-df87-4d3d-96ff-9c53009f18e6}">
+      <label languagecode="1033" description="Web Check file" />
+    </steplabels>
+    <steplabels id="{e4a3ee7f-42c7-4a7b-b709-80a5676ec3b3}">
+      <label languagecode="1033" description="Continue With Transaction Monitoring Process" />
+    </steplabels>
+    <steplabels id="{03c64905-a751-4765-8964-1a2f47d91e65}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+  </labels>
+</Workflow>

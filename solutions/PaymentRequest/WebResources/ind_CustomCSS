@@ -1,0 +1,8 @@
+.pa-yi.pa-yj.pa-h.pa-g.pa-yk.pa-de.pa-yl.pa-ym.pa-zl.pa-zm.pa-y.webkitScroll {
+	width : 500px;
+	
+}
+
+div[id^="MscrmControls.Containers.ProcessStageControl-processHeaderStageFlyout_"] { 
+	width : 500px; 
+}

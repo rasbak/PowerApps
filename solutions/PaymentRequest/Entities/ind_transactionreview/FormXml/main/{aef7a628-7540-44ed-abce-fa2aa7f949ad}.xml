@@ -1,0 +1,1865 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{aef7a628-7540-44ed-abce-fa2aa7f949ad}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{0ca040ed-d4b9-4caf-be17-ba271f2e23e6}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{d96b68ec-e4a9-484a-8d94-1501c6aad0f5}">
+          <labels>
+            <label description="Perform Standard CDD" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{af8b4626-ba61-53a9-30d4-e090840c1d5e}" name="StageStep3_section1" labelid="{0baf9bb8-f964-4d84-97cd-7116e398819d}">
+                  <labels>
+                    <label description="Perform Standard CDD" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ca924952-3217-449b-8497-056e18baaec2}" showlabel="true" visible="true" labelid="{12fcadae-c50c-4721-98a1-c5b4685e2abc}">
+                        <labels>
+                          <label description="On File?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_onfile" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_onfile" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{70cc67d0-03f5-47ee-bf7b-b5c6c06b7585}" showlabel="true" visible="true" labelid="{bbdac452-0447-44b8-8bbe-56dcecd915ea}">
+                        <labels>
+                          <label description="Doubt/Suspicion?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_doubtsuspicion" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_doubtsuspicion" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{1703c78d-e509-43b3-b18c-6182c7059dcb}" name="StageStep9" locklevel="0" expanded="true" visible="false" labelid="{43fc3578-a378-40b1-a931-74cc65a6a2a3}">
+          <labels>
+            <label description="Documents Needed" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{1a061655-ac84-1d66-0567-d3c2e22bf448}" name="StageStep9_section1" labelid="{8120d7c7-45ca-46d8-bf0a-e44afeb124e5}">
+                  <labels>
+                    <label description="Documents Needed" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{67ea874f-7795-4518-9628-f31b518622be}" showlabel="true" visible="true" labelid="{11354428-ff6a-4a19-a92d-f4ffaddc9e1e}">
+                        <labels>
+                          <label description="Source of Documents" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_sourceofdocuments" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_sourceofdocuments" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{9a259ec2-c93e-4497-9c17-067f0d61b380}" name="StageStep13" locklevel="0" expanded="true" visible="false" labelid="{64234bea-6c32-4f83-93d0-bdc068223dd9}">
+          <labels>
+            <label description="Review Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{1ac54f7c-ec44-7f06-5147-c8243fe2e00a}" name="StageStep13_section1" labelid="{dc1ee9d2-cba6-4d2f-b3e6-f39860cf958f}">
+                  <labels>
+                    <label description="Review Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{de3b3e32-1a5a-4271-a2cc-2310b1607937}" showlabel="true" visible="true" labelid="{0e5af46e-4a7f-48d7-9f80-b6128a84c3fa}">
+                        <labels>
+                          <label description="Status Reason" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{62c0d0f8-7110-4a9c-a1c8-9736cf45cd78}" name="StageStep17" locklevel="0" expanded="true" visible="false" labelid="{54d0a9e8-8659-4d5a-9889-a0516e779c0e}">
+          <labels>
+            <label description="Request For Documents" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{4e525021-8471-ad11-677b-69779fae11ad}" name="StageStep17_section1" labelid="{7b4ba659-97cf-4ef4-a513-70bbc8311e6c}">
+                  <labels>
+                    <label description="Request For Documents" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{dae11ccd-5efd-4153-8c9c-cc9fb465e357}" showlabel="true" visible="true" labelid="{40deed57-9c9a-436e-96b8-df4c0c5bfe7b}">
+                        <labels>
+                          <label description="Documents required transaction review" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_documentsrequiredtransactionreview" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_documentsrequiredtransactionreview" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{cd728542-bdba-46a4-bd51-02300be75169}" name="StageStep21" locklevel="0" expanded="true" visible="false" labelid="{5beb1d50-7cbd-450a-936f-b1ce9c5c99ce}">
+          <labels>
+            <label description="Request For Documents" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{a971fb3d-d5c9-290a-fc4f-a585e2b2ccc9}" name="StageStep21_section1" labelid="{97225f37-f2eb-4248-a2bc-a101fe512992}">
+                  <labels>
+                    <label description="Request For Documents" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{fabbd82e-359e-4e6f-b245-2ea40fb93ab8}" showlabel="true" visible="true" labelid="{6cf3937c-5faa-49ee-8dd9-12d1b8a30f36}">
+                        <labels>
+                          <label description="Documents required transaction review" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_documentsrequiredtransactionreview" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_documentsrequiredtransactionreview" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{af25cb77-a8c4-424d-9ff9-580f96e6b8db}" name="StageStep25" locklevel="0" expanded="true" visible="false" labelid="{746fc11f-282e-4876-aa4e-0ccdd038af1c}">
+          <labels>
+            <label description="Review Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{7216a703-a1bf-1931-004d-463cffc1adc8}" name="StageStep25_section1" labelid="{68fa32e1-c002-4296-9f34-bb7ca0a7ae32}">
+                  <labels>
+                    <label description="Review Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{1f5b3d6f-04b4-461f-98ac-d2ba21946e07}" showlabel="true" visible="true" labelid="{c434df40-10e7-443d-ace8-fc4ce929b8fa}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{ca558de3-ac19-4edc-ad10-327b3dbd1c42}" name="StageStep29" locklevel="0" expanded="true" visible="false" labelid="{bce2beb1-3e30-4dae-a44d-8dc6ba0098be}">
+          <labels>
+            <label description="Received In Place" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{2cbbe34e-ee20-9b34-418b-93dd3986ff75}" name="StageStep29_section1" labelid="{5df4c19e-8105-4aad-838f-1e364c8de612}">
+                  <labels>
+                    <label description="Received In Place" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3173acb1-8962-4b55-a45a-0d7405de28ef}" showlabel="true" visible="true" labelid="{065d4625-55c6-4d9b-a360-44f1c75f1998}">
+                        <labels>
+                          <label description="Received In Place" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_receivedinplace" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_receivedinplace" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c76b9d60-4643-4032-a656-35b9e53ac29a}" showlabel="true" visible="true" labelid="{bfaab092-5fe1-4c7c-a5c6-7b2b2955c4c7}">
+                        <labels>
+                          <label description="Doubt/Suspicion" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_doubtsuspicion" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_doubtsuspicion" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{a8599d70-cd3a-474f-a304-a0f90a94af94}" name="StageStep35" locklevel="0" expanded="true" visible="false" labelid="{055156fc-474c-4543-8f5d-325497630371}">
+          <labels>
+            <label description="Proceed With Transaction Monitoring" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{d5c19c6e-af5a-e707-06b1-e63823e27f60}" name="StageStep35_section1" labelid="{f90985f6-0435-4519-9b3f-969e79df4abc}">
+                  <labels>
+                    <label description="Proceed With Transaction Monitoring" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3da43b96-5bc5-4e19-841f-4fb318d1dc5c}" showlabel="true" visible="true" labelid="{e02a2ad8-b732-4c9f-8dfa-963496c461ca}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1b3b70ee-69e2-4720-95e2-645653eab377}" showlabel="true" visible="true" labelid="{9d605601-e62f-4292-a1af-55805376c38b}">
+                        <labels>
+                          <label description="CIBP from ARA" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{96282b7f-9e46-40c3-a7e1-c728f6f5e656}" showlabel="true" visible="true" labelid="{d375d7ef-3435-4301-8659-ebf72c1affe6}">
+                        <labels>
+                          <label description="CIBP from Jurisdiction" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpjustisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpjustisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dbe59f94-0c42-4a31-96c5-44511c0383b5}" showlabel="true" visible="true" labelid="{7f8cdc1a-d210-4c75-be37-e79056063340}">
+                        <labels>
+                          <label description="EDD New Behavior" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddnewbehavior" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_triggereddnewbehavior" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9b267ba0-327e-4da1-a5a1-b0a230b29beb}" showlabel="true" visible="true" labelid="{fbfcefbd-1208-4ca0-9fbd-3d0eb883ed70}">
+                        <labels>
+                          <label description="EDD (high risk activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dade4634-1680-43e5-a449-aac22e7153f3}" showlabel="true" visible="true" labelid="{b9fc98cf-30a5-4089-89f4-a624a7fe071d}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e6ef4015-599a-4f19-907e-da08fb97142a}" showlabel="true" visible="true" labelid="{74a4af7d-08ed-4166-8f72-66cd76e7bb13}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{937ee965-7fe3-4e69-918a-c193679c0045}" showlabel="true" visible="true" labelid="{b9dae5b8-7dda-4a71-af07-b94a9d75f792}">
+                        <labels>
+                          <label description="EDD (High Risk Jurisdiction)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddjurisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddjurisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f8c30454-c9c8-43f3-a6e8-66edc151bb34}" showlabel="true" visible="true" labelid="{81d8996a-0be9-486a-80d3-738e1277439e}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c62b38d1-d55b-4d7c-ac6d-d76c1b804130}" showlabel="true" visible="true" labelid="{2741d318-924a-4742-9c11-ca33524937c9}">
+                        <labels>
+                          <label description="EDD (PEP is not an MP)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddpep" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddpep" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{eed7ab80-ce28-4fb0-82ff-a50537a5ef3a}" showlabel="true" visible="true" labelid="{9e1cf092-edb6-494d-9e66-0995a376162b}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8a87af1a-576e-4e01-a4d7-a589b1760dfa}" showlabel="true" visible="true" labelid="{4604b4b8-1226-425b-9d4c-81e0bbd081a2}">
+                        <labels>
+                          <label description="Transaction Amount" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{416df422-994b-4cb6-9a6d-99c8b1263e58}" showlabel="true" visible="true" labelid="{15b5faec-174f-4558-8c37-80015a047bb4}">
+                        <labels>
+                          <label description="STR (illegal banned activity)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{85baac10-6fe6-40af-8317-d946b3a74dfc}" showlabel="true" visible="true" labelid="{145acbbd-95df-4098-89f7-e114276c4f8e}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2a4ac9ed-0667-4f11-98c2-f75d13dec964}" showlabel="true" visible="true" labelid="{8a6aca71-dca1-42d1-9c9e-6c0f07537c4e}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7b1946e5-5492-479f-8720-8d8adb8795b3}" showlabel="true" visible="true" labelid="{01b01682-10cb-423a-9510-4e1ed0e8faed}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6c324462-6138-4c5d-9e02-20a46d1854e6}" showlabel="true" visible="true" labelid="{65b783d7-4f60-4f07-92e7-dc491177b248}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d7ae8133-0a29-43eb-bd9e-2fb63df889ba}" showlabel="true" visible="true" labelid="{83856eb5-c31a-46c0-9de7-2baf7ebf58d4}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a43a5d69-f820-4cc1-9bd8-dccfb7dc383e}" showlabel="true" visible="true" labelid="{95682cca-a7a1-478f-a535-5e70753cae44}">
+                        <labels>
+                          <label description="TReporting (Banned activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d939d5f2-5b10-436a-b637-4e232117bf71}" showlabel="true" visible="true" labelid="{15b02fd4-26a2-4084-88e7-caf07593443c}">
+                        <labels>
+                          <label description="TReporting (No-go country identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepjusrisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepjusrisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fc72a922-1e20-4d3f-91f5-c85b20b731ae}" showlabel="true" visible="true" labelid="{875bf1ba-9c4d-4f32-a257-41b471d6380b}">
+                        <labels>
+                          <label description="TReporting (One month Late EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepedd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepedd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e8bdd211-0305-4dc1-ad82-cf46724577ce}" showlabel="true" visible="true" labelid="{16b4b73e-767b-4d13-80a2-9e7bd4588f6b}">
+                        <labels>
+                          <label description="TReporting (One month Late TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertreptr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertreptr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{205fa648-f9a0-4442-aca3-7ef01a95d992}" name="StageStep81" locklevel="0" expanded="true" visible="false" labelid="{7c2e8fdd-b7f8-4fa3-9956-cf6a8bd433cb}">
+          <labels>
+            <label description="STR Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{a0dc8b91-9e25-e1a0-d83d-a4a3e5eea6a7}" name="StageStep81_section1" labelid="{ca76bb7a-0cb2-40be-b168-8332e35c1b49}">
+                  <labels>
+                    <label description="STR Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b8c04311-de0c-4c9f-9cbc-d7db17238267}" showlabel="true" visible="true" labelid="{01209e89-b49f-4cd3-bdae-02c80b347c88}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a39f4380-ddb9-4f09-afb7-ba3c2ef7a7b4}" showlabel="true" visible="true" labelid="{5458c280-2925-4f12-9319-721141763e80}">
+                        <labels>
+                          <label description="CIBP from ARA" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a2693fb8-1584-48d2-8363-b0e37d70e33d}" showlabel="true" visible="true" labelid="{56154707-bb09-44d6-bf1f-ab75ee0a2cb6}">
+                        <labels>
+                          <label description="CIBP from Jurisdiction" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpjustisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpjustisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{90043448-d4ae-4816-becc-48e2457108a5}" showlabel="true" visible="true" labelid="{f5b383d1-e7d1-452b-9651-44b71551501c}">
+                        <labels>
+                          <label description="EDD New Behavior" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddnewbehavior" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_triggereddnewbehavior" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3caef25d-a4a9-4b38-99f1-2b7d0740e133}" showlabel="true" visible="true" labelid="{f6d450f8-6eef-4008-b6af-7abf7db6360a}">
+                        <labels>
+                          <label description="EDD (high risk activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1f79eb76-19a9-4b0c-a74e-d455ff92b92b}" showlabel="true" visible="true" labelid="{f5ec4562-a62c-4456-9164-675cfd989236}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d2db2e56-44ca-468f-a7b6-658a9583e7bc}" showlabel="true" visible="true" labelid="{09b62aa7-bc0a-46c6-9aac-e8ac152eaa2d}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{83f915f3-9e87-47cb-b487-c859a3c8e998}" showlabel="true" visible="true" labelid="{6c4afba6-f42e-46d9-9c84-9c92767bc592}">
+                        <labels>
+                          <label description="EDD (High Risk Jurisdiction)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddjurisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddjurisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6a989491-f857-4ae3-8a8f-fa1d15aeee2c}" showlabel="true" visible="true" labelid="{36893edb-e9a1-4f68-b097-d6173b0a5b77}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6db724f0-d53b-43e2-979b-ce7f67b653eb}" showlabel="true" visible="true" labelid="{3320c6d7-f4a3-4233-b010-1bdabe2ef82a}">
+                        <labels>
+                          <label description="EDD (PEP is not an MP)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddpep" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddpep" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2802c398-788c-4d10-b288-9fffa2fa0e92}" showlabel="true" visible="true" labelid="{00b3825a-ee14-463c-8901-44929cd9d171}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5bb10e03-49d7-4d41-8f0b-e1b459fe3ef9}" showlabel="true" visible="true" labelid="{75b79046-46bd-4329-851c-9c97c85dc7f5}">
+                        <labels>
+                          <label description="Transaction Amount" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{56f3d577-2e4b-4662-bfb6-5cd1ec2e987e}" showlabel="true" visible="true" labelid="{4b3f9549-bd85-4942-9ddc-0cac36791b6d}">
+                        <labels>
+                          <label description="STR (illegal banned activity)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2b9f00b3-4bae-47e3-b4cd-096176250a8a}" showlabel="true" visible="true" labelid="{6a994de8-591f-43a2-a2e4-dccffeb6a74a}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a0f0bcdc-4c04-45b3-80c4-00b2391139d3}" showlabel="true" visible="true" labelid="{27942e89-6847-403e-bb70-660673a58e8e}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{aa283baf-8132-4a31-9e49-f1f1674e525b}" showlabel="true" visible="true" labelid="{5ee10989-9de5-413e-b540-470c293c7305}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{30a578b7-0640-406d-85e8-38457185aac5}" showlabel="true" visible="true" labelid="{1d5ce7f8-d1d2-4d02-8229-9291880a67cd}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{993baf70-2086-4504-8fe2-c3ffdb98b411}" showlabel="true" visible="true" labelid="{e334268e-dc9b-4115-a729-1726de34d907}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6dd6df80-2509-4969-8239-d30b8c5372e2}" showlabel="true" visible="true" labelid="{4f193894-5b3c-4039-8cb5-09ea3da15de6}">
+                        <labels>
+                          <label description="TReporting (Banned activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3fa7be64-499f-4b03-b708-54ed1128643b}" showlabel="true" visible="true" labelid="{11a927d7-ca6e-426a-9a54-16ca451d7dea}">
+                        <labels>
+                          <label description="TReporting (No-go country identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepjusrisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepjusrisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5b94cafa-cfaa-4738-bf99-808c76e52680}" showlabel="true" visible="true" labelid="{6d54511d-9170-4bb4-9637-b53a9c08335c}">
+                        <labels>
+                          <label description="TReporting (One month Late EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepedd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepedd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{36b8c2cd-32b4-474b-b798-6051f0e100e8}" showlabel="true" visible="true" labelid="{169bc77f-11e5-44c7-bb0f-a8f72788a724}">
+                        <labels>
+                          <label description="TReporting (One month Late TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertreptr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertreptr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{b9920e35-28ca-4220-ac65-8f998c7712cd}" name="StageStep127" locklevel="0" expanded="true" visible="false" labelid="{35285c91-3f0a-4ecc-a8d7-4de10f146a5a}">
+          <labels>
+            <label description="Assess Doc At Hand" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{d43a7836-5484-d7e9-d11d-2be50eeb9fb4}" name="StageStep127_section1" labelid="{c8bf81ea-8317-4215-b17c-7ab631f08b88}">
+                  <labels>
+                    <label description="Assess Doc At Hand" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{9ac90d5a-34a7-4fe3-9a16-a91445ee648a}" showlabel="true" visible="true" labelid="{af4d0144-a52a-4d1e-84da-1d99186fb2fe}">
+                        <labels>
+                          <label description="Additional documents" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_additionaldocuments" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_additionaldocuments" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{674666b5-3485-4005-bdd9-1c2b49c8ced7}" showlabel="true" visible="true" labelid="{9b5f9b2a-c69d-451b-a990-b75547d46109}">
+                        <labels>
+                          <label description="Adequate" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_adequate" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="ind_adequate" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{6bef052b-48cb-4ab8-97dc-efb1e7db2246}" name="StageStep133" locklevel="0" expanded="true" visible="false" labelid="{13c3b1fb-a96b-4523-aff3-33a3721c3053}">
+          <labels>
+            <label description="Proceed With Transaction Monitoring" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{6f40ed2c-cc94-0550-a36f-3dc686f05759}" name="StageStep133_section1" labelid="{ca91a9f9-1806-47bd-b5f6-2470388a5c8c}">
+                  <labels>
+                    <label description="Proceed With Transaction Monitoring" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b60420af-6e55-44de-bcb3-d1eff1baefa3}" showlabel="true" visible="true" labelid="{557fddfa-b99d-4ab9-9e63-8ad6b2686171}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7303be2d-9b28-4bed-9c9e-1265ce7dbece}" showlabel="true" visible="true" labelid="{dd9b3fae-70d8-4972-9155-a51d91804840}">
+                        <labels>
+                          <label description="CIBP from ARA" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ee61a199-70ea-4208-b47f-96f7bc612bac}" showlabel="true" visible="true" labelid="{7dfc82af-fceb-461a-acfe-c47701149f9e}">
+                        <labels>
+                          <label description="CIBP from Jurisdiction" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpjustisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpjustisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{13a4cb67-b15f-4a95-9bd4-1a9de2edeba7}" showlabel="true" visible="true" labelid="{22d5eb76-300e-45fa-9595-4a198dba2962}">
+                        <labels>
+                          <label description="EDD New Behavior" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddnewbehavior" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_triggereddnewbehavior" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9bc7473d-bd5b-4f2c-9541-02d25a6011cf}" showlabel="true" visible="true" labelid="{0569b77f-325f-47a0-958f-d0110ac15da3}">
+                        <labels>
+                          <label description="EDD (high risk activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ce3a899e-c315-4770-9021-e3694c592e14}" showlabel="true" visible="true" labelid="{05105c1e-2122-41f9-9266-2962a9636cfe}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d9816931-9018-4aed-ac58-ea6508aa0679}" showlabel="true" visible="true" labelid="{0f45fd4a-cfdc-400d-b52b-ad532ef2e2db}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{520090e7-0dce-4e06-ac3d-2c99717018aa}" showlabel="true" visible="true" labelid="{d3941073-6bda-4bc1-91c9-16033a42502a}">
+                        <labels>
+                          <label description="EDD (High Risk Jurisdiction)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddjurisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddjurisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9a4bed15-a653-4a99-920a-dd24a6d07c2b}" showlabel="true" visible="true" labelid="{4164396e-5bc2-4663-a0a8-7c2c0b8abbfe}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e73a6315-31d7-49ad-8edf-3d83ca89f55d}" showlabel="true" visible="true" labelid="{1decd73a-5c4f-42eb-9ee4-cc7e9feb2290}">
+                        <labels>
+                          <label description="EDD (PEP is not an MP)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddpep" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddpep" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3ab161eb-d54e-42d5-96fe-ccfc03d9fab6}" showlabel="true" visible="true" labelid="{061d0818-c7b5-4e63-8767-995831e9dfa5}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{32102ff6-ecea-43b3-bea4-8d71d25adad6}" showlabel="true" visible="true" labelid="{49b8e624-eb75-4349-9092-424582d3aa09}">
+                        <labels>
+                          <label description="Transaction Amount" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f1c602ed-826b-41c0-a554-7e75a4bcde42}" showlabel="true" visible="true" labelid="{f1a1efd6-5c47-411d-a6d2-cbd54e5c7101}">
+                        <labels>
+                          <label description="STR (illegal banned activity)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a95d515d-f645-49b6-b1ed-4d15db3f8bc5}" showlabel="true" visible="true" labelid="{207983ae-2801-4a06-a581-0451951ce8a0}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bfa47d59-e0c3-46a6-b4c0-e2d61f5bc948}" showlabel="true" visible="true" labelid="{4459d623-878e-4301-bc66-f9178aa6b47d}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{68567803-9954-43b6-b455-8c009f8a2716}" showlabel="true" visible="true" labelid="{b9aaf359-4a80-4c52-8037-f231265f1210}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{94f32f70-f6f1-4dae-82ff-ac8972f6f9db}" showlabel="true" visible="true" labelid="{7116c082-b0b3-4d56-ab83-b35afccbca43}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f38187b4-64a4-4c21-b898-87c0e9f6905d}" showlabel="true" visible="true" labelid="{6b73b370-3669-4b74-ae03-7ba9142e89c5}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9f2d80de-6567-4982-946d-4d81e8af22b3}" showlabel="true" visible="true" labelid="{d4f44e89-80ed-478e-94fa-5c39b87dc7ee}">
+                        <labels>
+                          <label description="TReporting (Banned activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b54dc325-d27c-4cd6-b8ea-56c9bd4bd3d6}" showlabel="true" visible="true" labelid="{bbfc8a7e-dc49-4076-8893-9e16bb864968}">
+                        <labels>
+                          <label description="TReporting (No-go country identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepjusrisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepjusrisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dee35f79-295a-4b47-b132-411c0f2e6eb8}" showlabel="true" visible="true" labelid="{54b17381-f0a5-4373-9b56-a3897ee3bcd3}">
+                        <labels>
+                          <label description="TReporting (One month Late EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepedd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepedd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b4a8e018-5ceb-478f-be15-93e7bd393bde}" showlabel="true" visible="true" labelid="{c42ccc2d-7646-4112-8f30-0a8fa2c998c4}">
+                        <labels>
+                          <label description="TReporting (One month Late TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertreptr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertreptr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{19f20bd1-a5c9-4722-ac67-2749eec21cfe}" name="StageStep179" locklevel="0" expanded="true" visible="false" labelid="{4b4f2be7-d5fe-439f-8155-849281cddebe}">
+          <labels>
+            <label description="STR Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{7ff7a7d2-96f1-9f92-5eeb-e56ac5f4105f}" name="StageStep179_section1" labelid="{39c290df-f9fe-4f77-a847-c4de3de7bde3}">
+                  <labels>
+                    <label description="STR Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{afe3fd2c-7d59-4705-a7af-f938c3fb310d}" showlabel="true" visible="true" labelid="{70759f53-aa34-4b94-8d37-901deb900426}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c4432c90-1b71-45c5-acb2-15d4ff8abee3}" showlabel="true" visible="true" labelid="{e51f12ac-23b3-41ea-8a71-d2cab804afad}">
+                        <labels>
+                          <label description="CIBP from ARA" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dbe6a4c7-098f-417f-aa65-6f63b608fd0d}" showlabel="true" visible="true" labelid="{a0b072c4-66fd-4e81-804e-49f00da66514}">
+                        <labels>
+                          <label description="CIBP from Jurisdiction" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpjustisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpjustisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d540e6dd-7d76-41ab-b92c-68c933f92d89}" showlabel="true" visible="true" labelid="{81ca85e8-0180-40ca-a32f-dbff5e0f9de0}">
+                        <labels>
+                          <label description="EDD New Behavior" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddnewbehavior" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_triggereddnewbehavior" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{095744ff-deeb-4ef3-828b-c18d3e38fe0a}" showlabel="true" visible="true" labelid="{57d28e54-6a58-42fc-99cb-9034ab9f1d1d}">
+                        <labels>
+                          <label description="EDD (high risk activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b87b3aa9-4d6d-4f8e-9277-e6651f4c4c7b}" showlabel="true" visible="true" labelid="{b30ba532-f0a8-4353-abe6-b0db42de542d}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b3de6706-8a61-4294-8b7e-fe3184003c2b}" showlabel="true" visible="true" labelid="{5436f55d-901c-4e52-8c6e-42ad5d6dae8e}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c0336b3a-79ac-4130-bc1b-1be7f423ea65}" showlabel="true" visible="true" labelid="{811caac2-cbd6-47cc-aa6c-744acf8e6dfa}">
+                        <labels>
+                          <label description="EDD (High Risk Jurisdiction)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddjurisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddjurisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e5cfd504-5065-426d-bc36-b306ac9f29fe}" showlabel="true" visible="true" labelid="{d7a02ed0-6913-4f21-9e81-a9456f801475}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1752bdcf-181d-46d6-bd59-b73f04b9f7d8}" showlabel="true" visible="true" labelid="{2dc9b7a9-3260-41ff-afef-37d76d2a1ecc}">
+                        <labels>
+                          <label description="EDD (PEP is not an MP)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddpep" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddpep" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{42ec3f82-af04-4056-be42-d756f1df5dd9}" showlabel="true" visible="true" labelid="{d22b2315-5352-42dc-860a-707eeecf5b28}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c52fb777-bac6-4701-9fed-3fab2b577adb}" showlabel="true" visible="true" labelid="{d9e3617e-21bb-4604-ad20-d2c8df7b1cc6}">
+                        <labels>
+                          <label description="Transaction Amount" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fc7d0a05-19fc-45d6-9740-04766a42a49b}" showlabel="true" visible="true" labelid="{f69b5d68-fd86-4baa-b5a2-75646810cb7a}">
+                        <labels>
+                          <label description="STR (illegal banned activity)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9ec475d2-244f-4e89-9ad2-175f12b71470}" showlabel="true" visible="true" labelid="{634a443f-db40-470d-b001-fa75636bd8a8}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e2e6a511-f837-4460-8e10-402f7ef9c490}" showlabel="true" visible="true" labelid="{139b9db6-d5cc-4ae0-9787-de6ac5c783e7}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{490e0dd4-398f-4e56-81c5-675fa8b77dd9}" showlabel="true" visible="true" labelid="{1d282ede-2f9a-4e62-b92a-8c60b6d0b446}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1a0ae6f0-dbed-412d-a364-d96e5aa27345}" showlabel="true" visible="true" labelid="{fd76bdb2-ed6d-4650-8262-e6892564a615}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e3724e7d-37a0-422a-93cb-ba4be4498f23}" showlabel="true" visible="true" labelid="{d08aeac3-d8a0-4c86-ab1c-69f897bcf73b}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d77a5a13-2537-481f-811f-d5232df6998d}" showlabel="true" visible="true" labelid="{ee3b7fb3-77aa-4b02-8ae0-7a064be110c2}">
+                        <labels>
+                          <label description="TReporting (Banned activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{35863341-12d2-4e6b-8708-cd070e160339}" showlabel="true" visible="true" labelid="{b75d9af7-6289-4b37-82c5-7201c5b80d19}">
+                        <labels>
+                          <label description="TReporting (No-go country identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepjusrisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepjusrisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3b3b445f-dc85-42e7-b002-2216c3d717ca}" showlabel="true" visible="true" labelid="{0bf9827e-cd54-4edb-a209-79178c6c4e63}">
+                        <labels>
+                          <label description="TReporting (One month Late EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepedd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepedd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9f226ac5-706b-4c31-9c80-5b585dac2fc0}" showlabel="true" visible="true" labelid="{c0f2766f-04fa-4a97-a25c-0254904cb429}">
+                        <labels>
+                          <label description="TReporting (One month Late TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertreptr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertreptr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{48c5db30-fd06-436b-958a-fac605af73aa}" name="StageStep225" locklevel="0" expanded="true" visible="false" labelid="{0bba77fb-d63b-4447-80c7-e4d10ce34064}">
+          <labels>
+            <label description="EDD Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{60e57e95-466d-e239-b821-3576f1441da5}" name="StageStep225_section1" labelid="{c88f144c-99c2-4748-b077-fac37b92d289}">
+                  <labels>
+                    <label description="EDD Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{0c7fccf0-1c3e-4ef1-aa7b-fe11172cbe58}" showlabel="true" visible="true" labelid="{ce804ca2-80df-4b7e-a3bb-aaffa38a635a}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c3c5cb52-e773-473c-9d87-4f1ed424bb18}" showlabel="true" visible="true" labelid="{e0846802-afb2-4d5b-ba19-f8c928e659ad}">
+                        <labels>
+                          <label description="CIBP from ARA" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fbbb6930-1c44-4746-8218-a7223a36a9f5}" showlabel="true" visible="true" labelid="{32873dd6-7c01-47f2-ab01-3868eb80fe3f}">
+                        <labels>
+                          <label description="CIBP from Jurisdiction" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpjustisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpjustisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{25babb6d-98ec-498d-bf7c-5ebc9dfb6a33}" showlabel="true" visible="true" labelid="{38c818c5-533a-4b5c-a166-211e8f936338}">
+                        <labels>
+                          <label description="EDD New Behavior" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddnewbehavior" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_triggereddnewbehavior" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e62e8500-2bbd-4512-90a6-86a6f3aeb9f5}" showlabel="true" visible="true" labelid="{8a7ede11-8492-4f3d-a4e8-647166028410}">
+                        <labels>
+                          <label description="EDD (high risk activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d8021152-4d67-4fd2-b174-dbbd7bb72198}" showlabel="true" visible="true" labelid="{6c00937b-e7c6-4d57-8fd7-f183f56dcdc0}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{eee34dac-9e06-4371-b544-99b0a527068b}" showlabel="true" visible="true" labelid="{da71ffa1-e6f1-47dc-ab6a-6eeb30147a95}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0ad081e3-aff3-464d-9fee-a5659b0db2dd}" showlabel="true" visible="true" labelid="{4ac7cb4c-5124-48b0-8ad3-a9c8506e5473}">
+                        <labels>
+                          <label description="EDD (High Risk Jurisdiction)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddjurisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddjurisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9b045625-f539-4180-af25-768a983a1118}" showlabel="true" visible="true" labelid="{a9900337-53e2-4510-ba6e-4bfc1bc89d92}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{338a2ed7-1a3d-45d7-a791-56e90b811d18}" showlabel="true" visible="true" labelid="{326abb1c-b4a3-4a1a-9cbc-16739a7248ab}">
+                        <labels>
+                          <label description="EDD (PEP is not an MP)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddpep" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddpep" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ad0bb66f-a4eb-49e5-b1c4-b695b3d93c9d}" showlabel="true" visible="true" labelid="{c7417a21-b4dc-40b3-8b6e-b58c2d141093}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{347cdbb7-e25d-45f5-8009-047423f75fb1}" showlabel="true" visible="true" labelid="{cb5f4db8-3e5e-4df0-bae5-2680ef94b38a}">
+                        <labels>
+                          <label description="Transaction Amount" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e19117e9-2037-4abd-ba28-068fedc3c39f}" showlabel="true" visible="true" labelid="{5299906c-cf14-4196-8c77-f9a21f402eac}">
+                        <labels>
+                          <label description="STR (illegal banned activity)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f20c8968-8412-4b11-ad49-058e755d34ab}" showlabel="true" visible="true" labelid="{bd9e60eb-6fc8-4cb7-8693-469fb0bec6e2}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6eacee16-eff1-4964-a90b-a1cd583e81ad}" showlabel="true" visible="true" labelid="{9c7e1858-e5e9-48f9-bd96-535fbf71cc9e}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2ecb015e-2274-41fa-94d7-86d99d8b8750}" showlabel="true" visible="true" labelid="{1237d38a-6101-4592-9f45-1068fa5f971e}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6e4492e8-9ebc-4d73-a21f-8ba45669b589}" showlabel="true" visible="true" labelid="{30937077-d14f-4047-9823-d5485166c3c7}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3567cada-519d-4665-afa9-23d5876ab6a5}" showlabel="true" visible="true" labelid="{75843eee-3e28-46cf-8f57-4896efed50b1}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9c7efe82-f992-41e3-886d-c3fce5747559}" showlabel="true" visible="true" labelid="{1249d36a-072d-4cc4-a842-962f08b9f3b8}">
+                        <labels>
+                          <label description="TReporting (Banned activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e5e59fc7-d426-4689-904d-4beb2be1d4eb}" showlabel="true" visible="true" labelid="{b2628204-31f8-4138-bfe4-5175fc221498}">
+                        <labels>
+                          <label description="TReporting (No-go country identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepjusrisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepjusrisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f7b84ac3-27ac-42d6-9053-5749faea6828}" showlabel="true" visible="true" labelid="{5a6279fb-b226-4eb5-baa0-ecc60c4cd9fe}">
+                        <labels>
+                          <label description="TReporting (One month Late EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepedd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepedd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4446f930-ca4a-4935-aa5b-67cbd62fa734}" showlabel="true" visible="true" labelid="{49d33939-3e4d-4f45-97a6-3a228def0e96}">
+                        <labels>
+                          <label description="TReporting (One month Late TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertreptr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertreptr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{16651a39-6628-4e0b-a874-9678dcb01e31}" name="StageStep271" locklevel="0" expanded="true" visible="false" labelid="{3a57cab3-498a-4bf8-9561-9a4fa5536950}">
+          <labels>
+            <label description="Request For Additional Docs/ Clarifications" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{6fd5d3ff-dc33-2945-659e-6a67021c9053}" name="StageStep271_section1" labelid="{ca611571-d4ac-477a-bb22-58f57295b56d}">
+                  <labels>
+                    <label description="Request For Additional Docs/ Clarifications" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e7327f3e-2ff6-4039-8d5e-d9f630bb96ac}" showlabel="true" visible="true" labelid="{586d2711-7716-4ebf-a458-7403f0296e32}">
+                        <labels>
+                          <label description="Additionals Document" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_additionaldocumenttr" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="ind_additionaldocumenttr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{96d5566c-42a1-4e12-b33a-1c8a14d57f36}" showlabel="true" visible="true" labelid="{ed98f2b1-663b-4104-9557-d711afd52f8e}">
+                        <labels>
+                          <label description="Successful" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_successfultr" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_successfultr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{36c82a8d-ca98-4e05-b292-c6ae37cff8b1}" name="StageStep277" locklevel="0" expanded="true" visible="false" labelid="{9f5441ea-b0e7-4733-8681-06ca6bbca729}">
+          <labels>
+            <label description="Redirect" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{61996513-680e-3e7c-14a4-ca6a1e94cf07}" name="StageStep277_section1" labelid="{22a88e7b-0271-4282-bbfa-e51574038568}">
+                  <labels>
+                    <label description="Redirect" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{83693603-d523-43aa-9c46-1c3b29e8f292}" showlabel="true" visible="true" labelid="{59111880-cb26-4fa0-bb51-33ce0731ccf8}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{f0defd43-1099-4e08-995f-25dc1df0da53}" name="StageStep281" locklevel="0" expanded="true" visible="false" labelid="{89d48e04-afde-413e-b3c0-a1c191f35b5b}">
+          <labels>
+            <label description="Transaction Reporting Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{f532a87b-2155-7d0f-eace-c82553398ab0}" name="StageStep281_section1" labelid="{5f72fe94-35aa-436e-8b5c-b19c26fde93b}">
+                  <labels>
+                    <label description="Transaction Reporting Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ca8b11ef-a90c-4d90-8c84-d53873aa2c63}" showlabel="true" visible="true" labelid="{37f92649-dad5-4bd6-969c-dee94b803c2d}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{055b3e37-c166-47ec-ab47-98d179db914c}" showlabel="true" visible="true" labelid="{d8c482ee-64ca-4c96-96d3-22e3f60a616b}">
+                        <labels>
+                          <label description="CIBP from ARA" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0f4b499a-a947-42b4-bbd6-ab3ed7f155c0}" showlabel="true" visible="true" labelid="{cbcaa828-2c51-45eb-ac17-0f39713e410a}">
+                        <labels>
+                          <label description="CIBP from Jurisdiction" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpjustisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpjustisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c70521bb-7b31-44b0-8e92-e993ac9a9c26}" showlabel="true" visible="true" labelid="{2d37451d-e90f-4276-b206-350da74044d0}">
+                        <labels>
+                          <label description="EDD New Behavior" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddnewbehavior" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_triggereddnewbehavior" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{41f7a022-0815-4ec0-ae93-a691e85fff38}" showlabel="true" visible="true" labelid="{46949978-feda-43fc-96be-e04992060801}">
+                        <labels>
+                          <label description="EDD (high risk activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{99396d74-fa73-4556-8cd5-9f6def05d89d}" showlabel="true" visible="true" labelid="{4460d945-90bf-4478-ab52-0c575e294b0e}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{06406957-a451-4e6e-b2a8-b81ead3fbbd1}" showlabel="true" visible="true" labelid="{77d389fb-a45f-419e-9da5-b23a23df7ddd}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{06332723-b1a8-47b7-a7bf-07199f96a390}" showlabel="true" visible="true" labelid="{04addfee-67f9-413b-b412-d0eec6510834}">
+                        <labels>
+                          <label description="EDD (High Risk Jurisdiction)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddjurisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddjurisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b96be1e3-ddb1-426b-8a55-854b01ab38e3}" showlabel="true" visible="true" labelid="{64c943a0-2c8f-4397-affa-41264cfb014a}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cf03bcb0-84a8-4a71-8ed5-e45e953c4026}" showlabel="true" visible="true" labelid="{66a8cf66-d6ba-4ea6-ab1f-c798ec293d85}">
+                        <labels>
+                          <label description="EDD (PEP is not an MP)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddpep" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddpep" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{468b72e2-7430-4ced-b5f5-be0cc49a94a3}" showlabel="true" visible="true" labelid="{cb47ae7c-fcaa-47f0-b561-20fb94ed692f}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{30f21471-337c-48b6-9df2-7aed6d03a1d6}" showlabel="true" visible="true" labelid="{953d7105-724f-4bac-a93a-ec482a5f2d36}">
+                        <labels>
+                          <label description="Transaction Amount" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e2297dd3-1d47-4066-bf66-d8b2cafaf3eb}" showlabel="true" visible="true" labelid="{a5fc3392-adcf-4691-8a8e-ba911b1cc9c3}">
+                        <labels>
+                          <label description="STR (illegal banned activity)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{295aecec-009a-4268-a488-e58927461b94}" showlabel="true" visible="true" labelid="{f3fa2911-2738-4829-b158-dbc37215f596}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ecae4190-2e68-4f01-8036-0c2ef8ace4ed}" showlabel="true" visible="true" labelid="{c76b285a-dad7-4784-a102-27d115e63087}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8c57141a-3ec7-4f38-96bc-ea6fdb035651}" showlabel="true" visible="true" labelid="{7ba135a5-726b-48aa-a292-db52ca8e07d7}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{da946747-08f6-41b7-8618-ccbc286bc531}" showlabel="true" visible="true" labelid="{f8a927de-517c-40d3-96f9-c5400176dfe3}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{54be1a88-6a42-4984-baae-81c430a206d5}" showlabel="true" visible="true" labelid="{f41a177e-ee99-45ac-8721-1cc978d01586}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f98128d7-f7f6-4a0c-8715-6b7b01eb178a}" showlabel="true" visible="true" labelid="{a2e7d360-bea2-4ef1-9795-75ab29951489}">
+                        <labels>
+                          <label description="TReporting (Banned activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8d051129-863c-4ca4-ba4e-4383fbe92ea6}" showlabel="true" visible="true" labelid="{2dd83107-5e59-42a7-9397-9d8f6c5318a6}">
+                        <labels>
+                          <label description="TReporting (No-go country identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepjusrisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepjusrisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{97a92e48-c632-45d9-b07a-edc5df9542e6}" showlabel="true" visible="true" labelid="{34a4cf1d-a597-4eb0-ba88-7ee4b7f1d5bd}">
+                        <labels>
+                          <label description="TReporting (One month Late EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepedd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepedd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3135be1b-bfda-462a-9568-3082bd1ed613}" showlabel="true" visible="true" labelid="{9e8d1741-f328-4441-b80c-19d5281e4e61}">
+                        <labels>
+                          <label description="TReporting (One month Late TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertreptr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertreptr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{3f1a062a-8948-4d58-97c6-3f45db6682e1}" name="StageStep327" locklevel="0" expanded="true" visible="false" labelid="{f8fd883f-99ff-4b5a-8a7e-9cde5f9177f4}">
+          <labels>
+            <label description="STR Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{b5a1399a-8eb3-ed2c-c047-5162d29a3795}" name="StageStep327_section1" labelid="{e63fd645-5666-4e9f-acf3-4268834a2d6a}">
+                  <labels>
+                    <label description="STR Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a0bf5d76-0625-4d29-bae8-cfbf216d12ec}" showlabel="true" visible="true" labelid="{70fb2444-edd0-480e-8f86-9950e5c8f38d}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3f7f4d8c-7df7-46f4-a7ec-97080df095bd}" showlabel="true" visible="true" labelid="{8274efe2-2c49-43a1-ac28-4e3a46819e88}">
+                        <labels>
+                          <label description="CIBP from ARA" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f02e4643-93a4-4ae7-99ce-1052ed090cdf}" showlabel="true" visible="true" labelid="{9678268c-d16e-47ae-bea4-627209a047f2}">
+                        <labels>
+                          <label description="CIBP from Jurisdiction" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpjustisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpjustisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{46cc8177-86c0-445f-8041-38850d9c40bb}" showlabel="true" visible="true" labelid="{334a6f1f-a50c-4804-ac35-591809253020}">
+                        <labels>
+                          <label description="EDD New Behavior" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddnewbehavior" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_triggereddnewbehavior" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{db0cdc6f-561f-4943-85bc-7335f70b51cc}" showlabel="true" visible="true" labelid="{4b9ea4ea-f342-47b2-97f6-ea6997b9220b}">
+                        <labels>
+                          <label description="EDD (high risk activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e03aac5e-6f42-47c9-9099-3e2f3c1d0ea6}" showlabel="true" visible="true" labelid="{e3985669-eb4e-4b0e-a5db-fc88b2b2f763}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{03159bd0-5071-411f-aca3-7489232b06b4}" showlabel="true" visible="true" labelid="{45c26a96-787c-45e0-b717-77e563ffef3f}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{de110013-e709-4a77-a409-aacde371d052}" showlabel="true" visible="true" labelid="{4e8d57de-56e5-4afb-bd54-428ac3a07727}">
+                        <labels>
+                          <label description="EDD (High Risk Jurisdiction)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddjurisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddjurisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{19d31056-b672-47b2-9a32-5d459724ee58}" showlabel="true" visible="true" labelid="{d6309c45-3de3-4d59-8f85-1fe31563a595}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cd2c72b3-e2da-4f9a-9030-11d1af957864}" showlabel="true" visible="true" labelid="{90b0c7bb-37bc-4feb-afcb-adb5ae3497be}">
+                        <labels>
+                          <label description="EDD (PEP is not an MP)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddpep" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddpep" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{26a7ac33-9ff6-479b-a5ab-1c770d6842cb}" showlabel="true" visible="true" labelid="{3f1cb7a5-f4bc-4c9a-bd4c-63876570209e}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4b0305d8-0d50-4f0c-92e6-65611eb3bfa3}" showlabel="true" visible="true" labelid="{57e1a6ab-5da0-4630-85cd-fba17d0174b4}">
+                        <labels>
+                          <label description="Transaction Amount" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b42d00ac-50c5-421f-b8fd-b849ee60dd4d}" showlabel="true" visible="true" labelid="{3c105ee8-7d5a-4adf-833e-811331b0ca6d}">
+                        <labels>
+                          <label description="STR (illegal banned activity)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{aa68a916-0b49-4076-9404-1d3a429dcba2}" showlabel="true" visible="true" labelid="{afa912ae-b565-44be-a8ae-7069ab054e80}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{13221ccb-8cca-499a-9f4e-48766d6764a1}" showlabel="true" visible="true" labelid="{8aa90796-019f-4c47-a7fe-2b2db7449d62}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{34fa2d20-909b-4894-a596-823638ea2704}" showlabel="true" visible="true" labelid="{a13352c7-97de-4302-ac6e-e64b67c77808}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5485f5a3-0422-46ce-a1f4-495fc78055fe}" showlabel="true" visible="true" labelid="{a46da55d-7329-494a-90b4-8ca59465480a}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{59a7c832-08dc-42c8-a1a8-8fd989466ded}" showlabel="true" visible="true" labelid="{2bd86729-d9ef-49e4-ba11-6fbac9a49409}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8d8b6375-2642-4b80-976b-144e3c3556ff}" showlabel="true" visible="true" labelid="{2475cd11-6b71-4bd0-b6e5-0d09fdd01092}">
+                        <labels>
+                          <label description="TReporting (Banned activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{029109d0-c91d-445e-bdf5-17df37bdad89}" showlabel="true" visible="true" labelid="{15f0ed65-055e-4d3f-be50-ee91dcd01379}">
+                        <labels>
+                          <label description="TReporting (No-go country identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepjusrisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepjusrisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c122c684-c146-4dd1-ae7e-fbfe116c3225}" showlabel="true" visible="true" labelid="{80750bb4-03be-4129-9e67-2f3e6971633e}">
+                        <labels>
+                          <label description="TReporting (One month Late EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepedd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepedd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d1160fe1-fef2-4849-b597-0f03054976bb}" showlabel="true" visible="true" labelid="{fed346b6-ea8b-446a-a91e-92e47327e5b4}">
+                        <labels>
+                          <label description="TReporting (One month Late TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertreptr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertreptr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{3519469f-e5ba-40c2-9147-43e5f6177c41}" name="StageStep373" locklevel="0" expanded="true" visible="false" labelid="{c4cfe878-3d08-4420-993e-5d585097e78c}">
+          <labels>
+            <label description="Proceed With Transaction Monitoring" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{4fe5431c-dc69-f18d-0f96-9eaf2edbfa75}" name="StageStep373_section1" labelid="{cf434127-62ae-4b6d-b612-a16a8a854720}">
+                  <labels>
+                    <label description="Proceed With Transaction Monitoring" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{82694ac2-830b-4e1c-a32b-10249f63e70a}" showlabel="true" visible="true" labelid="{fc70c5fc-7718-40a3-b39d-db372a53e28f}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{08dd8941-fd9f-4b1e-bdd2-9d955517c588}" showlabel="true" visible="true" labelid="{efb3e9c9-e499-4cad-b6a1-aac5153aabc9}">
+                        <labels>
+                          <label description="CIBP from ARA" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5a0b9f6e-de01-41ac-a967-c350e5567282}" showlabel="true" visible="true" labelid="{52e6a738-bee3-4771-96cb-9c9ee57514b8}">
+                        <labels>
+                          <label description="CIBP from Jurisdiction" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggercibpjustisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggercibpjustisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{825d04a1-c3fa-4d21-a7b0-18fa68a2d0f6}" showlabel="true" visible="true" labelid="{a1bf6031-8adc-4bd8-b5cb-8f767012609c}">
+                        <labels>
+                          <label description="EDD New Behavior" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddnewbehavior" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_triggereddnewbehavior" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{859f28ba-f14e-4978-b792-bfac064f7ba4}" showlabel="true" visible="true" labelid="{e98eb749-0501-4646-8d17-220b78cff3eb}">
+                        <labels>
+                          <label description="EDD (high risk activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9c840009-379b-486b-9cc2-5f300f369845}" showlabel="true" visible="true" labelid="{2992f3c3-7ba4-429e-a60b-afbcc79b5aa2}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f803af1d-190a-4fbf-b8d1-ec8bb445dda0}" showlabel="true" visible="true" labelid="{3d13ca52-1bd2-4d98-92f5-a1aa7e47a522}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{21d84dd1-93d4-41bf-8ebf-153e2253eecb}" showlabel="true" visible="true" labelid="{2e7cde3f-f837-4981-a2bd-74001739f486}">
+                        <labels>
+                          <label description="EDD (High Risk Jurisdiction)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddjurisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddjurisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{757cd2cd-1b07-441c-870b-9d626651a67c}" showlabel="true" visible="true" labelid="{e5f6fa6a-f76a-4f62-8a38-18d4a75cfe12}">
+                        <labels>
+                          <label description="EDD (Other adverse report)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a128169c-f6c9-4ade-a2ee-e1591078c38c}" showlabel="true" visible="true" labelid="{fabbff97-c9d9-4677-82c9-e79dcb8b7aa6}">
+                        <labels>
+                          <label description="EDD (PEP is not an MP)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddpep" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddpep" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{18f34ddc-1dba-4387-a7c9-381f2944c24b}" showlabel="true" visible="true" labelid="{11371901-80bc-4e71-8f07-adafdf504d04}">
+                        <labels>
+                          <label description="EDD (False or stolen Docs TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d7d12d2d-cd4a-45ad-996a-c4255280a7b7}" showlabel="true" visible="true" labelid="{472483fd-14da-4beb-a92c-d15799ed0960}">
+                        <labels>
+                          <label description="Transaction Amount" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e367d757-b850-41be-98eb-73673affd0b7}" showlabel="true" visible="true" labelid="{74cfa6ca-8a3c-4981-a707-34a5093b4481}">
+                        <labels>
+                          <label description="STR (illegal banned activity)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5f85620a-3e6a-4571-9ef7-12cb3dc9e1b1}" showlabel="true" visible="true" labelid="{dde0326c-371d-4996-b987-f265a0f9cd8f}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{64ae79c7-9c8a-45d4-9abc-ca9808d030d4}" showlabel="true" visible="true" labelid="{6e4172bb-91d4-4bed-b3cf-2dab6ad30481}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggereddcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggereddcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{da2a56ce-de88-48a6-bb40-9081a01931d1}" showlabel="true" visible="true" labelid="{0548965b-d528-49cb-93f8-ae9dbdd62543}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{67b7bb8b-227f-4c1c-9a00-745304d3fa65}" showlabel="true" visible="true" labelid="{3c443859-f3c5-4308-8d45-37ba7d9f61dc}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a8ebee31-08d4-493d-b853-a8c82263c195}" showlabel="true" visible="true" labelid="{2c86dcb8-12bc-4935-9527-f476e3d0c66d}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggerstrtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrtr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{148b340b-43ed-4a82-a5b1-839ad1567e01}" showlabel="true" visible="true" labelid="{3261bdb3-327e-4c03-bcfb-6e4dea0ec776}">
+                        <labels>
+                          <label description="TReporting (Banned activity identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepara" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f1174096-d745-46e0-8b2c-281a97eec806}" showlabel="true" visible="true" labelid="{d32b54f7-88b0-40c7-9bd9-046c4b0a7aa1}">
+                        <labels>
+                          <label description="TReporting (No-go country identified)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepjusrisdiction" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepjusrisdiction" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{99279a65-29b3-4994-84b2-f3c68a4b941d}" showlabel="true" visible="true" labelid="{3db61d84-0eb8-4d4e-a94f-e154c9b27bce}">
+                        <labels>
+                          <label description="TReporting (One month Late EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertrepedd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertrepedd" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a0ce76e3-2bac-4620-b4f9-cefd8fe4143b}" showlabel="true" visible="true" labelid="{84eb37e5-61eb-49e8-9e5f-e8a1c1b929ed}">
+                        <labels>
+                          <label description="TReporting (One month Late TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_transactionreview:ind_triggertreptr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggertreptr" disabled="false" relationship="bpf_ind_ind_operation_ind_transactionreview" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

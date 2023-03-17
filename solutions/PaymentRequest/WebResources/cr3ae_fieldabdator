@@ -1,0 +1,775 @@
+function UpdateField(executionContext){
+	
+	
+
+
+	var formContext = executionContext.getFormContext();
+	var idProcess = Xrm.Page.data.process.getActiveProcess().getId();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	//console.log(Xrm.Page.data.process.getActiveStage()._processManager._instanceModifiedTimestamp);
+	console.log(formContext.data.process.getInstanceId());
+	var status = Xrm.Page.data.process.getStatus(); //remove handler on finished
+		debugger;
+	//TM
+	if (idProcess == 'e11049ed-4354-ed11-bba3-0022482a4894'){
+		debugger;
+		
+		            	//continue with transaction unlock comment
+			if(idStage=='a3047965-573f-4db4-9578-92ab7819b429'){
+				
+				formContext.getControl("header_process_ind_commentreason").setDisabled(false);
+			}
+			//Doc Steps Lock Comment
+			if(idStage=='7acd31a4-1d7f-4fca-8e33-5a975aa1344e' || idStage=='1e523d31-a9e9-4ef0-8eda-39e67828321a' || idStage=='d0a870e4-a09f-4f36-8a58-b6e17681aa18' || idStage=='f28b8a0a-5a8b-4e12-af8d-43249d43645d'
+			     || idStage==' fefe5cba-f277-49c1-9e9d-b1c10728be7a' || idStage=='fb77f598-302f-4d61-92ff-c6c0f76ab5a5' || idStage=='7238f13f-4cdf-421a-91b8-cda8103ab4b5' || idStage=='97cd0de5-e780-4082-baea-fce2465fff6d'){
+				formContext.getControl("header_process_ind_commentreason").setDisabled(true);
+			}   
+			//alert
+		if(idStage == "318de4bd-3c6c-4659-b157-828499b943e8"){
+			Xrm.Utility.alertDialog("Update the VP database ! ");
+		}
+		//unlock behavior and lock status
+		if ( idStage=='7f3a4c8b-a2b2-4ccb-9ede-1b97a2d791a6'){
+			formContext.getControl("header_process_ind_newbehavior").setDisabled(false);
+			formContext.getControl("header_process_statuscode").setDisabled(true);
+		}
+		//lock beh
+		if( idStage=='bfebc484-b353-46bc-ac6f-fdc8dcad574d'){
+			formContext.getControl("header_process_ind_newbehavior").setDisabled(true);
+			
+				    var newremitter = Xrm.Page.getAttribute("ind_newremitter").getValue();
+				    var newbehavior = Xrm.Page.getAttribute("ind_newbehavior").getValue();
+				    var newcountry = Xrm.Page.getAttribute("ind_newcountry").getValue();
+				    var HighriskJurisdiction = Xrm.Page.getAttribute("ind_highriskjurisdiction").getValue();
+			if(newremitter=="Yes"){
+				if (formContext.getControl("header_process_ind_customeridentificationdocument")!=null)
+							 formContext.getControl("header_process_ind_customeridentificationdocument").setVisible(true);
+
+			}else{
+				if (formContext.getControl("header_process_ind_customeridentificationdocument")!=null)
+				 formContext.getControl("header_process_ind_customeridentificationdocument").setVisible(false);
+			}
+			if(newbehavior==true ){
+				if (formContext.getControl("header_process_ind_edddocument")!=null)
+						formContext.getControl("header_process_ind_edddocument").setVisible(true);
+
+			}else{
+				if (formContext.getControl("header_process_ind_edddocument")!=null)
+				 formContext.getControl("header_process_ind_edddocument").setVisible(false);
+			}
+			if( newcountry=="Yes" && HighriskJurisdiction=="Yes"){
+				formContext.getControl("header_process_ind_eddjuproposedactivitiesdetailedinformation").setVisible(true);
+				formContext.getControl("header_process_ind_eddjuregulatoryrequirements").setVisible(true);
+				formContext.getControl("header_process_ind_eddjuscreeningofintermediarybanksinvolved").setVisible(true);
+				formContext.getControl("header_process_ind_eddjuscreeningofproposedstakeholders").setVisible(true);
+
+			}else{
+				formContext.getControl("header_process_ind_eddjuproposedactivitiesdetailedinformation").setVisible(false);
+				formContext.getControl("header_process_ind_eddjuregulatoryrequirements").setVisible(false);
+				formContext.getControl("header_process_ind_eddjuscreeningofintermediarybanksinvolved").setVisible(false);
+				formContext.getControl("header_process_ind_eddjuscreeningofproposedstakeholders").setVisible(false);
+			}
+			
+		}
+		Xrm.Page.data.process.addOnStageChange(Update);
+		Xrm.Page.data.process.addOnPreStageChange(Update2);
+	}
+	
+	
+	//CDDS
+	if (idProcess == '14bae384-7d5e-ed11-9562-0022482a40f8'){
+		Xrm.Page.data.process.addOnStageChange(UpdateCDDS);
+		if ( idStage == '37a0f35f-7cfc-47d7-9b81-2e0c435b34ed' ){
+		//var tabObj = formContext.ui.tabs.get();
+		console.log(formContext.ui.tabs.get()[0].sections.get()[0]);
+	
+		var IFrame = formContext.ui.controls.get("IFRAME_webCheck");  
+		IFrame.setSrc(IFrame.getSrc()+"/search?q="+formContext.getAttribute("ind_partyname").getValue()[0].name);
+		
+		formContext.ui.tabs.get()[0].sections.get()[0].setVisible(true);
+	}
+		
+	}
+	//TR
+	if (idProcess == 'e8a74313-985f-ed11-9562-0022482a40f8'){
+		Xrm.Page.data.process.addOnStageChange(UpdateTR);
+		
+	}
+	//STR
+	if (idProcess == 'dc605514-d860-ed11-9562-0022482a40f8'){
+		if(formContext.getControl("header_process_ind_triggerstrara").getAttribute().getValue()=="Yes")
+			formContext.getControl("header_process_ind_triggerstrara").setDisabled(true);
+		if(formContext.getControl("header_process_ind_triggerstrcddi").getAttribute().getValue()=="Yes")
+			formContext.getControl("header_process_ind_triggerstrcddi").setDisabled(true);
+		if(formContext.getControl("header_process_ind_triggerstredd").getAttribute().getValue()=="Yes")
+			formContext.getControl("header_process_ind_triggerstredd").setDisabled(true);
+		if(formContext.getControl("header_process_ind_triggerstrtr").getAttribute().getValue()=="Yes")
+			formContext.getControl("header_process_ind_triggerstrtr").setDisabled(true);
+		Xrm.Page.data.process.addOnStageChange(UpdateSTR);
+		
+	}
+	//PEP
+	if (idProcess == '568355fe-f160-ed11-9562-0022482a4894'){
+		Xrm.Page.data.process.addOnStageChange(UpdatePEP);
+		
+	}
+	//Outward 2
+	if (idProcess == 'b2268c54-8770-ed11-9562-0022482a40f8'){
+		var statusPR = Xrm.Page.getAttribute("statuscode");
+		statusPR.setValue(100000016);
+		Xrm.Page.data.process.addOnStageChange(UpdateOutward2);
+		
+	}
+	//TRep reactivate
+	if (idProcess == '711fef8d-0161-ed11-9562-0022482a40f8'){
+		
+		if(formContext.getControl("header_process_ind_triggertreppep").getAttribute().getValue()=="Yes")
+			formContext.getControl("header_process_ind_triggertreppep").setDisabled(true);
+		if(formContext.getControl("header_process_ind_triggertrepedd").getAttribute().getValue()=="Yes")
+			formContext.getControl("header_process_ind_triggertrepedd").setDisabled(true);
+		if(formContext.getControl("header_process_ind_triggertrepara").getAttribute().getValue()=="Yes")
+			formContext.getControl("header_process_ind_triggertrepara").setDisabled(true);
+		if(formContext.getControl("header_process_ind_triggertrepcddi").getAttribute().getValue()=="Yes")
+			formContext.getControl("header_process_ind_triggertrepcddi").setDisabled(true);
+		if(formContext.getControl("header_process_ind_triggertrepjusrisdiction").getAttribute().getValue()=="Yes")
+			formContext.getControl("header_process_ind_triggertrepjusrisdiction").setDisabled(true);
+		if(formContext.getControl("header_process_ind_triggertreptr").getAttribute().getValue()=="Yes")
+			formContext.getControl("header_process_ind_triggertreptr").setDisabled(true);
+		
+		
+		
+		if(status=="finished"){
+			Xrm.Page.data.process.setStatus("active");
+			setTimeout(() => { 
+				formContext.data.process.setActiveStage('daeea7d8-2e52-4c32-91a1-d48a1efe9fd2');
+			}, "500");
+		}
+		//Xrm.Page.data.process.addOnStageChange(UpdatePEP);
+		
+	}
+	//EDD
+	if (idProcess == '1348a6ad-7862-ed11-9562-0022482a40f8'){
+		var newBehaviour = Xrm.Page.getAttribute("ind_newbehavior").getValue();
+		var triggerEDDARA = Xrm.Page.getAttribute("ind_triggereddara").getValue();
+		var triggerEDDCDDI = Xrm.Page.getAttribute("ind_triggereddcddi").getValue();
+		var triggerEDDJusrisdiction = Xrm.Page.getAttribute("ind_triggereddjurisdiction").getValue();
+		var triggerEDDTR = Xrm.Page.getAttribute("ind_triggereddtr").getValue();
+		var triggerEDDONGOING = Xrm.Page.getAttribute("ind_triggereddongoing").getValue();
+		var triggerEDDCDDS = Xrm.Page.getAttribute("ind_triggereddcdds").getValue();
+		var triggerEDDPEP = Xrm.Page.getAttribute("ind_triggereddpep").getValue();
+			if ( idStage == 'ee4b525d-d4ef-4942-ab39-8dba919d3dc1' ){
+				if(newBehaviour==true)
+					formContext.getControl("header_process_ind_edddocument").setVisible(false);
+				
+				if(triggerEDDARA!="Yes"){
+					formContext.getControl("header_process_ind_eddaradetailedinformation").setVisible(false);
+					formContext.getControl("header_process_ind_eddaradocumentationofclientsourceofwealth").setVisible(false);
+					formContext.getControl("header_process_ind_eddaraproceduresontransactionssubstance").setVisible(false);
+					formContext.getControl("header_process_ind_eddaraproposedstakeholders").setVisible(false);
+					formContext.getControl("header_process_ind_eddararegulatoryrequirements").setVisible(false);
+				}
+				
+				if(triggerEDDCDDI!="Yes")
+					formContext.getControl("header_process_ind_falseorstolendocsedddocument").setVisible(false);
+				
+				
+				
+				if(triggerEDDJusrisdiction!="Yes"){
+					formContext.getControl("header_process_ind_eddjuproposedactivitiesdetailedinformation").setVisible(false);
+					formContext.getControl("header_process_ind_eddjuregulatoryrequirements").setVisible(false);
+					formContext.getControl("header_process_ind_eddjuscreeningofintermediarybanksinvolved").setVisible(false);
+					formContext.getControl("header_process_ind_eddjuscreeningofproposedstakeholders").setVisible(false);
+				}
+				
+				
+				if(triggerEDDTR!="Yes")
+					formContext.getControl("header_process_ind_falseorstolendocstredddocument").setVisible(false);
+				if(triggerEDDONGOING!="Yes"&&triggerEDDCDDS!="Yes")
+					formContext.getControl("header_process_ind_otheradversereportedddocument").setVisible(false);
+				if(triggerEDDPEP!="Yes"){
+					formContext.getControl("header_process_ind_pepeddassessmentofpotentialconflict").setVisible(false);
+					formContext.getControl("header_process_ind_pepthirdpartiesdocofclientsourceofwealth").setVisible(false);
+				}
+			}
+		Xrm.Page.data.process.addOnStageChange(UpdateEDD);
+		
+	}	
+	//CDDI
+	if (idProcess == '170fcbdf-9f61-ed11-9562-0022482a4894'){
+		Xrm.Page.data.process.addOnStageChange(UpdateCDDI);
+		
+	}
+	//ARA
+	if (idProcess == '8f6456d2-9061-ed11-9562-0022482a4894'){
+		formContext.getControl("header_process_ind_bannedactivity").setVisible(false);
+		formContext.getControl("header_process_ind_highriskactivity").setVisible(false);
+	}
+	//ONgoing
+	if (idProcess == '3fc7e0ba-f760-ed11-9562-0022482a40f8'){
+		//web check
+		if ( idStage == 'b5382f81-cc3f-4ad9-9e80-947086b45400' || idStage == '06eafa1b-a3c8-4140-8973-253a559834f9'){
+			//var tabObj = formContext.ui.tabs.get();
+			console.log(formContext.ui.tabs.get()[0].sections.get()[0]);
+		
+			var IFrame = formContext.ui.controls.get("IFRAME_webCheck");  
+			IFrame.setSrc(IFrame.getSrc()+"/search?q="+formContext.getAttribute("ind_partyname").getValue()[0].name);
+			
+			formContext.ui.tabs.get()[0].sections.get()[0].setVisible(true);
+		}
+		//TM OR preliminary assassement
+		if ( idStage == 'e4a3ee7f-42c7-4a7b-b709-80a5676ec3b3' || idStage == 'ef254fe9-dee9-4ee1-a4b6-4a6e63c2d7f6'){
+		
+			formContext.ui.tabs.get()[0].sections.get()[0].setVisible(false);
+		}
+		Xrm.Page.data.process.addOnStageChange(UpdateONGOING);
+		
+	}
+	//CIBP
+	if (idProcess == '045363fa-e363-ed11-9562-0022482a40f8'){
+		
+		if(formContext.getControl("header_process_ind_triggercibpara").getAttribute().getValue()=="Yes")
+			formContext.getControl("header_process_ind_triggercibpara").setDisabled(true);
+		
+		if(formContext.getControl("header_process_ind_triggercibpjustisdiction").getAttribute().getValue()=="Yes")
+			formContext.getControl("header_process_ind_triggercibpjustisdiction").setDisabled(true);
+		
+		formContext.getControl("header_process_ind_bpupdatevp").setDisabled(true);
+		
+	}
+	
+	if (status == "finished") {
+		Xrm.Page.data.process.removeOnStageChange(Update);
+		Xrm.Page.data.process.removeOnStageChange(Update2);
+		Xrm.Page.data.process.removeOnStageChange(UpdateCDDS);
+		Xrm.Page.data.process.removeOnStageChange(UpdateTR);
+		Xrm.Page.data.process.removeOnStageChange(UpdatePEP);
+		Xrm.Page.data.process.removeOnStageChange(UpdateEDD);
+		Xrm.Page.data.process.removeOnStageChange(UpdateCDDI);
+		Xrm.Page.data.process.removeOnStageChange(UpdateONGOING);
+		
+	}
+}
+async function Update2(executionContext){
+	debugger;
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	if(idStage=='741c7575-ff3c-4fd8-bdd7-c5e841b9cf38'){
+		var benefdoc1 = Xrm.Page.getAttribute("ind_certificateofincorporationproofofidentity").getValue();
+		var benefdoc2 = Xrm.Page.getAttribute("ind_listofdirectors").getValue();
+		var benefdoc3 = Xrm.Page.getAttribute("ind_evidenceofbackgroundverification").getValue();
+		
+		
+		var customerTradingDoc1 = Xrm.Page.getAttribute("ind_billoflading").getValue();
+		var customerTradingDoc2 = Xrm.Page.getAttribute("ind_goodsreceiptnotesatdeliverypoint").getValue();
+		var customerTradingDoc3 = Xrm.Page.getAttribute("ind_invoicefromsupplier").getValue();
+		
+		var customerInvestmentDoc1 = Xrm.Page.getAttribute("ind_boardaproval").getValue();
+		var customerInvestmentDoc2 = Xrm.Page.getAttribute("ind_solvencytestsolvensycertificate").getValue();
+		var customerInvestmentDoc3 = Xrm.Page.getAttribute("ind_salespurshaseagreement").getValue();
+		
+		var customerConsultancyDoc1 = Xrm.Page.getAttribute("ind_agreement").getValue();
+		var customerConsultancyDoc2 = Xrm.Page.getAttribute("ind_evidanceofdelivrable").getValue();
+		var customerConsultancyDoc3 = Xrm.Page.getAttribute("ind_invoice").getValue();
+		
+		
+		var customerDividendDoc = Xrm.Page.getAttribute("ind_docsfordividendpayment").getValue();
+		var customerForfeitureofsharesDoc = Xrm.Page.getAttribute("ind_docsforforfeitureofshares").getValue();
+		var customerLoantoshareholderDoc = Xrm.Page.getAttribute("ind_docsforloantoshareholder").getValue();
+		var customerRedemptionofsharesDoc = Xrm.Page.getAttribute("ind_docsforredemptionofshares").getValue();
+		var customerIssueofsharesDoc = Xrm.Page.getAttribute("ind_docsforissueofshares").getValue();
+		
+		
+		
+		
+		var activityType = Xrm.Page.getAttribute("ind_activitytype").getValue();
+		var inOrder = Xrm.Page.getAttribute("ind_basicdocsinorder");
+		
+		if(benefdoc1==null ||benefdoc2==null ||benefdoc3==null ){
+			inOrder.setValue(false);
+		}
+		else if(activityType==100000001 && (customerTradingDoc1==null||customerTradingDoc2==null||customerTradingDoc3==null)){
+				inOrder.setValue(false);
+		}
+		else if(activityType==100000000 && (customerInvestmentDoc1==null||customerInvestmentDoc2==null||customerInvestmentDoc3==null)){
+				inOrder.setValue(false);
+		}
+		else if(activityType==100000002 && (customerConsultancyDoc1==null||customerConsultancyDoc2==null||customerConsultancyDoc3==null)){
+				inOrder.setValue(false);
+		}
+		else if(inOrder.getValue()==false){
+				executionContext.getEventArgs().preventDefault();
+				inOrder.setValue(true);
+				formContext.data.refresh(false);
+		} 
+
+	}
+	if(idStage == '318de4bd-3c6c-4659-b157-828499b943e8'){
+			contactMail = formContext.getAttribute('ind_contactemail').getValue();
+				
+					var fetchXml = "?fetchXml=<fetch><entity name='ind_ind_contact'><filter><condition attribute='ind_email' operator='eq' value='" + contactMail + "'/></filter></entity></fetch>";
+				
+		const result = await Xrm.WebApi.retrieveMultipleRecords('ind_ind_contact', fetchXml);
+		console.log(result);
+		debugger;
+			if(result.entities[0]==undefined ||result.entities[0]==""||result.entities[0]==null)
+			{	
+				setTimeout(() => {	
+					formContext.data.process.movePrevious();
+				}, "500");
+			}
+	}
+			
+}
+	
+
+
+function Update(executionContext){
+	
+	setTimeout(() => {	
+		var formContext = executionContext.getFormContext();
+		var idStage = Xrm.Page.data.process.getActiveStage().getId();
+
+		
+		var proceedAss = Xrm.Page.getAttribute("ind_proceedtoassessdeviation").getValue();
+		var statusPR = Xrm.Page.getAttribute("statuscode");
+		
+	
+		
+		
+		debugger;
+			//check status
+			if (idStage == "6ec04693-8893-4cfd-a1b5-c72d14d48f49"){
+				statusPR.setValue(100000009);
+			}
+			//in order
+			if(idStage=='741c7575-ff3c-4fd8-bdd7-c5e841b9cf38'){
+				formContext.getControl("header_process_ind_basicdocsinorder").setVisible(false);
+			}
+			//continue with transaction unlock comment
+			if(idStage=='a3047965-573f-4db4-9578-92ab7819b429'){
+				formContext.getControl("header_process_ind_comment").setDisabled(false);
+			}
+			//Doc Steps Lock Comment
+			if(idStage=='7acd31a4-1d7f-4fca-8e33-5a975aa1344e' || idStage=='1e523d31-a9e9-4ef0-8eda-39e67828321a' || idStage=='d0a870e4-a09f-4f36-8a58-b6e17681aa18' || idStage=='f28b8a0a-5a8b-4e12-af8d-43249d43645d'
+			     || idStage==' fefe5cba-f277-49c1-9e9d-b1c10728be7a' || idStage=='fb77f598-302f-4d61-92ff-c6c0f76ab5a5' || idStage=='7238f13f-4cdf-421a-91b8-cda8103ab4b5' || idStage=='97cd0de5-e780-4082-baea-fce2465fff6d'){
+				formContext.getControl("header_process_ind_basicdocsinorder").setDisabled(true);
+			}
+		//Assess TM
+		if (idStage == "7869b070-b66d-4720-8cc5-95829aa2c74a" || idStage == "26c7d2a9-eae3-4582-aac1-8b990967cab8")
+		{
+			
+			if(proceedAss==1){
+				statusPR.setValue(100000001);
+			}
+			else{
+				statusPR.setValue(100000003);
+			}
+	
+			
+			
+		}
+		//UpdateVP
+		if (idStage == "318de4bd-3c6c-4659-b157-828499b943e8"){
+			
+			statusPR.setValue(100000005);
+		}
+		if (idStage == "26c7d2a9-eae3-4582-aac1-8b990967cab8"){
+			
+			statusPR.setValue(100000003);
+		}
+		
+		if (idStage == "6aca273b-fc4f-4c48-ae32-0542fb8ae7e7"){
+			
+			statusPR.setValue(100000006);
+		}
+		
+		if (idStage == "144efa2d-3ed0-4c5c-83b5-5e59f8e897ba"){
+			
+			statusPR.setValue(100000007);
+		}
+			if(idStage == "8f58c689-d58b-4b39-b1e2-f0ea609b3543"  || idStage == "832867db-c576-4f3b-942e-100760c20b6b" ){
+			statusPR.setValue(100000008);
+		}
+		
+		//docBank
+		if (idStage == "741c7575-ff3c-4fd8-bdd7-c5e841b9cf38"){
+			
+			var paymentID = formContext.data.entity.getId();
+		
+
+			const response = new XMLHttpRequest();
+			const json = JSON.stringify({
+				id: paymentID		
+		});
+
+		response.open("POST", 'https://prod-18.westus.logic.azure.com:443/workflows/350623d4e05648a4b27e1744c57cae77/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pFWSzTLGqaFKQqY7yhPbN8GXpXetdD1Fdo-1pSpNy4E')
+		response.setRequestHeader('Content-Type', 'application/json');
+
+		response.send(json);
+		}
+		
+		
+			
+		//alert
+		if(idStage == "318de4bd-3c6c-4659-b157-828499b943e8"){
+			Xrm.Utility.alertDialog("Update the VP database ! ");
+		}
+		//unlock behavior and lock status
+		if ( idStage=='7f3a4c8b-a2b2-4ccb-9ede-1b97a2d791a6'){
+			formContext.getControl("header_process_ind_newbehavior").setDisabled(false);
+			formContext.getControl("header_process_statuscode").setDisabled(true);
+		}
+		//lock beh
+		if( idStage=='bfebc484-b353-46bc-ac6f-fdc8dcad574d'){
+			formContext.getControl("header_process_ind_newbehavior").setDisabled(true);
+			formContext.getControl("header_process_ind_corporateaction").setDisabled(true);
+				    var newremitter = Xrm.Page.getAttribute("ind_newremitter").getValue();
+				    var newbehavior = Xrm.Page.getAttribute("ind_newbehavior").getValue();
+				    var newcountry = Xrm.Page.getAttribute("ind_newcountry").getValue();
+				    var HighriskJurisdiction = Xrm.Page.getAttribute("ind_highriskjurisdiction").getValue();
+			if(newremitter=="Yes"){
+							 formContext.getControl("header_process_ind_customeridentificationdocument").setVisible(true);
+
+			}else{
+				 formContext.getControl("header_process_ind_customeridentificationdocument").setVisible(false);
+			}
+			if(newbehavior==true ){
+							 formContext.getControl("header_process_ind_edddocument").setVisible(true);
+
+			}else{
+				 formContext.getControl("header_process_ind_edddocument").setVisible(false);
+			}
+			if( newcountry=="Yes" && HighriskJurisdiction=="Yes"){
+							 formContext.getControl("header_process_ind_highriskjurisdictionedddocument").setVisible(true);
+
+			}else{
+				 formContext.getControl("header_process_ind_highriskjurisdictionedddocument").setVisible(false);
+			}
+			
+			
+		}
+		
+	}, "500");
+
+}
+
+
+
+async function UpdateCDDS(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	var statusPR = Xrm.Page.getAttribute("statuscode");
+	//TR
+	if ( idStage == '4f954a17-55fc-4170-87b6-be15f6fa7350' || idStage == 'd2148a9c-1c4c-44e5-a1a6-966f987f5592'){
+			statusPR.setValue(100000004);
+	}
+	//EDD
+	if ( idStage == '3e0ec563-b0b6-421e-a73e-5a6d4839d40e' ){
+			statusPR.setValue(100000010);
+	}
+	//PEP
+	if ( idStage == '4db0de07-13c6-4f40-ab26-13a2d7376e55' ){
+			statusPR.setValue(100000011);
+	}
+	//STR
+	if ( idStage == '8da809d0-a6da-4da1-a454-51223cd1121b' ){
+			statusPR.setValue(100000012);
+	}
+	//iframe show
+	if ( idStage == '37a0f35f-7cfc-47d7-9b81-2e0c435b34ed' ){
+		//var tabObj = formContext.ui.tabs.get();
+		console.log(formContext.ui.tabs.get()[0].sections.get()[0]);
+		console.log(formContext.ui.controls.get("IFRAME_webCheck"));
+	
+		var IFrame = formContext.ui.controls.get("IFRAME_webCheck");  
+		IFrame.setSrc(IFrame.getSrc()+"/search?q="+formContext.getAttribute("ind_partyname").getValue()[0].name);
+		
+		formContext.ui.tabs.get()[0].sections.get()[0].setVisible(true);
+	}
+	//iframe close
+	if ( idStage == '7982bf19-ff33-4d79-9707-00ff65ec644a' || idStage == 'd2148a9c-1c4c-44e5-a1a6-966f987f5592' ){
+		formContext.ui.tabs.get()[0].sections.get()[0].setVisible(false);
+	}
+	//Create Masterfile On VP
+	if(idStage == 'f081f995-344f-46b9-877e-4a21ae26f2ce'){
+		var party = formContext.getAttribute("ind_partyname").getValue()[0].name;
+				
+					var fetchXml = "?fetchXml=<fetch><entity name='ind_party'><filter><condition attribute='ind_name' operator='eq' value='" + party + "'/></filter></entity></fetch>";
+				
+		const result = await Xrm.WebApi.retrieveMultipleRecords('ind_party', fetchXml);
+		console.log(result);
+		debugger;
+			if(result.entities[0]==undefined ||result.entities[0]==""||result.entities[0]==null)
+			{	
+					
+					formContext.data.process.movePrevious();
+				
+			}
+	}
+}
+function UpdateTR(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	var statusPR = Xrm.Page.getAttribute("statuscode");
+	//REVIEW
+	if ( idStage == '9a259ec2-c93e-4497-9c17-067f0d61b380'){
+			statusPR.setValue(100000013);
+	}
+	
+	//EDD
+	if ( idStage == '48c5db30-fd06-436b-958a-fac605af73aa' ){
+			statusPR.setValue(100000010);
+	}
+	//One month
+	if ( idStage == 'b9920e35-28ca-4220-ac65-8f998c7712cd' ){
+			
+		var paymentID = formContext.data.entity.getId();
+		
+		var response = new XMLHttpRequest();
+	    const json = JSON.stringify({
+				id: paymentID	
+			});	    
+		const json2 = JSON.stringify({
+				id: paymentID,
+				type: "RM Notif"				
+			});
+
+		response.open("POST", 'https://prod-150.westus.logic.azure.com:443/workflows/6a08fd5f2db94c13b3fda5f3fec25ae2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=hm3o3sYyoM_HsWJumzHmDw33OhsrBCshN1MtFX3OdfY');
+		response.setRequestHeader('Content-Type', 'application/json');
+
+		response.send(json);
+		
+		//Send Notif
+		response = new XMLHttpRequest();
+		response.open("POST", 'https://prod-41.westus.logic.azure.com:443/workflows/726c3824a32b4de39e0c05f2383b3cb2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1oBX2rsnRI-XJSokJlQYaz3GmwfU2Ppb4WnByk-lCNY');
+		response.setRequestHeader('Content-Type', 'application/json');
+
+		response.send(json2);
+	}
+	
+}
+
+function UpdateEDD(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	var statusPR = Xrm.Page.getAttribute("statuscode");
+
+	
+		var newBehaviour = Xrm.Page.getAttribute("ind_newbehavior").getValue();
+		var triggerEDDARA = Xrm.Page.getAttribute("ind_triggereddara").getValue();
+		var triggerEDDCDDI = Xrm.Page.getAttribute("ind_triggereddcddi").getValue();
+		var triggerEDDJusrisdiction = Xrm.Page.getAttribute("ind_triggereddjurisdiction").getValue();
+		var triggerEDDTR = Xrm.Page.getAttribute("ind_triggereddtr").getValue();
+		var triggerEDDONGOING = Xrm.Page.getAttribute("ind_triggereddongoing").getValue();
+		var triggerEDDCDDS = Xrm.Page.getAttribute("ind_triggereddcdds").getValue();
+		var triggerEDDPEP = Xrm.Page.getAttribute("ind_triggereddpep").getValue();
+				
+		
+
+
+	if ( idStage == 'ee4b525d-d4ef-4942-ab39-8dba919d3dc1' ){
+		if(newBehaviour==true)
+			formContext.getControl("header_process_ind_edddocument").setVisible(false);
+		
+		if(triggerEDDARA!="Yes"){
+			formContext.getControl("header_process_ind_eddaradetailedinformation").setVisible(false);
+			formContext.getControl("header_process_ind_eddaradocumentationofclientsourceofwealth").setVisible(false);
+			formContext.getControl("header_process_ind_eddaraproceduresontransactionssubstance").setVisible(false);
+			formContext.getControl("header_process_ind_eddaraproposedstakeholders").setVisible(false);
+			formContext.getControl("header_process_ind_eddararegulatoryrequirements").setVisible(false);
+		}
+		
+		if(triggerEDDCDDI!="Yes")
+			formContext.getControl("header_process_ind_falseorstolendocsedddocument").setVisible(false);
+		
+		
+		
+		if(triggerEDDJusrisdiction!="Yes"){
+			formContext.getControl("header_process_ind_eddjuproposedactivitiesdetailedinformation").setVisible(false);
+			formContext.getControl("header_process_ind_eddjuregulatoryrequirements").setVisible(false);
+			formContext.getControl("header_process_ind_eddjuscreeningofintermediarybanksinvolved").setVisible(false);
+			formContext.getControl("header_process_ind_eddjuscreeningofproposedstakeholders").setVisible(false);
+		}
+		
+		
+		if(triggerEDDTR!="Yes")
+			formContext.getControl("header_process_ind_falseorstolendocstredddocument").setVisible(false);
+		if(triggerEDDONGOING!="Yes"&&triggerEDDCDDS!="Yes")
+			formContext.getControl("header_process_ind_otheradversereportedddocument").setVisible(false);
+		if(triggerEDDPEP!="Yes"){
+			formContext.getControl("header_process_ind_pepeddassessmentofpotentialconflict").setVisible(false);
+			formContext.getControl("header_process_ind_pepthirdpartiesdocofclientsourceofwealth").setVisible(false);
+		}
+		
+	}
+	
+	
+	if ( idStage == '5143b691-2b60-4d79-8822-9d460816c594' ){
+			
+		var paymentID = formContext.data.entity.getId();
+		
+		var response = new XMLHttpRequest();
+	    const json = JSON.stringify({
+				id: paymentID	
+			});
+		const json2 = JSON.stringify({
+			id: paymentID,
+			type: "RM Notif"				
+		});
+		response.open("POST", 'https://prod-150.westus.logic.azure.com:443/workflows/6a08fd5f2db94c13b3fda5f3fec25ae2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=hm3o3sYyoM_HsWJumzHmDw33OhsrBCshN1MtFX3OdfY');
+		response.setRequestHeader('Content-Type', 'application/json');
+
+		response.send(json);
+		
+		//Send Notif
+		response = new XMLHttpRequest();
+		response.open("POST", 'https://prod-41.westus.logic.azure.com:443/workflows/726c3824a32b4de39e0c05f2383b3cb2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1oBX2rsnRI-XJSokJlQYaz3GmwfU2Ppb4WnByk-lCNY');
+		response.setRequestHeader('Content-Type', 'application/json');
+
+		response.send(json2);
+	}
+	
+}
+
+function UpdateCDDI(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	var statusPR = Xrm.Page.getAttribute("statuscode");
+	debugger;
+	//adequate4
+	if ( idStage == '8a6d12a7-a303-4f40-8d64-c8d9e7563350' ){ 
+	//console.log(formContext.getControl());
+	 formContext.getControl("header_process_ind_adequatecddi_1").setVisible(true);
+	}
+	//assess doc at hand
+	if ( idStage == '2def3a39-c55b-4780-83ae-1b19cb0dce51' ){ //*****************************************!!!!!!!!!!!!!!!!!!!!!!!!!!**************************!!!!!!!!!!!!!!!!!!!!!!!!!
+			
+		var paymentID = formContext.data.entity.getId();
+		
+		var response = new XMLHttpRequest();
+	    const json = JSON.stringify({
+				id: paymentID	
+			});
+		const json2 = JSON.stringify({
+				id: paymentID,
+				type: "RM Notif"
+			});
+
+		response.open("POST", 'https://prod-150.westus.logic.azure.com:443/workflows/6a08fd5f2db94c13b3fda5f3fec25ae2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=hm3o3sYyoM_HsWJumzHmDw33OhsrBCshN1MtFX3OdfY');
+		response.setRequestHeader('Content-Type', 'application/json');
+
+		response.send(json);
+		
+		//Send Notif
+		response = new XMLHttpRequest();
+		response.open("POST", 'https://prod-41.westus.logic.azure.com:443/workflows/726c3824a32b4de39e0c05f2383b3cb2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1oBX2rsnRI-XJSokJlQYaz3GmwfU2Ppb4WnByk-lCNY');
+		response.setRequestHeader('Content-Type', 'application/json');
+
+		response.send(json2);
+	}
+	
+}
+
+function UpdatePEP(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	var statusPR = Xrm.Page.getAttribute("statuscode");
+	//TREP
+	if ( idStage == '62d3461f-cafe-43e2-9ff7-0bc8eb1b85cc'){
+			Xrm.Utility.alertDialog("Reject The Transaction And Inform The Client !");
+	}
+	
+	
+}
+function UpdateOutward2(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	var statusPR = Xrm.Page.getAttribute("statuscode");
+
+	
+	
+}
+function UpdateSTR(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	var statusPR = Xrm.Page.getAttribute("statuscode");
+	//proceed
+	if ( idStage == '654d4eae-3f86-49cc-a45d-59881420bde5'){
+		
+		var paymentID = formContext.data.entity.getId();
+		
+		var response = new XMLHttpRequest();
+	    const json = JSON.stringify({
+				id: paymentID,
+				type: "Ro STR"
+			});
+			
+			
+		//Send Notif
+		
+		response.open("POST", 'https://prod-41.westus.logic.azure.com:443/workflows/726c3824a32b4de39e0c05f2383b3cb2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1oBX2rsnRI-XJSokJlQYaz3GmwfU2Ppb4WnByk-lCNY');
+		response.setRequestHeader('Content-Type', 'application/json');
+
+		response.send(json);
+	}
+	
+	
+}
+
+function UpdateONGOING(executionContext){
+	debugger;
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	var statusPR = Xrm.Page.getAttribute("statuscode");
+	
+	if ( idStage == 'b5382f81-cc3f-4ad9-9e80-947086b45400' || idStage == '06eafa1b-a3c8-4140-8973-253a559834f9'){
+		//var tabObj = formContext.ui.tabs.get();
+		console.log(formContext.ui.tabs.get()[0].sections.get()[0]);
+		console.log(formContext.ui.controls.get("IFRAME_webCheck"));
+		var IFrame = formContext.ui.controls.get("IFRAME_webCheck");  
+		IFrame.setSrc(IFrame.getSrc()+"/search?q="+formContext.getAttribute("ind_partyname").getValue()[0].name);
+		
+		formContext.ui.tabs.get()[0].sections.get()[0].setVisible(true);
+	}
+	//TM OR preliminary assassement
+		if ( idStage == 'e4a3ee7f-42c7-4a7b-b709-80a5676ec3b3' || idStage == 'ef254fe9-dee9-4ee1-a4b6-4a6e63c2d7f6'){
+		
+			formContext.ui.tabs.get()[0].sections.get()[0].setVisible(false);
+		}
+	if ( idStage == 'ee2cfc32-e20d-4bd4-8145-9c0b5f2a977f'){
+		var paymentID = formContext.data.entity.getId();
+		var response = new XMLHttpRequest();
+	    const json = JSON.stringify({
+				id: paymentID,
+				type: "Ro ongoing"
+		});
+			
+			
+		//Send Notif
+		
+		response.open("POST", 'https://prod-41.westus.logic.azure.com:443/workflows/726c3824a32b4de39e0c05f2383b3cb2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1oBX2rsnRI-XJSokJlQYaz3GmwfU2Ppb4WnByk-lCNY');
+		response.setRequestHeader('Content-Type', 'application/json');
+
+		response.send(json);
+	}
+}
+	
+	
+
+
+
+
+/* var field = Xrm.Page.getAttribute("ind_transactionamount");
+		 var f = Xrm.Page.getAttribute("ind_transactionamount").getValue()+"";
+			if(field)
+			{
+				var lookup = new Array();
+				lookup[0] = new Object();
+				lookup[0].id = "9b5e5d98-7154-ed11-bba3-0022482a40f8";
+				lookup[0].name = "Brunei dollar";
+				lookup[0].entityType = "transactioncurrency";
+				Xrm.Page.getAttribute("transactioncurrencyid").setValue(lookup);
+
+				Xrm.Page.data.refresh(true);
+				//field.setValue(parseFloat(f.substring(1,f.length)));//Or any symbol you want
+			}  */   

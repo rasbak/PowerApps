@@ -1,0 +1,37 @@
+function TheUltimateAbort(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idProcess = Xrm.Page.data.process.getActiveProcess().getId();
+	var status = Xrm.Page.data.process.getStatus(); //remove handler on finished
+	
+	if (idProcess == 'e11049ed-4354-ed11-bba3-0022482a4894'){
+		formContext.data.process.addOnPreStageChange(Abort);
+	}
+	if (status == "finished") {
+		formContext.data.process.removeOnPreStageChange(Abort);
+	}
+	
+	
+}
+
+
+function Abort(executionContext){
+
+		debugger;
+		
+		var idStage = Xrm.Page.data.process.getActiveStage().getId();
+		var statusPR = Xrm.Page.getAttribute("statuscode");
+		var contactVerifid = Xrm.Page.getAttribute("ind_contactverified");
+		var fund = Xrm.Page.getAttribute("ind_fundaccount");
+		
+		if (idStage == "8f58c689-d58b-4b39-b1e2-f0ea609b3543" || idStage == "0575ae4b-e118-4788-84fb-a24b14ebab94"){
+			
+			executionContext.getEventArgs().preventDefault();
+			Xrm.Utility.alertDialog("Request aborted !");
+			
+		}
+		
+	
+	
+	
+
+}

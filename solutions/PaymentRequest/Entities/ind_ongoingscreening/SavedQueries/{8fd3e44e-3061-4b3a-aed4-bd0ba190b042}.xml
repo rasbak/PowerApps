@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{8fd3e44e-3061-4b3a-aed4-bd0ba190b042}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="bpf_name" select="1" icon="1" preview="1">
+        <row name="result" id="businessprocessflowinstanceid">
+          <cell name="bpf_ind_ind_operationid" width="142" />
+          <cell name="activestageid" width="150" />
+          <cell name="processid" width="120" />
+          <cell name="ind_potentiallyadversehitsduration" width="246" />
+          <cell name="ind_performwebcheckduration" width="219" />
+          <cell name="ind_preliminaryassessmentduration" width="246" />
+          <cell name="ind_assessgenuinenessofthewchitsduration" width="300" />
+          <cell name="ind_assessreportofroduration" width="231" />
+          <cell name="ind_eddprocessduration" width="171" />
+          <cell name="ind_pepscreeningprocessduration" width="243" />
+          <cell name="ind_strprocessduration" width="190" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_ongoingscreening">
+          <attribute name="businessprocessflowinstanceid" />
+          <attribute name="bpf_name" />
+          <attribute name="bpf_ind_ind_operationid" />
+          <attribute name="activestageid" />
+          <attribute name="statecode" />
+          <attribute name="createdby" />
+          <attribute name="processid" />
+          <order attribute="bpf_name" descending="false" />
+          <attribute name="ind_potentiallyadversehitsduration" />
+          <attribute name="ind_performwebcheckduration" />
+          <attribute name="ind_assessgenuinenessofthewchitsduration" />
+          <attribute name="ind_assessreportofroduration" />
+          <attribute name="ind_preliminaryassessmentduration" />
+          <attribute name="ind_eddprocessduration" />
+          <attribute name="ind_pepscreeningprocessduration" />
+          <attribute name="ind_strprocessduration" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Ongoing Screening" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

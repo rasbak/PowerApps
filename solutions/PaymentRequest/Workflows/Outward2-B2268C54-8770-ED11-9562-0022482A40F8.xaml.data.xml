@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{b2268c54-8770-ed11-9562-0022482a40f8}" Name="Outward 2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/Outward2-B2268C54-8770-ED11-9562-0022482A40F8.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>ind_outward2</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>ind_ind_Operation</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Outward 2" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{d4bd34e6-7931-4463-bb9e-fb50fcf768bf}">
+      <label languagecode="1033" description="Verifications" />
+    </steplabels>
+    <steplabels id="{cb1328a6-3de0-4b2a-abe2-5f2ea62e59db}">
+      <label languagecode="1033" description="Bank Document" />
+    </steplabels>
+    <steplabels id="{bcb78441-a52e-4cdf-aef1-b48aa5b47082}">
+      <label languagecode="1033" description="In order ?" />
+    </steplabels>
+    <steplabels id="{2d202e99-f243-4c3e-9d4f-ef9453b62535}">
+      <label languagecode="1033" description="Require escalation to RM ?" />
+    </steplabels>
+    <steplabels id="{27735c42-e11f-47c5-8658-207470a7a9fd}">
+      <label languagecode="1033" description="Reason" />
+    </steplabels>
+    <steplabels id="{5e7a0617-bcb3-46a4-8ea0-c1148fda1c6e}">
+      <label languagecode="1033" description="Manager Cross Verifications" />
+    </steplabels>
+    <steplabels id="{e34492e9-1306-417c-943d-bea1e03ef819}">
+      <label languagecode="1033" description="In Order ?" />
+    </steplabels>
+    <steplabels id="{75034a1e-0dfd-4ed4-8d89-1bc9f1c41246}">
+      <label languagecode="1033" description="Verification Of Amount" />
+    </steplabels>
+    <steplabels id="{b46b3c36-b0e5-4a8e-9fc7-28039141fdfb}">
+      <label languagecode="1033" description="Amount &gt; 100k ?" />
+    </steplabels>
+    <steplabels id="{5546a0f4-c374-4581-b6c3-52018414c9c2}">
+      <label languagecode="1033" description="Matter To be Reported To CC" />
+    </steplabels>
+    <steplabels id="{d81c6162-590b-4811-9cf2-bd00a66f5088}">
+      <label languagecode="1033" description="Review And Query Transaction" />
+    </steplabels>
+    <steplabels id="{98d9babc-1d0f-4d17-96f7-8e023da92441}">
+      <label languagecode="1033" description="In Order ?" />
+    </steplabels>
+    <steplabels id="{78480a53-969c-4258-a895-de1651351f76}">
+      <label languagecode="1033" description="Require escalation to HOC ?" />
+    </steplabels>
+    <steplabels id="{4dc8f6b0-1df5-4845-b9fb-086e675fd950}">
+      <label languagecode="1033" description="HOC Cross Verification" />
+    </steplabels>
+    <steplabels id="{b06f2917-988b-48f1-905b-6b8cc4382de4}">
+      <label languagecode="1033" description="In Order ?" />
+    </steplabels>
+    <steplabels id="{807f31c7-5779-4b13-b7b9-2ebe299a94c7}">
+      <label languagecode="1033" description="Matter to be reported to CC ?" />
+    </steplabels>
+    <steplabels id="{6a39affe-2785-406d-9c06-bd61d0880eb8}">
+      <label languagecode="1033" description="Transaction Reporting Process" />
+    </steplabels>
+    <steplabels id="{8bd97eb7-8968-4699-86f7-143da78dea66}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{a4424597-7217-4448-adbc-ad26317591ed}">
+      <label languagecode="1033" description="Circulate Docs To Bank Signatories" />
+    </steplabels>
+    <steplabels id="{8e3aebcf-0eb7-4725-b53b-bbec98e96a87}">
+      <label languagecode="1033" description="Sent To Bank ?" />
+    </steplabels>
+    <steplabels id="{81d82435-220b-4457-9791-467395a11c32}">
+      <label languagecode="1033" description="Amount Transfered ?" />
+    </steplabels>
+    <steplabels id="{dba42855-b32a-4737-a29a-786ca51b9b2d}">
+      <label languagecode="1033" description="Circulate Docs To Bank Signatories" />
+    </steplabels>
+    <steplabels id="{d9f04dde-0565-4e5c-9e15-09caf181dc62}">
+      <label languagecode="1033" description="Sent to Bank ?" />
+    </steplabels>
+    <steplabels id="{b5fa974d-be27-4890-86fa-1ac059e0ad7b}">
+      <label languagecode="1033" description="Amount Transfered ?" />
+    </steplabels>
+    <steplabels id="{889d23e3-4116-4c05-85c6-51d330d85767}">
+      <label languagecode="1033" description="Verifications" />
+    </steplabels>
+    <steplabels id="{efe33381-4e27-4fbc-b3eb-fa429204bbf6}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{108a339d-7803-46d1-b942-8690f741453e}">
+      <label languagecode="1033" description="Verifications" />
+    </steplabels>
+    <steplabels id="{43e67faa-bf4e-4a7a-a177-9530e4a6b354}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{5d4b65e3-38a1-48fe-9574-c4418f581222}">
+      <label languagecode="1033" description="Circulate Docs To Bank Signatories" />
+    </steplabels>
+    <steplabels id="{11d1973a-2b21-4c18-92ec-f9a5dee0a1b9}">
+      <label languagecode="1033" description="Sent to Bank ?" />
+    </steplabels>
+    <steplabels id="{2784b88c-6558-48ee-a08b-e20accd940c1}">
+      <label languagecode="1033" description="Amount Transfered ?" />
+    </steplabels>
+    <steplabels id="{6426ef5c-dc3e-4f22-bb82-b34c27e2f163}">
+      <label languagecode="1033" description="Verifications" />
+    </steplabels>
+    <steplabels id="{4bc958ea-ba37-4710-9c01-8744dc0317cc}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{6040d8dd-9c1a-4c25-b9ee-bf25a6003cbd}">
+      <label languagecode="1033" description="Request For Additional Docs/ Clarifications" />
+    </steplabels>
+    <steplabels id="{30d43f00-9c3f-4e8e-9c41-f662f6d0425c}">
+      <label languagecode="1033" description="Additional Documents" />
+    </steplabels>
+    <steplabels id="{b3ed0500-2ac6-4987-93e6-e1147626a199}">
+      <label languagecode="1033" description="Successful ?" />
+    </steplabels>
+    <steplabels id="{8fcfcf70-8a4b-491d-984c-d8eb8c58e12d}">
+      <label languagecode="1033" description="Received ?" />
+    </steplabels>
+    <steplabels id="{59bdd372-2891-4db3-b48d-f91ec3e325cb}">
+      <label languagecode="1033" description="Verifications" />
+    </steplabels>
+    <steplabels id="{ef4d1698-0969-47a1-9221-7a3754aac4cd}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{45efe490-d717-4800-950b-3a0819510a55}">
+      <label languagecode="1033" description="Verifications" />
+    </steplabels>
+    <steplabels id="{784f2b89-0d06-4fa6-b141-a21979385b89}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{81aab181-e8f2-4aec-904f-d5f2ddcf8673}">
+      <label languagecode="1033" description="Discuss With Client &amp; Request For Alternative Doc/Info" />
+    </steplabels>
+    <steplabels id="{c86d91d0-f2d0-4f7e-803f-fc21d32a63f0}">
+      <label languagecode="1033" description="Satisfied ?" />
+    </steplabels>
+    <steplabels id="{c3e2635d-382c-43af-9d05-17ca9e99077d}">
+      <label languagecode="1033" description="Amount" />
+    </steplabels>
+    <steplabels id="{4b2e0432-532c-4069-ba84-618406ef8ff3}">
+      <label languagecode="1033" description="Activity" />
+    </steplabels>
+    <steplabels id="{1d0d273e-9563-485a-ac9b-4b2e326268e6}">
+      <label languagecode="1033" description="Transaction Reporting Process" />
+    </steplabels>
+    <steplabels id="{7b43780b-5c7a-4b1e-916b-8fba5d19efbc}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{fbd42e25-0b55-4364-a98a-d529ac741eeb}">
+      <label languagecode="1033" description="Circulate Docs To Bank Signatories" />
+    </steplabels>
+    <steplabels id="{3256ea42-43bf-4ce3-b36d-6dfbd2662e63}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{4928b357-1af5-476c-9ae0-fdd245f59421}">
+      <label languagecode="1033" description="Amount Transfered ?" />
+    </steplabels>
+    <steplabels id="{e7da33e8-7826-4d93-bdc5-adc199963075}">
+      <label languagecode="1033" description="Amend Transfer Form" />
+    </steplabels>
+    <steplabels id="{c3fe285e-be1d-426e-af6f-baa878670367}">
+      <label languagecode="1033" description="Regenerate Bank Doc ?" />
+    </steplabels>
+    <steplabels id="{c5e2daa1-c6de-481a-b071-2fb029b65c83}">
+      <label languagecode="1033" description="Verifications" />
+    </steplabels>
+    <steplabels id="{38572025-cb91-4fbd-b411-c1dd034db267}">
+      <label languagecode="1033" description="Additional Document TR" />
+    </steplabels>
+  </labels>
+</Workflow>

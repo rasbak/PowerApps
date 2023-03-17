@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{568355fe-f160-ed11-9562-0022482a4894}" Name="PEP Screening" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/PEPScreening-568355FE-F160-ED11-9562-0022482A4894.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>ind_pepscreening</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>ind_ind_Operation</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="PEP Screening" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{8748f185-3012-49ad-97de-52907aa35c42}">
+      <label languagecode="1033" description="Identify PEP " />
+    </steplabels>
+    <steplabels id="{d6e157be-8a78-4648-b1e3-cb0db766397b}">
+      <label languagecode="1033" description="PEP from Government" />
+    </steplabels>
+    <steplabels id="{62d3461f-cafe-43e2-9ff7-0bc8eb1b85cc}">
+      <label languagecode="1033" description="Transaction Reporting Process" />
+    </steplabels>
+    <steplabels id="{b8b84229-52ad-45f5-9c0c-b23f127dbf60}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{b95a4d48-2a2f-4074-8937-61b567457b55}">
+      <label languagecode="1033" description="EDD Process" />
+    </steplabels>
+    <steplabels id="{731ef14c-dec9-4dd7-a97b-4d1fc11a41f5}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+  </labels>
+</Workflow>

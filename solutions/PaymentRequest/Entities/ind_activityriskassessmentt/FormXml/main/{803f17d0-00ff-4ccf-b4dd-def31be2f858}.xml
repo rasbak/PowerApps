@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{803f17d0-00ff-4ccf-b4dd-def31be2f858}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{405bd032-65af-4c71-994f-01280d9dec95}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{bfb11ccf-9602-4522-abe6-8303d53310a0}">
+          <labels>
+            <label description="Establish Rationale For Change " languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{b89141a2-77b9-896b-dd78-5bce5b19cb06}" name="StageStep3_section1" labelid="{af78d1f8-7a1e-48e0-ac36-477e4a29026c}">
+                  <labels>
+                    <label description="Establish Rationale For Change " languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b562a052-3169-49aa-82b2-cbc2e357b5b6}" showlabel="true" visible="true" labelid="{908e7835-73a7-4efa-8817-27c9de88896c}">
+                        <labels>
+                          <label description="Rational for Change" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_activityriskassessmentt:ind_rationalforchangeara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_rationalforchangeara" disabled="false" relationship="bpf_ind_ind_operation_ind_activityriskassessmentt" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{53e0bd11-ab3b-4cb1-8b58-c4e0cef94fda}" name="StageStep7" locklevel="0" expanded="true" visible="false" labelid="{3fca9154-c5da-45aa-ac10-e41274718f16}">
+          <labels>
+            <label description="Assess Activity : Banned Activity" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{b51b7d97-a0c6-d9bf-5d27-614bf17cf7a3}" name="StageStep7_section1" labelid="{6ee5aabe-1265-4c01-bafb-d7cc97c9b0e6}">
+                  <labels>
+                    <label description="Assess Activity : Banned Activity" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5202324b-75d0-49f8-9151-f0ba0c362133}" showlabel="true" visible="true" labelid="{71006353-d554-44fb-93e7-644d20011399}">
+                        <labels>
+                          <label description="Banned Activity ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_activityriskassessmentt:ind_bannedactivitylookup" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_bannedactivitylookup" disabled="false" relationship="bpf_ind_ind_operation_ind_activityriskassessmentt" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{25112647-44d3-4b7f-95b1-e35eeaf39b92}" showlabel="true" visible="true" labelid="{321626d6-4e44-474b-9291-eb6ead568f18}">
+                        <labels>
+                          <label description="Banned Activity" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_activityriskassessmentt:ind_bannedactivity" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_bannedactivity" disabled="false" relationship="bpf_ind_ind_operation_ind_activityriskassessmentt" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d544914f-1abd-431c-b0dc-d5e30a2ea272}" showlabel="true" visible="true" labelid="{3864b5d9-0782-4d17-b2b2-676a2fc7f3ec}">
+                        <labels>
+                          <label description="Illegal Banned Activity ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_activityriskassessmentt:ind_illegalbannedactivity" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_illegalbannedactivity" disabled="false" relationship="bpf_ind_ind_operation_ind_activityriskassessmentt" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{37370366-27ce-47a1-9296-a5cade034f1c}" name="StageStep15" locklevel="0" expanded="true" visible="false" labelid="{63c1b87d-9443-4ef8-9469-09dc6c3c144a}">
+          <labels>
+            <label description="Assess Activity : High Risk Activity" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{560ddb4f-85e3-5588-8364-8db3820aba0d}" name="StageStep15_section1" labelid="{f1b30053-6c95-4869-bc54-958e31fd4f90}">
+                  <labels>
+                    <label description="Assess Activity : High Risk Activity" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{98b01017-9875-4861-922f-18480790e24a}" showlabel="true" visible="true" labelid="{df03f918-bb3a-4249-a423-daca3b35e513}">
+                        <labels>
+                          <label description="High Risk Activity ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_activityriskassessmentt:ind_highriskactivitylookup" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_highriskactivitylookup" disabled="false" relationship="bpf_ind_ind_operation_ind_activityriskassessmentt" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0e2a8239-a37a-44f6-8e11-137bb8ffb98e}" showlabel="true" visible="true" labelid="{9344ae6e-73f1-4c89-bbf5-428d481f8d37}">
+                        <labels>
+                          <label description="High Risk Activity ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_activityriskassessmentt:ind_highriskactivity" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_highriskactivity" disabled="false" relationship="bpf_ind_ind_operation_ind_activityriskassessmentt" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{77202ea9-dd64-4572-b32b-59f3a7cf0cb8}" name="StageStep21" locklevel="0" expanded="true" visible="false" labelid="{9dd46105-c83e-4ff0-8606-cfbcee033230}">
+          <labels>
+            <label description="EDD Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{4f5a6029-cc71-2ca2-2d47-297834e2b639}" name="StageStep21_section1" labelid="{d2b76286-0e4d-4b5d-84c9-85f497aef223}">
+                  <labels>
+                    <label description="EDD Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{075492db-b2fd-466d-88cb-843e448a0b33}" showlabel="true" visible="true" labelid="{92201d71-f23c-4e4f-ae45-57c44306106e}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_activityriskassessmentt:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_activityriskassessmentt" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{95a9a82d-513b-491c-8eee-262049230f7e}" name="StageStep25" locklevel="0" expanded="true" visible="false" labelid="{77421ea2-22a4-4c44-9dcc-b31e0bb1f259}">
+          <labels>
+            <label description="Trigger Change In Business Plan" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{6cd17573-3f15-8894-aebd-90b2590a27f1}" name="StageStep25_section1" labelid="{afeca3ab-8a88-4d07-b458-297c53976d56}">
+                  <labels>
+                    <label description="Trigger Change In Business Plan" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b465a0a6-d9b0-4725-acee-f805d77aff71}" showlabel="true" visible="true" labelid="{3ca0757c-101d-4158-96d9-6f352a4f8f73}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_activityriskassessmentt:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_activityriskassessmentt" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{af353c5b-6772-482a-93a1-e149d47e2a2f}" name="StageStep29" locklevel="0" expanded="true" visible="false" labelid="{93b3487a-629b-453f-935a-fa4e5233f210}">
+          <labels>
+            <label description="Transaction Reporting Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{78dcde89-e26d-d63c-c706-a6cd2a11822f}" name="StageStep29_section1" labelid="{37f74146-c58c-45e9-8d2b-4f9510b0e77d}">
+                  <labels>
+                    <label description="Transaction Reporting Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{27ed36e3-24ae-4909-8d58-e3b365517a21}" showlabel="true" visible="true" labelid="{ca527b28-b02f-4fe1-aad4-8c0a92db09c9}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_activityriskassessmentt:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_activityriskassessmentt" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{7a0b2b1f-e8aa-4088-9f8b-eff170f9c040}" name="StageStep33" locklevel="0" expanded="true" visible="false" labelid="{f8ad5214-436c-4804-97cf-143cc37d1215}">
+          <labels>
+            <label description="STR Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{4e8c9916-4628-b8f7-6c65-1cb0271ecb2f}" name="StageStep33_section1" labelid="{9bcdc9df-308d-4841-85ae-f6ebc6742f42}">
+                  <labels>
+                    <label description="STR Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{79e0abf1-6d97-484e-8499-e269c53a4ef9}" showlabel="true" visible="true" labelid="{ce2a038d-3ee5-4f9b-9946-39f01b9f24e0}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_activityriskassessmentt:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_activityriskassessmentt" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

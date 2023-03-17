@@ -1,0 +1,103 @@
+function UpdateField(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idProcess = Xrm.Page.data.process.getActiveProcess().getId();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	var status = Xrm.Page.data.process.getStatus(); //remove handler on finished
+	debugger;
+	//EDD
+	if (idProcess == '46aeeb60-5071-ed11-9562-0022482a4894'){
+		
+		var triggerEDDARA = Xrm.Page.getAttribute("ind_triggereddara").getValue();
+		var triggerEDDJusrisdiction = Xrm.Page.getAttribute("ind_triggereddjur").getValue();
+	
+			
+		
+		
+				if(triggerEDDARA!="Yes"){
+					formContext.getControl("header_process_ind_eddaradetailedinformation").setVisible(false);
+					formContext.getControl("header_process_ind_eddaradocumentationofclientsourceofwealth").setVisible(false);
+					formContext.getControl("header_process_ind_eddaraproceduresontransactionssubstance").setVisible(false);
+					formContext.getControl("header_process_ind_eddaraproposedstakeholders").setVisible(false);
+					formContext.getControl("header_process_ind_eddararegulatoryrequirements").setVisible(false);
+				}
+				
+				
+				
+				if(triggerEDDJusrisdiction!="Yes"){
+					formContext.getControl("header_process_ind_eddjuproposedactivitiesdetailedinformation").setVisible(false);
+					formContext.getControl("header_process_ind_eddjuregulatoryrequirements").setVisible(false);
+					formContext.getControl("header_process_ind_eddjuscreeningofintermediarybanksinvolved").setVisible(false);
+					formContext.getControl("header_process_ind_eddjuscreeningofproposedstakeholders").setVisible(false);
+				}
+		
+		
+	
+		Xrm.Page.data.process.addOnStageChange(UpdateEDD);
+		
+	}	
+	//TRep
+	if (idProcess == 'f5ddf3df-1d7a-ed11-81ad-0022482a4894'){
+		var triggerTRepARA = Xrm.Page.getAttribute("ind_triggertrepara").getValue();
+		var triggerTRepEDD = Xrm.Page.getAttribute("ind_triggertrepedd").getValue();
+		var triggerTRepJur = Xrm.Page.getAttribute("ind_triggertrepjur").getValue();
+		
+		if(triggerTRepARA!="Yes")
+			formContext.getControl("header_process_ind_triggertrepara").setVisible(false);
+		if(triggerTRepEDD!="Yes")
+			formContext.getControl("header_process_ind_triggertrepedd").setVisible(false);
+		if(triggerTRepJur!="Yes")
+			formContext.getControl("header_process_ind_triggertrepjur").setVisible(false);
+		Xrm.Page.data.process.addOnStageChange(UpdateTRep);
+		
+	}
+	//STR
+	if (idProcess == '78951581-8471-ed11-9562-0022482a40f8'){
+		var triggerSTRARA = Xrm.Page.getAttribute("ind_triggerstrara").getValue();
+		var triggerSTREDD = Xrm.Page.getAttribute("ind_triggerstredd").getValue();
+		
+		if(triggerSTRARA!="Yes")
+			formContext.getControl("header_process_ind_triggerstrara").setVisible(false);
+		if(triggerSTREDD!="Yes")
+			formContext.getControl("header_process_ind_triggerstredd").setVisible(false);
+		
+	}
+	//ARA
+	if (idProcess == 'f7f8465a-e570-ed11-9562-0022482a40f8'){
+		var bannedAct = formContext.getControl("header_process_ind_bannedactivitylookup").getAttribute().getValue();
+		
+		if(bannedAct!=undefined){
+			if(bannedAct[0].name=="None"){
+				formContext.getControl("header_process_ind_illegalbannedactivity").setVisible(false);
+			}
+		}
+		else{
+			formContext.getControl("header_process_ind_illegalbannedactivity").setVisible(false);
+		}
+		
+		
+	}
+	
+	if (status == "finished") {
+		
+		Xrm.Page.data.process.removeOnStageChange(UpdateEDD);
+		Xrm.Page.data.process.removeOnStageChange(UpdateTRep);
+		
+		
+	}
+}
+
+
+
+
+function UpdateEDD(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	var statusPR = Xrm.Page.getAttribute("statuscode");
+	
+}
+function UpdateTRep(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	var statusPR = Xrm.Page.getAttribute("statuscode");
+	
+}

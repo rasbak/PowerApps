@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{f57852b9-a289-4ace-8ed6-d6671f39df17}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="bpf_name" select="1" icon="1" preview="1">
+        <row name="result" id="businessprocessflowinstanceid">
+          <cell name="bpf_ind_ind_businessplanid" width="156" />
+          <cell name="activestageid" width="150" />
+          <cell name="processid" width="91" />
+          <cell name="ind_edddocumentduration" width="187" />
+          <cell name="ind_edddocumentvalidationduration" width="256" />
+          <cell name="ind_followupduration" width="177" />
+          <cell name="ind_requestforadditionalinformationduration" width="300" />
+          <cell name="ind_strprocessduration" width="171" />
+          <cell name="ind_transactionreportingprocessduration" width="289" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_bpeddprocess">
+          <attribute name="businessprocessflowinstanceid" />
+          <attribute name="bpf_name" />
+          <attribute name="bpf_ind_ind_businessplanid" />
+          <attribute name="activestageid" />
+          <attribute name="statecode" />
+          <attribute name="createdby" />
+          <attribute name="processid" />
+          <order attribute="bpf_name" descending="false" />
+          <attribute name="ind_edddocumentduration" />
+          <attribute name="ind_edddocumentvalidationduration" />
+          <attribute name="ind_followupduration" />
+          <attribute name="ind_requestforadditionalinformationduration" />
+          <attribute name="ind_strprocessduration" />
+          <attribute name="ind_transactionreportingprocessduration" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active BP EDD Process" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

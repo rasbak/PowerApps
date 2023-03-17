@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{607a57ab-46e4-425e-8e47-1e4e0a75c382}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="ind_accountnumber" select="1" icon="1" preview="1">
+        <row name="result" id="ind_ind_partyaccountid">
+          <cell name="ind_accountnumber" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_ind_partyaccount">
+          <attribute name="ind_ind_partyaccountid" />
+          <attribute name="ind_accountnumber" />
+          <attribute name="createdon" />
+          <order attribute="ind_accountnumber" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inactive ind_PartyAccounts" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

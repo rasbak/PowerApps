@@ -1,0 +1,73 @@
+ function Check (executionContext) {
+      
+
+		var formContext = executionContext.getFormContext();	
+	
+		var stageID = formContext.data.process.getActiveStage().getId();
+		
+	
+		debugger;
+		
+	
+	    if (stageID == '8bea2f77-9824-4015-add7-2c652e798dfe'){
+			//console.log(formContext.getControl());
+			 formContext.getControl("header_process_ind_commentreason").setVisible(false);
+			 formContext.getControl("header_process_ind_commentreason_1").setVisible(false);
+			 formContext.getControl("header_process_ind_commentreason_2").setVisible(false);
+			 formContext.getControl("header_process_ind_commentreason_3").setVisible(false);
+			 formContext.getControl("header_process_ind_commentreason_4").setVisible(false);
+			 formContext.getControl("header_process_ind_commentreason_5").setVisible(false);
+			 formContext.getControl("header_process_ind_commentreason_6").setVisible(false);
+			 formContext.getControl("header_process_ind_commentreason_7").setVisible(false);
+			 formContext.getControl("header_process_ind_commentreason_8").setVisible(false);
+			 formContext.getControl("header_process_ind_commentreason_9").setVisible(false);
+			 formContext.getControl("header_process_ind_commentreason_10").setVisible(false);
+			var paymentID = formContext.data.entity.getId();
+			const response = new XMLHttpRequest();
+			const json = JSON.stringify({
+				id: paymentID	
+			});
+
+		response.open("POST", 'https://prod-162.westus.logic.azure.com:443/workflows/4883aa018fa247179b14597db54771a2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=GOwZCMtno8KosEfTgmQTuOBEW3IFNBzY3-dbJTZdl58');
+		response.setRequestHeader('Content-Type', 'application/json');
+
+		response.send(json);
+		
+		if(Xrm.Page.getAttribute("ind_partyname").getValue()){
+		var nameC = Xrm.Page.getAttribute("ind_partyname").getValue()[0].name;
+		
+				
+				
+				const response = new XMLHttpRequest();
+				const json = JSON.stringify({
+					id: paymentID,
+					name : nameC
+				});
+
+			response.open("POST", 'https://prod-113.westus.logic.azure.com:443/workflows/83bebbbc53d14824ab6a22148c8cde1b/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=lXgnON9gpq8TW1PRvo4cjvACEWog9kL78Qpl2e21k_k');
+			response.setRequestHeader('Content-Type', 'application/json');
+
+			response.send(json);
+			
+		
+	}
+	}
+	if (stageID == 'a3047965-573f-4db4-9578-92ab7819b429'|| stageID == '741c7575-ff3c-4fd8-bdd7-c5e841b9cf38'|| stageID == 'ef0eefaf-e4d5-4ebd-b71b-9432f1c75c61'){
+		
+		formContext.getControl("header_process_ind_commentreason").setVisible(true);
+		formContext.getControl("header_process_ind_commentreason_1").setVisible(true);
+		formContext.getControl("header_process_ind_commentreason_2").setVisible(true);
+			 formContext.getControl("header_process_ind_commentreason_3").setVisible(true);
+			 formContext.getControl("header_process_ind_commentreason_4").setVisible(true);
+			 formContext.getControl("header_process_ind_commentreason_5").setVisible(true);
+			 formContext.getControl("header_process_ind_commentreason_6").setVisible(true);
+			 formContext.getControl("header_process_ind_commentreason_7").setVisible(true);
+			 formContext.getControl("header_process_ind_commentreason_8").setVisible(true);
+			 formContext.getControl("header_process_ind_commentreason_9").setVisible(true);
+			 formContext.getControl("header_process_ind_commentreason_10").setVisible(true);
+	}
+	
+		   
+	
+ }
+	

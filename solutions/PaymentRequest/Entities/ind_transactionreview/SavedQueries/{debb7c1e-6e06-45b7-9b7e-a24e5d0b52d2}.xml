@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{debb7c1e-6e06-45b7-9b7e-a24e5d0b52d2}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="bpf_name" select="1" icon="1" preview="1">
+        <row name="result" id="businessprocessflowinstanceid">
+          <cell name="bpf_ind_ind_operationid" width="140" />
+          <cell name="activestageid" width="110" />
+          <cell name="processid" width="120" />
+          <cell name="ind_performstandardcddduration" width="239" />
+          <cell name="ind_documentsneededduration" width="230" />
+          <cell name="ind_requestfordocumentsduration" width="255" />
+          <cell name="ind_reviewprocessduration" width="205" />
+          <cell name="ind_receivedinplaceduration" width="212" />
+          <cell name="ind_assessdocathandduration" width="220" />
+          <cell name="ind_requestforadditionaldocsclarificationsduration" width="300" />
+          <cell name="ind_eddprocessduration" width="163" />
+          <cell name="ind_proceedwithtransactionmonitoringduration" width="300" />
+          <cell name="ind_strprocessduration" width="156" />
+          <cell name="ind_transactionreportingprocessduration" width="288" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_transactionreview">
+          <attribute name="businessprocessflowinstanceid" />
+          <attribute name="bpf_name" />
+          <attribute name="bpf_ind_ind_operationid" />
+          <attribute name="activestageid" />
+          <attribute name="statecode" />
+          <attribute name="createdby" />
+          <attribute name="processid" />
+          <order attribute="bpf_name" descending="false" />
+          <attribute name="ind_performstandardcddduration" />
+          <attribute name="ind_documentsneededduration" />
+          <attribute name="ind_reviewprocessduration" />
+          <attribute name="ind_receivedinplaceduration" />
+          <attribute name="ind_assessdocathandduration" />
+          <attribute name="ind_requestfordocumentsduration" />
+          <attribute name="ind_requestforadditionaldocsclarificationsduration" />
+          <attribute name="ind_eddprocessduration" />
+          <attribute name="ind_proceedwithtransactionmonitoringduration" />
+          <attribute name="ind_strprocessduration" />
+          <attribute name="ind_transactionreportingprocessduration" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Transaction Review" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

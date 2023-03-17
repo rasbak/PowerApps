@@ -1,0 +1,64 @@
+function hideShowControlVerfificationsOutward2(executionContext){
+	 var idProcess = Xrm.Page.data.process.getActiveProcess().getId();
+	
+		//outward2 
+	if (idProcess=='b2268c54-8770-ed11-9562-0022482a40f8'){
+		 
+				
+		var formContext = executionContext.getFormContext();
+		var inorder1 =  Xrm.Page.getAttribute("ind_inorderoutward2").getValue();
+		var escalrm =  Xrm.Page.getAttribute("ind_requireescalationtorm").getValue();
+		var amount =  Xrm.Page.getAttribute("ind_amountgreaterthan100k").getValue();
+		var inorder3 =  Xrm.Page.getAttribute("ind_inorder3outward2").getValue();
+		var inorder4 =  Xrm.Page.getAttribute("ind_inorder4outward2").getValue();
+		var receved =  Xrm.Page.getAttribute("ind_receivedoutward2").getValue();
+		
+		console.log(executionContext);
+		debugger;
+		//inorder1
+		if(inorder1 == false && escalrm==false){
+			formContext.getControl("header_process_ind_requireescalationtorm").setVisible(true);
+			formContext.getControl("header_process_ind_reasonoutward2").setVisible(true);
+		}
+		else if(inorder1 == false && escalrm==true) {
+			
+			formContext.getControl("header_process_ind_reasonoutward2").setVisible(false);
+		}
+		else {
+			formContext.getControl("header_process_ind_reasonoutward2").setVisible(false);
+			formContext.getControl("header_process_ind_requireescalationtorm").setVisible(false);
+		}
+		//amount
+	 	if(amount == false ){
+			formContext.getControl("header_process_ind_mattertobereprtedtocc").setVisible(true);
+			
+		}else{
+			formContext.getControl("header_process_ind_mattertobereprtedtocc").setVisible(false);
+		}
+		//in order 3
+		if(inorder3 == false ){
+			formContext.getControl("header_process_ind_requireescalationtohoc").setVisible(true);
+			
+		}else{
+			formContext.getControl("header_process_ind_requireescalationtohoc").setVisible(false);
+		}
+		//received successful
+		if(receved == false ){
+			formContext.getControl("header_process_ind_successfuloutward2").setVisible(true);
+			
+		}else{
+			formContext.getControl("header_process_ind_successfuloutward2").setVisible(false);
+		}
+	/*	//in order 4
+		if(inorder4 == false ){
+			formContext.getControl("header_process_ind_mattertobereprtedtocc").setVisible(true);
+			
+		}else{
+			formContext.getControl("header_process_ind_requireescalationtohoc").setVisible(false);
+		}
+	*/
+	
+		
+		
+	}
+}

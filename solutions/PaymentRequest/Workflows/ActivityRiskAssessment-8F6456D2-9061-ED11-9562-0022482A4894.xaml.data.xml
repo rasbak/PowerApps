@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{8f6456d2-9061-ed11-9562-0022482a4894}" Name="Activity Risk Assessment" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/ActivityRiskAssessment-8F6456D2-9061-ED11-9562-0022482A4894.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>ind_activityriskassessmentt</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>ind_ind_Operation</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Activity Risk Assessment" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{405bd032-65af-4c71-994f-01280d9dec95}">
+      <label languagecode="1033" description="Establish Rationale For Change " />
+    </steplabels>
+    <steplabels id="{b562a052-3169-49aa-82b2-cbc2e357b5b6}">
+      <label languagecode="1033" description="Rational for Change" />
+    </steplabels>
+    <steplabels id="{53e0bd11-ab3b-4cb1-8b58-c4e0cef94fda}">
+      <label languagecode="1033" description="Assess Activity : Banned Activity" />
+    </steplabels>
+    <steplabels id="{5202324b-75d0-49f8-9151-f0ba0c362133}">
+      <label languagecode="1033" description="Banned Activity ?" />
+    </steplabels>
+    <steplabels id="{25112647-44d3-4b7f-95b1-e35eeaf39b92}">
+      <label languagecode="1033" description="Banned Activity" />
+    </steplabels>
+    <steplabels id="{d544914f-1abd-431c-b0dc-d5e30a2ea272}">
+      <label languagecode="1033" description="Illegal Banned Activity ?" />
+    </steplabels>
+    <steplabels id="{37370366-27ce-47a1-9296-a5cade034f1c}">
+      <label languagecode="1033" description="Assess Activity : High Risk Activity" />
+    </steplabels>
+    <steplabels id="{98b01017-9875-4861-922f-18480790e24a}">
+      <label languagecode="1033" description="High Risk Activity ?" />
+    </steplabels>
+    <steplabels id="{0e2a8239-a37a-44f6-8e11-137bb8ffb98e}">
+      <label languagecode="1033" description="High Risk Activity ?" />
+    </steplabels>
+    <steplabels id="{77202ea9-dd64-4572-b32b-59f3a7cf0cb8}">
+      <label languagecode="1033" description="EDD Process" />
+    </steplabels>
+    <steplabels id="{075492db-b2fd-466d-88cb-843e448a0b33}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{95a9a82d-513b-491c-8eee-262049230f7e}">
+      <label languagecode="1033" description="Trigger Change In Business Plan" />
+    </steplabels>
+    <steplabels id="{b465a0a6-d9b0-4725-acee-f805d77aff71}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{af353c5b-6772-482a-93a1-e149d47e2a2f}">
+      <label languagecode="1033" description="Transaction Reporting Process" />
+    </steplabels>
+    <steplabels id="{27ed36e3-24ae-4909-8d58-e3b365517a21}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{7a0b2b1f-e8aa-4088-9f8b-eff170f9c040}">
+      <label languagecode="1033" description="STR Process" />
+    </steplabels>
+    <steplabels id="{79e0abf1-6d97-484e-8499-e269c53a4ef9}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+  </labels>
+</Workflow>

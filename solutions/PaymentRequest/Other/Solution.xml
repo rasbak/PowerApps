@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.23021.198" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>PaymentRequest</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Payment Request" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.0.17</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>Indigo</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Indigo" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>ind</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>10000</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="ind_activityriskassessmentt" behavior="0" />
+      <RootComponent type="1" schemaName="ind_bannedactivity" behavior="0" />
+      <RootComponent type="1" schemaName="ind_bpactivityriskassessement" behavior="0" />
+      <RootComponent type="1" schemaName="ind_bpeddprocess" behavior="0" />
+      <RootComponent type="1" schemaName="ind_bpjurisdiction" behavior="0" />
+      <RootComponent type="1" schemaName="ind_bpstrprocess" behavior="0" />
+      <RootComponent type="1" schemaName="ind_bptransactionreporting" behavior="0" />
+      <RootComponent type="1" schemaName="ind_cddidentification" behavior="0" />
+      <RootComponent type="1" schemaName="ind_cddscreening" behavior="0" />
+      <RootComponent type="1" schemaName="ind_changeinbusinessplan" behavior="0" />
+      <RootComponent type="1" schemaName="ind_currency" behavior="0" />
+      <RootComponent type="1" schemaName="ind_customer" behavior="0" />
+      <RootComponent type="1" schemaName="ind_eddprocess" behavior="0" />
+      <RootComponent type="1" schemaName="ind_highriskactivity" behavior="0" />
+      <RootComponent type="1" schemaName="ind_ind_account" behavior="0" />
+      <RootComponent type="1" schemaName="ind_ind_activity" behavior="0" />
+      <RootComponent type="1" schemaName="ind_ind_bank" behavior="0" />
+      <RootComponent type="1" schemaName="ind_ind_businessplan" behavior="0" />
+      <RootComponent type="1" schemaName="ind_ind_contact" behavior="0" />
+      <RootComponent type="1" schemaName="ind_ind_corporateaction" behavior="0" />
+      <RootComponent type="1" schemaName="ind_ind_country" behavior="0" />
+      <RootComponent type="1" schemaName="ind_ind_operation" behavior="0" />
+      <RootComponent type="1" schemaName="ind_ind_partyaccount" behavior="0" />
+      <RootComponent type="1" schemaName="ind_ind_usercontact" behavior="0" />
+      <RootComponent type="1" schemaName="ind_jurisdictionscreening" behavior="0" />
+      <RootComponent type="1" schemaName="ind_ongoingscreening" behavior="0" />
+      <RootComponent type="1" schemaName="ind_outward" behavior="0" />
+      <RootComponent type="1" schemaName="ind_outward2" behavior="0" />
+      <RootComponent type="1" schemaName="ind_party" behavior="0" />
+      <RootComponent type="1" schemaName="ind_pepscreening" behavior="0" />
+      <RootComponent type="1" schemaName="ind_requestforchangeinbusinessplan" behavior="0" />
+      <RootComponent type="1" schemaName="ind_reviewprocess" behavior="0" />
+      <RootComponent type="1" schemaName="ind_sector" behavior="0" />
+      <RootComponent type="1" schemaName="ind_stagesduration" behavior="0" />
+      <RootComponent type="1" schemaName="ind_strprocess" behavior="0" />
+      <RootComponent type="1" schemaName="ind_transaction" behavior="0" />
+      <RootComponent type="1" schemaName="ind_transactionreporting" behavior="0" />
+      <RootComponent type="1" schemaName="ind_transactionreview" behavior="0" />
+      <RootComponent type="1" schemaName="ind_worldcheck" behavior="0" />
+      <RootComponent type="1" schemaName="new_bpf_b21126463e024788a29492e65ed951e3" behavior="0" />
+      <RootComponent type="1" schemaName="new_bpf_b2924b5a1bb144fd877312e032905472" behavior="0" />
+      <RootComponent type="1" schemaName="processstageparameter" behavior="1" />
+      <RootComponent type="1" schemaName="systemuser" behavior="2" />
+      <RootComponent type="1" schemaName="transactioncurrency" behavior="0" />
+      <RootComponent type="29" id="{045363fa-e363-ed11-9562-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{065ecf6f-8266-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{087abff4-6860-ed11-9562-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{10d15e2f-7862-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{1348a6ad-7862-ed11-9562-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{1422cfed-3861-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{14bae384-7d5e-ed11-9562-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{14f127e9-10a6-ed11-aad1-002248243c07}" behavior="0" />
+      <RootComponent type="29" id="{15bcabc9-3d60-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{170fcbdf-9f61-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{1c1dd30d-6760-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{24a85e85-3960-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{25ce7e60-657c-ed11-81ad-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{2670dedb-3b60-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{278de692-8371-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{2f29259d-3d60-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{2fcabf55-5c7c-ed11-81ad-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{31bb69eb-215c-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{36a6181e-3a60-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{3bf91bbd-3a60-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{3fc7e0ba-f760-ed11-9562-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{40e3cf6f-e081-ed11-81ad-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{43e5f5d0-4e72-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{46aeeb60-5071-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{4729a01d-1960-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{47435261-3a60-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{552a0fdd-3c60-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{568355fe-f160-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{5e3dc405-3b61-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{6adbd2b9-2c56-ed11-bba3-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{711fef8d-0161-ed11-9562-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{74cdc960-fa8c-ed11-81ad-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{7597310f-3b60-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{78951581-8471-ed11-9562-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{7a15475c-5c7c-ed11-81ad-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{7c2f4260-c97a-ed11-81ad-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{7c87e18e-db55-ed11-bba3-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{7ca77963-cf90-ed11-aad1-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{7d81dcda-7662-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{8129506a-cf90-ed11-aad1-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{8361a76b-2e6b-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{89365c85-3860-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{8c98dbc3-7458-ed11-9562-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{8f6456d2-9061-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{90c04208-3c60-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{92c6662e-d86b-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{94a0785d-3d60-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{99543dde-3156-ed11-bba3-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{9d23451d-3d60-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{a55deedb-6755-ed11-bba3-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{a9b21d1f-4481-ed11-81ad-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{aafeb1a6-7c71-ed11-9562-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{af9f53ff-a356-ed11-bba3-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{b0710745-578b-ed11-81ad-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{b2112646-3e02-4788-a294-92e65ed951e3}" behavior="0" />
+      <RootComponent type="29" id="{b2268c54-8770-ed11-9562-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{b2924b5a-1bb1-44fd-8773-12e032905472}" behavior="0" />
+      <RootComponent type="29" id="{b4e5aa89-1960-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{b5d2c93b-dc55-ed11-bba3-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{bb450f4d-4475-ed11-81ab-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{c7031191-8c74-ed11-81ab-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{c9db80c9-3860-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{cd72476f-3b60-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{cef2cd5e-aa56-ed11-bba3-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{d542e065-ad95-ed11-aad1-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{d5701cea-dd55-ed11-bba3-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{d87312e1-3960-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{dc03c75b-5c7c-ed11-81ad-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{dc605514-d860-ed11-9562-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{dc6f5203-4475-ed11-81ab-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{de03c75b-5c7c-ed11-81ad-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{df03c75b-5c7c-ed11-81ad-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{e11049ed-4354-ed11-bba3-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{e8596573-3c60-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{e8a74313-985f-ed11-9562-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{f131ee19-9f53-4130-a33b-7a05f0a1b9d7}" behavior="0" />
+      <RootComponent type="29" id="{f304c75b-5c7c-ed11-81ad-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{f5ddf3df-1d7a-ed11-81ad-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{f7f8465a-e570-ed11-9562-0022482a40f8}" behavior="0" />
+      <RootComponent type="29" id="{f9f96729-3960-ed11-9562-0022482a4894}" behavior="0" />
+      <RootComponent type="29" id="{fccc33cf-528b-ed11-81ad-0022482a40f8}" behavior="0" />
+      <RootComponent type="300" schemaName="ind_testcanevas_c4d84" behavior="0" />
+      <RootComponent type="300" schemaName="ind_testgit_d1d41" behavior="0" />
+      <RootComponent type="60" id="{7b00802b-099b-ed11-aad1-0022482a4894}" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_Abort" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_AmountInWords" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_bannedIllegal" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_BpReturnStge" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_BPStepDuration" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_BPUpdateField" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_checks" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_fieldabdator" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_filteringLookup" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_iframe" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_inorderoutward2" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_OGSCheck" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_ReGenerateDoc" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_ReturnStage" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_RoleStage" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_setparty" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_StageDuration" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_SwitchBPF" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_SwitchManualBP" behavior="0" />
+      <RootComponent type="61" schemaName="cr3ae_UpdateBannedHigh" behavior="0" />
+      <RootComponent type="61" schemaName="crfa1_NotifyRole" behavior="0" />
+      <RootComponent type="61" schemaName="ind_CustomCSS" behavior="0" />
+      <RootComponent type="61" schemaName="ind_testHTML" behavior="0" />
+      <RootComponent type="62" schemaName="ind_Paymenrequest" behavior="0" />
+      <RootComponent type="62" schemaName="ind_PaymentRequest" behavior="0" />
+      <RootComponent type="80" schemaName="ind_Paymenrequest" behavior="0" />
+      <RootComponent type="9" schemaName="ind_activitytype" behavior="0" />
+      <RootComponent type="9" schemaName="ind_transactiontype" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_analysisjob" displayName="Analysis Job" solution="msdyn_PowerAppsChecker (1.2.0.198)" />
+        <Dependent type="62" schemaName="ind_PaymentRequest" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_analysisresult" displayName="Analysis Result" solution="msdyn_PowerAppsChecker (1.2.0.198)" />
+        <Dependent type="62" schemaName="ind_PaymentRequest" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_solutionhealthruleset" displayName="Solution Health Rule Set" solution="msdyn_PowerAppsChecker (1.2.0.198)" />
+        <Dependent type="62" schemaName="ind_PaymentRequest" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="processstageparameter" displayName="ProcessStageParameter" solution="MicrosoftFlowExtensionsCore (1.4.19.0)">
+          <package>MicrosoftFlowExtensionsAnchor (1.4.19.0)</package>
+        </Required>
+        <Dependent type="1" schemaName="processstageparameter" displayName="ProcessStageParameter" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="teammobileofflineprofilemembership" displayName="TeamMobileOfflineProfileMembership" solution="MobileOfflineMembership (1.0.0.3)" />
+        <Dependent type="80" schemaName="ind_Paymenrequest" displayName="Paymen request" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Icons/AnalysisJob.svg" displayName="msdyn_/Icons/AnalysisJob.svg" solution="msdyn_PowerAppsChecker (1.2.0.198)" />
+        <Dependent type="62" schemaName="ind_PaymentRequest" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Icons/AnalysisResult.svg" displayName="msdyn_/Icons/AnalysisResult.svg" solution="msdyn_PowerAppsChecker (1.2.0.198)" />
+        <Dependent type="62" schemaName="ind_PaymentRequest" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Icons/SolutionHealthAppModule.svg" displayName="msdyn_/Icons/SolutionHealthAppModule.svg" solution="msdyn_PowerAppsChecker (1.2.0.198)" />
+        <Dependent type="62" schemaName="ind_PaymentRequest" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Icons/SolutionHealthRuleSet.svg" displayName="msdyn_/Icons/SolutionHealthRuleSet.svg" solution="msdyn_PowerAppsChecker (1.2.0.198)" />
+        <Dependent type="62" schemaName="ind_PaymentRequest" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)" />
+        <Dependent type="80" schemaName="ind_Paymenrequest" displayName="Paymen request" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_KMAllowedOriginsInfo.html" displayName="msdyn_KMAllowedOriginsInfo.html" solution="msdynce_KnowledgeManagementPatch (9.0.23011.5031)">
+          <package>msdynce_KnowledgeManagementAnchor (9.0.23011.5031)</package>
+        </Required>
+        <Dependent type="60" displayName="Test" id="{7b00802b-099b-ed11-aad1-0022482a4894}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.ModelForm.ModelFormControl" displayName="MscrmControls.ModelForm.ModelFormControl" solution="BaseCustomControlsCore (9.0.2302.1014)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Operation" id="{04e75d0d-ad0e-40a2-8314-1d2ad7db4d84}" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{33a5e78b-2767-ed11-9562-0022482a40f8}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="ind_name" select="1" icon="1" preview="1">
+        <row name="result" id="ind_ind_operationid">
+          <cell name="ind_name" width="200" />
+          <cell name="ind_customername" width="100" />
+          <cell name="statuscode" width="100" />
+          <cell name="createdon" width="100" />
+          <cell name="ind_transactiontype" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="ind_ind_operation">
+          <attribute name="ind_name" />
+          <attribute name="ind_ind_operationid" />
+          <attribute name="ind_transactiontype" />
+          <filter type="and">
+            <condition attribute="ind_transactiontype" operator="eq" value="100000000" />
+          </filter>
+          <attribute name="ind_customername" />
+          <attribute name="createdon" />
+          <attribute name="statuscode" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inwards" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

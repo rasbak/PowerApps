@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{ec475cc2-583c-48b1-84c7-1197ad0b0c1d}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="bpf_name" select="1" icon="1" preview="1">
+        <row name="result" id="businessprocessflowinstanceid">
+          <cell name="bpf_ind_ind_businessplanid" width="162" />
+          <cell name="activestageid" width="150" />
+          <cell name="processid" width="93" />
+          <cell name="ind_establishrationaleforchangeduration" width="286" />
+          <cell name="ind_assesscountrynogocountryduration" width="283" />
+          <cell name="ind_assesscountryhighriskjurduration" width="286" />
+          <cell name="ind_proceedwithcibpduration" width="196" />
+          <cell name="ind_transactionreportingprocessduration" width="286" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_bpjurisdiction">
+          <attribute name="businessprocessflowinstanceid" />
+          <attribute name="bpf_name" />
+          <attribute name="bpf_ind_ind_businessplanid" />
+          <attribute name="activestageid" />
+          <attribute name="statecode" />
+          <attribute name="createdby" />
+          <attribute name="processid" />
+          <order attribute="bpf_name" descending="false" />
+          <attribute name="ind_establishrationaleforchangeduration" />
+          <attribute name="ind_assesscountrynogocountryduration" />
+          <attribute name="ind_proceedwithcibpduration" />
+          <attribute name="ind_transactionreportingprocessduration" />
+          <attribute name="ind_assesscountryhighriskjurduration" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active BP Jurisdiction" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

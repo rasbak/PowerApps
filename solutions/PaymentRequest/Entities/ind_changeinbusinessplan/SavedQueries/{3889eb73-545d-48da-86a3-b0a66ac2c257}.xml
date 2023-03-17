@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{3889eb73-545d-48da-86a3-b0a66ac2c257}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="bpf_name" select="1" icon="1" preview="1">
+        <row name="result" id="businessprocessflowinstanceid">
+          <cell name="bpf_ind_ind_operationid" width="139" />
+          <cell name="activestageid" width="150" />
+          <cell name="processid" width="137" />
+          <cell name="ind_checklicensingconditionsduration" width="263" />
+          <cell name="ind_prepareupdatedbpduration" width="239" />
+          <cell name="ind_preparebpduration" width="154" />
+          <cell name="ind_reviewdocumentationduration" width="239" />
+          <cell name="ind_amenddocumentduration" width="198" />
+          <cell name="ind_circulatedocsforsignatureduration" width="275" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_changeinbusinessplan">
+          <attribute name="businessprocessflowinstanceid" />
+          <attribute name="bpf_name" />
+          <attribute name="bpf_ind_ind_operationid" />
+          <attribute name="activestageid" />
+          <attribute name="statecode" />
+          <attribute name="createdby" />
+          <attribute name="processid" />
+          <order attribute="bpf_name" descending="false" />
+          <attribute name="ind_checklicensingconditionsduration" />
+          <attribute name="ind_prepareupdatedbpduration" />
+          <attribute name="ind_preparebpduration" />
+          <attribute name="ind_reviewdocumentationduration" />
+          <attribute name="ind_amenddocumentduration" />
+          <attribute name="ind_circulatedocsforsignatureduration" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Change in Business Plan" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

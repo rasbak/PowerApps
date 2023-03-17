@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{f5ddf3df-1d7a-ed11-81ad-0022482a4894}" Name="BP Transaction Reporting" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/BPTransactionReporting-F5DDF3DF-1D7A-ED11-81AD-0022482A4894.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>ind_bptransactionreporting</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.10</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>ind_ind_BusinessPlan</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="BP Transaction Reporting" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{bfa17bd2-f9f4-4170-98ee-211b536c14c3}">
+      <label languagecode="1033" description="Submit Internal Report To Compliance" />
+    </steplabels>
+    <steplabels id="{430dc55f-7b31-4f18-8e90-37fa1b9d234c}">
+      <label languagecode="1033" description="TReporting (Banned activity identified)" />
+    </steplabels>
+    <steplabels id="{5d5c59ad-7dfc-4ac2-be4e-64ebf6d3a6c8}">
+      <label languagecode="1033" description="TReporting (No-go country identified)" />
+    </steplabels>
+    <steplabels id="{b89623ee-d3cf-41cf-84c8-1190b08f3bdb}">
+      <label languagecode="1033" description="TReporting (One month Late EDD)" />
+    </steplabels>
+    <steplabels id="{eeded575-5b0f-4e18-99e9-496a51b2c519}">
+      <label languagecode="1033" description="Internal Report" />
+    </steplabels>
+    <steplabels id="{903f5d54-ea3e-4835-aedb-d1b70f313b4a}">
+      <label languagecode="1033" description="Review And Issue Compliance Report" />
+    </steplabels>
+    <steplabels id="{c5fa7c45-ed24-468a-b39c-4cc0c7d44e71}">
+      <label languagecode="1033" description="Internal Report" />
+    </steplabels>
+    <steplabels id="{19014a21-dbff-4c46-acc1-5793c27eb087}">
+      <label languagecode="1033" description="Holding Of External Comittee" />
+    </steplabels>
+    <steplabels id="{fb13e5fc-87b7-4b9f-aa67-f70be357ee6e}">
+      <label languagecode="1033" description="Decision CC" />
+    </steplabels>
+    <steplabels id="{64e196f1-8d5b-4791-8ff1-5a1827ab2931}">
+      <label languagecode="1033" description="Reason Decision CC" />
+    </steplabels>
+    <steplabels id="{789e7023-8eed-486a-b32b-895fa001916f}">
+      <label languagecode="1033" description="May Proceed With Change In Business Plan" />
+    </steplabels>
+    <steplabels id="{eb57284b-810c-4e9d-b536-2b4ac307d9bb}">
+      <label languagecode="1033" description="Recommend further actions/clarifications/documents ?" />
+    </steplabels>
+    <steplabels id="{96de7abc-ea2f-4773-b1d2-7108035bca54}">
+      <label languagecode="1033" description="Request For Additional Docs/ Clarifications" />
+    </steplabels>
+    <steplabels id="{fcb7c2b8-c2e5-4d6c-ba2b-9b767e93b289}">
+      <label languagecode="1033" description="Additional Docs" />
+    </steplabels>
+    <steplabels id="{8cd235a9-31cb-4cb0-90d2-c2bd991696b9}">
+      <label languagecode="1033" description="Received ?" />
+    </steplabels>
+    <steplabels id="{3db47465-4c4a-41ca-bb6c-574e57a0b90f}">
+      <label languagecode="1033" description="Request Aborted" />
+    </steplabels>
+    <steplabels id="{c58aa018-760a-46b3-b377-c3fc57966049}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{e577741f-01c5-4665-9c75-b931bc736a71}">
+      <label languagecode="1033" description="Validate Docs" />
+    </steplabels>
+    <steplabels id="{2306ad1b-5849-45be-84e3-c216f96f89ef}">
+      <label languagecode="1033" description="Validate ?" />
+    </steplabels>
+    <steplabels id="{e8644c48-af09-4f99-a3b5-315eab2b3faf}">
+      <label languagecode="1033" description="Request Aborted" />
+    </steplabels>
+    <steplabels id="{39e0e121-0be6-4b6b-9c51-4d39171aa479}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{51acfb26-958f-4908-a173-2ae8b0bbeabe}">
+      <label languagecode="1033" description="Circulate For Approval" />
+    </steplabels>
+    <steplabels id="{bebc3593-fd7e-41d9-83eb-0da676f16aed}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{57944bb3-3fea-4273-a2bd-a7d173c5e334}">
+      <label languagecode="1033" description="Continue With Change In Business Plan Process" />
+    </steplabels>
+    <steplabels id="{fc497348-f1d8-4aa5-b850-9a1a09b9d2eb}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{04d2e5c1-a556-4a1e-99b9-18bd44706039}">
+      <label languagecode="1033" description="Inform Customer" />
+    </steplabels>
+    <steplabels id="{9de3afdd-b68e-4edd-a5c8-646486fb8154}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{2b99b3ea-f9d7-4d13-be73-8319a4329346}">
+      <label languagecode="1033" description="Request Aborted" />
+    </steplabels>
+    <steplabels id="{6b23cd09-d764-4ba4-aecf-4713db95baaa}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{e6fa2203-fc86-46b6-9867-5cea24509049}">
+      <label languagecode="1033" description="Take Note" />
+    </steplabels>
+    <steplabels id="{7eaf6641-be2f-49d9-be20-bcd452b74717}">
+      <label languagecode="1033" description="Note" />
+    </steplabels>
+    <steplabels id="{27c2eb64-3472-43c4-9a52-88517820cfa8}">
+      <label languagecode="1033" description="Request Aborted" />
+    </steplabels>
+    <steplabels id="{005c2830-5a34-43ba-9af7-0397db7043a4}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+  </labels>
+</Workflow>

@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{3ead77b6-0478-492b-bbd0-64646a830516}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{b16e68da-2e2e-46b5-89b3-a1010492cc18}" IsUserDefined="1" name="all">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="50%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{bdaaba60-72f5-417b-b4b0-fda87f4522cb}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{fbcb5f77-875e-4a39-a4bc-00f20f0ea707}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="ind_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ind_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{188663a9-0c28-4661-89d5-81eaf7e07452}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Customer" languagecode="1033" />
+                        </labels>
+                        <control id="ind_customer" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ind_customer" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5003139d-3de9-454a-ac59-dbe0b9e4826a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Party" languagecode="1033" />
+                        </labels>
+                        <control id="ind_party" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ind_party" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a0fc51e4-91f8-4bc4-8ef8-6053935513d4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Activity" languagecode="1033" />
+                        </labels>
+                        <control id="ind_activity" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ind_activity" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9f043a59-219e-48a5-bcac-02c175fc6292}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Sector" languagecode="1033" />
+                        </labels>
+                        <control id="ind_sector" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ind_sector" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8843437c-5352-4b95-8589-3c12a9512599}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Country" languagecode="1033" />
+                        </labels>
+                        <control id="ind_country" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ind_country" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="all_section_3" id="4c245159-d097-42a7-ae5d-6717aae48dc8" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="false">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{370707dd-0e66-417c-a603-d1f91f0bc664}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description=" EDD JU proposed activities Detailed information" languagecode="1033" />
+                        </labels>
+                        <control id="ind_eddjuproposedactivitiesdetailedinformation" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_eddjuproposedactivitiesdetailedinformation" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{161c6796-824b-4a1e-8d61-694cd9704342}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Additional Docs TRep" languagecode="1033" />
+                        </labels>
+                        <control id="ind_additionaldocstrep" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_additionaldocstrep" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0d27bfe0-48cb-4cd3-abcc-33e5867e7541}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Additional Informations EDD" languagecode="1033" />
+                        </labels>
+                        <control id="ind_additionalinformationsedd" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_additionalinformationsedd" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{280d3c66-a5d5-49cb-b22d-65bade31e192}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Approval Letter BP" languagecode="1033" />
+                        </labels>
+                        <control id="ind_approvalletterbp" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_approvalletterbp" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a323f449-6c0e-4060-bc5a-bbbca57d1bed}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Business Plan Document" languagecode="1033" />
+                        </labels>
+                        <control id="ind_businessplandocument" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_businessplandocument" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{de2c7f13-5cf3-416e-a744-903a56330908}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Change in Activity" languagecode="1033" />
+                        </labels>
+                        <control id="ind_changeinactivity" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_changeinactivity" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{254bc45f-b55e-44a3-9849-8e94621b2939}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Change in Business Plan Required" languagecode="1033" />
+                        </labels>
+                        <control id="ind_changeinbusinessplanrequired" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_changeinbusinessplanrequired" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1bf54247-580c-49ad-b888-9fe3fb2be774}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Conclusion of Investigation Report" languagecode="1033" />
+                        </labels>
+                        <control id="ind_conclusionofinvestigationreport" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_conclusionofinvestigationreport" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0816ae8c-4032-4109-9295-f7e28f3addfe}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Confirmation Letter" languagecode="1033" />
+                        </labels>
+                        <control id="ind_confirmationletter" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_confirmationletter" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0fc4d520-e25f-4fa7-80c3-7223a47fd002}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Created By" languagecode="1033" />
+                        </labels>
+                        <control id="createdby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="createdby" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{684efad6-23f6-444a-84a0-35746c36b8bc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Created By (Delegate)" languagecode="1033" />
+                        </labels>
+                        <control id="createdonbehalfby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="createdonbehalfby" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7acbc70a-dd5c-498a-abd7-ccdac7fe37ea}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Created On" languagecode="1033" />
+                        </labels>
+                        <control id="createdon" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="createdon" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5647c57d-75c8-417c-8fe3-d521ff5f34f5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Decision CC" languagecode="1033" />
+                        </labels>
+                        <control id="ind_decisioncc" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="ind_decisioncc" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6ce85a39-57b2-42d9-9318-cf073d4bf81a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Document's Details" languagecode="1033" />
+                        </labels>
+                        <control id="ind_documentsdetails" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ind_documentsdetails" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c3b6fcac-fb3b-46e2-81a3-346aace67f1c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Doubt/Suspicion EDD" languagecode="1033" />
+                        </labels>
+                        <control id="ind_doubtsuspicionedd" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_doubtsuspicionedd" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1ce5b7ed-f272-4adb-abef-c47b0d87e97a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="EDD ARA Detailed information" languagecode="1033" />
+                        </labels>
+                        <control id="ind_eddaradetailedinformation" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_eddaradetailedinformation" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0999ba62-5821-4486-88c5-cc5aaaf4cbb8}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="EDD ARA Documentation of client source of wealth" languagecode="1033" />
+                        </labels>
+                        <control id="ind_eddaradocumentationofclientsourceofwealth" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_eddaradocumentationofclientsourceofwealth" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{09fb6da7-0040-4bd4-8c86-d658ee17d9e9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="EDD ARA procedures on transaction’s substance" languagecode="1033" />
+                        </labels>
+                        <control id="ind_eddaraproceduresontransactionssubstance" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_eddaraproceduresontransactionssubstance" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{09f7445c-b683-4d39-9df3-19ebbf9a6748}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="EDD ARA Proposed stakeholders" languagecode="1033" />
+                        </labels>
+                        <control id="ind_eddaraproposedstakeholders" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_eddaraproposedstakeholders" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b71af8da-001a-4b16-88b1-471a76d648f6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="EDD ARA Regulatory requirements" languagecode="1033" />
+                        </labels>
+                        <control id="ind_eddararegulatoryrequirements" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_eddararegulatoryrequirements" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{29eb7ca7-8b15-40e2-bc8d-76fd093b06bb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="EDD JU Regulatory requirements" languagecode="1033" />
+                        </labels>
+                        <control id="ind_eddjuregulatoryrequirements" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_eddjuregulatoryrequirements" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b70483ee-1e58-4a30-92e4-00b4a16fbf4e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="EDD JU Screening of intermediary banks involved" languagecode="1033" />
+                        </labels>
+                        <control id="ind_eddjuscreeningofintermediarybanksinvolved" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_eddjuscreeningofintermediarybanksinvolved" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1509d0ae-f4db-4322-95c7-258d6ab1a35b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="EDD JU Screening of proposed stakeholders" languagecode="1033" />
+                        </labels>
+                        <control id="ind_eddjuscreeningofproposedstakeholders" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_eddjuscreeningofproposedstakeholders" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dfbafb8e-38e9-4111-ba46-18cd325186de}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="External Report Log" languagecode="1033" />
+                        </labels>
+                        <control id="ind_externalreportlog" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_externalreportlog" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{25d279ab-96d3-4401-a50a-15b5d864202e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="FSC approval required" languagecode="1033" />
+                        </labels>
+                        <control id="ind_fscapprovalrequired" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_fscapprovalrequired" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{42ddfb13-89b6-414d-b37f-0cf9a07322fe}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="High Risk Activity" languagecode="1033" />
+                        </labels>
+                        <control id="ind_highriskactivity" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_highriskactivity" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8884f5ec-8116-4121-b760-67de07dea214}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="High Risk Activity EDD Document" languagecode="1033" />
+                        </labels>
+                        <control id="ind_highriskactivityedddocument" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_highriskactivityedddocument" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{86cf46b0-0f65-4717-a27d-2867a9200eb2}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="High Risk Jurisdiction EDD Document" languagecode="1033" />
+                        </labels>
+                        <control id="ind_highriskjurisdictionedddocument" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_highriskjurisdictionedddocument" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{19b1dcf3-9b81-4e13-8529-dff972b98c1c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="High risk jurisdiction identified" languagecode="1033" />
+                        </labels>
+                        <control id="ind_highriskjurisdictionidentified" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_highriskjurisdictionidentified" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{57ac48ba-7046-4a2d-81de-630559d061fd}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Internal Report Log" languagecode="1033" />
+                        </labels>
+                        <control id="ind_internalreportlog" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_internalreportlog" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7605293b-fe68-419d-942e-d324a553a5a6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Internal Report TRep" languagecode="1033" />
+                        </labels>
+                        <control id="ind_internalreporttrep" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_internalreporttrep" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4a60f7b3-57f5-47f3-ac2e-78afb66686be}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Jusrisdiction" languagecode="1033" />
+                        </labels>
+                        <control id="ind_jusrisdiction" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_jusrisdiction" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{196075cd-034b-4c39-abcc-999da551b817}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Modified By" languagecode="1033" />
+                        </labels>
+                        <control id="modifiedby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="modifiedby" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e65f6ef6-cca5-4218-96f5-9a4fb583aa82}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Modified By (Delegate)" languagecode="1033" />
+                        </labels>
+                        <control id="modifiedonbehalfby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="modifiedonbehalfby" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5c121b40-5938-4d64-96bd-7f8899f67d4f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Modified On" languagecode="1033" />
+                        </labels>
+                        <control id="modifiedon" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="modifiedon" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b10ff43b-e2f4-40e2-9f96-4c1b25dbeab1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="No-go country identified" languagecode="1033" />
+                        </labels>
+                        <control id="ind_nogocountryidentified" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_nogocountryidentified" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7737c8ca-e9e4-4733-b205-c55b6e8553b0}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Note" languagecode="1033" />
+                        </labels>
+                        <control id="ind_note" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ind_note" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e105b8d2-b2a4-4182-b981-9f9bf1a6b693}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Owning Business Unit" languagecode="1033" />
+                        </labels>
+                        <control id="owningbusinessunit" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="owningbusinessunit" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9b8a6b4a-c7c9-458d-bf19-177b21f880cb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Rational For Change" languagecode="1033" />
+                        </labels>
+                        <control id="ind_rationalforchange" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_rationalforchange" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9ca1ca65-da60-4f1a-8c7b-2b1ed3c70ecb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Rational for Change ARA" languagecode="1033" />
+                        </labels>
+                        <control id="ind_rationalforchangeara" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_rationalforchangeara" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fc772287-5ba3-4cbb-aa13-71c052fa1dd7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Reason Decision CC" languagecode="1033" />
+                        </labels>
+                        <control id="ind_reasondecisioncc" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ind_reasondecisioncc" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{27d37ae1-3972-459b-9676-3656e16fa92b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Received EDD" languagecode="1033" />
+                        </labels>
+                        <control id="ind_receivededd" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_receivededd" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dfdbd2fe-6195-4d0c-87af-0c1d3610ec68}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Received TRep" languagecode="1033" />
+                        </labels>
+                        <control id="ind_receivedtrep" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_receivedtrep" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{472dfdeb-e5b5-41c4-ba8e-17eb787ea068}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Recommand TRep" languagecode="1033" />
+                        </labels>
+                        <control id="ind_recommandtrep" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_recommandtrep" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{059471df-51d6-4bbe-bf99-e8c15780ef6d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Resolution Doc BP" languagecode="1033" />
+                        </labels>
+                        <control id="ind_resolutiondocbp" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_resolutiondocbp" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4ea525f5-ba54-4f3a-8ffe-2979879cf6e4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Satisfactory" languagecode="1033" />
+                        </labels>
+                        <control id="ind_satisfactory" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_satisfactory" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3b6a3afa-9895-42c9-a7fb-2fde92f64097}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Satisfactory STR" languagecode="1033" />
+                        </labels>
+                        <control id="ind_satisfactorystr" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_satisfactorystr" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{29891c50-4cfe-445d-9c9b-a216ec75a6cb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Satisfactory STR2" languagecode="1033" />
+                        </labels>
+                        <control id="ind_satisfactorystr2" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_satisfactorystr2" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{94e897af-8c23-4467-a094-b0fbefe25678}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="statecode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statecode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{646e4365-47e5-4ca2-86f7-01d979f55173}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Status Reason" languagecode="1033" />
+                        </labels>
+                        <control id="statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2e509d3e-33da-4252-bcc9-a0857b107e6f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="STR Report" languagecode="1033" />
+                        </labels>
+                        <control id="ind_strreport" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_strreport" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{10e62bd9-a20a-49e2-bb17-3916e473c55a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Successful EDD" languagecode="1033" />
+                        </labels>
+                        <control id="ind_successfuledd" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_successfuledd" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{32b002ba-fc34-4c27-ad7f-0b70cecfa0ac}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Sufficient EDD Report" languagecode="1033" />
+                        </labels>
+                        <control id="ind_sufficienteddreport" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="ind_sufficienteddreport" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5cbcb257-4e06-4f69-b327-fa2a0d0926e5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="triggerEDDARA" languagecode="1033" />
+                        </labels>
+                        <control id="ind_triggereddara" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ind_triggereddara" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{02380ecb-62b1-4f44-bf41-f9a2e9a932f3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="triggerEDDJur" languagecode="1033" />
+                        </labels>
+                        <control id="ind_triggereddjur" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ind_triggereddjur" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{736d5ef1-6682-4f68-addb-3baa1f4b8eff}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="triggerSTRARA" languagecode="1033" />
+                        </labels>
+                        <control id="ind_triggerstrara" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ind_triggerstrara" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a0f1a205-dbdf-4761-b5b9-d619791eea16}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="triggerSTREDD" languagecode="1033" />
+                        </labels>
+                        <control id="ind_triggerstredd" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ind_triggerstredd" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{34df7bcb-921e-4c3c-a2c6-b2c2a1c75425}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="triggerTrepARA" languagecode="1033" />
+                        </labels>
+                        <control id="ind_triggertrepara" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ind_triggertrepara" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{411e1f36-0f62-4194-a57f-6bd27d6f020c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="triggerTRepEDD" languagecode="1033" />
+                        </labels>
+                        <control id="ind_triggertrepedd" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ind_triggertrepedd" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{54b5ec94-326b-44ad-b65a-f04bbad39799}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="triggerTRepJur" languagecode="1033" />
+                        </labels>
+                        <control id="ind_triggertrepjur" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ind_triggertrepjur" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{07b6a0df-4699-4bea-b9bc-c2eb21170cc9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Unusual transaction report" languagecode="1033" />
+                        </labels>
+                        <control id="ind_unusualtransactionreport" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_unusualtransactionreport" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{13b9947e-ff1e-4c67-8447-d36726801a04}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Validate TRep" languagecode="1033" />
+                        </labels>
+                        <control id="ind_validatetrep" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_validatetrep" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bb067978-9570-4a3c-8771-f3861e63bdc9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="World Check File" languagecode="1033" />
+                        </labels>
+                        <control id="ind_worldcheckfile" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="ind_worldcheckfile" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%">
+              <sections>
+                <section name="_section_80" id="22e92b28-f071-4898-bf3d-b256c1c216cd" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="false">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b9ad142f-a5c7-40b1-ad65-cbc1b3de680c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Banned Activity lookup" languagecode="1033" />
+                        </labels>
+                        <control id="ind_bannedactivitylookup" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ind_bannedactivitylookup" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{e965833a-744a-44d1-8426-76ec515e6431}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{c96397a3-5a7c-4b07-b854-f5f6a686783f}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{720c1ada-3a53-4e39-af82-9b36c603f8f3}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{ced661bd-c3b0-4fa9-a873-538d585444d0}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{f784aba5-0b14-46cb-ab4d-cd08b9b87825}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{735c4eb9-2056-42d9-84a8-5a3397184ee5}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{ce84fbfe-df2a-4ca6-93e5-82a9fd59ed3a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{9d178f82-095d-4b97-836c-e189e5bf09ae}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{03a31fc2-8168-452c-abba-556a17f7a3c3}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+      <formLibraries>
+        <Library name="cr3ae_BPUpdateField" libraryUniqueId="{be18c342-e27f-4a37-bf0c-a4030a07b910}" />
+        <Library name="cr3ae_SwitchManualBP" libraryUniqueId="{f7809727-0bb4-43de-8e10-04f927d8bf96}" />
+        <Library name="cr3ae_bannedIllegal" libraryUniqueId="{2febf899-a36d-4ab5-89b9-26d4a880b2c1}" />
+        <Library name="cr3ae_BpReturnStge" libraryUniqueId="{43cbe8af-ab86-4498-bb81-6a824465f0d4}" />
+        <Library name="cr3ae_BPStepDuration" libraryUniqueId="{bc8f70b3-1925-4505-bd29-35b6e4a61c35}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="UpdateField" libraryName="cr3ae_BPUpdateField" handlerUniqueId="{3436d114-f71e-4372-855d-afb9fb7f6788}" enabled="true" parameters="" passExecutionContext="true" />
+            <Handler functionName="BPFEvent" libraryName="cr3ae_SwitchManualBP" handlerUniqueId="{aa10c2c3-1465-44b5-a17b-20b075f799b4}" enabled="true" parameters="" passExecutionContext="true" />
+            <Handler functionName="BPReturnStage" libraryName="cr3ae_BpReturnStge" handlerUniqueId="{9a4110fe-acc5-4aea-a1f4-f51e86982bb3}" enabled="true" parameters="" passExecutionContext="false" />
+            <Handler functionName="StepDuration" libraryName="cr3ae_BPStepDuration" handlerUniqueId="{b5d1a82e-3cbb-4c8e-95a7-1e8e1106fb10}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="ind_bannedactivitylookup">
+          <Handlers>
+            <Handler functionName="bannedIllegalVisibility" libraryName="cr3ae_bannedIllegal" handlerUniqueId="{1227e3f4-82cf-47b6-94db-044f07a11871}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{3741dde5-91d5-4574-b442-4ca9d9c45032}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{61fe73fc-ef74-4b06-9515-b02d20389365}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{f0e23368-3fba-4138-9c18-d01b6c31ed4a}">
+          <labels>
+            <label description="Prepare Unusual Transaction Report " languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{cdcd915a-cc5d-f43f-6393-eae43b55e0ad}" name="StageStep3_section1" labelid="{569f1fcf-d75d-4e34-80e6-d6fbab91e5f2}">
+                  <labels>
+                    <label description="Prepare Unusual Transaction Report " languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5d41c74a-9b10-41ea-8988-6b6b027c5c0a}" showlabel="true" visible="true" labelid="{0ff8441f-c016-4add-a8d5-53a2f15b0ad5}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion TR)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_triggerstrtr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrtr" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3565190a-2ec4-47b1-a064-95e7a86f35c8}" showlabel="true" visible="true" labelid="{dc721753-15d7-40fa-883f-8a283d1f285d}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_triggerstrongoing" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrongoing" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{41850d4f-350a-424b-b0f8-28b66fa92804}" showlabel="true" visible="true" labelid="{c776d005-2e4a-4764-a38d-188447245fe7}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion EDD)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_triggerstredd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstredd" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d54bd85f-6c08-4eda-a86e-599a580a72cb}" showlabel="true" visible="true" labelid="{09a8b49b-2693-4516-b851-bac402da475c}">
+                        <labels>
+                          <label description="STR (Sanctioned Person)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_triggerstrcdds" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcdds" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4589cd77-3f7c-4bc9-9210-eaf6c847b1c9}" showlabel="true" visible="true" labelid="{28f88a07-c114-4b30-b428-9972d3c4d335}">
+                        <labels>
+                          <label description="STR (Doubt/Suspicion CDDI)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_triggerstrcddi" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrcddi" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7e50af67-47d2-4ea3-810e-ead6ed98f8ed}" showlabel="true" visible="true" labelid="{06e6869d-4525-4a45-a56f-e85bf6ed549d}">
+                        <labels>
+                          <label description="STR (illegal banned activity)" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_triggerstrara" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_triggerstrara" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d4014ac2-fc41-441f-9b72-ba81045e5339}" showlabel="true" visible="true" labelid="{c54a5c70-cef1-49ca-ba70-19f28803d6b2}">
+                        <labels>
+                          <label description="Unusual transaction report" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_unusualtransactionreport" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_unusualtransactionreport" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{b22af40c-0ea9-4bf7-8857-87a799cfe363}" name="StageStep19" locklevel="0" expanded="true" visible="false" labelid="{ab9042d0-7cb9-4fa5-94c6-894ffd47e589}">
+          <labels>
+            <label description="Update Internal Report Log" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{089c9f20-2c66-4629-5caa-080412d7c05d}" name="StageStep19_section1" labelid="{e50ccb9c-a14c-4234-9bad-945ef347f6d8}">
+                  <labels>
+                    <label description="Update Internal Report Log" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{53436cb3-c489-4d8e-b7e6-95a788bc00cf}" showlabel="true" visible="true" labelid="{1825f599-a2f2-4bf4-8f10-02001550d404}">
+                        <labels>
+                          <label description="Internal Report Log" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_internalreportlog" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_internalreportlog" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{7d7146a5-420b-4f54-b844-cd5d8a6894c8}" name="StageStep23" locklevel="0" expanded="true" visible="false" labelid="{a4efd18c-afa2-4da0-b446-3bc67110f877}">
+          <labels>
+            <label description="Performs Transaction And Behaviour Analysis" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{5a529d80-8cb3-9468-61e5-56e121cfc240}" name="StageStep23_section1" labelid="{5706311e-7361-4169-9631-87c8e075b854}">
+                  <labels>
+                    <label description="Performs Transaction And Behaviour Analysis" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5faf3864-7aed-49d4-acc2-dd46f12f0bb9}" showlabel="true" visible="true" labelid="{a2bb050e-ca65-44ee-ae17-7cdbcd93a175}">
+                        <labels>
+                          <label description="Satisfactory ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_satisfactorystr" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_satisfactorystr" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{877ad773-c2b7-4792-8bc4-5bd300af20ff}" name="StageStep27" locklevel="0" expanded="true" visible="false" labelid="{58210c29-8371-44d1-be4c-2e62923898d3}">
+          <labels>
+            <label description="Perform Screening And Due Diligence" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{1b8d6ea6-9825-52f9-a867-39ab9c9aa5b1}" name="StageStep27_section1" labelid="{3f30c4fc-6afb-47a8-b61c-1e50e05ab6e2}">
+                  <labels>
+                    <label description="Perform Screening And Due Diligence" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b06d275f-eb90-43c1-9adb-58069c448b09}" showlabel="true" visible="true" labelid="{ddcf75d4-b0ed-4009-aaf1-dc0585b32444}">
+                        <labels>
+                          <label description="World Check File" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_worldcheckfile" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="ind_worldcheckfile" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{45c7b59d-fc87-40e5-9479-6e47f9348f31}" showlabel="true" visible="true" labelid="{05170e9e-4989-477a-92bc-b47a92c32c77}">
+                        <labels>
+                          <label description="Satisfactory ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_satisfactorystr2" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_satisfactorystr2" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{a6e20d6b-5662-4d6c-99d4-d9822fee84cc}" name="StageStep33" locklevel="0" expanded="true" visible="false" labelid="{525be961-a7a7-4d86-a9a2-7ef19d773b99}">
+          <labels>
+            <label description="Conclusion Of Investigation Report" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{5710f6a8-7212-4de3-a9df-92e0701c2bdb}" name="StageStep33_section1" labelid="{844afabf-1ad6-4b3d-9e49-2a609eb81de7}">
+                  <labels>
+                    <label description="Conclusion Of Investigation Report" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f157d659-0b4b-4586-8e20-9eb893eac02e}" showlabel="true" visible="true" labelid="{fd74124b-c661-4acc-b5ab-5761b9403b1e}">
+                        <labels>
+                          <label description="Conclusion of Investigation Report" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_conclusionofinvestigationreport" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_conclusionofinvestigationreport" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{13a03fd3-1bde-42ed-9491-9f0125e5c0e2}" name="StageStep37" locklevel="0" expanded="true" visible="false" labelid="{979a7985-04ce-42e9-8f13-abe042c833f4}">
+          <labels>
+            <label description="Update Internal Report Log" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{23e4adbc-c36d-cf07-e85c-1c6a9ae13d2f}" name="StageStep37_section1" labelid="{e0c62118-bfd0-4cbd-afc8-f14c3e7585db}">
+                  <labels>
+                    <label description="Update Internal Report Log" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{92aa08cb-2d09-4f75-8356-25c8b29e9862}" showlabel="true" visible="true" labelid="{af3eff76-efe0-4d59-85f3-2eb615e2d133}">
+                        <labels>
+                          <label description="Internal Report Log" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_evidanceofdelivrable" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_evidanceofdelivrable" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{654d4eae-3f86-49cc-a45d-59881420bde5}" name="StageStep41" locklevel="0" expanded="true" visible="false" labelid="{63e5bfdf-aa7d-484c-abcc-74ef7065fade}">
+          <labels>
+            <label description="Proceed With Transaction Monitoring Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{60a0f0d1-c24a-7b35-9564-6cbf9994329a}" name="StageStep41_section1" labelid="{8fb1e699-397a-4893-8300-18e163fd4e8f}">
+                  <labels>
+                    <label description="Proceed With Transaction Monitoring Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{11e9df8e-64a6-463c-8c52-9835d9f3c3d6}" showlabel="true" visible="true" labelid="{0d57dfb2-4d03-4dfa-a79e-7b02880cbd32}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{4800fe1a-df7b-4659-99da-22e0276ba9c8}" name="StageStep45" locklevel="0" expanded="true" visible="false" labelid="{f5bcf8a8-53be-4dff-b695-0ddba8ed490c}">
+          <labels>
+            <label description="File STR With FIU" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{76f68670-b6ba-57eb-f2be-8211d3cbec33}" name="StageStep45_section1" labelid="{aefd9658-0cfe-435d-bc91-02c482e71fa5}">
+                  <labels>
+                    <label description="File STR With FIU" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f6c8481a-f643-4a3c-8453-1dd9a3ad10d1}" showlabel="true" visible="true" labelid="{bc2f6c34-7194-4580-951d-709ff6d3cd4f}">
+                        <labels>
+                          <label description="STR Report" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_strreport" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_strreport" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{b6c66e12-30b5-4819-8fbb-17080833c4cf}" name="StageStep49" locklevel="0" expanded="true" visible="false" labelid="{dd2c4ccb-1d23-4324-aec4-8bc3c028124e}">
+          <labels>
+            <label description="Updates External Report Log" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{ea246e82-7fc2-bb22-9545-07a7f60dc9e0}" name="StageStep49_section1" labelid="{f357f81a-5912-4df7-8b98-141498367a30}">
+                  <labels>
+                    <label description="Updates External Report Log" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{47d7a8bd-9b4e-4e9c-819f-427d26ea2545}" showlabel="true" visible="true" labelid="{d7ecb33f-4ac1-45af-9e37-0f9c06fafe7f}">
+                        <labels>
+                          <label description="External Report Log" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_externalreportlog" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_externalreportlog" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{3d38205b-0d14-439b-8513-962e2ec61ff1}" name="StageStep53" locklevel="0" expanded="true" visible="false" labelid="{f2fd1b90-f8db-4ec4-8341-790336f70036}">
+          <labels>
+            <label description="Request Aborted" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{230fd0e3-7571-ad70-bc69-97bc4b62365a}" name="StageStep53_section1" labelid="{90851fc1-649e-435b-a5c3-b36af65a5acf}">
+                  <labels>
+                    <label description="Request Aborted" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{fa53e5f2-7360-4961-9e41-3c65151454f9}" showlabel="true" visible="true" labelid="{09255d3d-ed1d-483e-bdb6-d6feecb15df0}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{d29327ec-a074-47b1-b9c8-893dd4d91351}" name="StageStep57" locklevel="0" expanded="true" visible="false" labelid="{b5e635c5-5396-48cf-a1d3-922177d744d7}">
+          <labels>
+            <label description="File STR With FIU" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{e2142f42-eda1-f711-1702-c7209ba0818a}" name="StageStep57_section1" labelid="{7ec1bb41-187b-48cf-bd5d-bc70531c1b7f}">
+                  <labels>
+                    <label description="File STR With FIU" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c771484d-008d-400f-aafb-d89ee9f40f94}" showlabel="true" visible="true" labelid="{c25f466d-8adc-45ff-92da-693d41885832}">
+                        <labels>
+                          <label description="STR Report" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_strreport" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_strreport" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{08c8fd92-3189-43f9-a1bc-7ebf48ac641b}" name="StageStep61" locklevel="0" expanded="true" visible="false" labelid="{81f7d154-e5c1-42c6-9a93-72eb5a88205b}">
+          <labels>
+            <label description="Updates External Report Log" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{c60700d6-24ce-900b-2799-0dc1293e0a90}" name="StageStep61_section1" labelid="{cae562de-bd7a-41f7-8123-7e0ffd88860e}">
+                  <labels>
+                    <label description="Updates External Report Log" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f388d5ab-84bd-478c-8c77-9edd1a4f329e}" showlabel="true" visible="true" labelid="{26733a52-4a18-4088-8d7e-34a365585bbc}">
+                        <labels>
+                          <label description="External Report Log" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:ind_externalreportlog" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_externalreportlog" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{4304218c-5d4a-4c1a-afe1-86467433cf67}" name="StageStep65" locklevel="0" expanded="true" visible="false" labelid="{4d9b5462-b07f-40ed-841a-4e0d245a63dd}">
+          <labels>
+            <label description="Request Aborted" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{1efd4239-7b80-ea7c-b433-c3cdf4f57a05}" name="StageStep65_section1" labelid="{9455d804-602e-4952-bb58-a3440df4f7a7}">
+                  <labels>
+                    <label description="Request Aborted" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{70c853a5-cfc2-42bd-a7aa-927e9ab6e9a2}" showlabel="true" visible="true" labelid="{9da99f6d-27bf-4a84-a2a5-d6e97428ed76}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_strprocess:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_strprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

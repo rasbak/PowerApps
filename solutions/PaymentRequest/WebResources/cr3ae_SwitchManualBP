@@ -1,0 +1,211 @@
+function BPFEvent(executionContext) {
+	var formContext = executionContext.getFormContext();
+	var idProcess = Xrm.Page.data.process.getActiveProcess().getId();
+    debugger;
+	Xrm.Page.data.process.addOnProcessStatusChange(SwitchIt);
+	
+	Xrm.Page.data.process.addOnStageChange(SwitchItBeforeFinish);
+	var status = Xrm.Page.data.process.getStatus();
+	if (status == "finished") {
+		Xrm.Page.data.process.removeOnProcessStatusChange(SwitchIt);
+	}
+}
+
+function SwitchIt(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idProcess = Xrm.Page.data.process.getActiveProcess().getId();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+	setTimeout(() => { 
+		var triggerEDDJur = Xrm.Page.getAttribute("ind_triggereddjur").getValue();
+		var triggerEDDARA = Xrm.Page.getAttribute("ind_triggereddara").getValue();
+		
+		var triggerTrepJur = Xrm.Page.getAttribute("ind_triggertrepjur").getValue();
+		var triggerTrepARA = Xrm.Page.getAttribute("ind_triggertrepara").getValue();
+		var triggerTrepEDD = Xrm.Page.getAttribute("ind_triggertrepedd").getValue();
+		
+		var triggerSTREDD = Xrm.Page.getAttribute("ind_triggerstredd").getValue();
+		var triggerSTRARA = Xrm.Page.getAttribute("ind_triggerstredd").getValue();
+	debugger;
+	//ARA
+	if(idProcess=='f7f8465a-e570-ed11-9562-0022482a40f8'){
+		//cibp
+		if(idStage == 'e951f463-c310-48be-acc8-12371d63fda9')
+	    {
+			Xrm.Page.data.process.setActiveProcess("8361a76b-2e6b-ed11-9562-0022482a4894");
+			return;
+		}
+		//Trep
+		if(idStage == 'ec203331-0122-41c7-803b-544395ed28ac')
+	    {
+			Xrm.Page.getAttribute("ind_triggertrepara").setValue("Yes");
+			//CIBP
+			Xrm.Page.data.process.setActiveProcess("8361a76b-2e6b-ed11-9562-0022482a4894");
+			return;
+		}
+		//STR
+		if(idStage == '60e2a9db-480c-44fb-9e3c-9ad2d65600a5')
+	    {
+			Xrm.Page.getAttribute("ind_triggerstrara").setValue("Yes");
+			//CIBP
+			Xrm.Page.data.process.setActiveProcess("8361a76b-2e6b-ed11-9562-0022482a4894");
+			return;
+		}
+	}
+	
+	
+	//Juris
+	if(idProcess=='aafeb1a6-7c71-ed11-9562-0022482a40f8'){
+		//cibp
+		if(idStage == 'b7e77f30-c114-41da-be4f-85d4786843d3')
+	    {
+			if(triggerEDDARA =="Yes"){
+				//EDD
+				Xrm.Page.data.process.setActiveProcess("46aeeb60-5071-ed11-9562-0022482a4894");
+				return;
+			}
+			
+			else if( triggerTrepARA =="Yes"){
+				//tREP
+				Xrm.Page.data.process.setActiveProcess("f5ddf3df-1d7a-ed11-81ad-0022482a4894");
+				return;
+			}
+			else if( triggerSTRARA =="Yes"){
+				//STR
+				Xrm.Page.data.process.setActiveProcess("78951581-8471-ed11-9562-0022482a40f8");
+				return;
+			}
+			else{
+				//cibp
+				Xrm.Page.data.process.setActiveProcess("8361a76b-2e6b-ed11-9562-0022482a4894");
+				return;
+			}
+		}
+		//Trep
+		if(idStage == '5deea8c9-f5ad-459a-8040-81145f1e5498')
+	    {
+			if(triggerEDDARA =="Yes"){
+				//EDD
+				Xrm.Page.data.process.setActiveProcess("46aeeb60-5071-ed11-9562-0022482a4894");
+				return;
+			}else{
+				Xrm.Page.getAttribute("ind_triggertrepjur").setValue("Yes");
+				//trep
+				Xrm.Page.data.process.setActiveProcess("f5ddf3df-1d7a-ed11-81ad-0022482a4894");
+				return;
+			}
+			
+		}
+		
+	}
+	
+	
+	
+	//EDD switch
+	if(idProcess=='46aeeb60-5071-ed11-9562-0022482a4894'){
+		//TREP
+		if(idStage == '7e12e302-f355-49d5-a462-bf85f11a07bd')
+	    {
+			Xrm.Page.getAttribute("ind_triggertrepedd").setValue("Yes");
+			//Trep
+			Xrm.Page.data.process.setActiveProcess("f5ddf3df-1d7a-ed11-81ad-0022482a4894");
+			return;
+			
+		}
+		//STR
+		if(idStage == 'cd2e1f3a-f153-429d-9ff3-6afca002ba99'||idStage == 'a659fc0a-f5d3-47dd-863f-b1e632def058')
+	    {
+			Xrm.Page.getAttribute("ind_triggerstredd").setValue("Yes");
+			if( triggerTrepARA=="Yes" || triggerTrepJur=="Yes"){
+				//trep
+				Xrm.Page.data.process.setActiveProcess("f5ddf3df-1d7a-ed11-81ad-0022482a4894");
+				return;
+			}else{
+				//STR
+				Xrm.Page.data.process.setActiveProcess("78951581-8471-ed11-9562-0022482a40f8");
+				return;
+			}
+			
+		}
+	}	
+	//STR switch
+	if(idProcess=='78951581-8471-ed11-9562-0022482a40f8'){
+		//
+		if(idStage == 'd0c129e8-176c-4d9e-871d-f5cc48138b84')
+	    {	
+			//CIBP
+			Xrm.Page.data.process.setActiveProcess("8361a76b-2e6b-ed11-9562-0022482a4894");
+			return;
+		}
+	}
+	//TREP switch
+	if(idProcess=='f5ddf3df-1d7a-ed11-81ad-0022482a4894'){
+		//
+		if(idStage == '57944bb3-3fea-4273-a2bd-a7d173c5e334')
+	    {
+			if(triggerSTRARA == "Yes" || triggerSTREDD == "Yes"){
+			//STR
+			Xrm.Page.data.process.setActiveProcess("78951581-8471-ed11-9562-0022482a40f8");
+			return;
+			}
+			else{
+				//CIBP
+			Xrm.Page.data.process.setActiveProcess("8361a76b-2e6b-ed11-9562-0022482a4894");
+			return;
+			}
+			
+		}
+	}
+
+	}, "500");
+	
+}
+function SwitchItBeforeFinish(executionContext){
+	var formContext = executionContext.getFormContext();
+	var idProcess = Xrm.Page.data.process.getActiveProcess().getId();
+	var idStage = Xrm.Page.data.process.getActiveStage().getId();
+
+	setTimeout(() => { 
+	//CIBP switch 
+	debugger;
+	if(idProcess=='8361a76b-2e6b-ed11-9562-0022482a4894'){
+		//ARA
+		if(idStage == 'f1bdd2e7-09b8-431b-8c32-3af0e816ee9f')
+	    {
+			Xrm.Page.data.process.setActiveProcess("f7f8465a-e570-ed11-9562-0022482a40f8");
+			return;	
+		}	
+		//jur
+		if(idStage == '8e3a34cf-90ee-420d-ab3b-1a9f215a3e7d')
+	    {
+			Xrm.Page.data.process.setActiveProcess("aafeb1a6-7c71-ed11-9562-0022482a40f8");
+			return;	
+		}
+	}
+	//ARA switch
+	if(idProcess=='f7f8465a-e570-ed11-9562-0022482a40f8'){
+		//EDD
+		if(idStage == 'ab87a217-d87f-4f70-9d86-4fa3f25ac366')
+	    {
+			Xrm.Page.getAttribute("ind_triggereddara").setValue("Yes");
+		}	
+		
+	}
+	//JUR switch
+	if(idProcess=='aafeb1a6-7c71-ed11-9562-0022482a40f8'){
+		//EDD
+		if(idStage == 'f10b6a11-7e33-4519-a90b-289beb99546d')
+	    {
+			Xrm.Page.getAttribute("ind_triggereddjur").setValue("Yes");
+			//EDD
+			Xrm.Page.data.process.setActiveProcess("46aeeb60-5071-ed11-9562-0022482a4894");
+			return;
+			
+		}
+	}	
+
+	
+		
+
+	}, "500");
+	
+}

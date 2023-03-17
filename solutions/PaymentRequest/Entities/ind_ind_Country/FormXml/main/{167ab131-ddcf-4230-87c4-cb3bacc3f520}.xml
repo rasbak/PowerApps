@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{167ab131-ddcf-4230-87c4-cb3bacc3f520}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{5995a664-37cc-4c9a-b9a3-4b3027438263}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{f80c4b35-dc69-43d8-8e0c-3c99fe695e9a}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{0e10b3b6-f02c-4af4-9427-0983fb46f557}">
+                        <labels>
+                          <label description="UF Value" languagecode="1033" />
+                        </labels>
+                        <control id="ind_ufvalue" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ind_ufvalue" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e93e9075-583c-4be0-bf8b-1f0ab56ba35e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="UF Name" languagecode="1033" />
+                        </labels>
+                        <control id="ind_ufname" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ind_ufname" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{33b524ca-b1bf-4a5e-80ee-088461f495d4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="NoGo" languagecode="1033" />
+                        </labels>
+                        <control id="ind_nogo" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_nogo" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{96b3612b-8e25-4c42-8bbc-7d1be36d97d5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="High risk" languagecode="1033" />
+                        </labels>
+                        <control id="ind_highrisk" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="ind_highrisk" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{0c644b3d-0b1e-43e3-8e6b-a253135d0695}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{d4bb6572-2b23-48f7-9219-644d5993939c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{01d37700-140f-46f1-a731-d44207f50a29}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{fe1c2afc-3d41-48b7-a6f1-003792a253bb}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{086778f6-c53c-4b2e-8b7a-f96050e0083b}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{bf2c1b9a-d2ce-48d1-9a85-7fec948a0129}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{e28792ee-5faa-41e6-95d3-80e4905625d8}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{422348e8-cf4e-465c-ad04-a56acd010525}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{e7fffe60-bd95-4985-a317-3b89168b3688}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

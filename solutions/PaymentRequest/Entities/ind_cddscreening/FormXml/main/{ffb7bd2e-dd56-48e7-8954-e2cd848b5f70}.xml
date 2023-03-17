@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{ffb7bd2e-dd56-48e7-8954-e2cd848b5f70}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{1cfe8af1-5991-43bc-9e96-88f40dcf1223}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{70c6099b-3ddc-4794-905c-a2726ebe701b}">
+          <labels>
+            <label description="Party On OGS" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{d0496ebf-1663-9192-f62f-6ece83116281}" name="StageStep3_section1" labelid="{b4afaccc-daba-4b18-8f41-84e1fbd32b75}">
+                  <labels>
+                    <label description="Party On OGS" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{bcda2e4d-1ff3-439b-a211-aeb3f6c8b8aa}" showlabel="true" visible="true" labelid="{950e20ce-1d08-4e2a-8cc6-5611ad9adeaf}">
+                        <labels>
+                          <label description="Party On OGS ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddscreening:ind_partyonogs" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_partyonogs" disabled="false" relationship="bpf_ind_ind_operation_ind_cddscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{111bfb41-a424-4358-b8f6-61f8fd00ecd8}" name="StageStep7" locklevel="0" expanded="true" visible="false" labelid="{bb15c6bb-0b0e-4fac-b55b-f2e058eb193d}">
+          <labels>
+            <label description="Party On VP" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{8b081cd8-4d4e-2a74-7527-d7453b59de91}" name="StageStep7_section1" labelid="{bfc1ec72-a6c4-4696-a075-da2e5ab2463f}">
+                  <labels>
+                    <label description="Party On VP" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{7eaabeac-caee-4edf-a037-049ca4f875ed}" showlabel="true" visible="true" labelid="{34bcfde3-d56b-4be3-8240-eb46fae41b77}">
+                        <labels>
+                          <label description="Party On VP ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddscreening:ind_partyonvp" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_partyonvp" disabled="false" relationship="bpf_ind_ind_operation_ind_cddscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{f081f995-344f-46b9-877e-4a21ae26f2ce}" name="StageStep11" locklevel="0" expanded="true" visible="false" labelid="{37d34e33-0e8a-4de1-a0c2-a11bad72aab3}">
+          <labels>
+            <label description="Create Masterfile On VP" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{69e55105-c959-cb45-58d8-fc19d0204f1d}" name="StageStep11_section1" labelid="{bc8b813f-0437-4593-87b2-24edaf195063}">
+                  <labels>
+                    <label description="Create Masterfile On VP" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{8479d312-42b1-457b-87db-8bd95439a654}" showlabel="true" visible="true" labelid="{fedfd4c5-c725-4bfc-8dde-6bca78bde406}">
+                        <labels>
+                          <label description="Created ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddscreening:ind_createdmasterfieldvp" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="ind_createdmasterfieldvp" disabled="false" relationship="bpf_ind_ind_operation_ind_cddscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{67297252-702c-4a18-b523-ac9e00c07284}" name="StageStep15" locklevel="0" expanded="true" visible="false" labelid="{0a578504-2684-41e8-a71f-b633d278a72b}">
+          <labels>
+            <label description="Create Transaction Party On OGS And Perform Screening On World Check" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{dcf55649-e015-b06a-e518-9537e7cd0902}" name="StageStep15_section1" labelid="{2fabbc60-c4ef-427e-b3d9-d07f5903644d}">
+                  <labels>
+                    <label description="Create Transaction Party On OGS And Perform Screening On World Check" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b521f3d0-74af-4f21-838d-d6a25a3dac53}" showlabel="true" visible="true" labelid="{ec74ebc4-e76f-4e13-9d6f-a7053b94d7fe}">
+                        <labels>
+                          <label description="Created ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddscreening:ind_createdmasterfileogs" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="ind_createdmasterfileogs" disabled="false" relationship="bpf_ind_ind_operation_ind_cddscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{37a0f35f-7cfc-47d7-9b81-2e0c435b34ed}" name="StageStep19" locklevel="0" expanded="true" visible="false" labelid="{3469c2d3-8efa-4147-ac52-793970535b37}">
+          <labels>
+            <label description="Perform Web Check" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{8fcd5d5f-51d5-558c-a0d5-c4226fc1fe45}" name="StageStep19_section1" labelid="{8706efa7-30cb-4102-9c64-ea715afb780c}">
+                  <labels>
+                    <label description="Perform Web Check" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{66bba364-3137-41f1-93f9-e5b24b256588}" showlabel="true" visible="true" labelid="{26d0d167-fe75-4ff0-b01a-e1bfd8a5dae1}">
+                        <labels>
+                          <label description="Web check document" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddscreening:ind_webcheck" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_webcheck" disabled="false" relationship="bpf_ind_ind_operation_ind_cddscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ffafd783-0e3f-4969-95c7-b2832f007ede}" showlabel="true" visible="true" labelid="{be649512-24c0-4a84-94c6-34a8be0ded40}">
+                        <labels>
+                          <label description="Adverse Hits ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddscreening:ind_adversehits" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_adversehits" disabled="false" relationship="bpf_ind_ind_operation_ind_cddscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{7982bf19-ff33-4d79-9707-00ff65ec644a}" name="StageStep25" locklevel="0" expanded="true" visible="false" labelid="{619f5147-50c5-4d1e-8efd-1db66845fbe7}">
+          <labels>
+            <label description="Assess Genuineness Of The World Check Hits" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{d386eb2b-42a0-3672-2953-fa375ea7b9af}" name="StageStep25_section1" labelid="{8de09341-ea08-423d-b43e-a39a346850db}">
+                  <labels>
+                    <label description="Assess Genuineness Of The World Check Hits" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ff35af03-4f55-4ecf-bb37-d5bca9e79ed1}" showlabel="true" visible="true" labelid="{0de12469-9198-4fad-929e-7ec5f5013e45}">
+                        <labels>
+                          <label description="True Match ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddscreening:ind_truematch" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="ind_truematch" disabled="false" relationship="bpf_ind_ind_operation_ind_cddscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{4f954a17-55fc-4170-87b6-be15f6fa7350}" name="StageStep29" locklevel="0" expanded="true" visible="false" labelid="{22f9b522-3ea7-4907-8315-f8f9d6fbe695}">
+          <labels>
+            <label description="Continue With Transaction Review" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{b61ca11b-597c-f15c-0258-1a04fcba6a04}" name="StageStep29_section1" labelid="{a66d1300-62ef-4aa8-bbf8-9a4d6c1c68ee}">
+                  <labels>
+                    <label description="Continue With Transaction Review" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{341067c1-9c25-4161-bc29-e16cdea80126}" showlabel="true" visible="true" labelid="{849e066a-ca01-4c96-9544-e7d3130db682}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddscreening:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{8da809d0-a6da-4da1-a454-51223cd1121b}" name="StageStep33" locklevel="0" expanded="true" visible="false" labelid="{b1e948f6-6359-4f1d-9da7-4f3aa9f00eb5}">
+          <labels>
+            <label description="Initiate STR Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{e400a125-12f1-58ee-2ef7-783d825bb7cd}" name="StageStep33_section1" labelid="{8ec37e41-dcd8-4d39-b9a2-8088d3549bc6}">
+                  <labels>
+                    <label description="Initiate STR Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{9955d1fb-9a15-45cd-ad13-737ed07198aa}" showlabel="true" visible="true" labelid="{3abb23d0-ee4e-4fda-8eb1-89cc95d03276}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddscreening:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{4db0de07-13c6-4f40-ab26-13a2d7376e55}" name="StageStep37" locklevel="0" expanded="true" visible="false" labelid="{bd53ccbf-2eb1-4644-9ee7-825afecbb5b0}">
+          <labels>
+            <label description="PEP Screening Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{91f0ad50-4f73-7a04-ca6b-5c56893ef850}" name="StageStep37_section1" labelid="{96f8a8a3-4dce-47e0-8efb-0f2738abfcb6}">
+                  <labels>
+                    <label description="PEP Screening Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f2eef019-7a4f-4286-8b84-c5beb844ddc3}" showlabel="true" visible="true" labelid="{846660ab-b5a7-4e71-8bc3-be75bbc8dc84}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddscreening:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{3e0ec563-b0b6-421e-a73e-5a6d4839d40e}" name="StageStep41" locklevel="0" expanded="true" visible="false" labelid="{9044251e-615b-4c4e-a987-3e35d3a630a8}">
+          <labels>
+            <label description="EDD Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{e43adaa0-0542-56d8-eeb9-33b6cdc98f4b}" name="StageStep41_section1" labelid="{fbf98516-edc3-48c1-8dfc-55de48b4cfbd}">
+                  <labels>
+                    <label description="EDD Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{7e00e8eb-afac-4a03-864e-2a1b0495c273}" showlabel="true" visible="true" labelid="{a41ac93a-0c38-4513-8887-a64bb1d405f4}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddscreening:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{d2148a9c-1c4c-44e5-a1a6-966f987f5592}" name="StageStep45" locklevel="0" expanded="true" visible="false" labelid="{0a7ccae6-3d19-4c62-b622-842c6c00952a}">
+          <labels>
+            <label description="Continue With Transaction Review" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{d50c30cc-25f7-9bdc-106b-495361a740a2}" name="StageStep45_section1" labelid="{aaa07483-34fc-45a4-81f0-dbc13d51a84a}">
+                  <labels>
+                    <label description="Continue With Transaction Review" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5dd4b1b2-94ea-4233-926f-090c2bac0728}" showlabel="true" visible="true" labelid="{5d7395ae-44ed-409e-b2ba-fdb26917fd8e}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddscreening:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{ffe04f69-febd-4339-aa62-2b402f04bed1}" name="StageStep49" locklevel="0" expanded="true" visible="false" labelid="{dd60215e-657f-4814-bedf-f8757473bbda}">
+          <labels>
+            <label description="Ongoing Screening" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{19410628-6e97-cf27-7e40-695a63e4a9d6}" name="StageStep49_section1" labelid="{a2409aa7-aa55-4456-93a5-cd03a88ab161}">
+                  <labels>
+                    <label description="Ongoing Screening" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{0fa3f34f-ef71-4b15-8f4d-f1ec3ff5741e}" showlabel="true" visible="true" labelid="{52aff795-974b-4232-afc5-46686b02cb7d}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_cddscreening:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_cddscreening" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

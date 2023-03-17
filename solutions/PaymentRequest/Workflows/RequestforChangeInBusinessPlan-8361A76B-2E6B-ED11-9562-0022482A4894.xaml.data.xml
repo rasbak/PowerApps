@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{8361a76b-2e6b-ed11-9562-0022482a4894}" Name="Request for Change In Business Plan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/RequestforChangeInBusinessPlan-8361A76B-2E6B-ED11-9562-0022482A4894.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>ind_requestforchangeinbusinessplan</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>ind_ind_BusinessPlan</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Request for Change In Business Plan" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{d99c7b78-47c6-4e99-a619-aeb8b2669247}">
+      <label languagecode="1033" description="Identify Change In Activity" />
+    </steplabels>
+    <steplabels id="{62e8cc3b-200e-4636-b654-1436ba56701f}">
+      <label languagecode="1033" description="Change in activity" />
+    </steplabels>
+    <steplabels id="{f1bdd2e7-09b8-431b-8c32-3af0e816ee9f}">
+      <label languagecode="1033" description="Activity Risk Assessment" />
+    </steplabels>
+    <steplabels id="{b26ae310-1e1a-4e05-845e-c491606e9d87}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{45fc8343-79cb-498d-9dbc-7d58d8eac2b7}">
+      <label languagecode="1033" description="Identify Jusrisdiction Change " />
+    </steplabels>
+    <steplabels id="{8698e418-337f-4aed-9e65-5891793e7874}">
+      <label languagecode="1033" description="Jusrisdiction" />
+    </steplabels>
+    <steplabels id="{8e3a34cf-90ee-420d-ab3b-1a9f215a3e7d}">
+      <label languagecode="1033" description="Jurisdiction Screening" />
+    </steplabels>
+    <steplabels id="{3a66e3c5-fb64-4299-8593-074470499ee6}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{f38caee2-20f9-43c8-8935-27d335d314b1}">
+      <label languagecode="1033" description="Check Licensing Conditions" />
+    </steplabels>
+    <steplabels id="{1de27f5f-2833-4350-99b0-f66208d012ba}">
+      <label languagecode="1033" description="FSC approval required" />
+    </steplabels>
+    <steplabels id="{c26444a7-60cb-4970-b038-fd067a686652}">
+      <label languagecode="1033" description="Prepare Business Plan, Resolution And Approval Letter" />
+    </steplabels>
+    <steplabels id="{370efa3e-844a-411f-a8ec-c2e66cc7ed89}">
+      <label languagecode="1033" description="Business Plan Document" />
+    </steplabels>
+    <steplabels id="{06091168-efdd-4e9d-8c13-c68ac611da32}">
+      <label languagecode="1033" description="Resolution Document" />
+    </steplabels>
+    <steplabels id="{23445057-f9ea-4225-a738-042241049c87}">
+      <label languagecode="1033" description="Approval Letter" />
+    </steplabels>
+    <steplabels id="{ac034837-c05c-40a1-bebd-7e01cbf62c24}">
+      <label languagecode="1033" description="Prepare Updated Business Plan, Resolution And Confirmation Letter" />
+    </steplabels>
+    <steplabels id="{1a9599d8-c66e-49c6-a3b3-3a18c9026507}">
+      <label languagecode="1033" description="Business Plan Document" />
+    </steplabels>
+    <steplabels id="{f08cebff-3b3b-464f-af52-d3f9f991b0d3}">
+      <label languagecode="1033" description="Resolution Document" />
+    </steplabels>
+    <steplabels id="{1964128a-b1c5-494a-9a98-2c714b564f4c}">
+      <label languagecode="1033" description="Confirmation Letter" />
+    </steplabels>
+    <steplabels id="{82d340ef-0bb4-4cc5-8e32-c88c27ec4204}">
+      <label languagecode="1033" description="Review Documentationzd" />
+    </steplabels>
+    <steplabels id="{074b3c1c-21a8-4727-9daa-d811bd521818}">
+      <label languagecode="1033" description="Business Plan Document" />
+    </steplabels>
+    <steplabels id="{4c11ee8e-62de-4b8b-9846-53a3d7d5343d}">
+      <label languagecode="1033" description="Resolution Document" />
+    </steplabels>
+    <steplabels id="{d4d795af-65fc-4e69-987d-31d230d0ec99}">
+      <label languagecode="1033" description="Approval Letter" />
+    </steplabels>
+    <steplabels id="{0e79b758-d13c-422b-846f-15681278d1ae}">
+      <label languagecode="1033" description="Satisfactory ?" />
+    </steplabels>
+    <steplabels id="{0e487651-1a79-40ed-93d3-81b9507afb5f}">
+      <label languagecode="1033" description="Circulate Docs For Signature" />
+    </steplabels>
+    <steplabels id="{9e4fd215-e804-45f3-8313-3233aac435d4}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{1628f825-56f4-44e1-bfad-b49024719e2b}">
+      <label languagecode="1033" description="Amend Document" />
+    </steplabels>
+    <steplabels id="{98a6bf1b-18b4-4d49-8d84-5c3e02c6a778}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{d1619cf0-1888-4a5f-a8cf-340fcdf1d00d}">
+      <label languagecode="1033" description="Review Documentation" />
+    </steplabels>
+    <steplabels id="{39376c53-075c-4513-b12b-943cf84ddf5b}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+  </labels>
+</Workflow>

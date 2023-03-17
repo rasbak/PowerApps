@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{b2924b5a-1bb1-44fd-8773-12e032905472}" Name="Inward" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/Inward-B2924B5A-1BB1-44FD-8773-12E032905472.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>new_bpf_b2924b5a1bb144fd877312e032905472</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>ind_ind_Operation</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Inward" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{7cd5bbb2-6226-4c34-af1a-707b0eef0820}">
+      <label languagecode="1033" description="Transaction" />
+    </steplabels>
+    <steplabels id="{3c39f2b3-eeb2-4f1a-9f46-52f27798002d}">
+      <label languagecode="1033" description="Customer Name" />
+    </steplabels>
+    <steplabels id="{d1dda7b4-0108-4a60-9ab5-fcdfb253b590}">
+      <label languagecode="1033" description="Customer Account" />
+    </steplabels>
+    <steplabels id="{a2dc70c1-1e58-45f1-a4c2-782f6c3da92a}">
+      <label languagecode="1033" description="Beneficiary Name" />
+    </steplabels>
+    <steplabels id="{3a913054-f70e-4d68-b775-047381e00f6f}">
+      <label languagecode="1033" description="Beneficiary Account" />
+    </steplabels>
+    <steplabels id="{c4843b48-e67f-481f-ae2d-92f29a4c3a1c}">
+      <label languagecode="1033" description="Mentioned Purpose of transfer" />
+    </steplabels>
+    <steplabels id="{9621282a-d0c4-47b5-b9b8-20c162d95b65}">
+      <label languagecode="1033" description="Currency" />
+    </steplabels>
+    <steplabels id="{c0e0e68a-d117-4196-9f2e-5e395562ab4b}">
+      <label languagecode="1033" description="Transaction Amount" />
+    </steplabels>
+    <steplabels id="{fd5b1bfc-4bfe-4fb3-af1b-9cb8cd215e9b}">
+      <label languagecode="1033" description="Amount In Words" />
+    </steplabels>
+    <steplabels id="{c63b3858-42cf-4c99-b509-8b467a465b8e}">
+      <label languagecode="1033" description="Fx Rate/Ref" />
+    </steplabels>
+    <steplabels id="{b4dc9373-30ba-4fe1-9415-53f5e8e57f67}">
+      <label languagecode="1033" description="Bank Charges" />
+    </steplabels>
+    <steplabels id="{45486bc0-7180-4a77-b8c9-881d6528dee6}">
+      <label languagecode="1033" description="Security Checks" />
+    </steplabels>
+    <steplabels id="{e721863e-9ec9-4342-b476-eb79f6491583}">
+      <label languagecode="1033" description="New behavior" />
+    </steplabels>
+    <steplabels id="{08f0e522-1958-4282-ab53-24187563ef67}">
+      <label languagecode="1033" description="Existant Email" />
+    </steplabels>
+    <steplabels id="{205ce00a-56b7-4c4f-b62a-63f41986490d}">
+      <label languagecode="1033" description="Requested Email and Genuine" />
+    </steplabels>
+    <steplabels id="{3b8d003a-6b3b-4dc5-a785-3a425430004f}">
+      <label languagecode="1033" description="Validate callback step" />
+    </steplabels>
+    <steplabels id="{e66fd983-6bfb-48f5-995c-a04ded62cc8a}">
+      <label languagecode="1033" description="Callback Date" />
+    </steplabels>
+    <steplabels id="{1f990c56-5d16-44a6-bf8b-94c9c50c56e1}">
+      <label languagecode="1033" description="Identification of Email Address" />
+    </steplabels>
+    <steplabels id="{3d924570-4032-4d09-b039-1cace66fe709}">
+      <label languagecode="1033" description="Authorised for payment" />
+    </steplabels>
+    <steplabels id="{be9be228-62ff-4c0a-a811-ba209cd14931}">
+      <label languagecode="1033" description="Security checks Status" />
+    </steplabels>
+    <steplabels id="{8d5636b2-9b7c-432c-9536-a683d99fd221}">
+      <label languagecode="1033" description="Update VP DATABASE" />
+    </steplabels>
+    <steplabels id="{608047fe-564e-43d3-ad56-4c6fa91800d1}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{38554659-514e-4e55-a328-cd409ddc237b}">
+      <label languagecode="1033" description="Request Aborted" />
+    </steplabels>
+    <steplabels id="{f3fc7bcc-e07a-47f3-aab8-07b1b1f3916c}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{4345c56c-4f69-454d-b153-d7b721a54af5}">
+      <label languagecode="1033" description="Corporate Action" />
+    </steplabels>
+    <steplabels id="{dcba61b1-5af3-4eaf-810e-9afeed7975c1}">
+      <label languagecode="1033" description="Corporate Action ?" />
+    </steplabels>
+    <steplabels id="{0cdcaf18-abc7-43d3-a2d3-69087f5aec3b}">
+      <label languagecode="1033" description="Corporate Action" />
+    </steplabels>
+    <steplabels id="{ac65c591-2f66-4ec0-9f7f-4af7c8e7709a}">
+      <label languagecode="1033" description="Activity Type" />
+    </steplabels>
+    <steplabels id="{0e8c1a88-40ba-4fe4-9968-dd57aeb7d28f}">
+      <label languagecode="1033" description="Purpose of Transfer" />
+    </steplabels>
+    <steplabels id="{4a8e9c68-b2fe-4a58-9710-70d180be2417}">
+      <label languagecode="1033" description="Sector" />
+    </steplabels>
+    <steplabels id="{013f03ac-f6b5-4d38-9460-a1e47e3614e3}">
+      <label languagecode="1033" description="Trading Standard CDD : Transaction's Substance" />
+    </steplabels>
+    <steplabels id="{4ce3a5d3-05c5-4a53-954a-549b961ee1cc}">
+      <label languagecode="1033" description="Comment (Reason)" />
+    </steplabels>
+    <steplabels id="{e545d314-59b7-4087-bdc5-45c91a1b67d2}">
+      <label languagecode="1033" description="Bill of lading" />
+    </steplabels>
+    <steplabels id="{23c2766c-6dd7-4c00-b212-4e0373df0ef6}">
+      <label languagecode="1033" description="Goods receipt notes at delivery point" />
+    </steplabels>
+    <steplabels id="{a0b15536-c2bb-4849-a817-224d6973b07a}">
+      <label languagecode="1033" description="Invoice from supplier" />
+    </steplabels>
+    <steplabels id="{2cc7ccd0-e388-441c-b42a-5de0748ca608}">
+      <label languagecode="1033" description="Investment Holding Standard CDD : Transaction's Substance" />
+    </steplabels>
+    <steplabels id="{76f4d1e9-dbd1-4b5c-a9e8-f98ad1350d0f}">
+      <label languagecode="1033" description="Comment (Reason)" />
+    </steplabels>
+    <steplabels id="{b6f9ce08-6929-486e-9780-5463b58b7d3c}">
+      <label languagecode="1033" description="Board Approval" />
+    </steplabels>
+    <steplabels id="{09670a7a-ae13-4717-9df2-b84a878b0a17}">
+      <label languagecode="1033" description="Solvency test/Solvensy certificate" />
+    </steplabels>
+    <steplabels id="{2930b534-adb6-4e02-8bf4-cf7cc071ba9f}">
+      <label languagecode="1033" description="Sales purshase agreement" />
+    </steplabels>
+    <steplabels id="{602d712d-9e5f-47d7-acac-f19c4cc9fff2}">
+      <label languagecode="1033" description="Consultancy Standard CDD : Transaction's Substance" />
+    </steplabels>
+    <steplabels id="{727ebf00-c732-4236-b9b3-d5c1b8c52b74}">
+      <label languagecode="1033" description="Comment (Reason)" />
+    </steplabels>
+    <steplabels id="{a9eb21f3-d999-42db-be0d-deedb43527fe}">
+      <label languagecode="1033" description="Agreement" />
+    </steplabels>
+    <steplabels id="{8c6ab04e-c63f-4e7d-8cb2-cf4a47893ce1}">
+      <label languagecode="1033" description="Evidance of delivrable" />
+    </steplabels>
+    <steplabels id="{79456444-83d2-408d-9485-44b8311e6051}">
+      <label languagecode="1033" description="Invoice" />
+    </steplabels>
+    <steplabels id="{edfa189a-058b-490c-af04-54c710b0c7a8}">
+      <label languagecode="1033" description="Other Standard CDD : Transaction's Substance" />
+    </steplabels>
+    <steplabels id="{cdcbd924-5984-4359-ab66-34f0dd38af7f}">
+      <label languagecode="1033" description="Comment (Reason)" />
+    </steplabels>
+    <steplabels id="{618e1301-9572-4032-9364-149ff4821967}">
+      <label languagecode="1033" description="Agreement" />
+    </steplabels>
+    <steplabels id="{6717d880-dd8c-4a0a-8cf8-19bc28fdd399}">
+      <label languagecode="1033" description="Occasional Standard CDD : Transaction's Substance" />
+    </steplabels>
+    <steplabels id="{4cddb8d2-89f7-4201-91c5-2fc9837695a3}">
+      <label languagecode="1033" description="Comment (Reason)" />
+    </steplabels>
+    <steplabels id="{fadd53f2-c3e7-49a1-b27b-40af437d1f8d}">
+      <label languagecode="1033" description="Board Approval" />
+    </steplabels>
+    <steplabels id="{2ef0e170-84af-4802-98d1-0f3ef571b88c}">
+      <label languagecode="1033" description="Assassement of significance" />
+    </steplabels>
+    <steplabels id="{3736003b-0af8-4140-be4f-d7ea324b21cd}">
+      <label languagecode="1033" description="Occasional Standard CDD : Dividend Payment" />
+    </steplabels>
+    <steplabels id="{566e1824-765f-4757-ab5f-7111e59623c2}">
+      <label languagecode="1033" description="Comment (Reason)" />
+    </steplabels>
+    <steplabels id="{b6109c20-5a6b-4ca9-b5da-2b393f359457}">
+      <label languagecode="1033" description="Docs for Dividend payment" />
+    </steplabels>
+    <steplabels id="{a58fa8f6-f8ec-4585-b10b-a2b2cbdbff32}">
+      <label languagecode="1033" description="Occasional Standard CDD : Forfeiture Of Shares" />
+    </steplabels>
+    <steplabels id="{1b2411c7-6008-4835-b990-62d47ed5e4f0}">
+      <label languagecode="1033" description="Comment (Reason)" />
+    </steplabels>
+    <steplabels id="{f7cdd796-1f48-433f-a08c-90384ac93d8c}">
+      <label languagecode="1033" description="Docs forfeiture of shares" />
+    </steplabels>
+    <steplabels id="{29b4b78b-5626-407a-b2e3-1ea22ce18a9c}">
+      <label languagecode="1033" description="Occasional Standard CDD : Issue Of Shares" />
+    </steplabels>
+    <steplabels id="{bbce255b-6a0c-461a-b11a-643c40ee2996}">
+      <label languagecode="1033" description="Comment (Reason)" />
+    </steplabels>
+    <steplabels id="{d5f357d2-f38f-46c6-b29b-24f2eafaa6e2}">
+      <label languagecode="1033" description="Docs for Issue of Shares" />
+    </steplabels>
+    <steplabels id="{74c936e5-e615-458d-b055-c6ed18daebbd}">
+      <label languagecode="1033" description="Occasional Standard CDD : Loan To Shareholder" />
+    </steplabels>
+    <steplabels id="{f988dcca-673d-4900-89ca-1c729cc2a578}">
+      <label languagecode="1033" description="Comment (Reason)" />
+    </steplabels>
+    <steplabels id="{0204fe93-ed39-4f9a-9d8d-01af4382e1b3}">
+      <label languagecode="1033" description="Occasional Standard CDD : Redemption Of Shares" />
+    </steplabels>
+    <steplabels id="{3a69545a-2561-42d4-b4e4-f06ac3c8be82}">
+      <label languagecode="1033" description="Comment (Reason)" />
+    </steplabels>
+    <steplabels id="{3819266b-c10c-45c0-b8d4-3cbf840b0a03}">
+      <label languagecode="1033" description="Standard CDD : Backgound Of Payment Beneficary" />
+    </steplabels>
+    <steplabels id="{d3bd50ec-810a-41ab-bf96-ebee028ee7cd}">
+      <label languagecode="1033" description="Certificate of incorporation/Proof of identity" />
+    </steplabels>
+    <steplabels id="{73f047eb-004a-408c-852f-faaf1b6d8b17}">
+      <label languagecode="1033" description="List of directors" />
+    </steplabels>
+    <steplabels id="{a90b5c11-107f-43e9-84b8-d1ed72e4568a}">
+      <label languagecode="1033" description="Evidence of background verification" />
+    </steplabels>
+    <steplabels id="{353b9da4-d07f-4d7f-8aa7-b1e57ff95770}">
+      <label languagecode="1033" description="In Order?" />
+    </steplabels>
+    <steplabels id="{dfceb772-1af5-40ef-9c02-2aac33c33e4f}">
+      <label languagecode="1033" description="Basic Docs In Order ?" />
+    </steplabels>
+    <steplabels id="{f13406b6-01d9-40d1-b792-cbf45fdbefad}">
+      <label languagecode="1033" description="Continue With Transaction?" />
+    </steplabels>
+    <steplabels id="{74e31f15-fb4a-40a4-b9f6-b31e57694578}">
+      <label languagecode="1033" description="Continue With Transaction?" />
+    </steplabels>
+    <steplabels id="{a43aa0d6-d8d5-44cc-a1bc-d0d55ee4245d}">
+      <label languagecode="1033" description="Comment (Reason)" />
+    </steplabels>
+    <steplabels id="{e94bc73a-0b9f-492e-a7f0-17079a9c7897}">
+      <label languagecode="1033" description="Assess Deviation Inputs Result And Documents" />
+    </steplabels>
+    <steplabels id="{e9346588-00ef-4c27-9da9-e7e684a2e0cf}">
+      <label languagecode="1033" description="New Country" />
+    </steplabels>
+    <steplabels id="{8e3dd53e-315e-42c5-aa91-f5019c1d3565}">
+      <label languagecode="1033" description="New Activity" />
+    </steplabels>
+    <steplabels id="{978a87b0-5fe9-4f0c-8c86-5b8f486bacec}">
+      <label languagecode="1033" description="New Remitter" />
+    </steplabels>
+    <steplabels id="{37f9df51-7d2b-4369-a497-ebaa9a9a429b}">
+      <label languagecode="1033" description="New behavior" />
+    </steplabels>
+    <steplabels id="{0e8a41f4-88bf-4d7b-8203-9d6f107d0306}">
+      <label languagecode="1033" description="Transaction Review Documents " />
+    </steplabels>
+    <steplabels id="{62b763be-611b-473e-8ae9-7286d1ee2e4b}">
+      <label languagecode="1033" description="EDD Document" />
+    </steplabels>
+    <steplabels id="{b323f618-ea31-4ed7-a21e-613e5cee5a55}">
+      <label languagecode="1033" description="Customer Identification Document " />
+    </steplabels>
+    <steplabels id="{08b2619d-2ac1-49c0-89c0-fd4c541bd596}">
+      <label languagecode="1033" description="Proceed to assess deviation?" />
+    </steplabels>
+    <steplabels id="{e38d1a92-5b22-4158-b6d0-7b19e1e31590}">
+      <label languagecode="1033" description="Proceed With Asses Deviation" />
+    </steplabels>
+    <steplabels id="{cb705744-c17e-4428-944f-3ceebc149cdb}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{d26d7268-ae00-4328-bb06-d186dd6d21d9}">
+      <label languagecode="1033" description="Proceed With  CDD Screening" />
+    </steplabels>
+    <steplabels id="{0754729e-5163-441e-8db0-75da7a642573}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+  </labels>
+</Workflow>

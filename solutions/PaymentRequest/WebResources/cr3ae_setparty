@@ -1,0 +1,43 @@
+function setParty(executionContext){
+		var formContext = executionContext.getFormContext();
+	debugger;
+	if(formContext.getControl("header_process_ind_businessplan").getAttribute().getValue()!=null){
+			
+				Xrm.WebApi.retrieveRecord('ind_ind_businessplan',formContext.getControl("header_process_ind_businessplan").getAttribute().getValue()[0].id.substring(1,37)).then(
+				function success(result) {
+					//console.log(result);
+					debugger;
+					
+					Xrm.WebApi.retrieveRecord('ind_party',result._ind_party_value).then(
+						function success(result) {
+							console.log(result);
+							debugger;
+							
+							
+							   
+							var partyValue = {
+								  "entityType": "ind_party", 
+								  "id": result.ind_partyid,
+								  "name": result.ind_name
+
+							};
+
+							
+							formContext.getControl("header_process_ind_partyname").getAttribute().setValue([partyValue]);
+						},
+						function (error) {
+							console.log(error.message);
+							// handle error conditions
+						}
+					);
+					   
+				
+				},
+				function (error) {
+					console.log(error.message);
+					// handle error conditions
+				}
+			);
+			
+	}
+}

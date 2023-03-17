@@ -1,0 +1,525 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "ind_sharedcommondataserviceforapps_64f74"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "ind_sharedcommondataserviceforapps_64f74"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "ind_sharedoffice365_cc2d4"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_an_email_is_flagged_(V3)": {
+          "splitOn": "@triggerOutputs()?['body/value']",
+          "metadata": {
+            "operationMetadataId": "c4e56a35-6594-492b-b856-3908c2c90e8e"
+          },
+          "type": "OpenApiConnectionNotification",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365",
+              "operationId": "OnFlaggedEmailV3",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "folderPath": "Inbox",
+              "importance": "Any",
+              "fetchOnlyWithAttachment": false
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "List_rows_from_Contacts_filtered_by_email": {
+          "runAfter": {
+            "mailID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d5263094-e803-47ba-bbbd-40225513f606"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ind_ind_contacts",
+              "$filter": "ind_email eq '@{triggerOutputs()?['body/from']}'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Condition": {
+          "actions": {
+            "Apply_to_each": {
+              "foreach": "@outputs('List_rows_from_Contacts_filtered_by_email')?['body/value']",
+              "actions": {
+                "Set_CustomerName": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "addb7a86-0aaa-4201-bb6e-9a8d0c9f8330"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "Customer id",
+                    "value": "@items('Apply_to_each')?['_ind_customer_value']"
+                  }
+                },
+                "Set_email_existent": {
+                  "runAfter": {
+                    "Set_CustomerName": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "43577492-b0b2-4b2e-92c1-a3fb001e54f0"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "Existant email",
+                    "value": "@true"
+                  }
+                },
+                "List_rows": {
+                  "runAfter": {
+                    "Set_email_existent": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "ac2061dd-61f0-4bf2-ad6d-72447401890d"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps_1",
+                      "operationId": "ListRecords",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "systemusers",
+                      "$filter": "ind_code eq '@{items('Apply_to_each')?['ind_rm']}'"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Apply_to_each_3": {
+                  "foreach": "@outputs('List_rows')?['body/value']",
+                  "actions": {
+                    "Set_variable_2": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "c0cfc5a0-da2c-4f36-bddc-aa42355febb4"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "rm",
+                        "value": "@items('Apply_to_each_3')?['systemuserid']"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "List_rows": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "871b7532-58f6-4858-aa41-dc4cb9fd8fce"
+                  },
+                  "type": "Foreach"
+                },
+                "List_rows_2": {
+                  "runAfter": {
+                    "Apply_to_each_3": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "c0c0851c-1049-4519-908d-1dfb6afedf96"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps_1",
+                      "operationId": "ListRecords",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "systemusers",
+                      "$filter": "ind_code eq '@{items('Apply_to_each')?['ind_ro']}'"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Apply_to_each_4": {
+                  "foreach": "@outputs('List_rows')?['body/value']",
+                  "actions": {
+                    "Apply_to_each_5": {
+                      "foreach": "@outputs('List_rows_2')?['body/value']",
+                      "actions": {
+                        "Set_variable_3": {
+                          "runAfter": {},
+                          "metadata": {
+                            "operationMetadataId": "08f38b00-d329-4cab-ad8c-b00598f069b5"
+                          },
+                          "type": "SetVariable",
+                          "inputs": {
+                            "name": "ro",
+                            "value": "@items('Apply_to_each_5')?['systemuserid']"
+                          }
+                        }
+                      },
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "52cf7efd-b6fe-45cf-b9e6-cedfc438ce99"
+                      },
+                      "type": "Foreach"
+                    }
+                  },
+                  "runAfter": {
+                    "List_rows_2": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "a0ff9625-8c1d-44cf-b123-ad2ff56b9784"
+                  },
+                  "type": "Foreach"
+                }
+              },
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "acad220b-556c-4c51-bde1-cda6827c2dad"
+              },
+              "type": "Foreach"
+            },
+            "Add_new_Payment_Request": {
+              "runAfter": {
+                "Apply_to_each": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "c36f767f-8038-4d4d-ae85-6099dd8a5dd6"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "CreateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "ind_ind_operations",
+                  "item/ind_contactemail": "@triggerOutputs()?['body/from']",
+                  "item/ind_CustomerName@odata.bind": "/ind_customers(@{variables('Customer id')})",
+                  "item/ind_existantemail": "@variables('Existant email')",
+                  "item/ind_RM@odata.bind": "/systemusers(@{variables('rm')})",
+                  "item/ind_RO@odata.bind": "/systemusers(@{variables('ro')})",
+                  "item/statuscode": 1
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "rm": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "List_contacts": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "1cc093bb-864b-4397-b376-f1ed5dd762e5"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "ListRecords",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "ind_ind_contacts"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Apply_to_each_2": {
+                "foreach": "@outputs('List_contacts')?['body/value']",
+                "actions": {
+                  "Condition_2": {
+                    "actions": {
+                      "Add_new_Payment_Request_3": {
+                        "runAfter": {},
+                        "metadata": {
+                          "operationMetadataId": "c36f767f-8038-4d4d-ae85-6099dd8a5dd6"
+                        },
+                        "type": "OpenApiConnection",
+                        "inputs": {
+                          "host": {
+                            "connectionName": "shared_commondataserviceforapps",
+                            "operationId": "CreateRecord",
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                          },
+                          "parameters": {
+                            "entityName": "ind_ind_operations",
+                            "item/ind_contactemail": "@triggerOutputs()?['body/from']",
+                            "item/ind_CustomerName@odata.bind": "/ind_customers(@{items('Apply_to_each_2')?['_ind_customer_value']})",
+                            "item/ind_existantemail": false,
+                            "item/ind_newactivity": "Yes",
+                            "item/ind_newbehavior": false,
+                            "item/ind_newcountry": "Yes",
+                            "item/ind_newremitter": "Yes",
+                            "item/statuscode": 1
+                          },
+                          "authentication": "@parameters('$authentication')"
+                        }
+                      },
+                      "Set_variable": {
+                        "runAfter": {
+                          "Add_new_Payment_Request_3": [
+                            "Succeeded"
+                          ]
+                        },
+                        "metadata": {
+                          "operationMetadataId": "3f754101-8c6d-4b43-b975-6d1851cf6853"
+                        },
+                        "type": "SetVariable",
+                        "inputs": {
+                          "name": "checked",
+                          "value": "@true"
+                        }
+                      }
+                    },
+                    "runAfter": {},
+                    "expression": {
+                      "and": [
+                        {
+                          "contains": [
+                            "@items('Apply_to_each_2')?['ind_email']",
+                            "@variables('mailID')"
+                          ]
+                        },
+                        {
+                          "equals": [
+                            "@variables('checked')",
+                            "@false"
+                          ]
+                        }
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "0577fe5a-9b80-42a9-bf54-44cd637ee122"
+                    },
+                    "type": "If"
+                  }
+                },
+                "runAfter": {
+                  "List_contacts": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "21df54e1-b370-444f-95bc-caa1f87b15ce"
+                },
+                "type": "Foreach",
+                "runtimeConfiguration": {
+                  "concurrency": {
+                    "repetitions": 50
+                  }
+                }
+              }
+            }
+          },
+          "expression": {
+            "greater": [
+              "@length(outputs('List_rows_from_Contacts_filtered_by_email')?['body/value'])",
+              0
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9fc21f91-b401-496a-be3d-bc06ea74f6b8"
+          },
+          "type": "If"
+        },
+        "var_CustomerID": {
+          "runAfter": {
+            "List_rows_from_Contacts_filtered_by_email": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "cb194c48-a963-4a2c-9abe-581d7438bf6b"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Customer id",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "var_ExistantEMAIL": {
+          "runAfter": {
+            "var_CustomerID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "148a0b7a-e73f-4a37-91d7-594bac6cdd15"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Existant email",
+                "type": "boolean",
+                "value": "@false"
+              }
+            ]
+          }
+        },
+        "atPOS": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "ef0a1f9e-01d3-4a8d-a8b0-51ecec6ffe7a"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "atPOS",
+                "type": "integer",
+                "value": "@indexOf(triggerOutputs()?['body/from'],'@')"
+              }
+            ]
+          }
+        },
+        "mailID": {
+          "runAfter": {
+            "atPOS": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "778687f7-28d4-4a4b-a967-0da1558e716b"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "mailID",
+                "type": "string",
+                "value": "@{substring(triggerOutputs()?['body/from'],variables('atPOS'))}"
+              }
+            ]
+          }
+        },
+        "checked_false": {
+          "runAfter": {
+            "var_ExistantEMAIL": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "febd939f-e2d0-4b65-adbc-923bc9e5fcbe"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "checked",
+                "type": "boolean",
+                "value": "@false"
+              }
+            ]
+          }
+        },
+        "ro": {
+          "runAfter": {
+            "checked_false": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7b2878d2-6243-4a90-ab8f-5db8567e882f"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ro",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "rm": {
+          "runAfter": {
+            "ro": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "43a67039-9fcd-4cf9-b98e-542d95e7decc"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "rm",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

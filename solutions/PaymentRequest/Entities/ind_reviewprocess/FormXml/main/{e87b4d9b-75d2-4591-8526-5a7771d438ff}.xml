@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{e87b4d9b-75d2-4591-8526-5a7771d438ff}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{80c56baa-67f9-4f3d-a5f3-955b937eba25}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{1618ed0b-4f57-46ea-b077-0f9faebe67a0}">
+          <labels>
+            <label description="Submit For Verifications" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{3c08839c-bead-e26b-fdde-89061e884bc9}" name="StageStep3_section1" labelid="{9a7018c2-f99b-4965-8553-df481853deb8}">
+                  <labels>
+                    <label description="Submit For Verifications" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{58c6c1c2-0fcf-4c7b-9835-665fe65a2dc2}" showlabel="true" visible="true" labelid="{67eb4e14-d9f2-472b-8e24-0e8295473d0d}">
+                        <labels>
+                          <label description="Required Document" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_reviewprocess:ind_reviewprocessdoc" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_reviewprocessdoc" disabled="false" relationship="bpf_ind_ind_operation_ind_reviewprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{67e9cc71-69bf-428f-8a05-f49364e71398}" name="StageStep7" locklevel="0" expanded="true" visible="false" labelid="{c83e10f9-9e8b-4cb0-b34e-22cf7ecf32c8}">
+          <labels>
+            <label description="Document Verification" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{2a01d3f4-3e36-5fcf-d1de-5ffe82e0f606}" name="StageStep7_section1" labelid="{83f90685-fe45-4fc8-8676-82ebf6c01d10}">
+                  <labels>
+                    <label description="Document Verification" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d5e82a54-9df0-4480-84f7-2efcb63a841d}" showlabel="true" visible="true" labelid="{bca84042-843b-4bf6-8a82-31dc31703b86}">
+                        <labels>
+                          <label description="In Order RP" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_reviewprocess:ind_inorderrp" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_inorderrp" disabled="false" relationship="bpf_ind_ind_operation_ind_reviewprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{00fee77b-1ba9-403a-9b5f-780be12737d0}" name="StageStep11" locklevel="0" expanded="true" visible="false" labelid="{2a2a4e5f-e962-4618-adbf-03d7eed37870}">
+          <labels>
+            <label description="Signature Of Client" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{25b88a57-5514-b49b-102b-053a50e8ff8f}" name="StageStep11_section1" labelid="{d5b65eaa-4f9c-4fac-8477-12eda01e1e96}">
+                  <labels>
+                    <label description="Signature Of Client" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{6cc3acee-79f5-48ad-a222-541d52bc6761}" showlabel="true" visible="true" labelid="{d82a66ff-cc19-465d-a63e-a3368ba8808e}">
+                        <labels>
+                          <label description="Require Signature ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_reviewprocess:ind_requirecustomersignature" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_requirecustomersignature" disabled="false" relationship="bpf_ind_ind_operation_ind_reviewprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{1df78933-1d6f-4a77-8e19-64b0c0f8cf64}" name="StageStep15" locklevel="0" expanded="true" visible="false" labelid="{752d408e-a139-4b9d-8520-c4ee43ec5be6}">
+          <labels>
+            <label description="Send To Client For Review And Signature " languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{2ffb451e-26a0-b701-b7e8-e516a40a60c8}" name="StageStep15_section1" labelid="{7e463ae5-3b0e-4460-b22a-8f6ce716e6e4}">
+                  <labels>
+                    <label description="Send To Client For Review And Signature " languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{6b663dd3-46cf-459d-80fa-352f651693b7}" showlabel="true" visible="true" labelid="{2f086aca-da9e-4e94-8941-ad10b9cdb7de}">
+                        <labels>
+                          <label description="Signed Document" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_reviewprocess:ind_signeddocument" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_signeddocument" disabled="false" relationship="bpf_ind_ind_operation_ind_reviewprocess" isrequired="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{3ce1283a-7790-4137-ad09-be8f4f3a4cf5}" name="StageStep19" locklevel="0" expanded="true" visible="false" labelid="{833dc9e6-1e9d-4f54-9769-c951c8d860c5}">
+          <labels>
+            <label description="Submit For Approval And Signature Of Resident Director" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{1cf64858-9355-1764-1513-fe3db926a453}" name="StageStep19_section1" labelid="{cb9766cf-86fe-4245-9ca8-e9d77af8054f}">
+                  <labels>
+                    <label description="Submit For Approval And Signature Of Resident Director" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e9213f92-c631-4cde-a1eb-2e3c9b0ba707}" showlabel="true" visible="true" labelid="{e401e376-26c7-44c7-9ddf-68ccf9dbd9f4}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_reviewprocess:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_reviewprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{7aa33d7f-5b33-4a0e-946d-d69b5e966e43}" name="StageStep23" locklevel="0" expanded="true" visible="false" labelid="{21c28efa-e9bc-414e-94b9-f45c05e92b9a}">
+          <labels>
+            <label description="Submit For Approval And Signature Of Resident Director" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{055aef2b-4e5b-21f5-45f7-45b378161fbc}" name="StageStep23_section1" labelid="{5fd549f4-dade-40bf-8257-062a303d1dea}">
+                  <labels>
+                    <label description="Submit For Approval And Signature Of Resident Director" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a41ef40c-4855-4ca3-93a3-b86f536737e7}" showlabel="true" visible="true" labelid="{825cb8b9-e7c6-4334-90e0-b28e6e2e334e}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_reviewprocess:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_reviewprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{fe8c2802-6cc4-4062-b84e-b6f3e60a95ae}" name="StageStep27" locklevel="0" expanded="true" visible="false" labelid="{f8047ab2-497e-4fbc-85b3-dc4615e0c1d4}">
+          <labels>
+            <label description="Amend" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{bf61e299-0d29-c79c-62b4-52926e148824}" name="StageStep27_section1" labelid="{c0ae50d0-4991-492c-b74f-c70f40d7ae7d}">
+                  <labels>
+                    <label description="Amend" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5d570187-d288-4d3e-9ce0-74e2565001c6}" showlabel="true" visible="true" labelid="{96ffbdf3-d95b-4f22-a580-80eb4d969e4e}">
+                        <labels>
+                          <label description="Reason of Amend" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_reviewprocess:ind_reasonofamend" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="ind_reasonofamend" disabled="false" relationship="bpf_ind_ind_operation_ind_reviewprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{2ff84777-74b1-4d3e-9e03-122adddd4e15}" name="StageStep31" locklevel="0" expanded="true" visible="false" labelid="{e5cd42a9-0c9b-429c-857d-db06564cd1b2}">
+          <labels>
+            <label description="Redirect Amend" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{bd9004c6-6807-8ece-feda-7469c9cd26ee}" name="StageStep31_section1" labelid="{86fe2fdf-e4bb-45ac-b349-c8bc6c310b91}">
+                  <labels>
+                    <label description="Redirect Amend" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{308f98b6-dec3-4d65-8aac-5a4bb086d18e}" showlabel="true" visible="true" labelid="{039969f9-d2c2-482d-b112-ad5e2b8db224}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_reviewprocess:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_reviewprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

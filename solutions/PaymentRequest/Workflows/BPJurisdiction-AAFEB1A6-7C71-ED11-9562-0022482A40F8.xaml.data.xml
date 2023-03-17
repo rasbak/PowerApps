@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{aafeb1a6-7c71-ed11-9562-0022482a40f8}" Name="BP Jurisdiction" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/BPJurisdiction-AAFEB1A6-7C71-ED11-9562-0022482A40F8.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>ind_bpjurisdiction</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.8</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>ind_ind_BusinessPlan</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="BP Jurisdiction" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{fc4d8fa7-2aef-4c53-9be5-4e479ef22de1}">
+      <label languagecode="1033" description="Establish Rationale For Change" />
+    </steplabels>
+    <steplabels id="{35d0c48d-d765-4adf-92a3-20953e83d750}">
+      <label languagecode="1033" description="Rationale For Change" />
+    </steplabels>
+    <steplabels id="{a086d746-d7a9-412f-993a-0ad4380342cc}">
+      <label languagecode="1033" description="Assess Country : No-Go Country" />
+    </steplabels>
+    <steplabels id="{a2668d17-42c0-4da4-9a85-13a32cd5822e}">
+      <label languagecode="1033" description="No-go country identified ?" />
+    </steplabels>
+    <steplabels id="{335a4c88-0f57-4fe0-bc06-e213488be405}">
+      <label languagecode="1033" description="Assess Country : High Risk Jurisdiction" />
+    </steplabels>
+    <steplabels id="{48132507-deb6-4167-a133-1e350ae75660}">
+      <label languagecode="1033" description="High risk jurisdiction identified ?" />
+    </steplabels>
+    <steplabels id="{f10b6a11-7e33-4519-a90b-289beb99546d}">
+      <label languagecode="1033" description="EDD Process" />
+    </steplabels>
+    <steplabels id="{a6c03630-1ec1-4a9c-9da8-53f1e79eddae}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{b7e77f30-c114-41da-be4f-85d4786843d3}">
+      <label languagecode="1033" description="Proceed With Business Plan Process" />
+    </steplabels>
+    <steplabels id="{5cc90e50-b97a-4282-80b4-1b0c848056d9}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{5deea8c9-f5ad-459a-8040-81145f1e5498}">
+      <label languagecode="1033" description="Transaction Reporting Process" />
+    </steplabels>
+    <steplabels id="{1ad324fe-0e75-4d24-9e97-591a1157ed21}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+  </labels>
+</Workflow>

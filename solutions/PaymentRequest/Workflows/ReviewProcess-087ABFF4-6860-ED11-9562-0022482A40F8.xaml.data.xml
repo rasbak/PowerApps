@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{087abff4-6860-ed11-9562-0022482a40f8}" Name="Review Process" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/ReviewProcess-087ABFF4-6860-ED11-9562-0022482A40F8.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>ind_reviewprocess</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>ind_ind_Operation</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Review Process" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{80c56baa-67f9-4f3d-a5f3-955b937eba25}">
+      <label languagecode="1033" description="Submit For Verifications" />
+    </steplabels>
+    <steplabels id="{58c6c1c2-0fcf-4c7b-9835-665fe65a2dc2}">
+      <label languagecode="1033" description="Required Document" />
+    </steplabels>
+    <steplabels id="{67e9cc71-69bf-428f-8a05-f49364e71398}">
+      <label languagecode="1033" description="Document Verification" />
+    </steplabels>
+    <steplabels id="{d5e82a54-9df0-4480-84f7-2efcb63a841d}">
+      <label languagecode="1033" description="In Order RP" />
+    </steplabels>
+    <steplabels id="{00fee77b-1ba9-403a-9b5f-780be12737d0}">
+      <label languagecode="1033" description="Signature Of Client" />
+    </steplabels>
+    <steplabels id="{6cc3acee-79f5-48ad-a222-541d52bc6761}">
+      <label languagecode="1033" description="Require Signature ?" />
+    </steplabels>
+    <steplabels id="{1df78933-1d6f-4a77-8e19-64b0c0f8cf64}">
+      <label languagecode="1033" description="Send To Client For Review And Signature " />
+    </steplabels>
+    <steplabels id="{6b663dd3-46cf-459d-80fa-352f651693b7}">
+      <label languagecode="1033" description="Signed Document" />
+    </steplabels>
+    <steplabels id="{3ce1283a-7790-4137-ad09-be8f4f3a4cf5}">
+      <label languagecode="1033" description="Submit For Approval And Signature Of Resident Director" />
+    </steplabels>
+    <steplabels id="{e9213f92-c631-4cde-a1eb-2e3c9b0ba707}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{7aa33d7f-5b33-4a0e-946d-d69b5e966e43}">
+      <label languagecode="1033" description="Submit For Approval And Signature Of Resident Director" />
+    </steplabels>
+    <steplabels id="{a41ef40c-4855-4ca3-93a3-b86f536737e7}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{fe8c2802-6cc4-4062-b84e-b6f3e60a95ae}">
+      <label languagecode="1033" description="Amend" />
+    </steplabels>
+    <steplabels id="{5d570187-d288-4d3e-9ce0-74e2565001c6}">
+      <label languagecode="1033" description="Reason of Amend" />
+    </steplabels>
+    <steplabels id="{2ff84777-74b1-4d3e-9e03-122adddd4e15}">
+      <label languagecode="1033" description="Redirect Amend" />
+    </steplabels>
+    <steplabels id="{308f98b6-dec3-4d65-8aac-5a4bb086d18e}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+  </labels>
+</Workflow>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{8424807e-25a6-4d0f-b7ea-0cbbcf46c629}</savedqueryid>
+    <layoutxml>
+      <grid name="ind_ind_businessplans" jump="ind_name" select="1" icon="1" preview="0">
+        <row name="ind_ind_businessplan" id="ind_ind_businessplanid">
+          <cell name="ind_party" width="100" />
+          <cell name="ind_customer" width="100" />
+          <cell name="ind_activity" width="100" />
+          <cell name="ind_country" width="100" />
+          <cell name="ind_name" width="300" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_ind_businessplan">
+          <attribute name="ind_ind_businessplanid" />
+          <attribute name="ind_name" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="ind_customer" />
+          <attribute name="ind_activity" />
+          <attribute name="ind_country" />
+          <attribute name="ind_party" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="ind_BusinessPlan Lookup View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

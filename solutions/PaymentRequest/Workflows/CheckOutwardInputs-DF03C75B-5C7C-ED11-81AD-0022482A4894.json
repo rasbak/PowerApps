@@ -1,0 +1,674 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "ind_sharedcommondataserviceforapps_64f74"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "1c919464-ed4c-4828-8465-f35d19b06cba"
+          },
+          "type": "Request",
+          "kind": "Http",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "actions": {
+        "Get_payment_request": {
+          "runAfter": {
+            "Proceed_with_assess": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "0174b1ee-b522-4a10-b397-2caafb0bcc9e"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ind_ind_operations",
+              "recordId": "@substring(triggerBody()?['id'], 1, 36)"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "List_Party": {
+          "runAfter": {
+            "Get_payment_request": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1ff5123c-2320-4851-826d-550a1f2386bb"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ind_parties",
+              "$filter": "ind_name eq '@{outputs('Get_payment_request')?['body/_ind_partyname_value@OData.Community.Display.V1.FormattedValue']}'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "new_country": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "15ed228e-d9cc-474b-b1a7-f95d310f83a7"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "New country",
+                "type": "string",
+                "value": "Yes"
+              }
+            ]
+          }
+        },
+        "new_remitter": {
+          "runAfter": {
+            "new_country": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4d4922c9-4d7d-46e1-be1d-5b8047f7118d"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "New remitter",
+                "type": "string",
+                "value": "Yes"
+              }
+            ]
+          }
+        },
+        "If_Find_result_from_list_paty": {
+          "actions": {
+            "Apply_to_each": {
+              "foreach": "@outputs('List_Party')?['body/value']",
+              "actions": {
+                "List_BP_for_country": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "3d95518d-bbda-4f29-9910-5f1736b24066"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "ListRecords",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "ind_ind_businessplans",
+                      "fetchXml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\">\n  <entity name=\"ind_ind_businessplan\">\n    <filter type=\"and\">\n      <condition attribute=\"ind_country\" operator=\"eq\" value=\"@{items('Apply_to_each')?['_ind_country_value']}\" />\n<condition attribute=\"ind_customer\" operator=\"eq\" value=\"@{outputs('Get_payment_request')?['body/_ind_customername_value']}\" />\n    </filter>\n  </entity>\n</fetch>"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Condition": {
+                  "actions": {
+                    "Set_variable": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "ce877831-4d8d-4317-a7cb-d9614f929278"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "New country",
+                        "value": "No"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "List_BP_for_country": [
+                      "Succeeded"
+                    ]
+                  },
+                  "expression": {
+                    "greater": [
+                      "@length(outputs('List_BP_for_country')?['body/value'])",
+                      0
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "2dfdf45d-d792-4a49-97b6-a31380295fcd"
+                  },
+                  "type": "If"
+                },
+                "Condition_4": {
+                  "actions": {
+                    "Set_variable_3": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "434f3113-21d1-4167-960a-425a0804f941"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "New activity",
+                        "value": "No"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "ListBP_for_activity": [
+                      "Succeeded"
+                    ]
+                  },
+                  "expression": {
+                    "greater": [
+                      "@length(outputs('ListBP_for_activity')?['body/value'])",
+                      0
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "2bd4a3b7-5b7d-4f35-b470-4afe721227d3"
+                  },
+                  "type": "If"
+                },
+                "ListBP_for_activity": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "ef375ae2-9612-40d4-9782-801f78f7b511"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "ListRecords",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "ind_ind_businessplans",
+                      "fetchXml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\">\n  <entity name=\"ind_ind_businessplan\">\n    <filter type=\"and\">\n      <condition attribute=\"ind_activity\" operator=\"eq\" value=\"@{outputs('Get_payment_request')?['body/_ind_activity_value']}\" />\n<condition attribute=\"ind_customer\" operator=\"eq\" value=\"@{outputs('Get_payment_request')?['body/_ind_customername_value']}\" />\n<condition attribute=\"ind_sector\" operator=\"eq\" value=\"@{outputs('Get_payment_request')?['body/_ind_sector_value']}\" />\n    </filter>\n  </entity>\n</fetch>"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "List_BP_for_Party": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "de3e3307-2bab-4a0b-9a21-bd72193ec23e"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "ListRecords",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "ind_ind_businessplans",
+                      "fetchXml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\">\n  <entity name=\"ind_ind_businessplan\">\n    <filter type=\"and\">\n      <condition attribute=\"ind_party\" operator=\"eq\" value=\"@{outputs('Get_payment_request')?['body/_ind_partyname_value']}\" />\n<condition attribute=\"ind_customer\" operator=\"eq\" value=\"@{outputs('Get_payment_request')?['body/_ind_customername_value']}\" />\n    </filter>\n  </entity>\n</fetch>"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Condition_3": {
+                  "actions": {
+                    "Set_variable_2": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "47868ce1-6ff6-4a86-a93b-e5e882b7a120"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "New remitter",
+                        "value": "No"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "List_BP_for_Party": [
+                      "Succeeded"
+                    ]
+                  },
+                  "expression": {
+                    "greater": [
+                      "@length(outputs('List_BP_for_Party')?['body/value'])",
+                      0
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "c46e9592-ae2c-4a73-9cab-035f918e3cc4"
+                  },
+                  "type": "If"
+                }
+              },
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "e4d20438-1260-4e40-87b9-89e9fa570ef0"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "List_Party": [
+              "Succeeded"
+            ]
+          },
+          "expression": {
+            "greater": [
+              "@length(outputs('List_Party')?['body/value'])",
+              0
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9cd8f1e3-0afc-421a-8699-3ca3efffe0eb"
+          },
+          "type": "If"
+        },
+        "New_activity": {
+          "runAfter": {
+            "new_remitter": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "cdc81509-13b2-4727-b295-5ea8ebff06ef"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "New activity",
+                "type": "string",
+                "value": "Yes"
+              }
+            ]
+          }
+        },
+        "Corporate_action_no": {
+          "actions": {
+            "TP_VERIFIED": {
+              "actions": {
+                "Set_Proceed_to_assess_Yes": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "6c31bfb4-7407-4ba3-98fa-0cc9b921b7c0"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "Proceed with assess",
+                    "value": 1
+                  }
+                }
+              },
+              "runAfter": {},
+              "expression": {
+                "or": [
+                  {
+                    "equals": [
+                      "@variables('New activity')",
+                      "Yes"
+                    ]
+                  },
+                  {
+                    "equals": [
+                      "@variables('New remitter')",
+                      "Yes"
+                    ]
+                  },
+                  {
+                    "equals": [
+                      "@variables('New country')",
+                      "Yes"
+                    ]
+                  },
+                  {
+                    "equals": [
+                      "@outputs('Get_payment_request')?['body/ind_newbehavior']",
+                      "@true"
+                    ]
+                  }
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "15df57fc-d873-40a6-92a1-5ffb1b9b8439"
+              },
+              "type": "If"
+            }
+          },
+          "runAfter": {
+            "If_Find_result_from_list_paty": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "New_Party_or_new_Country": {
+                "actions": {
+                  "Set_Proceed_to_assess_Yes_2": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "48c8e507-6097-4b73-b27d-e7749435aa69"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "Proceed with assess",
+                      "value": 1
+                    }
+                  },
+                  "New_Activity_No": {
+                    "runAfter": {
+                      "Set_Proceed_to_assess_Yes_2": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "3d2c2083-edf7-40dd-809e-2c0e029e83e9"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "New activity",
+                      "value": "No"
+                    }
+                  }
+                },
+                "runAfter": {},
+                "expression": {
+                  "or": [
+                    {
+                      "equals": [
+                        "@variables('New remitter')",
+                        "Yes"
+                      ]
+                    },
+                    {
+                      "equals": [
+                        "@variables('New country')",
+                        "Yes"
+                      ]
+                    },
+                    {
+                      "equals": [
+                        "@outputs('Get_payment_request')?['body/ind_newbehavior']",
+                        "@true"
+                      ]
+                    }
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "2418d581-fc69-45bb-b869-12a4a16e2a73"
+                },
+                "type": "If"
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@outputs('Get_payment_request')?['body/_ind_corporateaction_value']",
+              "72cf5bcb-6e92-ed11-aad1-002248243d34"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a48d9823-af58-4eba-8f97-67c9c0147f5c"
+          },
+          "type": "If"
+        },
+        "Proceed_with_assess": {
+          "runAfter": {
+            "New_activity": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "50e57f22-8ebd-47a5-a8a6-498c34bd2a83"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Proceed with assess",
+                "type": "integer",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "Condition_2": {
+          "actions": {
+            "Update_a_row_2": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "fc5864a1-72e9-4268-85af-40b05a8d3cda"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "ind_ind_operations",
+                  "recordId": "@substring(triggerBody()?['id'], 1, 36)",
+                  "item/ind_newactivity": "@variables('New activity')",
+                  "item/ind_newcountry": "@variables('New country')",
+                  "item/ind_newremitter": "@variables('New remitter')",
+                  "item/ind_proceedtoassessdeviation": false
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Corporate_action_no": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Update_a_row": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "fc5864a1-72e9-4268-85af-40b05a8d3cda"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "UpdateRecord",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "ind_ind_operations",
+                    "recordId": "@substring(triggerBody()?['id'], 1, 36)",
+                    "item/ind_newactivity": "@variables('New activity')",
+                    "item/ind_newcountry": "@variables('New country')",
+                    "item/ind_newremitter": "@variables('New remitter')",
+                    "item/ind_proceedtoassessdeviation": true
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@variables('Proceed with assess')",
+              0
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9cd8f1e3-0afc-421a-8699-3ca3efffe0eb"
+          },
+          "type": "If"
+        },
+        "New_country_Yes": {
+          "actions": {
+            "Apply_to_each_2": {
+              "foreach": "@outputs('List_Party')?['body/value']",
+              "actions": {
+                "Get_a_row_by_ID": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "6d68dc6c-6030-4d2e-b690-c42ff3be13cf"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "GetItem",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "ind_ind_countries",
+                      "recordId": "@items('Apply_to_each_2')?['_ind_country_value']"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Condition_6": {
+                  "actions": {
+                    "Update_a_row_3": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "634e9ee2-28c9-431e-824e-a67899361921"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "UpdateRecord",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "entityName": "ind_ind_operations",
+                          "recordId": "@substring(triggerBody()?['id'], 1, 36)",
+                          "item/ind_highriskjurisdiction": true
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Get_a_row_by_ID": [
+                      "Succeeded"
+                    ]
+                  },
+                  "expression": {
+                    "equals": [
+                      "@outputs('Get_a_row_by_ID')?['body/ind_highrisk']",
+                      "@true"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "e359e1a4-ceb7-4fb1-98c1-ee8ee556b899"
+                  },
+                  "type": "If"
+                },
+                "Condition_5": {
+                  "actions": {
+                    "Update_a_row_4": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "634e9ee2-28c9-431e-824e-a67899361921"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "UpdateRecord",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "entityName": "ind_ind_operations",
+                          "recordId": "@substring(triggerBody()?['id'], 1, 36)",
+                          "item/ind_nogocountryidentified": true
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Condition_6": [
+                      "Succeeded"
+                    ]
+                  },
+                  "expression": {
+                    "equals": [
+                      "@outputs('Get_a_row_by_ID')?['body/ind_nogo']",
+                      "@true"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "e359e1a4-ceb7-4fb1-98c1-ee8ee556b899"
+                  },
+                  "type": "If"
+                }
+              },
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "f1741584-a815-4ab8-8940-9bcd07e09fd1"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "If_Find_result_from_list_paty": [
+              "Succeeded"
+            ]
+          },
+          "expression": {
+            "equals": [
+              "@variables('New country')",
+              "Yes"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "aa9bf8a6-38d8-463f-9d76-23a3c3bd9a06"
+          },
+          "type": "If"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

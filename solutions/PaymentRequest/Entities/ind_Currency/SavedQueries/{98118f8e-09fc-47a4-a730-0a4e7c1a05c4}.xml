@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{98118f8e-09fc-47a4-a730-0a4e7c1a05c4}</savedqueryid>
+    <layoutxml>
+      <grid name="ind_currencies" jump="ind_name" select="1" icon="1" preview="0">
+        <row name="ind_currency" id="ind_currencyid">
+          <cell name="ind_isocode" width="100" />
+          <cell name="ind_name" width="300" />
+          <cell name="ind_fractionalunit" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_currency">
+          <attribute name="ind_currencyid" />
+          <attribute name="ind_name" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="ind_isocode" />
+          <attribute name="ind_fractionalunit" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Currency Lookup View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

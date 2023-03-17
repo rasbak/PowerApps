@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{6fc090f1-9751-4cb6-a821-e6e36946aa27}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{41abc816-87ca-4d1f-b23a-0ed603ec4f1d}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{427d95bf-9f96-4ed3-bbb8-2bb0b8114f5c}">
+          <labels>
+            <label description="EDD Document" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{e6dc4968-07ae-5e63-a253-66368e52ab69}" name="StageStep3_section1" labelid="{0a4c2ce7-1c34-44bb-8bc3-3a31a2cd40a5}">
+                  <labels>
+                    <label description="EDD Document" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{94578c2f-3729-4633-8a66-d55608099bdf}" showlabel="true" visible="true" labelid="{0e07379e-cfbb-464c-a1c2-bcabfafdcf13}">
+                        <labels>
+                          <label description="Detailed Information" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:ind_eddaradetailedinformation" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddaradetailedinformation" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f27eff8c-631e-49e8-9e18-0b6265a59266}" showlabel="true" visible="true" labelid="{7cb87847-6896-4202-b063-f4a1328339d5}">
+                        <labels>
+                          <label description="Documentation of client source of wealth" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:ind_eddaradocumentationofclientsourceofwealth" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddaradocumentationofclientsourceofwealth" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{587a45ec-25cb-4b42-b854-19f5372ba6af}" showlabel="true" visible="true" labelid="{aeba4698-5f5b-4dd1-90ac-565615c3485d}">
+                        <labels>
+                          <label description="Proposed stakeholders" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:ind_eddaraproposedstakeholders" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddaraproposedstakeholders" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9aeb10d8-2f92-448d-9ebd-a726bdfd7a1c}" showlabel="true" visible="true" labelid="{a07bd9a5-f6ce-4b86-adbc-2a40d4a6f4d6}">
+                        <labels>
+                          <label description="Regularity Requirements" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:ind_eddararegulatoryrequirements" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddararegulatoryrequirements" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3b880f7a-622e-41eb-b92d-f0348b210b77}" showlabel="true" visible="true" labelid="{f3722e44-a068-45db-907d-e0987bc55e79}">
+                        <labels>
+                          <label description="Procedures on transaction’s substance" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:ind_eddaraproceduresontransactionssubstance" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddaraproceduresontransactionssubstance" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{016e2b9e-7ca6-493c-8d64-7a87fce02fe6}" showlabel="true" visible="true" labelid="{db3cee08-2da2-4a1e-9191-2a566f1d3f0e}">
+                        <labels>
+                          <label description="Proposed activities Detailed information" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:ind_eddjuproposedactivitiesdetailedinformation" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddjuproposedactivitiesdetailedinformation" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b25deb6e-ab1b-4140-a5e7-bac16bbb2cc0}" showlabel="true" visible="true" labelid="{16864ac0-f70e-49b6-bc3f-2c7476ae6d6d}">
+                        <labels>
+                          <label description="Regulatory requirements" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:ind_eddjuregulatoryrequirements" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddjuregulatoryrequirements" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fe0ddfca-f6d3-4a21-8999-227a46c4a8e5}" showlabel="true" visible="true" labelid="{aa08e28f-17de-4a48-8644-ae4dffbf2c3b}">
+                        <labels>
+                          <label description="Screening of intermediary banks involved" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:ind_eddjuscreeningofintermediarybanksinvolved" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddjuscreeningofintermediarybanksinvolved" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5e1d7bd0-0779-4679-8b7a-64b522904b6e}" showlabel="true" visible="true" labelid="{6dc25814-9ffd-495c-a7ef-4ec4fb734759}">
+                        <labels>
+                          <label description="Screening of proposed stakeholders" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:ind_eddjuscreeningofproposedstakeholders" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddjuscreeningofproposedstakeholders" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6adc7077-918b-48a0-937f-d9cbc394b9d5}" showlabel="true" visible="true" labelid="{45225937-0d8f-4dc1-803f-24c3638c344b}">
+                        <labels>
+                          <label description="Document's Details" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:ind_documentsdetails" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_documentsdetails" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f888e180-3f2f-42f2-8795-7c836489ddc1}" showlabel="true" visible="true" labelid="{f54d616f-08ef-49db-88e0-73f050b652c0}">
+                        <labels>
+                          <label description="Doubt/Suspicion" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:ind_doubtsuspicionedd" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_doubtsuspicionedd" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{b72cc602-c0fe-4362-9a62-bacbce5363f5}" name="StageStep27" locklevel="0" expanded="true" visible="false" labelid="{8bf2e929-7ef5-410a-9a18-a644e549790a}">
+          <labels>
+            <label description="EDD Document Validation" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{01f90155-9bf7-973b-166e-ccce35772a84}" name="StageStep27_section1" labelid="{f0aef5d6-99a8-47c7-8010-f42047ebbdab}">
+                  <labels>
+                    <label description="EDD Document Validation" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d878d125-7277-4b97-8e48-eb8d684117ca}" showlabel="true" visible="true" labelid="{903eb561-2945-4c87-97c0-181d62051820}">
+                        <labels>
+                          <label description="Sufficient Report" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:ind_sufficienteddreport" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_sufficienteddreport" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{6ccf4c26-2b7d-44cc-a958-4df9fd158f0a}" name="StageStep31" locklevel="0" expanded="true" visible="false" labelid="{9be41cfd-a8da-49fc-b19e-86332780d0e7}">
+          <labels>
+            <label description="Request For Additional Docs/ Clarifications" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{0c8c56ec-7877-8674-ad18-b9d5f768ed94}" name="StageStep31_section1" labelid="{a9022aa5-1e9b-4e0f-a428-9b8f3ed3142b}">
+                  <labels>
+                    <label description="Request For Additional Docs/ Clarifications" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ddc7f5a9-1a2e-4a01-ac45-1fbca7a6aafa}" showlabel="true" visible="true" labelid="{d93d2737-2002-4ba1-a4da-62235685463a}">
+                        <labels>
+                          <label description="Additional informations" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:ind_additionalinformationsedd" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_additionalinformationsedd" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{22f4cfda-03e9-492c-9d93-2e516dc27c67}" showlabel="true" visible="true" labelid="{92dac176-22cb-4c4b-921e-a4702927b0f7}">
+                        <labels>
+                          <label description="Received ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:ind_receivededd" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_receivededd" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{d0236bcd-cf53-4cce-b1c5-b38a432a5d25}" name="StageStep37" locklevel="0" expanded="true" visible="false" labelid="{b70aa110-5010-4954-9365-5105abecebfd}">
+          <labels>
+            <label description="Go Back To EDD Document Validation" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{8d8f37da-3e18-b9f7-74ea-47608140fdc8}" name="StageStep37_section1" labelid="{051fd636-4e09-44da-88d5-e0b32a8e8876}">
+                  <labels>
+                    <label description="Go Back To EDD Document Validation" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ab76b928-fac1-4c7f-8740-04ae999e0f1e}" showlabel="true" visible="true" labelid="{710aaddc-e5e5-4444-94ce-5150eb5cb5a6}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{5b872480-e224-49d1-a43b-19766a8aab49}" name="StageStep41" locklevel="0" expanded="true" visible="false" labelid="{f505a9e4-cdd1-47a6-83a8-8056d787d9e0}">
+          <labels>
+            <label description="Follow-Up" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{4d8b1460-e17c-aed9-787f-45e6296d4597}" name="StageStep41_section1" labelid="{0f8a48b6-e226-4475-9bfe-9694845be2e4}">
+                  <labels>
+                    <label description="Follow-Up" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{17a6c91c-27f2-4d3a-bc84-4cab1cad401a}" showlabel="true" visible="true" labelid="{53c40e4a-9772-4d74-aef4-0f47ed707aae}">
+                        <labels>
+                          <label description="Successful ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:ind_successfuledd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_successfuledd" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{23da38b6-6b4d-45c2-974f-b545106ad3df}" name="StageStep45" locklevel="0" expanded="true" visible="false" labelid="{1cb97a74-fca1-4a78-b986-bc58242861f6}">
+          <labels>
+            <label description="Go Back To EDD Document Validation" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{ed96ed15-8fe0-d11b-29ca-3fc83fc5abf2}" name="StageStep45_section1" labelid="{d8a80364-bb6c-4993-a961-a8fe5d19c843}">
+                  <labels>
+                    <label description="Go Back To EDD Document Validation" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e2fa362e-86a3-49e7-83d5-df4bb527ad80}" showlabel="true" visible="true" labelid="{1b1f12f1-fbf4-4e6a-9954-f3a63a01b3c7}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{d067c400-1deb-46cb-b8e9-031241ba582c}" name="StageStep49" locklevel="0" expanded="true" visible="false" labelid="{6ff79599-f79b-4c5b-8c56-3a5a863f16f1}">
+          <labels>
+            <label description="Go Back To EDD Document Validation" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{e1d2e11d-dfb6-0a00-f7de-77b87c8a12ab}" name="StageStep49_section1" labelid="{a86a8b99-2dd9-450a-8a14-8025768b20a6}">
+                  <labels>
+                    <label description="Go Back To EDD Document Validation" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2451f46b-2342-4c43-a38e-57e969f45082}" showlabel="true" visible="true" labelid="{706101a5-56b2-48a4-8021-20fcfe3b906b}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{a659fc0a-f5d3-47dd-863f-b1e632def058}" name="StageStep53" locklevel="0" expanded="true" visible="false" labelid="{2497f995-c5ed-468f-b231-c089be004e05}">
+          <labels>
+            <label description="STR Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{6b17c632-ed2f-72ae-0dd7-ba0cca787573}" name="StageStep53_section1" labelid="{95a90900-a8a8-4fdf-949f-2016d56577e4}">
+                  <labels>
+                    <label description="STR Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{6d609f73-3471-49f6-9bfc-1900e453d2dc}" showlabel="true" visible="true" labelid="{8ac2c3b9-fd77-4b5a-b1f4-b6c87ef8e7a7}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:statuscode" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{7e12e302-f355-49d5-a462-bf85f11a07bd}" name="StageStep57" locklevel="0" expanded="true" visible="false" labelid="{27b6132c-c694-4c67-b027-3b783b5e828f}">
+          <labels>
+            <label description="Transaction Reporting Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{1587a9a3-fd6a-e50f-216d-4c3a125a7c25}" name="StageStep57_section1" labelid="{93b5650e-bf8a-4c3a-a667-895e2bd34ea3}">
+                  <labels>
+                    <label description="Transaction Reporting Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e2e0f941-89e1-4ab8-ae17-9868226e71f9}" showlabel="true" visible="true" labelid="{a82b0fde-4c33-4327-a125-6e6525db7f10}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:statuscode" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{cd2e1f3a-f153-429d-9ff3-6afca002ba99}" name="StageStep61" locklevel="0" expanded="true" visible="false" labelid="{082cea9f-c10c-4c3a-a6c5-bcff98d3b9fb}">
+          <labels>
+            <label description="STR Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{e8277fe1-6c23-df4c-849e-bfb29f5fea1c}" name="StageStep61_section1" labelid="{1ffbc475-a3ee-4b72-a89c-751164c2a095}">
+                  <labels>
+                    <label description="STR Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{cdabc243-b48f-495d-adaf-5b4d01193fde}" showlabel="true" visible="true" labelid="{459e71c7-b115-4dcf-a09e-be5da427e3ae}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_businessplan_ind_bpeddprocess:statuscode" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_businessplan_ind_bpeddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

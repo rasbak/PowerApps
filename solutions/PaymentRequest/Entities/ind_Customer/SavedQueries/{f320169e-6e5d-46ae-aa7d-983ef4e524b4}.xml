@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{f320169e-6e5d-46ae-aa7d-983ef4e524b4}</savedqueryid>
+    <layoutxml>
+      <grid name="ind_customers" jump="ind_name" select="1" icon="1" preview="1">
+        <row name="ind_customer" id="ind_customerid">
+          <cell name="ind_name" width="300" />
+          <cell name="ind_address" width="100" />
+          <cell name="ind_companytype" width="100" />
+          <cell name="ind_contactnumber" width="100" />
+          <cell name="ind_entitycode" width="100" />
+          <cell name="ind_entitystatus" width="100" />
+          <cell name="ind_entitysubstatus" width="100" />
+          <cell name="ind_placeofincorporation" width="100" />
+          <cell name="ind_ufcaption" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_customer">
+          <attribute name="ind_customerid" />
+          <attribute name="ind_name" />
+          <order attribute="ind_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="ind_address" />
+          <attribute name="ind_companytype" />
+          <attribute name="ind_contactnumber" />
+          <attribute name="ind_entitycode" />
+          <attribute name="ind_entitystatus" />
+          <attribute name="ind_entitysubstatus" />
+          <attribute name="ind_placeofincorporation" />
+          <attribute name="ind_ufcaption" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="ind_Customer Associated View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

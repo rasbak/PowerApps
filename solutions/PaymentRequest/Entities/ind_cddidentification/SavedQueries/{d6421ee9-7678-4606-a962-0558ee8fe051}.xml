@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{d6421ee9-7678-4606-a962-0558ee8fe051}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="bpf_name" select="1" icon="1" preview="1">
+        <row name="result" id="businessprocessflowinstanceid">
+          <cell name="bpf_ind_ind_operationid" width="133" />
+          <cell name="activestageid" width="151" />
+          <cell name="processid" width="102" />
+          <cell name="ind_documentsonfileduration" width="100" />
+          <cell name="ind_cddscreeningprocessduration" width="100" />
+          <cell name="ind_customerrequestduration" width="100" />
+          <cell name="ind_followupduration" width="100" />
+          <cell name="ind_adequateduration" width="100" />
+          <cell name="ind_assessdocumentsathandduration" width="100" />
+          <cell name="ind_eddprocessduration" width="100" />
+          <cell name="ind_strprocessduration" width="100" />
+          <cell name="ind_originalcopyduration" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_cddidentification">
+          <attribute name="businessprocessflowinstanceid" />
+          <attribute name="bpf_name" />
+          <attribute name="bpf_ind_ind_operationid" />
+          <attribute name="activestageid" />
+          <attribute name="statecode" />
+          <attribute name="createdby" />
+          <attribute name="processid" />
+          <order attribute="bpf_name" descending="false" />
+          <attribute name="ind_documentsonfileduration" />
+          <attribute name="ind_cddscreeningprocessduration" />
+          <attribute name="ind_customerrequestduration" />
+          <attribute name="ind_followupduration" />
+          <attribute name="ind_adequateduration" />
+          <attribute name="ind_assessdocumentsathandduration" />
+          <attribute name="ind_eddprocessduration" />
+          <attribute name="ind_strprocessduration" />
+          <attribute name="ind_originalcopyduration" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active CDD Identification" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

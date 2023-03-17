@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{170fcbdf-9f61-ed11-9562-0022482a4894}" Name="CDD Identification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/CDDIdentification-170FCBDF-9F61-ED11-9562-0022482A4894.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>ind_cddidentification</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>ind_ind_Operation</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="CDD Identification" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{d3ec997b-0463-408c-ad47-ea53195b7338}">
+      <label languagecode="1033" description="Documents On File" />
+    </steplabels>
+    <steplabels id="{0c2bbd05-4c87-4ad0-9559-e45c06266aa6}">
+      <label languagecode="1033" description="Identification Document" />
+    </steplabels>
+    <steplabels id="{cf2efddb-32d2-4668-907d-5a932165e65d}">
+      <label languagecode="1033" description="Identification On File ?" />
+    </steplabels>
+    <steplabels id="{e1df7569-22ff-48d4-874f-57c15fbd87f1}">
+      <label languagecode="1033" description="Request Identification From Client" />
+    </steplabels>
+    <steplabels id="{d31bbbf4-da30-48fd-b90a-ce1353f5e3eb}">
+      <label languagecode="1033" description="Customer Identification Document" />
+    </steplabels>
+    <steplabels id="{6e4b202f-620a-40ca-b362-eac343d38ef7}">
+      <label languagecode="1033" description="Identification On File" />
+    </steplabels>
+    <steplabels id="{55222528-f534-442d-9ee6-5cf1b3def63d}">
+      <label languagecode="1033" description="Doubt/Suspicion" />
+    </steplabels>
+    <steplabels id="{ea9906c1-c9fd-458d-bbd1-0ded078a60b5}">
+      <label languagecode="1033" description="Adequate ?" />
+    </steplabels>
+    <steplabels id="{12d07c52-c09e-4800-9a57-b47aa3324436}">
+      <label languagecode="1033" description="STR Process" />
+    </steplabels>
+    <steplabels id="{3d0e47e6-9c87-46ec-80cf-9a2d3fddda4b}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{89b72376-d6ed-4a14-b374-976e871999fe}">
+      <label languagecode="1033" description="CDD Screening" />
+    </steplabels>
+    <steplabels id="{1ce8ee7d-6d83-4696-a075-c30008fcfb60}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{2def3a39-c55b-4780-83ae-1b19cb0dce51}">
+      <label languagecode="1033" description="Assess Documents At Hand" />
+    </steplabels>
+    <steplabels id="{d8f463c6-30d4-4676-a0b5-611cbf7734ed}">
+      <label languagecode="1033" description="In Order ?" />
+    </steplabels>
+    <steplabels id="{1eac60c5-07e7-48fe-8d91-fb9a724894ed}">
+      <label languagecode="1033" description="CDD Screening" />
+    </steplabels>
+    <steplabels id="{35a01e1e-ad17-45bc-98d7-ccd21d035da8}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{d1974a42-5987-4415-a3f0-780b717d7201}">
+      <label languagecode="1033" description="Customer Request " />
+    </steplabels>
+    <steplabels id="{781df0f7-7d73-4a81-a0f6-8e7afa2d941a}">
+      <label languagecode="1033" description="Customer Document" />
+    </steplabels>
+    <steplabels id="{81444594-db14-430e-aeae-e7fabf0f6b8d}">
+      <label languagecode="1033" description="Received CDDI" />
+    </steplabels>
+    <steplabels id="{eb0ccd93-3eb4-4471-b910-b744cdf05e23}">
+      <label languagecode="1033" description="Adequate" />
+    </steplabels>
+    <steplabels id="{8b820c3e-822b-47c6-aaf0-adf33eb72ec3}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{a2c31bdf-ee99-4634-8197-37a3b4b1c69d}">
+      <label languagecode="1033" description="Redirect Assess Documents At Hand" />
+    </steplabels>
+    <steplabels id="{70dce620-89cc-43fa-b609-fc1f5265c94b}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{561ab389-3df6-433a-800d-9130516e32f9}">
+      <label languagecode="1033" description="STR Process" />
+    </steplabels>
+    <steplabels id="{951c3484-94f1-4846-9dc0-8f84679b870a}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{8e0b2abd-43a2-47c6-8fe9-e8ec3e647442}">
+      <label languagecode="1033" description="EDD Process" />
+    </steplabels>
+    <steplabels id="{ac08fdfe-0ca4-49d2-9cf5-297d5210f004}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{15cc60d0-7427-47bd-8a3d-bd714557b2d5}">
+      <label languagecode="1033" description="Transaction Reporting Process" />
+    </steplabels>
+    <steplabels id="{b09f98d2-cedb-48c8-b489-9a95065dea70}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{e36ae374-372e-4da4-a9b4-25452fa49b48}">
+      <label languagecode="1033" description="Follow Up" />
+    </steplabels>
+    <steplabels id="{3806eaf2-62b7-4a02-af59-de8c836e5bb0}">
+      <label languagecode="1033" description="Successful ?" />
+    </steplabels>
+    <steplabels id="{405d7887-7961-4e85-b18e-196033f6471f}">
+      <label languagecode="1033" description="Assess Documents At Hand 3" />
+    </steplabels>
+    <steplabels id="{ea26f4e4-598f-4fe8-b800-8fbac16af68b}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{8a6d12a7-a303-4f40-8d64-c8d9e7563350}">
+      <label languagecode="1033" description="Adequates" />
+    </steplabels>
+    <steplabels id="{d2595327-bc55-4888-815b-90f5f4cfba9e}">
+      <label languagecode="1033" description="Adequate ?" />
+    </steplabels>
+    <steplabels id="{67663308-6359-4f99-85d8-acaeae34cece}">
+      <label languagecode="1033" description="CDD Screening" />
+    </steplabels>
+    <steplabels id="{24d14c0c-4fd9-4993-838d-dd526fb9d5cf}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{78a9afa9-4f08-40e0-bf51-7db346273ce1}">
+      <label languagecode="1033" description="Assess Documents At Hand 4" />
+    </steplabels>
+    <steplabels id="{32c637c1-58fb-4952-981d-406141673ee6}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+    <steplabels id="{cc2d47ed-814a-4b7b-aed1-c24fb40b6215}">
+      <label languagecode="1033" description="Original Copy" />
+    </steplabels>
+    <steplabels id="{b00ef4a4-e8b1-47d6-b8a9-7056562fa700}">
+      <label languagecode="1033" description="Original Copy CDDI" />
+    </steplabels>
+    <steplabels id="{8f66f957-c51f-4d4d-aa25-bbab1fff497b}">
+      <label languagecode="1033" description="CDD Screening" />
+    </steplabels>
+    <steplabels id="{fc85953d-9fb1-4339-8223-80ec9f693c3f}">
+      <label languagecode="1033" description="Status" />
+    </steplabels>
+  </labels>
+</Workflow>

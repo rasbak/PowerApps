@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{9140848d-7830-424b-8040-45d1a8ffd707}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="bpf_name" select="1" icon="1" preview="1">
+        <row name="result" id="businessprocessflowinstanceid">
+          <cell name="bpf_ind_ind_operationid" width="143" />
+          <cell name="processid" width="110" />
+          <cell name="activestageid" width="150" />
+          <cell name="ind_transactionduration" width="173" />
+          <cell name="ind_securitychecksduration" width="187" />
+          <cell name="ind_availabilityoffundsduration" width="235" />
+          <cell name="ind_awaitingfundsduration" width="181" />
+          <cell name="ind_fundaccountduration" width="165" />
+          <cell name="ind_uploadawaitingfundsswiftduration" width="285" />
+          <cell name="ind_uploadnewaccountswiftduration" width="254" />
+          <cell name="ind_continuewithtransactionduration" width="269" />
+          <cell name="ind_corporateactionduration" width="199" />
+          <cell name="ind_occasionalstandardcdddividendpaymentduration" width="100" />
+          <cell name="ind_standardcddbeneficaryduration" width="262" />
+          <cell name="ind_standardcddforfeitureofsharesduration" width="300" />
+          <cell name="ind_standardcddissueofsharesduration" width="286" />
+          <cell name="ind_standardcddloantoshareholderduration" width="300" />
+          <cell name="ind_standardcddredemptionofsharesduration" width="300" />
+          <cell name="ind_tradingstandardcddduration" width="242" />
+          <cell name="ind_standardcddtransactionssubstanceduration" width="300" />
+          <cell name="ind_investmentholdingstandardcddduration" width="300" />
+          <cell name="ind_consultancystandardcddduration" width="279" />
+          <cell name="ind_managerdecisionduration" width="206" />
+          <cell name="ind_assessdeviationduration" width="214" />
+          <cell name="ind_proceedwithassesdeviationduration" width="292" />
+          <cell name="ind_proceedwithcddscreeningduration" width="277" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_outward">
+          <attribute name="businessprocessflowinstanceid" />
+          <attribute name="bpf_name" />
+          <attribute name="bpf_ind_ind_operationid" />
+          <attribute name="activestageid" />
+          <attribute name="createdby" />
+          <attribute name="processid" />
+          <order attribute="bpf_name" descending="false" />
+          <attribute name="ind_transactionduration" />
+          <attribute name="ind_securitychecksduration" />
+          <attribute name="ind_awaitingfundsduration" />
+          <attribute name="ind_fundaccountduration" />
+          <attribute name="ind_uploadawaitingfundsswiftduration" />
+          <attribute name="ind_uploadnewaccountswiftduration" />
+          <attribute name="ind_availabilityoffundsduration" />
+          <attribute name="ind_corporateactionduration" />
+          <attribute name="ind_occasionalstandardcdddividendpaymentduration" />
+          <attribute name="ind_standardcddbeneficaryduration" />
+          <attribute name="ind_standardcddforfeitureofsharesduration" />
+          <attribute name="ind_standardcddissueofsharesduration" />
+          <attribute name="ind_standardcddloantoshareholderduration" />
+          <attribute name="ind_standardcddredemptionofsharesduration" />
+          <attribute name="statecode" />
+          <attribute name="ind_proceedwithcddscreeningduration" />
+          <attribute name="ind_proceedwithassesdeviationduration" />
+          <attribute name="ind_tradingstandardcddduration" />
+          <attribute name="ind_standardcddtransactionssubstanceduration" />
+          <attribute name="ind_managerdecisionduration" />
+          <attribute name="ind_investmentholdingstandardcddduration" />
+          <attribute name="ind_consultancystandardcddduration" />
+          <attribute name="ind_assessdeviationduration" />
+          <attribute name="ind_continuewithtransactionduration" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All Outward" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

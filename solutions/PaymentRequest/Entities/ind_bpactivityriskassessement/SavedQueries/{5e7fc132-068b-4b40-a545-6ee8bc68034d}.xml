@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{5e7fc132-068b-4b40-a545-6ee8bc68034d}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="bpf_name" select="1" icon="1" preview="1">
+        <row name="result" id="businessprocessflowinstanceid">
+          <cell name="bpf_ind_ind_businessplanid" width="151" />
+          <cell name="activestageid" width="150" />
+          <cell name="processid" width="153" />
+          <cell name="ind_establishrationaleforchangeduration" width="287" />
+          <cell name="ind_assessactivitybannedactivityduration" width="282" />
+          <cell name="ind_assesshighriskactivityduration" width="249" />
+          <cell name="ind_eddprocessduration" width="168" />
+          <cell name="ind_proceedtocibpduration" width="198" />
+          <cell name="ind_strprocessduration" width="170" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_bpactivityriskassessement">
+          <attribute name="businessprocessflowinstanceid" />
+          <attribute name="bpf_ind_ind_businessplanid" />
+          <attribute name="activestageid" />
+          <attribute name="statecode" />
+          <attribute name="createdby" />
+          <attribute name="processid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="not-null" />
+          </filter>
+          <attribute name="ind_establishrationaleforchangeduration" />
+          <attribute name="ind_eddprocessduration" />
+          <attribute name="ind_assessactivitybannedactivityduration" />
+          <attribute name="ind_assesshighriskactivityduration" />
+          <attribute name="bpf_name" />
+          <attribute name="ind_proceedtocibpduration" />
+          <attribute name="ind_strprocessduration" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All BP Activity Risk Assessement" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

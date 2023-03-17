@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{63f51150-3a07-4a14-a34a-332319b241fe}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{ee4b525d-d4ef-4942-ab39-8dba919d3dc1}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{eed7abdf-4f73-4b92-b5fc-894f768e62ef}">
+          <labels>
+            <label description="EDD Document" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{cc8f6ca6-735a-50c2-48f2-9c0462a9ef42}" name="StageStep3_section1" labelid="{2720a503-75b9-4317-93fe-3242b88c05ec}">
+                  <labels>
+                    <label description="EDD Document" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{0775c85e-c997-4300-91f4-d11851a2a4b8}" showlabel="true" visible="true" labelid="{c12b9354-32cb-4b4c-b88e-87d1ab6fdc21}">
+                        <labels>
+                          <label description="Assessment of potential conflict" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_pepeddassessmentofpotentialconflict" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_pepeddassessmentofpotentialconflict" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1a350455-ffa1-4ed3-8035-aecc486de748}" showlabel="true" visible="true" labelid="{e785264a-bf68-491c-b373-b56041c6156b}">
+                        <labels>
+                          <label description="Third parties Doc of client source of wealth " languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_pepthirdpartiesdocofclientsourceofwealth" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_pepthirdpartiesdocofclientsourceofwealth" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{beb37e0f-c540-4570-a071-7cad2ea291d6}" showlabel="true" visible="true" labelid="{b724b72d-5d4d-4e76-b002-85be9cf9690c}">
+                        <labels>
+                          <label description="Procedures on transaction’s substance" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_eddaraproceduresontransactionssubstance" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddaraproceduresontransactionssubstance" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{01857816-2b1b-4293-a25e-ac67e5e95ca1}" showlabel="true" visible="true" labelid="{7cc891fd-3227-4755-bdd3-8e84d4242dee}">
+                        <labels>
+                          <label description="Documentation of client source of wealth" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_eddaradocumentationofclientsourceofwealth" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddaradocumentationofclientsourceofwealth" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{befa096e-f15d-4f9c-8120-b10a02ec899d}" showlabel="true" visible="true" labelid="{86e27d18-c4fd-4d4e-a459-802b37aeaae2}">
+                        <labels>
+                          <label description="Regulatory requirements" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_eddararegulatoryrequirements" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddararegulatoryrequirements" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{973ac58d-617d-4e5a-8987-bb46087a5102}" showlabel="true" visible="true" labelid="{dec7e0af-043f-48ee-900a-fa4db84269c5}">
+                        <labels>
+                          <label description="Proposed stakeholders" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_eddaraproposedstakeholders" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddaraproposedstakeholders" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{eb88ef28-24e4-4f65-93e8-a3cae03c3ecb}" showlabel="true" visible="true" labelid="{7abf04cc-0e26-42d8-aafc-bb54d04d37f8}">
+                        <labels>
+                          <label description="Detailed information" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_eddaradetailedinformation" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddaradetailedinformation" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{98c30751-f650-4456-81dc-a1ccd906c687}" showlabel="true" visible="true" labelid="{9670a78f-66c5-4dc2-bb4b-fdb109ec8911}">
+                        <labels>
+                          <label description="Proposed activities Detailed information" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_eddjuproposedactivitiesdetailedinformation" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddjuproposedactivitiesdetailedinformation" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{00a291f9-3ed4-4c3b-ab6e-6c6de73be847}" showlabel="true" visible="true" labelid="{940e9274-e7ea-4661-b51b-c994cab2e15c}">
+                        <labels>
+                          <label description="Screening of proposed stakeholders" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_eddjuscreeningofproposedstakeholders" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddjuscreeningofproposedstakeholders" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{93edd34e-d491-4585-b586-7acca4982de3}" showlabel="true" visible="true" labelid="{72565b2a-a88d-4b45-8d7d-750914dec7b9}">
+                        <labels>
+                          <label description="Screening of intermediary banks involved" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_eddjuscreeningofintermediarybanksinvolved" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddjuscreeningofintermediarybanksinvolved" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{131e9dac-7b9b-47c5-92ab-6072242a50fd}" showlabel="true" visible="true" labelid="{7970daaa-8a74-4687-b015-a18bfda2b6e9}">
+                        <labels>
+                          <label description="Regulatory requirements" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_eddjuregulatoryrequirements" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_eddjuregulatoryrequirements" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1bd2b728-90b2-4adf-85c2-2aaa8604e1fe}" showlabel="true" visible="true" labelid="{f394d133-78d7-489b-8421-85e15f11f0d3}">
+                        <labels>
+                          <label description="EDD new behavior Document" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_edddocument" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_edddocument" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6b013567-6e80-4dfb-8fd5-8c4988874426}" showlabel="true" visible="true" labelid="{52c53646-be00-446a-8702-8deb689b0699}">
+                        <labels>
+                          <label description="False or stolen Docs EDD Document" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_falseorstolendocsedddocument" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_falseorstolendocsedddocument" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4f0bec8b-c0a4-4da3-a96c-2bd8091c0926}" showlabel="true" visible="true" labelid="{0535e060-be1d-4ad2-9cef-388174d4d81e}">
+                        <labels>
+                          <label description="Other adverse report EDD Document" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_otheradversereportedddocument" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_otheradversereportedddocument" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{be2e0920-ba18-444c-a22b-8bf1c6b7f417}" showlabel="true" visible="true" labelid="{7c0d1a6f-332a-422e-9b91-70c770797c11}">
+                        <labels>
+                          <label description="False or stolen Docs TR EDD Document" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_falseorstolendocstredddocument" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_falseorstolendocstredddocument" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{85ca075e-37c3-4afc-bc10-2c835f391c40}" showlabel="true" visible="true" labelid="{a4bb3db3-87fb-4cbb-8b5e-5d6f8324655c}">
+                        <labels>
+                          <label description="Document's Details" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_documentsdetails" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_documentsdetails" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6c8e1c79-b2c3-4761-9a52-af2f907c4d11}" showlabel="true" visible="true" labelid="{c1d26362-88f1-4d0a-b2af-aca10ad1e956}">
+                        <labels>
+                          <label description="Doubt/Suspicion" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_doubtsuspicionedd" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_doubtsuspicionedd" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{5143b691-2b60-4d79-8822-9d460816c594}" name="StageStep39" locklevel="0" expanded="true" visible="false" labelid="{82c28601-04c7-495c-a27f-881525d061f5}">
+          <labels>
+            <label description="EDD Document Validation" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{76cd5a4d-d05c-4c7b-7f4f-1afea9940e80}" name="StageStep39_section1" labelid="{ed45fa05-0ae3-461e-b8ef-abf66e29de6a}">
+                  <labels>
+                    <label description="EDD Document Validation" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{617e6031-9ba1-4bf7-b020-1f42033a1637}" showlabel="true" visible="true" labelid="{0a8c9d6d-b8e6-42e4-b491-53282489a555}">
+                        <labels>
+                          <label description="Sufficient EDD Report" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_sufficientedd" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="ind_sufficientedd" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{2379679a-1a9c-4eaa-995f-9426361bbff8}" name="StageStep43" locklevel="0" expanded="true" visible="false" labelid="{2b35dba7-1703-414b-a64c-ea2738f3b687}">
+          <labels>
+            <label description="Request For Additional Information" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{0e6d2b93-d606-6eec-d731-a98306a468a6}" name="StageStep43_section1" labelid="{bbb25d22-55c6-43d7-864d-6ea791e932c4}">
+                  <labels>
+                    <label description="Request For Additional Information" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{cf34c551-dd16-4c19-b9cf-3be559230442}" showlabel="true" visible="true" labelid="{b4984c63-a82d-47d2-a4f3-8d0415be594d}">
+                        <labels>
+                          <label description="Additional Informations" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_additionalinformationsedd" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_additionalinformationsedd" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e6460515-2e67-4c32-8787-6054868bb28a}" showlabel="true" visible="true" labelid="{37f2b3ab-b14b-48a9-9fea-3a676d31df7b}">
+                        <labels>
+                          <label description="Received ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_receivededd" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_receivededd" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{e26e3f83-0f31-46f1-aeba-eeadb65de6fa}" name="StageStep49" locklevel="0" expanded="true" visible="false" labelid="{f1a72b11-3799-42d7-ae3a-0f0dfa01b3f6}">
+          <labels>
+            <label description="Go Back To EDD Document Validation" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{644881d0-7b07-b66b-796e-bd1f41cb7837}" name="StageStep49_section1" labelid="{2063910c-f67a-4198-94d5-6722c5daa1f0}">
+                  <labels>
+                    <label description="Go Back To EDD Document Validation" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f46ff4d7-bd5a-4dfb-a1db-b3d2e48b0c99}" showlabel="true" visible="true" labelid="{f51dc2d7-8518-41eb-9e81-f0ff4a7447c9}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{b7698b46-0809-4904-bdf5-5a713c06fe42}" name="StageStep53" locklevel="0" expanded="true" visible="false" labelid="{527de011-9989-485f-9528-0f4d327305b2}">
+          <labels>
+            <label description="Follow-Up" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{5c859f34-0245-4931-a306-f40479f502d2}" name="StageStep53_section1" labelid="{722ae663-b2ab-4f12-9687-54b1ac974ffb}">
+                  <labels>
+                    <label description="Follow-Up" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{06e68fbd-e85c-4d74-b83e-8cf59f9b8ff2}" showlabel="true" visible="true" labelid="{c4f5f0a7-17df-4171-92b7-bb3d9a43106d}">
+                        <labels>
+                          <label description="Successful ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:ind_eddsuccessful" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_eddsuccessful" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{a5dc2a6c-a88d-4709-a4d2-66b4f74d92c6}" name="StageStep57" locklevel="0" expanded="true" visible="false" labelid="{4e938452-837d-4ee8-becd-bab8e3cce66a}">
+          <labels>
+            <label description="Go Back To EDD Document Validation" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{a0ff85dd-462e-0de6-0244-63282ad61efc}" name="StageStep57_section1" labelid="{73c2d983-a261-431a-9749-ff5fd764dfae}">
+                  <labels>
+                    <label description="Go Back To EDD Document Validation" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{805b4804-da6d-415b-9daa-37367e3368ed}" showlabel="true" visible="true" labelid="{1734976a-ded6-453e-a67a-9851c036b0d9}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{f5f74579-9688-40a6-afef-10c9917c43c7}" name="StageStep61" locklevel="0" expanded="true" visible="false" labelid="{678ad4f3-d69f-4ee5-92e1-3665045de107}">
+          <labels>
+            <label description="Go Back To EDD Document Validation" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{f4ef763e-88f1-8010-5689-34f3c8d78ca2}" name="StageStep61_section1" labelid="{bcf62c87-3ec7-4a5e-9596-fee44894e1c8}">
+                  <labels>
+                    <label description="Go Back To EDD Document Validation" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b5ffb2da-36bb-47be-8d82-bfdc6abd561a}" showlabel="true" visible="true" labelid="{19da49f2-ce9e-4bc0-9780-83a2cc1ccbcd}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{8c16918d-486a-4a61-aab3-0ddd704c9a0b}" name="StageStep65" locklevel="0" expanded="true" visible="false" labelid="{fc9402bc-d90f-48a5-aec8-52209be7bb0a}">
+          <labels>
+            <label description="STR Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{2b7ac004-ab76-2c70-acd6-5f806b21f924}" name="StageStep65_section1" labelid="{68c50867-e70e-4b6b-a7ad-4f7b2c9fc3d7}">
+                  <labels>
+                    <label description="STR Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{88b320c0-1540-47d5-b6cb-616fed1ac923}" showlabel="true" visible="true" labelid="{4befb43e-fd4b-4c31-9ad7-6e9073118bdf}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{42af709b-2b35-48ee-bc20-8895055e9774}" name="StageStep69" locklevel="0" expanded="true" visible="false" labelid="{81e3a59d-1c87-4b8e-ab28-d301508bcddf}">
+          <labels>
+            <label description="Transaction Reporting Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{0d37b323-9662-a186-b5c9-81e2d9bc0c26}" name="StageStep69_section1" labelid="{2f3c90fd-61a5-405f-a742-872bc23fdb1a}">
+                  <labels>
+                    <label description="Transaction Reporting Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{6a9a07a8-6bc0-439f-a15d-d7c205f72f4b}" showlabel="true" visible="true" labelid="{a368a4c3-4a1f-4370-8a30-a1851f810023}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{a7a8c0b0-89d8-4724-90aa-ff3cb06a2380}" name="StageStep73" locklevel="0" expanded="true" visible="false" labelid="{de683239-f605-472d-917a-44b41e290124}">
+          <labels>
+            <label description="STR Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{fd3aaab5-bfa2-903c-4168-436a8a63e59c}" name="StageStep73_section1" labelid="{940925d4-a16b-4112-8813-26f320f3c1c6}">
+                  <labels>
+                    <label description="STR Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a64d3a6d-5b0c-4258-a291-4133f91ef94f}" showlabel="true" visible="true" labelid="{6ca50c20-0a24-442a-b528-f0826000a13e}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_eddprocess:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_eddprocess" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

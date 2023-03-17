@@ -1,0 +1,663 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{03922eba-c48c-40e7-bfd9-10c1fe4b6eb3}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{d4bd34e6-7931-4463-bb9e-fb50fcf768bf}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{3261971b-a011-429a-b3f9-43f59d06dc1f}">
+          <labels>
+            <label description="Verifications" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{108ac5a2-1979-5593-10de-c40349c19610}" name="StageStep3_section1" labelid="{1163a6b0-45cf-45f3-8986-8b7b69248c66}">
+                  <labels>
+                    <label description="Verifications" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{cb1328a6-3de0-4b2a-abe2-5f2ea62e59db}" showlabel="true" visible="true" labelid="{9f3400e6-caa0-4ae6-9963-53d6b41b511b}">
+                        <labels>
+                          <label description="Bank Document" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_bandocument" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_bandocument" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bcb78441-a52e-4cdf-aef1-b48aa5b47082}" showlabel="true" visible="true" labelid="{cfb8a470-9c7c-4919-9131-c408e51d6535}">
+                        <labels>
+                          <label description="In order ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_inorderoutward2" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="ind_inorderoutward2" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2d202e99-f243-4c3e-9d4f-ef9453b62535}" showlabel="true" visible="true" labelid="{1a17bd58-0523-451e-bd89-b3c6158e7b9e}">
+                        <labels>
+                          <label description="Require escalation to RM ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_requireescalationtorm" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_requireescalationtorm" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{27735c42-e11f-47c5-8658-207470a7a9fd}" showlabel="true" visible="true" labelid="{856531f2-db52-49cb-9e87-a99b47dd199b}">
+                        <labels>
+                          <label description="Reason" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_reasonoutward2" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="ind_reasonoutward2" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{5e7a0617-bcb3-46a4-8ea0-c1148fda1c6e}" name="StageStep13" locklevel="0" expanded="true" visible="false" labelid="{425b684c-6b26-44d4-aa79-5d71cd0b9509}">
+          <labels>
+            <label description="Manager Cross Verifications" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{118faa91-64f7-95aa-cf09-3c232bb10f2b}" name="StageStep13_section1" labelid="{a7a73880-da4a-4985-a2e2-b75906ddd194}">
+                  <labels>
+                    <label description="Manager Cross Verifications" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e34492e9-1306-417c-943d-bea1e03ef819}" showlabel="true" visible="true" labelid="{f248c85b-9f10-40d7-a942-448795908184}">
+                        <labels>
+                          <label description="In Order ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_inorder2outward2" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="ind_inorder2outward2" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{75034a1e-0dfd-4ed4-8d89-1bc9f1c41246}" name="StageStep17" locklevel="0" expanded="true" visible="false" labelid="{606cd91e-9861-4149-b0f1-a430b1665114}">
+          <labels>
+            <label description="Verification Of Amount" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{4b76ae99-6dd6-f281-9717-27598a2f76ef}" name="StageStep17_section1" labelid="{66b8e4bc-5c3c-4ad1-a13a-e41c76d1c3bf}">
+                  <labels>
+                    <label description="Verification Of Amount" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b46b3c36-b0e5-4a8e-9fc7-28039141fdfb}" showlabel="true" visible="true" labelid="{d28c9e33-f4ec-4a41-ae41-3484758a2a73}">
+                        <labels>
+                          <label description="Amount &gt; 100k ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_amountgreaterthan100k" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="ind_amountgreaterthan100k" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5546a0f4-c374-4581-b6c3-52018414c9c2}" showlabel="true" visible="true" labelid="{106f50b3-5e54-457f-a65d-6d2e749bdade}">
+                        <labels>
+                          <label description="Matter To be Reported To CC" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_mattertobereprtedtocc" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_mattertobereprtedtocc" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{d81c6162-590b-4811-9cf2-bd00a66f5088}" name="StageStep23" locklevel="0" expanded="true" visible="false" labelid="{bf55ac1c-68f4-4f5c-82d0-9ae2fb18536a}">
+          <labels>
+            <label description="Review And Query Transaction" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{58b52c5a-2667-cbfa-7162-5d9548cbeaa0}" name="StageStep23_section1" labelid="{26bf5d6a-50a5-4cbf-b7f9-fa5db8a64d8f}">
+                  <labels>
+                    <label description="Review And Query Transaction" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{98d9babc-1d0f-4d17-96f7-8e023da92441}" showlabel="true" visible="true" labelid="{1609fd9d-0255-4a43-915c-9ebf88e3f8bb}">
+                        <labels>
+                          <label description="In Order ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_inorder3outward2" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_inorder3outward2" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{78480a53-969c-4258-a895-de1651351f76}" showlabel="true" visible="true" labelid="{cfc478d1-c8e2-40d5-b7fc-c4c494069dd9}">
+                        <labels>
+                          <label description="Require escalation to HOC ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_requireescalationtohoc" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_requireescalationtohoc" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{4dc8f6b0-1df5-4845-b9fb-086e675fd950}" name="StageStep29" locklevel="0" expanded="true" visible="false" labelid="{7b91ea74-1d0e-4f4a-86f0-15606ac2a3ef}">
+          <labels>
+            <label description="HOC Cross Verification" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{295868a0-ff98-f4d1-be44-17267d4be824}" name="StageStep29_section1" labelid="{fffb4b6b-db69-4dd5-85d7-bfdfb8edb3eb}">
+                  <labels>
+                    <label description="HOC Cross Verification" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b06f2917-988b-48f1-905b-6b8cc4382de4}" showlabel="true" visible="true" labelid="{28cee17c-c6d5-49b2-9afe-32844d63c88d}">
+                        <labels>
+                          <label description="In Order ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_inorder4outward2" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_inorder4outward2" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{807f31c7-5779-4b13-b7b9-2ebe299a94c7}" showlabel="true" visible="true" labelid="{80e91dc7-fbac-4211-9c28-5989f645fe61}">
+                        <labels>
+                          <label description="Matter to be reported to CC ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_mattertobereprtedtocc" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_mattertobereprtedtocc" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{6a39affe-2785-406d-9c06-bd61d0880eb8}" name="StageStep35" locklevel="0" expanded="true" visible="false" labelid="{0b9b6bac-d286-4434-b88d-d70e7860f89a}">
+          <labels>
+            <label description="Transaction Reporting Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{287b8cde-d5b3-3ce9-f81d-fde5e991eab8}" name="StageStep35_section1" labelid="{55793b0d-4541-4173-b874-3ed41f3ea54c}">
+                  <labels>
+                    <label description="Transaction Reporting Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{8bd97eb7-8968-4699-86f7-143da78dea66}" showlabel="true" visible="true" labelid="{66dfe756-038d-4b73-a070-ae7cb5d45e80}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{a4424597-7217-4448-adbc-ad26317591ed}" name="StageStep39" locklevel="0" expanded="true" visible="false" labelid="{86a95bf6-2810-4215-8e23-46f6276b4d32}">
+          <labels>
+            <label description="Circulate Docs To Bank Signatories" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{c1bcbb56-8e00-fad6-e771-ea6736e65292}" name="StageStep39_section1" labelid="{bbdcb7d3-90c3-40b7-9491-1333f943fe04}">
+                  <labels>
+                    <label description="Circulate Docs To Bank Signatories" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{8e3aebcf-0eb7-4725-b53b-bbec98e96a87}" showlabel="true" visible="true" labelid="{550ebb11-a073-499f-a774-418c19d2ff21}">
+                        <labels>
+                          <label description="Sent To Bank ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_sendtobank" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="ind_sendtobank" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{81d82435-220b-4457-9791-467395a11c32}" showlabel="true" visible="true" labelid="{862303db-86f7-492b-98ed-ad05669533de}">
+                        <labels>
+                          <label description="Amount Transfered ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_amounttransfered" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_amounttransfered" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{dba42855-b32a-4737-a29a-786ca51b9b2d}" name="StageStep45" locklevel="0" expanded="true" visible="false" labelid="{d31ea2e3-8baf-4aa0-8ee8-835fc8026572}">
+          <labels>
+            <label description="Circulate Docs To Bank Signatories" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{259e8b41-990e-ac1a-0b79-2432e83d20a3}" name="StageStep45_section1" labelid="{ac618b7f-53ee-48f6-b9a5-e00572d82dda}">
+                  <labels>
+                    <label description="Circulate Docs To Bank Signatories" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d9f04dde-0565-4e5c-9e15-09caf181dc62}" showlabel="true" visible="true" labelid="{aecedac5-e464-42a9-b624-d296bbaec7fb}">
+                        <labels>
+                          <label description="Sent to Bank ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_sendtobank" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="ind_sendtobank" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b5fa974d-be27-4890-86fa-1ac059e0ad7b}" showlabel="true" visible="true" labelid="{cf4a56cf-70a3-4708-a0a5-4f467d0ed70d}">
+                        <labels>
+                          <label description="Amount Transfered ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_amounttransfered" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_amounttransfered" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{889d23e3-4116-4c05-85c6-51d330d85767}" name="StageStep51" locklevel="0" expanded="true" visible="false" labelid="{e97a41ce-feed-4eee-a1f9-fd19561b49a3}">
+          <labels>
+            <label description="Verifications" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{d2c7a5b3-50e1-ff9d-f2f1-18f7fad60480}" name="StageStep51_section1" labelid="{bb9ef467-4d09-4de8-b863-6b4ad6f100e3}">
+                  <labels>
+                    <label description="Verifications" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{efe33381-4e27-4fbc-b3eb-fa429204bbf6}" showlabel="true" visible="true" labelid="{f3130e35-d67f-4f0b-b84a-6c395da872a9}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{108a339d-7803-46d1-b942-8690f741453e}" name="StageStep55" locklevel="0" expanded="true" visible="false" labelid="{3fcac21c-660c-441e-b015-bf2f43796052}">
+          <labels>
+            <label description="Verifications" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{06d7d163-b43b-eb2f-925e-bfa2023964a6}" name="StageStep55_section1" labelid="{9afa0084-8b98-445a-a0af-56cd48b64143}">
+                  <labels>
+                    <label description="Verifications" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{43e67faa-bf4e-4a7a-a177-9530e4a6b354}" showlabel="true" visible="true" labelid="{6b20cd9c-cf08-4420-9790-9b2fdaae486d}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{5d4b65e3-38a1-48fe-9574-c4418f581222}" name="StageStep59" locklevel="0" expanded="true" visible="false" labelid="{26341268-5ef3-4ed2-a0b4-05646f4cdc23}">
+          <labels>
+            <label description="Circulate Docs To Bank Signatories" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{f11d3477-16da-594f-083e-dd1e147dd9c2}" name="StageStep59_section1" labelid="{f434fbd9-2991-424b-af6a-c98a23446433}">
+                  <labels>
+                    <label description="Circulate Docs To Bank Signatories" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{11d1973a-2b21-4c18-92ec-f9a5dee0a1b9}" showlabel="true" visible="true" labelid="{ffdc880b-b20e-4c83-a4f0-3c7071ece2a1}">
+                        <labels>
+                          <label description="Sent to Bank ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_sendtobank" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_sendtobank" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2784b88c-6558-48ee-a08b-e20accd940c1}" showlabel="true" visible="true" labelid="{24568447-3e84-4797-840e-afb37f381298}">
+                        <labels>
+                          <label description="Amount Transfered ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_amounttransfered" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_amounttransfered" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{6426ef5c-dc3e-4f22-bb82-b34c27e2f163}" name="StageStep65" locklevel="0" expanded="true" visible="false" labelid="{7d0e4800-24de-4d1d-8640-ec89f10b4596}">
+          <labels>
+            <label description="Verifications" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{70375927-1597-5b95-6a65-d58af5b6c316}" name="StageStep65_section1" labelid="{56230bbf-6397-4b16-b1e6-b7607fa56616}">
+                  <labels>
+                    <label description="Verifications" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{4bc958ea-ba37-4710-9c01-8744dc0317cc}" showlabel="true" visible="true" labelid="{e0016e82-5f91-4c0b-93dc-0a44527aad6e}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{6040d8dd-9c1a-4c25-b9ee-bf25a6003cbd}" name="StageStep69" locklevel="0" expanded="true" visible="false" labelid="{00fc7054-f6fd-4b09-8a30-953ed8b4b9b5}">
+          <labels>
+            <label description="Request For Additional Docs/ Clarifications" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{ce25c22c-9d4d-efea-dcf4-8bb0ba80546c}" name="StageStep69_section1" labelid="{cc533557-3fc2-4059-9a11-ead19f86bcc8}">
+                  <labels>
+                    <label description="Request For Additional Docs/ Clarifications" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{30d43f00-9c3f-4e8e-9c41-f662f6d0425c}" showlabel="true" visible="true" labelid="{ebf9e66d-c67b-4250-b167-816660fcbd1a}">
+                        <labels>
+                          <label description="Additional Documents" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_additonaldocumentsoutward2" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="ind_additonaldocumentsoutward2" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b3ed0500-2ac6-4987-93e6-e1147626a199}" showlabel="true" visible="true" labelid="{26354d91-6f83-4c57-9ef5-0dd302b441a1}">
+                        <labels>
+                          <label description="Successful ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_successfuloutward2" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_successfuloutward2" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8fcfcf70-8a4b-491d-984c-d8eb8c58e12d}" showlabel="true" visible="true" labelid="{db511e8c-5853-41b4-997c-2ee8ed8f95f3}">
+                        <labels>
+                          <label description="Received ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_receivedoutward2" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_receivedoutward2" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{59bdd372-2891-4db3-b48d-f91ec3e325cb}" name="StageStep77" locklevel="0" expanded="true" visible="false" labelid="{15a2cb26-25ce-4148-b3e8-ff12e591c2a3}">
+          <labels>
+            <label description="Verifications" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{0999c8a2-66b3-be3e-b470-5407f9fb75c7}" name="StageStep77_section1" labelid="{8e0f3581-f202-4d06-9359-af0d3349bfee}">
+                  <labels>
+                    <label description="Verifications" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ef4d1698-0969-47a1-9221-7a3754aac4cd}" showlabel="true" visible="true" labelid="{66bf0510-1c9e-467f-80a2-49841330e78a}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{45efe490-d717-4800-950b-3a0819510a55}" name="StageStep81" locklevel="0" expanded="true" visible="false" labelid="{e1c1f6ff-dff1-4111-8624-2c6321806b23}">
+          <labels>
+            <label description="Verifications" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{a7b67bfa-c073-057d-b41a-d1d1c0d5d2f3}" name="StageStep81_section1" labelid="{a5d9ba03-1ec3-4478-ba5d-087692c5520b}">
+                  <labels>
+                    <label description="Verifications" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{784f2b89-0d06-4fa6-b141-a21979385b89}" showlabel="true" visible="true" labelid="{53b59dbe-b514-4177-809c-89de1f9154a8}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{81aab181-e8f2-4aec-904f-d5f2ddcf8673}" name="StageStep85" locklevel="0" expanded="true" visible="false" labelid="{8f96aedd-8f85-44f1-b623-4dd10cb13275}">
+          <labels>
+            <label description="Discuss With Client &amp; Request For Alternative Doc/Info" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{f8ba874c-12bb-f97c-09ff-0d5e5b751a3e}" name="StageStep85_section1" labelid="{1260b746-c475-4a4d-bf66-d751dbc6a7f5}">
+                  <labels>
+                    <label description="Discuss With Client &amp; Request For Alternative Doc/Info" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c86d91d0-f2d0-4f7e-803f-fc21d32a63f0}" showlabel="true" visible="true" labelid="{bb9be014-66ca-427f-ad41-deb5540b5554}">
+                        <labels>
+                          <label description="Satisfied ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_satisfied2outward2" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="ind_satisfied2outward2" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{c3e2635d-382c-43af-9d05-17ca9e99077d}" name="StageStep89" locklevel="0" expanded="true" visible="false" labelid="{b4650aea-307c-4524-afc4-80a0349a4e60}">
+          <labels>
+            <label description="Amount" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{b1256963-a71c-bd76-562e-f1b2570f94c4}" name="StageStep89_section1" labelid="{c8b3d9ab-c492-455b-9ec2-1d9a63288dda}">
+                  <labels>
+                    <label description="Amount" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{4b2e0432-532c-4069-ba84-618406ef8ff3}" showlabel="true" visible="true" labelid="{d24c7655-5778-42ba-afcd-4c97f12de410}">
+                        <labels>
+                          <label description="Activity" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_activity" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ind_activity" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{1d0d273e-9563-485a-ac9b-4b2e326268e6}" name="StageStep93" locklevel="0" expanded="true" visible="false" labelid="{c0e2d831-7ee7-4ded-b72a-50ffc938172a}">
+          <labels>
+            <label description="Transaction Reporting Process" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{41f11d15-df95-d10f-6ff4-9f524031d9f6}" name="StageStep93_section1" labelid="{32842129-4f7a-4307-a575-8f13ba30c4d4}">
+                  <labels>
+                    <label description="Transaction Reporting Process" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{7b43780b-5c7a-4b1e-916b-8fba5d19efbc}" showlabel="true" visible="true" labelid="{90d56a30-2c34-480b-b8f7-5b8f8af165ce}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:statuscode" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{fbd42e25-0b55-4364-a98a-d529ac741eeb}" name="StageStep97" locklevel="0" expanded="true" visible="false" labelid="{70fd39b5-3ffa-497a-beff-dc861ac0d248}">
+          <labels>
+            <label description="Circulate Docs To Bank Signatories" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{b9f3fcbc-bfa9-72ee-8981-82489c2a765b}" name="StageStep97_section1" labelid="{4f82a42b-a837-44df-92f7-24fef577cb47}">
+                  <labels>
+                    <label description="Circulate Docs To Bank Signatories" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3256ea42-43bf-4ce3-b36d-6dfbd2662e63}" showlabel="true" visible="true" labelid="{6e6235eb-0c0e-4b41-a9b4-97195df19df1}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:statuscode" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="statuscode" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4928b357-1af5-476c-9ae0-fdd245f59421}" showlabel="true" visible="true" labelid="{49a91c1a-94fc-4cb3-9ced-3bc777de164e}">
+                        <labels>
+                          <label description="Amount Transfered ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_amounttransfered" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="ind_amounttransfered" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{e7da33e8-7826-4d93-bdc5-adc199963075}" name="StageStep103" locklevel="0" expanded="true" visible="false" labelid="{f2e4dd6a-40b8-4d83-85ca-bea469d5ceae}">
+          <labels>
+            <label description="Amend Transfer Form" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{4b179010-aefe-6730-f49f-68fe5443a22c}" name="StageStep103_section1" labelid="{6fcba9e2-084f-46b7-a475-e66769fed567}">
+                  <labels>
+                    <label description="Amend Transfer Form" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c3fe285e-be1d-426e-af6f-baa878670367}" showlabel="true" visible="true" labelid="{22fe7e59-e0f9-471c-9956-d8b4e70a5ae0}">
+                        <labels>
+                          <label description="Regenerate Bank Doc ?" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_regeneratebankdoc" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="ind_regeneratebankdoc" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{c5e2daa1-c6de-481a-b071-2fb029b65c83}" name="StageStep107" locklevel="0" expanded="true" visible="false" labelid="{46efbc46-110b-4cb2-90a7-3a0d41e83d25}">
+          <labels>
+            <label description="Verifications" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{86eda8db-b89d-e115-084c-61f9bff5222b}" name="StageStep107_section1" labelid="{33b225a4-3c64-492e-baf3-7168626de2d6}">
+                  <labels>
+                    <label description="Verifications" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{38572025-cb91-4fbd-b411-c1dd034db267}" showlabel="true" visible="true" labelid="{7a720e14-5e19-44ec-97ff-f5595c90e54d}">
+                        <labels>
+                          <label description="Additional Document TR" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_ind_ind_operation_ind_outward2:ind_additionaldocumenttr" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ind_additionaldocumenttr" disabled="false" relationship="bpf_ind_ind_operation_ind_outward2" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

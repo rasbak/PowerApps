@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{cf4bbc3c-0ecc-4138-8e1c-77cca5506103}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="bpf_name" select="1" icon="1" preview="1">
+        <row name="result" id="businessprocessflowinstanceid">
+          <cell name="bpf_ind_ind_operationid" width="147" />
+          <cell name="activestageid" width="105" />
+          <cell name="processid" width="68" />
+          <cell name="ind_establishrationaleforchangeduration" width="288" />
+          <cell name="ind_assesscountrynogocountryduration" width="300" />
+          <cell name="ind_assesscountryhighriskjurduration" width="284" />
+          <cell name="ind_transactionreportingprocessduration" width="283" />
+          <cell name="ind_cibpprocessduration" width="165" />
+          <cell name="ind_initiatechangeinbpprocessduration" width="292" />
+          <cell name="ind_proceedwithtransactionmonitoringduration" width="300" />
+          <cell name="ind_eddprocessduration" width="175" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_jurisdictionscreening">
+          <attribute name="businessprocessflowinstanceid" />
+          <attribute name="bpf_name" />
+          <attribute name="bpf_ind_ind_operationid" />
+          <attribute name="activestageid" />
+          <attribute name="statecode" />
+          <attribute name="createdby" />
+          <attribute name="processid" />
+          <order attribute="bpf_name" descending="false" />
+          <attribute name="ind_establishrationaleforchangeduration" />
+          <attribute name="ind_assesscountrynogocountryduration" />
+          <attribute name="ind_assesscountryhighriskjurduration" />
+          <attribute name="ind_transactionreportingprocessduration" />
+          <attribute name="ind_cibpprocessduration" />
+          <attribute name="ind_initiatechangeinbpprocessduration" />
+          <attribute name="ind_proceedwithtransactionmonitoringduration" />
+          <attribute name="ind_eddprocessduration" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Jurisdiction Screening" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

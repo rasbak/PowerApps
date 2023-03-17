@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{5c69e8ae-6849-40e9-b8f9-dbd655cb53bd}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="bpf_name" select="1" icon="1" preview="1">
+        <row name="result" id="businessprocessflowinstanceid">
+          <cell name="bpf_ind_ind_businessplanid" width="155" />
+          <cell name="activestageid" width="110" />
+          <cell name="processid" width="76" />
+          <cell name="ind_prepareunusualtransactionreportduration" width="100" />
+          <cell name="ind_updateinternalreportlogmlroduration" width="161" />
+          <cell name="ind_performstransactionandbehaviouranalysisdurati" width="100" />
+          <cell name="ind_performscreeningandduediligenceduration" width="100" />
+          <cell name="ind_filestrwithfiuduration" width="100" />
+          <cell name="ind_updatesexternalreportlogduration" width="100" />
+          <cell name="ind_updateinternalreportlogroduration" width="100" />
+          <cell name="ind_conclusionofinvestigationreportduration" width="100" />
+          <cell name="ind_proceedwithcibpprocessduration" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ind_bpstrprocess">
+          <attribute name="businessprocessflowinstanceid" />
+          <attribute name="bpf_name" />
+          <attribute name="bpf_ind_ind_businessplanid" />
+          <attribute name="activestageid" />
+          <attribute name="statecode" />
+          <attribute name="createdby" />
+          <attribute name="processid" />
+          <order attribute="bpf_name" descending="false" />
+          <attribute name="ind_prepareunusualtransactionreportduration" />
+          <attribute name="ind_updateinternalreportlogmlroduration" />
+          <attribute name="ind_performscreeningandduediligenceduration" />
+          <attribute name="ind_performstransactionandbehaviouranalysisdurati" />
+          <attribute name="ind_filestrwithfiuduration" />
+          <attribute name="ind_updatesexternalreportlogduration" />
+          <attribute name="ind_conclusionofinvestigationreportduration" />
+          <attribute name="ind_proceedwithcibpprocessduration" />
+          <attribute name="ind_updateinternalreportlogroduration" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active BP STR Process" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

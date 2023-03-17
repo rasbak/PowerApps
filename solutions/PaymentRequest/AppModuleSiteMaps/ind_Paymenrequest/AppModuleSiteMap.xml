@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModuleSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SiteMapUniqueName>ind_Paymenrequest</SiteMapUniqueName>
+  <EnableCollapsibleGroups>False</EnableCollapsibleGroups>
+  <ShowHome>True</ShowHome>
+  <ShowPinned>True</ShowPinned>
+  <ShowRecents>True</ShowRecents>
+  <SiteMap IntroducedVersion="7.0.0.0">
+    <Area Id="area_93d530f7" ResourceId="SitemapDesigner.NewTitle" DescriptionResourceId="SitemapDesigner.NewTitle" ShowGroups="true" IntroducedVersion="7.0.0.0">
+      <Titles>
+        <Title LCID="1033" Title="Area1" />
+      </Titles>
+      <Group Id="group_4ba06dfa" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Payment requests" />
+        </Titles>
+        <SubArea Id="NewSubArea_ce999a6c" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ind_ind_operation" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_6e6135f0" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ind_ind_businessplan" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Business Plans" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_9c1ce195" DescriptionResourceId="Dashboards_Description" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="/workplace/home_dashboards.aspx" DefaultDashboard="7b00802b-099b-ed11-aad1-0022482a4894" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" ToolTipResourseId="DashboardTooltip">
+          <Titles>
+            <Title LCID="1033" Title="Test" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="NewSubArea_2aff93b5" ResourceId="Homepage_Dashboards" DescriptionResourceId="Dashboards_Description" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="/workplace/home_dashboards.aspx" DefaultDashboard="7b00802b-099b-ed11-aad1-0022482a4894" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Test Dashbord" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_c8bb38bd" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Administration" />
+        </Titles>
+        <SubArea Id="subarea_2f6eedcf" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ind_customer" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Customers" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_b860f6ac" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ind_ind_account" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Accounts" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_c49d7130" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ind_ind_activity" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Activities" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_3211a598" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ind_ind_bank" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Banks" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_e6b10072" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ind_party" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Parties" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_335da550" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ind_ind_partyaccount" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Party Accounts" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_a85f48ae" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ind_ind_usercontact" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="User Contacts" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_4f7957ce" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="systemuser" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+      </Group>
+    </Area>
+  </SiteMap>
+  <LocalizedNames>
+    <LocalizedName description="Paymen request" languagecode="1033" />
+  </LocalizedNames>
+</AppModuleSiteMap>

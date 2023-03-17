@@ -1,0 +1,25 @@
+function OGSCheck(executionContext){
+
+
+debugger;
+	var formContext = executionContext.getFormContext();	
+	var idProcess = Xrm.Page.data.process.getActiveProcess().getId();
+	if(Xrm.Page.getAttribute("ind_partyname").getValue()){
+	var nameC = Xrm.Page.getAttribute("ind_partyname").getValue()[0].name;
+	 if (idProcess == '14bae384-7d5e-ed11-9562-0022482a40f8'){
+			
+			var paymentID = formContext.data.entity.getId();
+			const response = new XMLHttpRequest();
+			const json = JSON.stringify({
+				id: paymentID,
+				name : nameC
+			});
+
+		response.open("POST", 'https://prod-165.westus.logic.azure.com:443/workflows/daa372cfd9a747d484956a171b7659cd/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=V5nBTzRRDYNEJ93HVzS_yhlVXk5zBXiYd8sxPt0l2Kw');
+		response.setRequestHeader('Content-Type', 'application/json');
+
+		response.send(json);
+		
+	}
+	}
+}
